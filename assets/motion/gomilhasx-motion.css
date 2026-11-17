@@ -24,7 +24,7 @@
 }
 
 /* ---------- Fundo tecnológico ---------- */
-.gx-stage { position: relative; isolation: isolate; overflow: hidden; }
+.gx-stage { position: relative; isolation: isolate; overflow: hidden; overflow: clip; } /* clip: recorta sem criar rolagem (cabeçalho fixo continua funcionando) */
 .gx-stage > .gx-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden;
   -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent); mask-image: linear-gradient(to bottom, #000 65%, transparent); }
 .gx-bg canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .9; }
