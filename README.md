@@ -25,6 +25,13 @@ copiados dos apps; ao mudar um preço lá, confira a seção "Planos" do index.h
 
 WhatsApp e Telegram da seção "Fale com a gente" são os mesmos de suporte do Balcão (SUPPORT_WHATSAPP e o canal).
 
+## Motion Kit (assets/motion)
+
+`gomilhasx-motion.css` e `gomilhasx-motion.js` são a fonte oficial do kit de animações da marca (sem dependências).
+O Manager e o Balcão usam uma cópia com a mesma versão no cabeçalho: ao mudar aqui, suba a versão e copie para lá.
+Classes: `gx-stage` + `data-gx-bg="network|grid|flow"` (fundo), `gx-reveal` (entrada), `gx-card`, `gx-btn`,
+`gx-glow`, `gx-faq` e `data-gx-count` (contador, só com dado real). Tudo respeita prefers-reduced-motion.
+
 ## Ver localmente
 
 ```bash
