@@ -1,0 +1,216 @@
+{
+ "/assets/fotos/asa-aviao.webp": {
+  "w": 900,
+  "h": 1200,
+  "versoes": [
+   [
+    "/assets/r/fotos-asa-aviao-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-asa-aviao-720.webp",
+    720
+   ]
+  ]
+ },
+ "/assets/fotos/ceu-avioes.webp": {
+  "w": 1920,
+  "h": 1280,
+  "versoes": [
+   [
+    "/assets/r/fotos-ceu-avioes-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-ceu-avioes-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-ceu-avioes-960.webp",
+    960
+   ],
+   [
+    "/assets/r/fotos-ceu-avioes-1440.webp",
+    1440
+   ]
+  ]
+ },
+ "/assets/fotos/janela-aviao.webp": {
+  "w": 900,
+  "h": 1200,
+  "versoes": [
+   [
+    "/assets/r/fotos-janela-aviao-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-janela-aviao-720.webp",
+    720
+   ]
+  ]
+ },
+ "/assets/fotos/maresias.webp": {
+  "w": 1200,
+  "h": 676,
+  "versoes": [
+   [
+    "/assets/r/fotos-maresias-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-maresias-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-maresias-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/fotos/noronha-dois-irmaos.webp": {
+  "w": 1920,
+  "h": 1280,
+  "versoes": [
+   [
+    "/assets/r/fotos-noronha-dois-irmaos-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-noronha-dois-irmaos-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-noronha-dois-irmaos-960.webp",
+    960
+   ],
+   [
+    "/assets/r/fotos-noronha-dois-irmaos-1440.webp",
+    1440
+   ]
+  ]
+ },
+ "/assets/fotos/noronha-morro.webp": {
+  "w": 900,
+  "h": 600,
+  "versoes": [
+   [
+    "/assets/r/fotos-noronha-morro-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-noronha-morro-720.webp",
+    720
+   ]
+  ]
+ },
+ "/assets/fotos/noronha-praia-do-leao.webp": {
+  "w": 1400,
+  "h": 933,
+  "versoes": [
+   [
+    "/assets/r/fotos-noronha-praia-do-leao-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-noronha-praia-do-leao-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-noronha-praia-do-leao-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/fotos/pouso-cidade.webp": {
+  "w": 900,
+  "h": 762,
+  "versoes": [
+   [
+    "/assets/r/fotos-pouso-cidade-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-pouso-cidade-720.webp",
+    720
+   ]
+  ]
+ },
+ "/assets/fotos/praia-viajante.webp": {
+  "w": 1400,
+  "h": 788,
+  "versoes": [
+   [
+    "/assets/r/fotos-praia-viajante-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-praia-viajante-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-praia-viajante-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/fotos/rio-noite.webp": {
+  "w": 1400,
+  "h": 933,
+  "versoes": [
+   [
+    "/assets/r/fotos-rio-noite-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-rio-noite-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-rio-noite-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/telas/celular-cartoes.webp": {
+  "w": 600,
+  "h": 1298,
+  "versoes": [
+   [
+    "/assets/r/telas-celular-cartoes-300.webp",
+    300
+   ],
+   [
+    "/assets/r/telas-celular-cartoes-450.webp",
+    450
+   ]
+  ]
+ },
+ "/assets/telas/celular-crm.webp": {
+  "w": 600,
+  "h": 1298,
+  "versoes": [
+   [
+    "/assets/r/telas-celular-crm-300.webp",
+    300
+   ],
+   [
+    "/assets/r/telas-celular-crm-450.webp",
+    450
+   ]
+  ]
+ },
+ "/assets/telas/celular-painel.webp": {
+  "w": 600,
+  "h": 1298,
+  "versoes": [
+   [
+    "/assets/r/telas-celular-painel-300.webp",
+    300
+   ],
+   [
+    "/assets/r/telas-celular-painel-450.webp",
+    450
+   ]
+  ]
+ }
+}
