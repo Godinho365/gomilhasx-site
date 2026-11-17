@@ -11,11 +11,10 @@
 <meta name="description" content="Conheça a GOMilhasX: soluções inteligentes para gestão de milhas, oportunidades de negócios, automação e tecnologia para o mercado de viagens.">
 <link rel="canonical" href="https://gomilhasx.com/">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/assets/icone-fundo-claro.png" media="(prefers-color-scheme: light)">
-<link rel="icon" type="image/png" href="/assets/icone-fundo-escuro.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="/assets/marca/icone.svg">
 <link rel="preload" as="image" href="/assets/fotos/noronha-dois-irmaos.webp" fetchpriority="high">
 <link rel="apple-touch-icon" href="/assets/apple-icon.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#102442">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GOMilhasX">
 <meta property="og:locale" content="pt_BR">
@@ -35,10 +34,13 @@
 </script>
 <style>
 @font-face { font-family: "Inter"; src: url("/assets/inter.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
-/* Visual claro inspirado na AppNext: fundo neutro, muito respiro, fotos de viagem grandes, botões pretos e o ciano da marca nos detalhes. */
+/* Visual claro inspirado na AppNext, nas cores da marca: azul-marinho #102442, dourado #D9A441, cinza e branco.
+   Dourado só em fundos, botões (texto em azul-marinho por cima) e ícones; nunca como texto sobre branco (contraste baixo). */
 :root {
-  --bg: #f3f3f1; --white: #ffffff; --panel: #ffffff; --panel2: #f3f3f1; --line: #e4e4e0; --text: #0b0b0c; --muted: #6b6e75; --soft: #a3a6ad;
-  --ink: #0b0b0c; --accent: #0891b2; --accent-btn: #0b0b0c; --accent-soft: #e6f8fc; --on-accent: #ffffff; --ok: #16a34a; --glow: rgba(8,145,178,.14);
+  --bg: #f4f4f2; --white: #ffffff; --panel: #ffffff; --panel2: #f4f4f2; --line: #e3e3df; --text: #102442; --muted: #6b6b6b; --soft: #8e8e8e;
+  --ink: #102442; --ink2: #1a3358; --gold: #d9a441; --gold-2: #e8bd66; --gold-dark: #9c7224; --gold-soft: #fbf1de;
+  --accent: #102442; --accent-btn: #102442; --accent-soft: #fbf1de; --on-accent: #ffffff; --ok: #16a34a; --glow: rgba(217,164,65,.25);
+  --gx-cyan: 217, 164, 65; --gx-cyan-strong: 217, 164, 65; /* kit de animação no dourado da marca */
   --sky: #e8f4fb;
   color-scheme: light;
 }
@@ -60,7 +62,9 @@ svg { stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; 
 .btn svg { width: 16px; height: 16px; }
 .btn-lg { height: 50px; padding: 0 26px; font-size: 15.5px; }
 .btn-primary { background: var(--ink); color: #fff; box-shadow: 0 8px 20px -10px rgba(0,0,0,.5); }
-.btn-primary:hover { background: #26272b; }
+.btn-primary:hover { background: var(--ink2); }
+.btn-gold { background: var(--gold); color: var(--ink); box-shadow: 0 8px 20px -10px rgba(156,114,36,.7); font-weight: 600; }
+.btn-gold:hover { background: var(--gold-2); }
 .btn-ghost { background: var(--white); border-color: var(--line); color: var(--text); }
 .btn-ghost:hover { background: #fafaf8; }
 .btn-light { background: #fff; color: var(--ink); }
@@ -70,7 +74,7 @@ svg { stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; 
 .icon { width: 40px; height: 40px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: var(--panel2); border: 1px solid var(--line); color: var(--ink); }
 .icon svg { width: 19px; height: 19px; }
 .kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--muted); }
-.kicker::before { content: ""; width: 6px; height: 6px; border-radius: 999px; background: var(--accent); }
+.kicker::before { content: ""; width: 7px; height: 7px; border-radius: 999px; background: var(--gold); }
 .title { max-width: 720px; margin: 0 auto 48px; text-align: center; }
 .title h2, .h2 { font-size: clamp(30px, 4.6vw, 48px); line-height: 1.08; letter-spacing: -.035em; font-weight: 500; }
 .title h2 { margin-top: 12px; }
@@ -82,7 +86,15 @@ section.white { background: var(--white); }
 header { position: sticky; top: 14px; z-index: 40; padding: 0 12px; }
 header .bar { position: relative; max-width: 780px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 56px; padding: 0 8px 0 18px; border-radius: 999px; background: rgba(255,255,255,.86); border: 1px solid rgba(0,0,0,.06); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 10px 30px -18px rgba(0,0,0,.35); }
 .brand { display: flex; align-items: center; text-decoration: none; }
-.brand img.logo { height: 24px; width: auto; }
+.brand { gap: 9px; }
+.brand img.mark { width: 34px; height: 34px; flex: none; }
+.wm { display: inline-flex; align-items: baseline; font-size: 21px; font-weight: 800; letter-spacing: -.035em; line-height: 1; white-space: nowrap; }
+.wm b { font-weight: 800; }
+.wm .go { color: var(--ink); }
+.wm .mi { color: #6b6b6b; font-weight: 700; }
+.wm .x { position: relative; color: var(--gold); font-weight: 900; }
+.wm .x svg { position: absolute; right: -10px; top: -8px; width: 14px; height: 14px; stroke: var(--gold); stroke-width: 3.6; }
+@media (max-width: 380px) { .wm { font-size: 18px; } .brand img.mark { width: 30px; height: 30px; } }
 .nav { display: none; gap: 2px; font-size: 14px; font-weight: 500; }
 .nav a { padding: 8px 12px; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background .2s; }
 .nav a:hover { color: var(--text); }
@@ -109,10 +121,10 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 .chips { margin: 28px auto 0; display: grid; gap: 8px; width: min(320px, 100%); }
 @media (min-width: 720px) { .chips { width: auto; grid-template-columns: auto auto; justify-content: center; } }
 .chip { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: #fff; border: 1px solid var(--line); border-radius: 14px; font-size: 14px; color: #3a3d44; box-shadow: 0 10px 24px -18px rgba(0,0,0,.4); text-align: left; }
-.chip .icon { width: 28px; height: 28px; border-radius: 8px; background: var(--accent-soft); border-color: transparent; color: var(--accent); }
+.chip .icon { width: 28px; height: 28px; border-radius: 8px; background: var(--gold-soft); border-color: transparent; color: var(--gold-dark); }
 .chip .icon svg { width: 15px; height: 15px; }
 .stage { position: relative; margin: 48px auto 0; max-width: 1240px; padding: 0 12px; }
-.stage .photo { position: relative; height: clamp(440px, 50vw, 620px); border-radius: 32px; overflow: hidden; background: #cfe6ef; }
+.stage .photo { position: relative; height: clamp(440px, 50vw, 620px); border-radius: 32px; overflow: hidden; background: #d7e3ee; }
 .stage .photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
 .stage .phone { position: absolute; left: 50%; top: 56px; transform: translateX(-50%); }
 .stage .tag-float { position: absolute; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 10px 14px 10px 10px; background: rgba(255,255,255,.92); border-radius: 16px; font-size: 13px; text-align: left; box-shadow: 0 20px 40px -20px rgba(0,0,0,.5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
@@ -125,13 +137,13 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 .stage .cap { margin-top: 10px; font-size: 12px; color: var(--soft); }
 
 /* Celular */
-.phone { width: clamp(220px, 24vw, 300px); padding: 9px; border-radius: 46px; background: #0b0b0c; box-shadow: 0 40px 80px -30px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08) inset; }
+.phone { width: clamp(220px, 24vw, 300px); padding: 9px; border-radius: 46px; background: var(--ink); box-shadow: 0 40px 80px -30px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08) inset; }
 .phone img { width: 100%; height: auto; border-radius: 38px; aspect-ratio: 600 / 1298; object-fit: cover; object-position: top; }
 .phone { position: relative; }
 
 /* Frase de apresentação */
 .statement { max-width: 860px; margin: 0 auto; font-size: clamp(22px, 3.2vw, 34px); line-height: 1.3; letter-spacing: -.025em; font-weight: 500; }
-.statement span { color: #b7b9be; }
+.statement span { color: #9a9a9a; }
 .strip { margin-top: 56px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .strip .row { display: flex; gap: 14px; width: max-content; animation: marquee 60s linear infinite; }
 .strip img { width: clamp(150px, 16vw, 210px); height: clamp(150px, 16vw, 210px); object-fit: cover; border-radius: 20px; }
@@ -155,7 +167,8 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 .prod .media > img { width: 100%; height: 100%; object-fit: cover; }
 .prod .media .ui { position: absolute; left: 50%; bottom: -1px; transform: translateX(-50%); width: min(340px, 86%); }
 .prod .body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex: 1; }
-.prod .name { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.prod .name { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); }
+.prod .name::before { content: ""; width: 7px; height: 7px; border-radius: 999px; background: var(--gold); }
 .prod h3 { margin-top: 8px; font-size: clamp(22px, 2.6vw, 28px); letter-spacing: -.03em; font-weight: 500; line-height: 1.15; }
 .prod p { margin-top: 10px; color: var(--muted); flex: 1; }
 .prod .row { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; }
@@ -204,25 +217,26 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 
 /* Seção escura com fatos reais */
 .dark { background: var(--ink); color: #fff; }
-.dark .title p { color: #9a9ca3; }
-.dark .kicker { color: #9a9ca3; }
+.dark .title p { color: #b4bfd0; }
+.dark .kicker { color: #b4bfd0; }
 .bento { display: grid; gap: 14px; }
 @media (min-width: 900px) { .bento { grid-template-columns: 1.15fr 1fr 1fr; grid-template-rows: 1fr 1fr; } .bento .big { grid-row: span 2; } }
-.tile { position: relative; overflow: hidden; border-radius: 22px; background: #17181b; border: 1px solid #26272b; padding: 24px; min-height: 190px; display: flex; flex-direction: column; justify-content: flex-end; }
-.tile .icon { position: absolute; top: 20px; left: 20px; background: #232428; border-color: #2e2f34; color: #e9eaec; }
+.tile { position: relative; overflow: hidden; border-radius: 22px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); padding: 24px; min-height: 190px; display: flex; flex-direction: column; justify-content: flex-end; }
+.tile .icon { position: absolute; top: 20px; left: 20px; background: rgba(217,164,65,.14); border-color: rgba(217,164,65,.35); color: var(--gold); }
 .tile h3 { font-size: 18px; font-weight: 500; letter-spacing: -.01em; }
-.tile p { margin-top: 6px; font-size: 14px; color: #9a9ca3; }
+.tile p { margin-top: 6px; font-size: 14px; color: #b4bfd0; }
 .tile.big { min-height: 400px; padding: 0; }
 .tile.big img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.tile.big .over { position: relative; margin: 16px; padding: 20px; border-radius: 18px; background: rgba(10,10,12,.55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.12); }
-.tile.big .over strong { display: block; font-size: clamp(36px, 4.5vw, 52px); font-weight: 500; letter-spacing: -.04em; line-height: 1; }
+.tile.big .over { position: relative; margin: 16px; padding: 20px; border-radius: 18px; background: rgba(16,36,66,.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.12); }
+.tile.big .over strong { display: block; color: var(--gold); font-size: clamp(36px, 4.5vw, 52px); font-weight: 500; letter-spacing: -.04em; line-height: 1; }
 .tile.big .over span { display: block; margin-top: 8px; color: #d4d5d8; font-size: 14.5px; }
 
 /* Passos */
 .steps { display: grid; gap: 14px; }
 @media (min-width: 900px) { .steps { grid-template-columns: repeat(3, 1fr); } }
 .step { padding: 28px; min-height: 230px; display: flex; flex-direction: column; }
-.step .n { font-size: 14px; color: var(--soft); font-variant-numeric: tabular-nums; }
+.step .n { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 999px; background: var(--gold-soft); color: var(--gold-dark); font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.step .n { align-self: flex-start; }
 .step h3 { margin-top: auto; font-size: 20px; font-weight: 500; letter-spacing: -.02em; }
 .step p { margin-top: 8px; font-size: 15px; color: var(--muted); }
 
@@ -236,16 +250,17 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 .plan ul { list-style: none; margin: 22px 0 0; padding: 22px 0 0; border-top: 1px solid var(--line); flex: 1; }
 .plan li { display: flex; gap: 10px; margin-top: 10px; font-size: 15px; color: #3a3d44; }
 .plan li:first-child { margin-top: 0; }
-.plan li svg { width: 18px; height: 18px; flex: none; margin-top: 3px; color: var(--accent); }
+.plan li svg { width: 18px; height: 18px; flex: none; margin-top: 3px; color: var(--gold-dark); }
 .plan .row { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; }
 .plan.featured { background: var(--ink); color: #fff; border-color: var(--ink); }
-.plan.featured .name, .plan.featured .price { color: #a3a5ab; }
+.plan.featured .name, .plan.featured .price { color: #b4bfd0; }
 .plan.featured .price strong { color: #fff; }
-.plan.featured ul { border-color: #2a2b30; }
-.plan.featured li { color: #dcdde0; }
-.plan.featured li svg { color: #67e8f9; }
-.plan.featured .btn-primary { background: #fff; color: var(--ink); }
-.plan.featured .btn-ghost { background: transparent; color: #fff; border-color: #3a3b40; }
+.plan.featured ul { border-color: rgba(255,255,255,.12); }
+.plan.featured li { color: #e3e8f0; }
+.plan.featured li svg { color: var(--gold); }
+.plan.featured .btn-primary { background: var(--gold); color: var(--ink); font-weight: 600; }
+.plan.featured .btn-primary:hover { background: var(--gold-2); }
+.plan.featured .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.25); }
 
 /* Sobre */
 .about { display: grid; gap: 16px; }
@@ -286,7 +301,7 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 /* Chamada final sobre foto */
 .final { position: relative; overflow: hidden; border-radius: 32px; min-height: 440px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 56px 24px; color: #fff; }
 .final > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.final::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,30,60,.15), rgba(5,20,40,.55)); }
+.final::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16,36,66,.2), rgba(16,36,66,.7)); }
 .final .in { position: relative; z-index: 1; max-width: 640px; }
 .final h2 { font-size: clamp(30px, 4.6vw, 50px); line-height: 1.05; letter-spacing: -.04em; font-weight: 500; }
 .final p { margin-top: 14px; color: rgba(255,255,255,.88); }
@@ -299,7 +314,7 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
   box-shadow: 0 10px 28px -10px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.15) inset; transition: transform .2s, box-shadow .2s; }
 .wa-float svg { width: 26px; height: 26px; color: #fff; }
 .wa-float:hover { transform: translateY(-2px); }
-.wa-float:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.wa-float:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .wa-float::before { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: 0 0 0 0 rgba(37,211,102,.5); animation: wa-pulse 2.6s ease-out 3; pointer-events: none; }
 @keyframes wa-pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); } 100% { box-shadow: 0 0 0 16px rgba(37,211,102,0); } }
 @media (max-width: 639px) { .wa-float { width: 56px; padding: 0; justify-content: center; } .wa-float span { display: none; } }
@@ -310,7 +325,7 @@ footer { background: var(--white); border-top: 1px solid var(--line); }
 footer .cols { display: grid; gap: 32px; padding: 56px 16px 40px; }
 @media (min-width: 640px) { footer .cols { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1024px) { footer .cols { grid-template-columns: 1.4fr repeat(4, 1fr); } }
-footer .brand img.logo { height: 26px; }
+footer .brand { margin-right: 10px; }
 footer p, footer li { font-size: 14px; color: var(--muted); }
 footer ul { list-style: none; margin: 0; padding: 0; }
 footer li + li { margin-top: 4px; }
@@ -364,7 +379,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 
 <header>
   <div class="bar">
-    <a class="brand" href="#inicio" aria-label="GOMilhasX, início"><img class="logo" src="/assets/logo-escuro.png" alt="GOMilhasX" width="105" height="24"></a>
+    <a class="brand" href="#inicio" aria-label="GOMilhasX, início"><img class="mark" src="/assets/marca/icone.svg" alt="" width="34" height="34"><span class="wm" aria-hidden="true"><b class="go">GO</b><b class="mi">Milhas</b><b class="x">X<svg viewBox="0 0 24 24"><path d="M5 19 19 5"/><path d="M9 5h10v10"/></svg></b></span></a>
     <nav class="nav" aria-label="Seções">
       <a href="#produtos">Produtos</a><a href="#planos">Planos</a><a href="#sobre">Sobre</a><a href="#fundador">Fundador</a><a href="#contato">Contato</a>
     </nav>
@@ -385,7 +400,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
       <h1 class="gx-reveal">Tecnologia para gestão de milhas <span>e negócios de viagens</span></h1>
       <p class="lead gx-reveal" style="--gx-delay:80ms">Dois produtos que trabalham juntos: o <strong>Manager</strong> organiza saldos, custos e vendas, e o <strong>Balcão</strong> conecta quem compra e quem vende milhas com verificação e intermediação.</p>
       <div class="ctas gx-reveal" style="--gx-delay:160ms">
-        <a class="btn btn-primary btn-lg" href="#manager">Conhecer o Manager</a>
+        <a class="btn btn-gold btn-lg" href="#manager">Conhecer o Manager</a>
         <a class="btn btn-ghost btn-lg" href="#balcao">Conhecer o Balcão</a>
       </div>
       <div class="chips gx-reveal" style="--gx-delay:220ms" aria-hidden="true">
@@ -679,7 +694,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
           <h2 id="final-titulo">Controle suas milhas. Potencialize suas oportunidades.</h2>
           <p>Comece grátis no Manager ou entre no Balcão para negociar com quem é verificado.</p>
           <div class="ctas">
-            <a class="btn btn-light btn-lg" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
+            <a class="btn btn-gold btn-lg" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
             <a class="btn btn-glass btn-lg" href="https://balcao.gomilhasx.com/" data-lead="final">Acessar o Balcão</a>
           </div>
         </div>
@@ -691,7 +706,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 <footer>
   <div class="wrap cols">
     <div>
-      <a class="brand" href="#inicio"><img class="logo" src="/assets/logo-escuro.png" alt="GOMilhasX" width="113" height="26"></a>
+      <a class="brand" href="#inicio" aria-label="GOMilhasX, início"><img class="mark" src="/assets/marca/icone.svg" alt="" width="34" height="34"><span class="wm" aria-hidden="true"><b class="go">GO</b><b class="mi">Milhas</b><b class="x">X<svg viewBox="0 0 24 24"><path d="M5 19 19 5"/><path d="M9 5h10v10"/></svg></b></span></a>
       <p style="margin-top:12px">Controle suas milhas. Potencialize suas oportunidades.</p>
       <a class="ig" href="https://www.instagram.com/gomilhasx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da GOMilhasX (abre em nova aba)"><svg><use href="#i-insta"/></svg>@gomilhasx</a>
     </div>
