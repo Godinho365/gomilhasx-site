@@ -17,6 +17,9 @@
 - [Site da empresa](https://gomilhasx.com/): apresentação, produtos, fundador e contato
 - [Recursos](https://gomilhasx.com/recursos/), [Planos e preços](https://gomilhasx.com/planos/), [Sobre](https://gomilhasx.com/sobre/), [Dúvidas](https://gomilhasx.com/duvidas/) e [Contato](https://gomilhasx.com/contato/)
 - [Blog](https://gomilhasx.com/blog/): guias sobre custo do milheiro, transferências bonificadas e compra de milhas com segurança
+- [Calculadora de custo do milheiro](https://gomilhasx.com/calculadora-custo-do-milheiro/): ferramenta grátis, sem cadastro; considera bônus e proporção de transferência e estima o lucro da venda
+- [Planilha de controle de milhas](https://gomilhasx.com/planilha-de-milhas/): planilha grátis (.xlsx) com contas, movimentações e vendas
+- [GO Manager no Claude](https://gomilhasx.com/claude/): conector MCP do GO Manager para o Claude (planos PRO e Gestor)
 - [Novidades do Manager](https://manager.gomilhasx.com/novidades): novos recursos, melhorias e correções
 - [Política de Privacidade](https://manager.gomilhasx.com/privacidade)
 - [Termos de Serviço](https://manager.gomilhasx.com/termos)
