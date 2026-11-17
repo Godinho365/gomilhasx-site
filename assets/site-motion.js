@@ -156,7 +156,7 @@
       var p = (start - r.top) / ((start - end) + r.height);
       p = Math.max(0, Math.min(1, p));
       var lit = p * t.words.length;
-      t.words.forEach(function (w, i) { var o = Math.max(0, Math.min(1, lit - i)); w.style.opacity = (0.2 + 0.8 * o).toFixed(3); });
+      t.words.forEach(function (w, i) { var o = Math.max(0, Math.min(1, lit - i)); w.style.opacity = (0.55 + 0.45 * o).toFixed(3); });
     });
     parallax.forEach(function (el) {
       var r = el.parentNode.getBoundingClientRect(), n = parseFloat(el.getAttribute("data-parallax")) || 80;
