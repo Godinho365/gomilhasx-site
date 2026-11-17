@@ -7,29 +7,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GOMilhasX · Gestão e negociação de milhas</title>
-<meta name="description" content="A GOMilhasX reúne o GOMilhasX Manager, para controlar saldos, custo do milheiro e vendas de milhas, e o GOMilhasX Balcão, o balcão de milhas no Telegram com vendedores verificados e intermediação.">
+<title>GOMilhasX | Tecnologia, Milhas e Soluções para Viagens</title>
+<meta name="description" content="Conheça a GOMilhasX: soluções inteligentes para gestão de milhas, oportunidades de negócios, automação e tecnologia para o mercado de viagens.">
 <link rel="canonical" href="https://gomilhasx.com/">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="/assets/icon.png">
+<link rel="apple-touch-icon" href="/assets/apple-icon.png">
 <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GOMilhasX">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://gomilhasx.com/">
-<meta property="og:title" content="GOMilhasX · Gestão e negociação de milhas">
-<meta property="og:description" content="O GOMilhasX Manager organiza saldos, custos e vendas de milhas. O GOMilhasX Balcão conecta quem compra e quem vende, com verificação e intermediação.">
+<meta property="og:title" content="GOMilhasX | Tecnologia, Milhas e Soluções para Viagens">
+<meta property="og:description" content="Conheça a GOMilhasX: soluções inteligentes para gestão de milhas, oportunidades de negócios, automação e tecnologia para o mercado de viagens.">
 <meta property="og:image" content="https://gomilhasx.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GOMilhasX | Tecnologia, Milhas e Soluções para Viagens">
+<meta name="twitter:description" content="Conheça a GOMilhasX: soluções inteligentes para gestão de milhas, oportunidades de negócios, automação e tecnologia para o mercado de viagens.">
+<meta name="twitter:image" content="https://gomilhasx.com/og-image.png">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://gomilhasx.com/#organization","name":"GOMilhasX","alternateName":["GO MilhasX"],"url":"https://gomilhasx.com/","logo":{"@type":"ImageObject","url":"https://gomilhasx.com/assets/icon-512.png","width":512,"height":512},"image":"https://gomilhasx.com/og-image.png","description":"Empresa de tecnologia para o mercado de viagens (TravelTech): gestão de milhas, negociação de milhas entre profissionais e automação para agentes e agências de viagens.","taxID":"70.001.231/0001-03","address":{"@type":"PostalAddress","addressCountry":"BR"},"sameAs":["https://www.instagram.com/gomilhasx/"],"brand":[{"@id":"https://gomilhasx.com/#manager"},{"@id":"https://gomilhasx.com/#balcao"}]},
  {"@type":"WebSite","@id":"https://gomilhasx.com/#website","url":"https://gomilhasx.com/","name":"GOMilhasX","alternateName":["GO MilhasX","MilhasX"],"inLanguage":"pt-BR","publisher":{"@id":"https://gomilhasx.com/#organization"}},
- {"@type":"Organization","@id":"https://gomilhasx.com/#organization","name":"GOMilhasX","url":"https://gomilhasx.com/","logo":"https://gomilhasx.com/assets/icon.png","taxID":"70.001.231/0001-03","sameAs":["https://www.instagram.com/gomilhasx/"]},
- {"@type":"SoftwareApplication","name":"GOMilhasX Manager","url":"https://manager.gomilhasx.com/","applicationCategory":"FinanceApplication","operatingSystem":"Web","publisher":{"@id":"https://gomilhasx.com/#organization"}},
- {"@type":"SoftwareApplication","name":"GOMilhasX Balcão","url":"https://balcao.gomilhasx.com/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@id":"https://gomilhasx.com/#organization"}}
+ {"@type":"WebPage","@id":"https://gomilhasx.com/#webpage","url":"https://gomilhasx.com/","name":"GOMilhasX | Tecnologia, Milhas e Soluções para Viagens","description":"Conheça a GOMilhasX: soluções inteligentes para gestão de milhas, oportunidades de negócios, automação e tecnologia para o mercado de viagens.","inLanguage":"pt-BR","isPartOf":{"@id":"https://gomilhasx.com/#website"},"about":{"@id":"https://gomilhasx.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://gomilhasx.com/og-image.png"}},
+ {"@type":"SoftwareApplication","@id":"https://gomilhasx.com/#manager","name":"GOMilhasX Manager","url":"https://manager.gomilhasx.com/","description":"Sistema de gestão de milhas e pontos: saldos por titular, custo do milheiro, transferências, vendas e financeiro.","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL","description":"Plano Pessoal gratuito; planos PRO e Gestor pagos."},"publisher":{"@id":"https://gomilhasx.com/#organization"}},
+ {"@type":"SoftwareApplication","@id":"https://gomilhasx.com/#balcao","name":"GOMilhasX Balcão","url":"https://balcao.gomilhasx.com/","description":"Balcão de milhas no Telegram: compra e venda de milhas entre usuários verificados, com intermediação e pagamento por PIX.","applicationCategory":"BusinessApplication","operatingSystem":"Web, Telegram","publisher":{"@id":"https://gomilhasx.com/#organization"}}
 ]}
 </script>
 <style>
@@ -180,6 +185,8 @@ section.block { padding: 64px 0; scroll-margin-top: 16px; }
 .about { max-width: 896px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; padding: 24px; }
 @media (min-width: 640px) { .about { flex-direction: row; } }
 .about h2 { font-size: 18px; }
+.about .about-h { font-size: 16px; margin-top: 16px; }
+.about .about-h:first-child { margin-top: 0; }
 .about p { margin-top: 4px; font-size: 14px; color: var(--muted); }
 .about .sec { display: flex; gap: 8px; margin-top: 12px; }
 .about .sec svg { width: 16px; height: 16px; flex: none; margin-top: 3px; color: var(--accent); }
@@ -246,8 +253,8 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
 <main id="inicio">
   <section class="hero">
     <div class="wrap">
-      <span class="pill"><svg><use href="#i-plane"/></svg>GOMilhasX · tecnologia para o mercado de milhas</span>
-      <h1>Gestão e negociação de milhas, do controle à venda</h1>
+      <span class="pill"><svg><use href="#i-plane"/></svg>GOMilhasX · TravelTech brasileira</span>
+      <h1>Tecnologia para gestão de milhas e negócios de viagens</h1>
       <p class="lead muted">Dois produtos que trabalham juntos: o <strong>Manager</strong> organiza saldos, custos e vendas, e o <strong>Balcão</strong> conecta quem compra e quem vende milhas com verificação e intermediação.</p>
       <p class="slogan">Controle suas milhas. Potencialize suas oportunidades.</p>
       <div class="ctas">
@@ -476,14 +483,17 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
     </div>
   </section>
 
-  <section id="sobre" class="block" style="padding-top:24px;padding-bottom:24px" aria-labelledby="sobre-titulo">
+  <section id="sobre" class="block" aria-labelledby="sobre-titulo">
     <div class="wrap">
+      <div class="title"><p class="kicker">Sobre</p><h2 id="sobre-titulo">A GOMilhasX</h2><p class="muted">Uma TravelTech brasileira que cria ferramentas para quem trabalha com milhas e viagens.</p></div>
       <div class="card about">
         <div class="icon"><svg><use href="#i-building"/></svg></div>
         <div>
-          <h2 id="sobre-titulo">Sobre a GOMilhasX</h2>
-          <p>A GOMilhasX desenvolve tecnologia para quem vive o mercado de milhas: pessoas que acumulam e viajam, agentes e agências que emitem para clientes e milheiros que vendem. CNPJ 70.001.231/0001-03.</p>
-          <p class="sec"><svg><use href="#i-lock"/></svg><span>Conexões criptografadas, senhas guardadas com hash e dados tratados conforme a LGPD. Leia a <a href="https://manager.gomilhasx.com/privacidade">Política de Privacidade</a> e os <a href="https://manager.gomilhasx.com/termos">Termos de Serviço</a>.</span></p>
+          <h3 class="about-h">Quem somos</h3>
+          <p>A GOMilhasX desenvolve tecnologia para o mercado de viagens: pessoas que acumulam pontos e viajam, agentes e agências que emitem passagens para clientes e milheiros que vendem milhas. Nosso trabalho é trocar planilhas, grupos e conta de cabeça por sistemas que mostram números confiáveis e tornam cada negociação mais segura.</p>
+          <h3 class="about-h">Como trabalhamos</h3>
+          <p>Cada produto resolve uma parte do dia a dia: o GOMilhasX Manager organiza a operação e o GOMilhasX Balcão conecta quem compra e quem vende. Novas frentes estão em desenvolvimento, como inteligência artificial e automação para agentes de viagens, um marketplace de passagens com milhas e ofertas de viagens; cada uma ganha a própria página quando for lançada.</p>
+          <p class="sec"><svg><use href="#i-lock"/></svg><span>Conexões criptografadas, senhas guardadas com hash e dados tratados conforme a LGPD. Leia a <a href="https://manager.gomilhasx.com/privacidade">Política de Privacidade</a> e os <a href="https://manager.gomilhasx.com/termos">Termos de Serviço</a>. CNPJ 70.001.231/0001-03.</span></p>
         </div>
       </div>
     </div>
@@ -493,7 +503,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
     <div class="wrap">
       <div class="title"><p class="kicker">Dúvidas</p><h2 id="duvidas-titulo">Perguntas frequentes</h2></div>
       <div class="faq">
-        <details class="card"><summary>O que é a GOMilhasX?</summary><p>A GOMilhasX é a empresa por trás de dois produtos para o mercado de milhas: o GOMilhasX Manager, para organizar e acompanhar a operação, e o GOMilhasX Balcão, para comprar e vender milhas com segurança.</p></details>
+        <details class="card"><summary>O que é a GOMilhasX?</summary><p>A GOMilhasX é uma empresa de tecnologia para o mercado de viagens, por trás de dois produtos para quem trabalha com milhas: o GOMilhasX Manager, para organizar e acompanhar a operação, e o GOMilhasX Balcão, para comprar e vender milhas com segurança.</p></details>
         <details class="card"><summary>Preciso assinar os dois?</summary><p>Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos.</p></details>
         <details class="card"><summary>O Manager tem teste grátis?</summary><p>Sim. Toda conta nova começa com 15 dias com os recursos do plano Gestor, sem cartão de crédito. Depois, continua grátis no plano Pessoal se você não assinar.</p></details>
         <details class="card"><summary>Como assino o Balcão?</summary><p>Escolha o módulo e o período, pague pela página de assinatura e ative o plano direto no Telegram. Antes de negociar, você faz uma verificação única de identidade.</p></details>
