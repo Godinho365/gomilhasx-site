@@ -54,6 +54,7 @@ class Checador(HTMLParser):
 
 
 paginas = sorted(p for p in ROOT.rglob("index.html") if not any(parte.startswith((".", "_")) for parte in p.relative_to(ROOT).parts))
+paginas += [ROOT / "404.html"] if (ROOT / "404.html").exists() else []  # página de erro: mesma checagem, sem exigir JSON-LD
 refs = []
 total_jsonld = 0
 for pagina in paginas:
@@ -67,7 +68,7 @@ for pagina in paginas:
             json.loads(bloco)
         except json.JSONDecodeError as e:
             erros.append(f"{nome}:{linha}: JSON-LD inválido ({e})")
-    if not c.jsonld:
+    if not c.jsonld and nome != "404.html":
         erros.append(f"{nome}: sem JSON-LD")
     total_jsonld += len(c.jsonld)
     refs += [(r, f"{nome}:{l}") for r, l in c.refs]

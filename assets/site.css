@@ -154,9 +154,9 @@ header .bar { position: relative; max-width: 760px; margin: 0 auto; display: fle
 .acc-item .body p { padding: 0 20px 20px 66px; color: var(--muted); font-size: 15px; }
 .acc-item .bar { height: 3px; margin: 0 20px 16px 66px; border-radius: 3px; background: var(--line); overflow: hidden; display: none; }
 .acc-item.open .bar { display: block; }
-.acc-item .bar i { display: block; height: 100%; width: 0; background: var(--gold); }
+.acc-item .bar i { display: block; height: 100%; width: 100%; background: var(--gold); transform: scaleX(0); transform-origin: left; }
 .acc-item.open .bar i { animation: fill 6s linear forwards; }
-@keyframes fill { to { width: 100%; } }
+@keyframes fill { to { transform: scaleX(1); } } /* scaleX e não width: não refaz o layout a cada quadro */
 .panel { position: relative; min-height: 440px; border-radius: 24px; overflow: hidden; background: var(--sky); display: flex; align-items: flex-end; justify-content: center; }
 .panel > img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .panel .phone { position: relative; margin-bottom: -170px; transform: rotate(-8deg) translateY(var(--sm-y, 0px)); }
@@ -353,13 +353,17 @@ header .bar { position: relative; max-width: 760px; margin: 0 auto; display: fle
 .wa-float:hover { transform: translateY(-2px); }
 .wa-float::before { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: 0 0 0 0 rgba(37,211,102,.5); animation: wa-pulse 2.6s ease-out 3; pointer-events: none; }
 @keyframes wa-pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); } 100% { box-shadow: 0 0 0 16px rgba(37,211,102,0); } }
-@media (max-width: 639px) { .wa-float { width: 56px; padding: 0; justify-content: center; } .wa-float span { display: none; } }
+@media (max-width: 639px) { .wa-float { width: 56px; padding: 0; justify-content: center; } .wa-float span { display: none; }
+  /* celular: o mesmo anel, feito com transform e opacity (a sombra animada repinta a cada quadro) */
+  .wa-float::before { z-index: -1; box-shadow: none; background: rgba(37,211,102,.5); animation-name: wa-pulse-m; }
+}
+@keyframes wa-pulse-m { from { transform: scale(1); opacity: 1; } to { transform: scale(1.57); opacity: 0; } }
 
 /* Rodapé */
 footer { background: #fff; border-top: 1px solid var(--line); }
 footer .cols { display: grid; gap: 32px; padding: 56px 16px 32px; }
 @media (min-width: 640px) { footer .cols { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 1024px) { footer .cols { grid-template-columns: 1.4fr repeat(5, 1fr); } }
+@media (min-width: 1024px) { footer .cols { grid-template-columns: 1.3fr repeat(6, 1fr); gap: 24px; } }
 footer p, footer li { font-size: 14px; color: var(--muted); }
 footer ul { list-style: none; margin: 0; padding: 0; }
 footer li + li { margin-top: 4px; }
@@ -386,6 +390,17 @@ header .head-cta { animation: sm-right .8s .15s cubic-bezier(.22,.61,.36,1) both
 .sm-js [data-split] .sm-w { display: inline-block; opacity: 0; transform: translateY(20px); filter: blur(6px); transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1), filter .7s; }
 .sm-js [data-split].sm-in .sm-w { opacity: 1; transform: none; filter: none; }
 .sm-js .sm-sw { transition: opacity .2s linear; }
+/* Animações contínuas fora da tela ficam paradas (site-motion.js marca .sm-pausa); voltam ao aparecer */
+.sm-pausa, .sm-pausa * { animation-play-state: paused !important; }
+/* Celular: sem desfoque de fundo (backdrop-filter) no cabeçalho fixo e nos cartões que andam; fundo mais opaco no lugar */
+@media (max-width: 767px) {
+  header .bar { background: rgba(255,255,255,.96); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .rc .over, .tcard .over { background: rgba(16,36,66,.78); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .tile.big .over { background: rgba(16,36,66,.82); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .page-photo .pill2 { background: rgba(255,255,255,.92); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  /* primeira dobra aparece pronta (sem esperar a entrada com atraso): o maior texto da tela é pintado antes */
+  .hero .gx-reveal, .page-hero .gx-reveal { opacity: 1; transform: none; transition: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   header .bar, header .brand, header .head-cta, .ticker .col, .track, .strip .row, .results .row, .dark-card .bars i, .cta2 .r .badge, .acc-item.open .bar i { animation: none; }
   .stack-sec { height: auto; } .stack-sticky { position: relative; height: auto; padding: 80px 0; } .stack img { transform: rotate(var(--r, 0deg)); position: relative; margin-top: -60%; } .stack img:first-child { margin-top: 0; }
@@ -557,6 +572,17 @@ header .head-cta { animation: sm-right .8s .15s cubic-bezier(.22,.61,.36,1) both
 .post-corpo strong { color: var(--text); font-weight: 600; }
 .post-corpo a { color: var(--ink); text-decoration-color: var(--gold); text-underline-offset: 3px; }
 .post-corpo blockquote { margin: 24px 0; padding: 18px 22px; border-left: 3px solid var(--gold); background: var(--off); border-radius: 0 14px 14px 0; color: var(--text); }
+/* "Leia também" no fim do artigo: página do público, ferramenta e produto */
+.post-corpo .leia-tambem { margin: 36px 0 0; padding: 22px; border-radius: 18px; background: var(--off); border: 1px solid var(--line); }
+.post-corpo .leia-tambem .t { margin: 0 0 12px; font-size: 14px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; color: var(--muted); }
+.post-corpo .leia-tambem ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.post-corpo .leia-tambem li { margin: 0; }
+.post-corpo .leia-tambem a { display: block; padding: 12px 14px; border-radius: 12px; background: #fff; border: 1px solid var(--line); text-decoration: none; line-height: 1.4; }
+.post-corpo .leia-tambem a:hover { border-color: var(--gold); }
+.post-corpo .leia-tambem b { display: block; font-size: 16px; font-weight: 600; color: var(--text); }
+.post-corpo .leia-tambem span { display: block; margin-top: 2px; font-size: 14.5px; color: var(--muted); }
+.post-corpo .leia-tambem .produto a { background: var(--ink); border-color: var(--ink); }
+.post-corpo .leia-tambem .produto b { color: #fff; } .post-corpo .leia-tambem .produto span { color: #c9d3e2; }
 .post-corpo .conta { margin: 22px 0; padding: 20px 22px; border-radius: 18px; background: var(--ink); color: #fff; font-size: 16px; }
 .post-corpo .conta b { color: var(--gold); font-weight: 600; }
 .post-corpo .aviso { font-size: 14.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 18px; margin-top: 32px; }

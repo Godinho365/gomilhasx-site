@@ -28,11 +28,34 @@ python3 ferramentas/gerar_site.py
 - `_fontes/blog/<slug>.html`: cada artigo (o nome do arquivo vira o endereço `/blog/<slug>/`). Metadados: `titulo`, `titulo_curto`,
   `descricao`, `resumo`, `data` (AAAA-MM-DD), `categoria`, `imagem`. O corpo é HTML simples (`h2`, `p`, `ul`, `ol`, `table`,
   `blockquote`, `<div class="conta">` para destacar uma conta, `<p class="aviso">` para a nota final).
+- `leia:` no artigo monta o quadro "Leia também" no fim do texto: páginas do site (`/para-viajantes/`, `/para-milheiros/`,
+  `/para-agencias/`, `/calculadora-custo-do-milheiro/`, `/planilha-de-milhas/`, `/seguranca/`) e/ou `manager`, `balcao`.
+- Links para o Manager e o Balcão: todo `<a>` para `manager.gomilhasx.com` ou `balcao.gomilhasx.com` leva
+  `data-utm="identificador_do_botao"` na fonte (ex.: `hero_manager`, `planos_gestor`, `rodape_balcao`). O gerador troca o
+  atributo por `?utm_source=gomilhasx.com&utm_medium=site&utm_content=<identificador>`, mantendo os parâmetros que o link já
+  tem (`plano`, `periodo`...). Sem `data-utm` a geração para com erro, exceto nos artigos (vira `blog_<slug>`), nas páginas de
+  privacidade e termos (ficam sem UTM) e em links que já trazem `utm_source`.
+- `_fontes/paginas/404.html` gera o `404.html` da raiz (fora do sitemap, `noindex`, sem canonical). O Caddy só mostra essa
+  página com um `handle_errors` no bloco `gomilhasx.com` (veja abaixo).
 - O gerador também refaz `sitemap.xml`. A checagem do CI (`.github/scripts/checar_site.py`) confere todas as páginas e avisa se
   alguma página não foi gerada de novo depois de mudar a fonte.
 - Estilos em `assets/site.css`; animações em `assets/site-motion.js` (as páginas usam a versão do arquivo no endereço, então a
   mudança aparece na hora).
 - Novas páginas precisam ser liberadas no Caddy do Manager (`docker/Caddyfile`, bloco `gomilhasx.com`, matcher `@site`).
+- Página de erro: para o `404.html` aparecer nos endereços que não existem dentro do site (ex.: `/blog/nao-existe/`), o bloco
+  `gomilhasx.com` do Caddyfile precisa de:
+
+  ```caddy
+  handle_errors 404 {
+  	root * /srv/institucional
+  	rewrite * /404.html
+  	header Cache-Control "no-cache"
+  	file_server
+  }
+  ```
+- Celular: em telas de até 767px, `site-motion.js` não divide os títulos, não acende o parágrafo com a rolagem e não faz
+  parallax; o CSS tira o desfoque de fundo (`backdrop-filter`) do cabeçalho e dos cartões. Animações contínuas fora da tela
+  ficam pausadas (classe `.sm-pausa`) em qualquer tela.
 
 ## Preços
 

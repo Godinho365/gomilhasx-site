@@ -19,12 +19,17 @@ import json
 import re
 from datetime import date
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 RAIZ = Path(__file__).resolve().parents[1]
 FONTES = RAIZ / "_fontes"
 SITE = "https://gomilhasx.com"
 MENU = [("recursos", "/recursos/", "Recursos"), ("planos", "/planos/", "Planos"), ("sobre", "/sobre/", "Sobre"),
         ("blog", "/blog/", "Blog"), ("contato", "/contato/", "Contato")]
+# Links para os produtos levam a origem (utm_*) para o Manager e o Balcão saberem de qual botão do site a pessoa veio.
+PRODUTO_URL = re.compile(r"^https://(?:manager|balcao)\.gomilhasx\.com(?=[/?#]|$)")
+SEM_UTM = ("/privacidade", "/termos")  # páginas legais dos produtos: link informativo, sem medição
+UTM_FIXO = (("utm_source", "gomilhasx.com"), ("utm_medium", "site"))
 MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
 
 
@@ -60,6 +65,41 @@ def menu_html(ativo: str) -> str:
     )
 
 
+def url_com_utm(url: str, conteudo: str) -> str:
+    """Acrescenta utm_source/utm_medium/utm_content ao endereço, sem tirar nem trocar os parâmetros que já existem."""
+    partes = urlsplit(url)
+    q = parse_qsl(partes.query, keep_blank_values=True)
+    tem = {k for k, _ in q}
+    q += [(k, v) for k, v in (*UTM_FIXO, ("utm_content", conteudo)) if k not in tem]
+    return urlunsplit(partes._replace(path=partes.path or "/", query=urlencode(q)))
+
+
+def com_utm(saida: str, onde: str, padrao: str = "") -> str:
+    """Em cada <a> para manager./balcao.gomilhasx.com, troca o atributo data-utm="identificador" pelos parâmetros utm_* no href.
+    Sem data-utm: usa o padrão da página (artigos: blog_<slug>); sem padrão, para a geração, para nenhum botão ficar sem
+    origem. Links internos, de terceiros, páginas legais dos produtos e links que já trazem utm_source ficam como estão."""
+    def troca(m: re.Match) -> str:
+        tag = m.group(0)
+        mh, md = re.search(r'\shref="([^"]*)"', tag), re.search(r'\sdata-utm="([^"]*)"', tag)
+        if md:
+            tag = tag.replace(md.group(0), "")
+            if not re.fullmatch(r"[a-z0-9_]+", md.group(1)):
+                raise SystemExit(f"{onde}: data-utm inválido (use letras minúsculas, números e _): {md.group(1)!r}")
+        url = html.unescape(mh.group(1)) if mh else ""
+        if not PRODUTO_URL.match(url):
+            if md:
+                raise SystemExit(f"{onde}: data-utm em link que não é do Manager nem do Balcão: {url or tag}")
+            return tag
+        q = dict(parse_qsl(urlsplit(url).query))
+        if not md and (urlsplit(url).path.startswith(SEM_UTM) or "utm_source" in q):
+            return tag
+        conteudo = md.group(1) if md else padrao
+        if not conteudo:
+            raise SystemExit(f'{onde}: link para {url} sem data-utm="identificador_do_botao"')
+        return tag.replace(mh.group(0), f' href="{html.escape(url_com_utm(url, conteudo), quote=True)}"')
+    return re.sub(r"<a\b[^>]*>", troca, saida)
+
+
 def jsonld(itens: list[dict | str]) -> str:
     out = []
     for it in itens:
@@ -75,6 +115,8 @@ COMUM = {
     "whatsapp": ler(FONTES / "whatsapp.html").strip(),
     "v_css": versao(RAIZ / "assets/site.css"),
     "v_js": versao(RAIZ / "assets/site-motion.js"),
+    "v_lead_css": versao(RAIZ / "assets/lead.css"),
+    "v_lead_js": versao(RAIZ / "assets/lead.js"),
 }
 CTA = ler(FONTES / "cta-final.html").strip()
 JSONLD_ARQ = {"organizacao": ler(FONTES / "jsonld-organizacao.json"), "faq": ler(FONTES / "jsonld-faq.json")}
@@ -89,7 +131,7 @@ def faq_da_pagina(conteudo: str) -> dict:
     return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": itens}
 
 
-def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None = None) -> str:
+def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None = None, utm_padrao: str = "") -> str:
     ld: list[dict | str] = []
     for n in filter(None, (x.strip() for x in meta.get("jsonld", "").split(","))):
         if n == "faq-pagina":
@@ -100,7 +142,8 @@ def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None 
             raise SystemExit(f"jsonld desconhecido em {meta['caminho']}: {n}")
     ld += extra_jsonld or []
     caminho = meta["caminho"]
-    if caminho != "/" and not any(isinstance(x, dict) and x.get("@type") == "BreadcrumbList" for x in ld):
+    indexavel = "noindex" not in meta.get("robots", "")
+    if indexavel and caminho != "/" and not any(isinstance(x, dict) and x.get("@type") == "BreadcrumbList" for x in ld):
         ld.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": meta.get("migalha", meta["titulo"].split(" | ")[0]), "item": SITE + caminho}]})
@@ -110,6 +153,9 @@ def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None 
         "titulo": html.escape(meta["titulo"], quote=True),
         "descricao": html.escape(meta["descricao"], quote=True),
         "caminho": caminho,
+        "robots": meta.get("robots", "index, follow, max-image-preview:large"),
+        # página de erro (404.html) é servida em qualquer endereço: sem canonical
+        "canonical": f'<link rel="canonical" href="{SITE}{caminho}">\n' if indexavel else "",
         "og_tipo": meta.get("og_tipo", "website"),
         "imagem": imagem if imagem.startswith("http") else SITE + imagem,
         "preload": "".join(f'<link rel="preload" as="image" href="{p.strip()}" fetchpriority="high">\n' for p in meta.get("preload", "").split(",") if p.strip()),
@@ -124,14 +170,44 @@ def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None 
     resto = re.findall(r"\{\{\w+\}\}", saida)
     if resto:
         raise SystemExit(f"marcadores sem valor em {caminho}: {resto}")
-    return saida
+    return com_utm(saida, caminho, utm_padrao)
 
 
 def gravar(caminho: str, conteudo: str, gerados: list[str]) -> None:
-    destino = RAIZ / ("index.html" if caminho == "/" else caminho.strip("/") + "/index.html")
+    # "/404.html" (endereço terminado em .html) vira o próprio arquivo; os demais, <caminho>/index.html
+    destino = RAIZ / ("index.html" if caminho == "/" else caminho.strip("/") if caminho.endswith(".html") else caminho.strip("/") + "/index.html")
     destino.parent.mkdir(parents=True, exist_ok=True)
     destino.write_text(conteudo, encoding="utf-8")
     gerados.append(str(destino.relative_to(RAIZ)))
+
+
+# "Leia também" no fim de cada artigo: metadado "leia:" com páginas do site (por público, ferramentas) e/ou produtos
+LEIA = {
+    "/para-viajantes/": ("Para viajantes", "Organize os pontos da família e compre milhas com o pagamento intermediado."),
+    "/para-milheiros/": ("Para milheiros", "Custo do milheiro, lucro por venda e o Módulo Milheiro do GO Balcão."),
+    "/para-agencias/": ("Para agências", "Contas de clientes, equipe e emissões com fornecedores, num lugar só."),
+    "/calculadora-custo-do-milheiro/": ("Calculadora do custo do milheiro", "Grátis e sem cadastro: o custo de uma compra ou transferência."),
+    "/planilha-de-milhas/": ("Planilha de milhas grátis", "Saldos, custo médio e vendas por programa, para baixar."),
+    "/seguranca/": ("Segurança no GO Balcão", "Verificação de identidade, intermediação e reputação pública."),
+    "manager": ("https://manager.gomilhasx.com/register", "GO Manager, grátis para começar", "O custo do milheiro recalculado a cada compra, transferência e venda."),
+    "balcao": ("https://balcao.gomilhasx.com/", "GO Balcão", "Compre e venda milhas com quem tem identidade conferida e PIX intermediado."),
+}
+
+
+def leia_tambem(slug: str, itens: str) -> str:
+    lis = []
+    for chave in filter(None, (x.strip() for x in itens.split(","))):
+        if chave not in LEIA:
+            raise SystemExit(f"blog/{slug}: leia desconhecido: {chave}")
+        if chave.startswith("/"):
+            nome, txt = LEIA[chave]
+            lis.append(f'<li><a href="{chave}"><b>{html.escape(nome)}</b><span>{html.escape(txt)}</span></a></li>')
+        else:
+            url, nome, txt = LEIA[chave]
+            lis.append(f'<li class="produto"><a href="{url}" data-utm="blog_{slug.replace("-", "_")}_leia_{chave}"><b>{html.escape(nome)}</b><span>{html.escape(txt)}</span></a></li>')
+    if not lis:
+        return ""
+    return f'\n  <aside class="leia-tambem" aria-labelledby="leia-titulo"><p class="t" id="leia-titulo">Leia também</p><ul>{"".join(lis)}</ul></aside>'
 
 
 def cartao_post(p: dict, destaque: bool = False) -> str:
@@ -163,7 +239,8 @@ def principal() -> None:
         if "{{blog_recentes}}" in corpo:
             corpo = corpo.replace("{{blog_recentes}}", "\n".join(cartao_post(p) for p in posts[:3]))
         gravar(meta["caminho"], montar(meta, corpo), gerados)
-        urls.append((meta["caminho"], meta.get("atualizado", "")))
+        if "noindex" not in meta.get("robots", ""):
+            urls.append((meta["caminho"], meta.get("atualizado", "")))
 
     # Lista do blog
     if posts:
@@ -219,7 +296,7 @@ def principal() -> None:
   </div>
   <figure class="post-capa wrap gx-reveal"><img src="{p["imagem"]}" alt="" fetchpriority="high"></figure>
   <div class="post-corpo wrap">
-{p["corpo"].rstrip()}
+{p["corpo"].rstrip()}{leia_tambem(p["slug"], p.get("leia", ""))}
   </div>
 </article>
 <section class="sec off" aria-labelledby="mais-titulo">
@@ -236,7 +313,7 @@ def principal() -> None:
             {"@type": "ListItem", "position": 3, "name": p["titulo_curto"], "item": f"{SITE}/blog/{p['slug']}/"}]}
         meta = {"titulo": p["titulo"], "descricao": p["descricao"], "caminho": f"/blog/{p['slug']}/", "menu": "blog",
                 "og_tipo": "article", "imagem": p["imagem"], "preload": p["imagem"], "classe": "pagina artigo"}
-        gravar(meta["caminho"], montar(meta, corpo, [artigo, migalhas]), gerados)
+        gravar(meta["caminho"], montar(meta, corpo, [artigo, migalhas], utm_padrao="blog_" + p["slug"].replace("-", "_")), gerados)
         urls.append((meta["caminho"], p.get("atualizado", p["data"])))
 
     # Mapa do site

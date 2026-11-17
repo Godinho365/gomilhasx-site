@@ -6,6 +6,8 @@
  *   [data-parallax="N"] sobe N px a mais que a rolagem enquanto passa pela tela (celular do topo)
  *   [data-scroll-x="N"] desliza para o lado acompanhando a rolagem (faixa de fotos); N = px por tela rolada (negativo = esquerda)
  * Sem JavaScript ou com "reduzir movimento", tudo aparece parado e legível.
+ * Em tela estreita (celular, até 767px), título palavra por palavra, parágrafo que acende e parallax ficam desligados:
+ * custam estilo, layout e pintura a cada quadro e pesam no celular. No computador nada muda.
  */
 (function () {
   "use strict";
@@ -13,6 +15,7 @@
   // Com "reduzir movimento": abas, sanfona e carrossel continuam funcionando no clique, mas nada se move sozinho.
   var reduce = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
   if (!reduce) doc.documentElement.classList.add("sm-js");
+  var leve = reduce || !!(window.matchMedia && matchMedia("(max-width: 767px)").matches);
 
   /* Quebra o texto de um elemento em palavras, mantendo os elementos internos (como <span> e <strong>). */
   function splitWords(el, cls) {
@@ -35,7 +38,7 @@
 
   /* Títulos palavra por palavra, quando entram na tela */
   var splits = doc.querySelectorAll("[data-split]");
-  if (!reduce && splits.length && "IntersectionObserver" in window) {
+  if (!leve && splits.length && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("sm-in"); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px" });
@@ -125,12 +128,20 @@
     if (!reduce) timer = setInterval(function () { show(cur + 1); }, 4000);
   });
 
+  /* Faixas e enfeites que se mexem sem parar (letreiros, ticker, barras, selos): parados enquanto estão fora da tela */
+  if (!reduce && "IntersectionObserver" in window) {
+    var io3 = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { e.target.classList.toggle("sm-pausa", !e.isIntersecting); });
+    }, { rootMargin: "100px 0px" });
+    Array.prototype.forEach.call(doc.querySelectorAll(".ticker, .logos, .strip, .results, .dark-card .bars, .cta2 .r"), function (el) { io3.observe(el); });
+  }
+
   /* Parágrafo que acende com a rolagem */
   if (reduce) return;
-  var scrollTexts = Array.prototype.map.call(doc.querySelectorAll("[data-scroll-words]"), function (el) {
+  var scrollTexts = leve ? [] : Array.prototype.map.call(doc.querySelectorAll("[data-scroll-words]"), function (el) {
     return { el: el, words: splitWords(el, "sm-sw") };
   });
-  var parallax = Array.prototype.slice.call(doc.querySelectorAll("[data-parallax]"));
+  var parallax = leve ? [] : Array.prototype.slice.call(doc.querySelectorAll("[data-parallax]"));
   var sliders = Array.prototype.slice.call(doc.querySelectorAll("[data-scroll-x]"));
   var stacks = Array.prototype.slice.call(doc.querySelectorAll("[data-stack]"));
 
