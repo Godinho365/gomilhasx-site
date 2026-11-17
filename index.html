@@ -241,7 +241,9 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que é a GOMilhasX?", "acceptedAnswer": {"@type": "Answer", "text": "A GOMilhasX é uma empresa de tecnologia para o mercado de viagens, por trás de dois produtos para quem trabalha com milhas: o GOMilhasX Manager, para organizar e acompanhar a operação, e o GOMilhasX Balcão, para comprar e vender milhas com segurança."}}, {"@type": "Question", "name": "Preciso assinar os dois?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos."}}, {"@type": "Question", "name": "O Manager tem teste grátis?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Toda conta nova começa com 15 dias com os recursos do plano Gestor, sem cartão de crédito. Depois, continua grátis no plano Pessoal se você não assinar."}}, {"@type": "Question", "name": "Como assino o Balcão?", "acceptedAnswer": {"@type": "Answer", "text": "Escolha o módulo e o período, pague pela página de assinatura e ative o plano direto no Telegram. Antes de negociar, você faz uma verificação única de identidade."}}, {"@type": "Question", "name": "As milhas são transferidas entre contas no Balcão?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Os programas de fidelidade não permitem transferir milhas entre contas de terceiros. O vendedor emite a passagem com as milhas dele, em nome dos passageiros informados."}}]}
 </script>
 <link rel="stylesheet" href="/assets/motion/gomilhasx-motion.css">
+<link rel="stylesheet" href="/assets/lead.css?v=1">
 <script src="/assets/motion/gomilhasx-motion.js" defer></script>
+<script src="/assets/lead.js?v=1" defer></script>
 </head>
 <body>
 <!-- Ícones (Lucide, licença ISC), reaproveitados com <use> -->
@@ -265,6 +267,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
   <symbol id="i-hand" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
   <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
   <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
 </svg>
@@ -337,7 +340,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
           <h3>GOMilhasX Balcão</h3>
           <p class="muted">Balcão de milhas no Telegram: quem quer comprar publica uma oferta, vendedores verificados aceitam ou fazem contraproposta, e a negociação acontece com reputação pública e pagamento por PIX com intermediação.</p>
           <div class="row">
-            <a class="btn btn-primary gx-btn" href="#planos">Ver planos do Balcão</a>
+            <a class="btn btn-primary gx-btn" href="https://balcao.gomilhasx.com/" data-lead="produto">Acessar o Balcão</a>
             <a class="btn btn-ghost" href="https://balcao.gomilhasx.com/">Ver o site <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
@@ -453,7 +456,8 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
             <li><svg><use href="#i-check"/></svg>Mensal, anual (economize 17%) ou vitalício; ativação direto no Telegram</li>
           </ul>
           <div class="row">
-            <a class="btn btn-primary gx-btn" href="https://balcao.gomilhasx.com/#planos">Ver os planos do Balcão</a>
+            <a class="btn btn-primary gx-btn" href="https://balcao.gomilhasx.com/" data-lead="planos">Acessar o Balcão</a>
+            <a class="btn btn-ghost" href="https://balcao.gomilhasx.com/#planos">Ver os planos <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -539,6 +543,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
     </ul></nav>
     <nav aria-label="Balcão"><p class="t">Balcão</p><ul>
       <li><a href="https://balcao.gomilhasx.com/">Conhecer o Balcão</a></li>
+      <li><a href="https://balcao.gomilhasx.com/" data-lead="rodape">Acessar o Balcão</a></li>
       <li><a href="https://balcao.gomilhasx.com/#planos">Planos do Balcão</a></li>
       <li><a href="https://balcao.gomilhasx.com/#faq">Dúvidas do Balcão</a></li>
     </ul></nav>
@@ -555,6 +560,60 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
   </div>
   <p class="copy">© <span id="ano">2026</span> GOMilhasX · CNPJ 70.001.231/0001-03. Todos os direitos reservados.</p>
 </footer>
+
+<dialog id="lead-dlg" class="lead-dlg" aria-labelledby="lead-title" aria-describedby="lead-sub">
+  <div class="lead-in">
+    <button type="button" class="lead-x" aria-label="Fechar"><svg><use href="#i-close"/></svg></button>
+    <div id="lead-step1">
+      <div class="lead-h">
+        <span id="lead-badge" class="lead-badge" hidden><svg><use href="#i-gift"/></svg><span></span></span>
+        <h2 id="lead-title">Acessar o GOMilhasX Balcão</h2>
+        <p id="lead-sub">Cadastre-se para entrar no balcão de milhas no Telegram. A verificação de identidade vale para todos os membros.</p>
+      </div>
+      <form id="lead-form" class="lead-f" novalidate>
+        <div class="lead-fd"><label for="lead-nome">Nome completo</label>
+          <input id="lead-nome" name="nome" autocomplete="name" maxlength="120" required aria-describedby="lead-err-nome">
+          <span class="lead-err" id="lead-err-nome" aria-live="polite"></span></div>
+        <div class="lead-fd"><label for="lead-whatsapp">WhatsApp</label>
+          <input id="lead-whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(11) 91234-5678" maxlength="16" required aria-describedby="lead-err-whatsapp">
+          <span class="lead-err" id="lead-err-whatsapp" aria-live="polite"></span></div>
+        <div class="lead-fd"><label for="lead-email">E-mail</label>
+          <input id="lead-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="160" required aria-describedby="lead-err-email">
+          <span class="lead-err" id="lead-err-email" aria-live="polite"></span></div>
+        <div class="lead-fd"><label for="lead-perfil">Seu perfil</label>
+          <select id="lead-perfil" name="perfil" required aria-describedby="lead-err-perfil">
+            <option value="">Escolha uma opção</option>
+            <option value="viajante">Viajo usando milhas</option>
+            <option value="agente">Agente de viagens ou agência</option>
+            <option value="milheiro">Compro e vendo milhas</option>
+            <option value="outro">Outro</option>
+          </select>
+          <span class="lead-err" id="lead-err-perfil" aria-live="polite"></span></div>
+        <div class="lead-hp" aria-hidden="true"><label for="lead-hp">Não preencha</label><input id="lead-hp" name="empresa_site" tabindex="-1" autocomplete="off"></div>
+        <label class="lead-chk"><input type="checkbox" name="marketing" value="1"> <span>Quero receber novidades e ofertas do GOMilhasX por WhatsApp e e-mail (opcional; dá para cancelar quando quiser).</span></label>
+        <p class="lead-alert" id="lead-alert" role="alert"></p>
+        <button class="btn btn-primary gx-btn" type="submit">Receber meu acesso</button>
+        <p class="lead-legal">Usamos seus dados para criar o seu acesso ao Balcão e falar com você sobre ele, como explica a <a href="https://balcao.gomilhasx.com/privacidade" target="_blank" rel="noopener">Política de Privacidade do Balcão</a>.</p>
+      </form>
+    </div>
+    <div id="lead-step2" class="lead-ok" hidden aria-live="polite">
+      <div class="icon"><svg><use href="#i-check"/></svg></div>
+      <h2 id="lead-ok-t">Pronto!</h2>
+      <p id="lead-ok-p"></p>
+      <a id="lead-go" class="btn btn-primary gx-btn" href="https://balcao.gomilhasx.com/" target="_blank" rel="noopener">Abrir no Telegram</a>
+      <ol class="lead-steps" id="lead-steps" hidden>
+        <li><b>1</b><span>Abra o convite e toque em <strong>Iniciar</strong> no bot do Balcão.</span></li>
+        <li><b>2</b><span>Envie a verificação de identidade (documento e selfie) pelo link que o bot mandar.</span></li>
+        <li><b>3</b><span>Com a verificação aprovada, o acesso é liberado.</span></li>
+      </ol>
+      <div class="lead-mgr">
+        <div class="icon"><svg><use href="#i-chart"/></svg></div>
+        <div><p class="muted">Controla milhas em planilha? O GOMilhasX Manager organiza contas, CPFs e vendas.</p>
+          <a id="lead-mgr-link" href="https://manager.gomilhasx.com/register?utm_source=gomilhasx.com&amp;utm_medium=modal_balcao&amp;utm_campaign=oferta_manager" target="_blank" rel="noopener">Conhecer o Manager grátis →</a></div>
+      </div>
+    </div>
+  </div>
+</dialog>
 
 <style>.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }</style>
 <script>
