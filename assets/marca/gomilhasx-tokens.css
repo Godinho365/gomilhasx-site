@@ -1,0 +1,83 @@
+/*
+ * Design System GOMilhasX — tokens oficiais (fonte única).
+ *
+ * Referência visual: o site institucional (gomilhasx.com). GO Manager, GO Balcão e GO Passagens usam
+ * exatamente estas cores; nenhum produto tem cor principal própria. A diferença entre produtos vem de
+ * imagens, ícones, conteúdo e organização, nunca da paleta.
+ *
+ * Como usar em cada produto:
+ * - Copie este arquivo sem editar (como o kit de animações em assets/motion). Para mudar um valor, mude aqui
+ *   e copie de novo para os outros repositórios.
+ * - Cada produto liga estes tokens às variáveis que já usa (ex.: --accent no Manager, --navy no Balcão).
+ *
+ * Regras:
+ * - Dourado (--gx-accent) nunca é cor de texto sobre fundo claro (contraste 2,25:1). Use em botões, fundos,
+ *   ícones e no X do logo. Texto dourado só no tema escuro.
+ * - --gx-accent-text (4,33:1 sobre branco) só para texto grande (18px+ ou 14px negrito) e ícones.
+ * - No tema escuro o marinho some (1,28:1 sobre o fundo): a ação principal passa a ser o dourado, com texto marinho.
+ * - Cores de feedback (success/warning/danger/info) existem para avisos e números; não viram cor de produto.
+ */
+
+:root {
+  /* Marca */
+  --gx-primary: #102442;        /* azul-marinho: texto principal, botão principal, títulos */
+  --gx-primary-hover: #1a3358;
+  --gx-secondary: #1a3358;
+  --gx-accent: #d9a441;         /* dourado: botão de destaque, ícones, X do logo */
+  --gx-accent-hover: #e8bd66;
+  --gx-accent-text: #9c7224;    /* dourado escuro: só texto grande e ícones sobre fundo claro */
+  --gx-accent-soft: #fbf1de;    /* fundo de selos e destaques */
+  --gx-on-primary: #ffffff;
+  --gx-on-accent: #102442;      /* texto sobre o dourado (6,9:1) */
+
+  /* Superfícies e texto (tema claro) */
+  --gx-bg: #ffffff;
+  --gx-surface: #f5f5f3;
+  --gx-card: #ffffff;
+  --gx-text: #102442;
+  --gx-muted: #6b6b6b;          /* 5,3:1 sobre branco */
+  --gx-border: #e8e8e4;
+
+  /* Feedback */
+  --gx-success: #16a34a;
+  --gx-warning: #d97706;
+  --gx-danger: #dc2626;
+  --gx-info: #2563eb;
+
+  /* Tema escuro (painéis de app): fundos neutros e dourado como cor de ação */
+  --gx-dark-bg: #09090b;
+  --gx-dark-surface: #111114;
+  --gx-dark-card: #18181b;
+  --gx-dark-text: #fafafa;
+  --gx-dark-muted: #a1a1aa;
+  --gx-dark-border: #27272a;
+  --gx-dark-primary: #d9a441;   /* ação principal no escuro, com texto --gx-primary */
+  --gx-dark-accent: #e8bd66;    /* links, item ativo e destaques no escuro (10,7:1) */
+
+  /* Forma */
+  --gx-radius-button: 999px;    /* botões principais: pílula */
+  --gx-radius-field: 12px;
+  --gx-radius-card: 16px;       /* cartões dentro de app */
+  --gx-radius-card-lg: 24px;    /* cartões e blocos de página pública */
+  --gx-shadow-button: 0 6px 16px -8px rgba(16, 36, 66, .6);
+  --gx-shadow-gold: 0 6px 16px -8px rgba(156, 114, 36, .7);
+
+  /* Tipografia */
+  --gx-font-display: "Stack Sans Headline", Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --gx-font-ui: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Logo oficial: ícone (assets/marca/icone.svg) + nome em texto. Não redesenhar nem trocar cores. */
+.gx-brand { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; }
+.gx-brand .gx-mark { width: 32px; height: 32px; flex: none; }
+.gx-wordmark { display: inline-flex; align-items: baseline; font-family: var(--gx-font-ui); font-size: 20px; font-weight: 800; letter-spacing: -.035em; line-height: 1; white-space: nowrap; }
+.gx-wordmark b { font-weight: 800; }
+.gx-wordmark .go { color: var(--gx-primary); }
+.gx-wordmark .mi { color: var(--gx-muted); font-weight: 700; }
+.gx-wordmark .x { color: var(--gx-accent); font-weight: 900; }
+/* Sobre fundo escuro: GO e Milhas em branco; o X continua dourado */
+.gx-on-dark .gx-wordmark .go { color: #ffffff; }
+.gx-on-dark .gx-wordmark .mi { color: rgba(255, 255, 255, .72); }
+/* Etiqueta do produto ao lado do logo (MANAGER, BALCÃO, PASSAGENS) */
+.gx-product { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; background: var(--gx-accent-soft); color: var(--gx-primary); font-family: var(--gx-font-ui); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.gx-on-dark .gx-product { background: rgba(217, 164, 65, .16); color: var(--gx-dark-accent); }
