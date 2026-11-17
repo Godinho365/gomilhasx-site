@@ -1,0 +1,134 @@
+<!--
+titulo: Planos e preços | GOMilhasX
+descricao: Planos do GOMilhasX Manager (Pessoal grátis, PRO e Gestor) e do GOMilhasX Balcão (módulos Viajante, Agentes e Milheiro), com preços mensais, anuais e vitalícios.
+caminho: /planos/
+menu: planos
+migalha: Planos
+preload: /assets/fotos/praia-viajante.webp
+jsonld: faq-pagina
+-->
+<!-- Preços copiados dos apps: Manager em src/domain/plans.ts (anual com 16% de desconto) e Balcão em DEFAULT_PRICES de bot/config.py. Ao mudar lá, mude aqui. -->
+<section class="page-hero" aria-labelledby="titulo">
+  <div class="wrap center">
+    <span class="kicker">Planos</span>
+    <h1 id="titulo" data-split="100">Preços simples para cada etapa da sua operação</h1>
+    <p class="lead-p gx-reveal" style="--gx-delay:400ms">Comece grátis no Manager e escolha no Balcão o módulo do seu objetivo. Cada produto tem a própria assinatura.</p>
+    <div class="ctas gx-reveal" style="--gx-delay:550ms"><a class="btn btn-primary" href="/recursos/">Ver os recursos</a><a class="btn btn-ghost" href="/duvidas/">Dúvidas</a></div>
+  </div>
+</section>
+<div class="page-photo gx-reveal">
+  <div class="ph"><img src="/assets/fotos/praia-viajante.webp" alt="" data-parallax="-50"></div>
+  <span class="pill2">Garantia de 7 dias no Balcão · teste grátis de 15 dias no Manager</span>
+</div>
+
+<section class="sec" aria-labelledby="escolha-titulo" data-precos>
+  <div class="wrap">
+    <div class="center"><h2 id="escolha-titulo" class="h2" data-split>Escolha o plano que cabe no seu momento</h2><p class="lead-p">Comece simples e mude de plano quando a operação crescer.</p></div>
+    <div class="price-ctrl">
+      <div class="seg light" role="tablist" aria-label="Produto">
+        <button type="button" role="tab" aria-selected="true" data-prod="manager">GOMilhasX Manager</button>
+        <button type="button" role="tab" aria-selected="false" data-prod="balcao">GOMilhasX Balcão</button>
+      </div>
+      <div class="period">
+        <span data-lbl="mensal" class="on">Mensal</span>
+        <button type="button" class="sw" role="switch" aria-checked="false" aria-label="Preço anual"><i></i></button>
+        <span data-lbl="anual">Anual</span>
+        <span class="off" data-desc>16% off</span>
+      </div>
+    </div>
+
+    <div class="pgroup" data-grupo="manager">
+      <div class="pcard gx-reveal" style="--gx-delay:0ms">
+        <h3>Pessoal</h3><p class="tag2">Para organizar os seus próprios pontos</p>
+        <p class="amt"><strong data-mensal="Grátis" data-anual="Grátis">Grátis</strong><span data-mensal="" data-anual=""></span></p><p class="sub2" data-mensal="para sempre" data-anual="para sempre">para sempre</p>
+        <ul><li><svg><use href="#i-selo"/></svg>Até 5 contas em programas</li><li><svg><use href="#i-selo"/></svg>1 titular</li><li><svg><use href="#i-selo"/></svg>Extrato e relatórios</li><li><svg><use href="#i-selo"/></svg>Simuladores básicos</li><li><svg><use href="#i-selo"/></svg>Alertas de saldo</li></ul>
+        <a class="btn btn-ghost" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
+      </div>
+      <div class="pcard gx-reveal" style="--gx-delay:80ms"><span class="pop">Mais popular</span>
+        <h3>PRO</h3><p class="tag2">Para quem acumula com estratégia</p>
+        <p class="amt"><strong data-mensal="R$ 19,90" data-anual="R$ 16,72">R$ 19,90</strong><span data-mensal="/mês" data-anual="/mês">/mês</span></p><p class="sub2" data-mensal="cobrado por mês" data-anual="por mês no plano anual">cobrado por mês</p>
+        <ul><li><svg><use href="#i-selo"/></svg>Tudo do Pessoal</li><li><svg><use href="#i-selo"/></svg>Contas ilimitadas</li><li><svg><use href="#i-selo"/></svg>Até 2 titulares</li><li><svg><use href="#i-selo"/></svg>Preço do milheiro, potencial de lucro e sugestor de compra</li><li><svg><use href="#i-selo"/></svg>Comprovantes e limite de CPFs</li><li><svg><use href="#i-selo"/></svg>Evolução e anexos</li><li><svg><use href="#i-selo"/></svg>Página pública com sua cor e banner</li></ul>
+        <a class="btn btn-primary" href="https://manager.gomilhasx.com/register">Começar teste grátis</a>
+      </div>
+      <div class="pcard gx-reveal" style="--gx-delay:160ms">
+        <h3>Gestor</h3><p class="tag2">Para quem gerencia contas de terceiros e vende emissões</p>
+        <p class="amt"><strong data-mensal="R$ 59,90" data-anual="R$ 50,32">R$ 59,90</strong><span data-mensal="/mês" data-anual="/mês">/mês</span></p><p class="sub2" data-mensal="cobrado por mês" data-anual="por mês no plano anual">cobrado por mês</p>
+        <ul><li><svg><use href="#i-selo"/></svg>Tudo do PRO</li><li><svg><use href="#i-selo"/></svg>Clientes ilimitados</li><li><svg><use href="#i-selo"/></svg>Contas de clientes e fornecedores</li><li><svg><use href="#i-selo"/></svg>Emissão com fornecedores</li><li><svg><use href="#i-selo"/></svg>Milheiro e saldo por fornecedor</li><li><svg><use href="#i-selo"/></svg>Equipe com permissões, métricas e financeiro</li><li><svg><use href="#i-selo"/></svg>Página do titular</li></ul>
+        <a class="btn btn-primary" href="https://manager.gomilhasx.com/register">Começar teste grátis</a>
+      </div>
+    </div>
+    <div class="pgroup" data-grupo="balcao" hidden>
+      <div class="pcard gx-reveal" style="--gx-delay:0ms">
+        <h3>Módulo Viajante</h3><p class="tag2">Para quem quer viajar gastando menos</p>
+        <p class="amt"><strong data-mensal="R$ 9,90" data-anual="R$ 99,00">R$ 9,90</strong><span data-mensal="/mês" data-anual="/ano">/mês</span></p><p class="sub2" data-mensal="cobrado por mês" data-anual="R$ 8,25 por mês">cobrado por mês</p>
+        <ul><li><svg><use href="#i-selo"/></svg>Comprar milhas para as suas viagens</li><li><svg><use href="#i-selo"/></svg>Vender milhas</li><li><svg><use href="#i-selo"/></svg>Intermediação do balcão em todas as compras</li><li><svg><use href="#i-selo"/></svg>Um ou mais passageiros</li><li><svg><use href="#i-selo"/></svg>Confiômetro e reputação dos vendedores</li><li><svg><use href="#i-selo"/></svg>Histórico das negociações</li></ul><p class="vit">Vitalício: <b>R$ 149,00</b> em pagamento único</p>
+        <a class="btn btn-ghost" href="https://balcao.gomilhasx.com/#planos">Assinar o Viajante</a>
+      </div>
+      <div class="pcard gx-reveal" style="--gx-delay:80ms">
+        <h3>Módulo Agentes</h3><p class="tag2">Para agências e agentes autônomos que emitem para clientes</p>
+        <p class="amt"><strong data-mensal="R$ 24,90" data-anual="R$ 249,00">R$ 24,90</strong><span data-mensal="/mês" data-anual="/ano">/mês</span></p><p class="sub2" data-mensal="cobrado por mês" data-anual="R$ 20,75 por mês">cobrado por mês</p>
+        <ul><li><svg><use href="#i-selo"/></svg>Comprar milhas para vários CPFs</li><li><svg><use href="#i-selo"/></svg>Vender milhas</li><li><svg><use href="#i-selo"/></svg>Selo de agente ou agência certificada</li><li><svg><use href="#i-selo"/></svg>Intermediação opcional</li><li><svg><use href="#i-selo"/></svg>Confiômetro e reputação dos vendedores</li><li><svg><use href="#i-selo"/></svg>Histórico das negociações</li></ul><p class="vit">Vitalício: <b>R$ 379,00</b> em pagamento único</p>
+        <a class="btn btn-primary" href="https://balcao.gomilhasx.com/#planos">Assinar o Agentes</a>
+      </div>
+      <div class="pcard gx-reveal" style="--gx-delay:160ms"><span class="pop">Mais completo</span>
+        <h3>Módulo Milheiro</h3><p class="tag2">Para quem tem milhas e quer vender</p>
+        <p class="amt"><strong data-mensal="R$ 49,90" data-anual="R$ 499,00">R$ 49,90</strong><span data-mensal="/mês" data-anual="/ano">/mês</span></p><p class="sub2" data-mensal="cobrado por mês" data-anual="R$ 41,58 por mês">cobrado por mês</p>
+        <ul><li><svg><use href="#i-selo"/></svg>Comprar e vender milhas</li><li><svg><use href="#i-selo"/></svg>Contrapropostas nas ofertas</li><li><svg><use href="#i-selo"/></svg>Alertas por programa</li><li><svg><use href="#i-selo"/></svg>Recebimento via PIX</li><li><svg><use href="#i-selo"/></svg>Intermediação opcional</li><li><svg><use href="#i-selo"/></svg>Histórico das negociações</li></ul><p class="vit">Vitalício: <b>R$ 749,00</b> em pagamento único</p>
+        <a class="btn btn-primary" href="https://balcao.gomilhasx.com/#planos">Assinar o Milheiro</a>
+      </div>
+    </div>
+    <div class="proof gx-reveal" data-nota="manager">
+      <span class="stack3"><img src="/assets/smiles.png" alt="" width="40" height="40"><img src="/assets/latam-pass.png" alt="" width="40" height="40"><img src="/assets/azul-fidelidade.png" alt="" width="40" height="40"><img src="/assets/livelo.png" alt="" width="40" height="40"></span>
+      <p>15 dias de teste com os recursos do Gestor, sem cartão de crédito</p>
+    </div>
+    <div class="proof gx-reveal" data-nota="balcao" hidden>
+      <span class="stack3"><svg><use href="#i-selo"/></svg></span>
+      <p>Garantia de 7 dias, sem renovação automática. PIX, cartão em até 12x ou boleto pelo Mercado Pago.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" aria-labelledby="tudo-titulo">
+  <div class="wrap">
+    <div class="center"><span class="kicker">Incluído</span><h2 id="tudo-titulo" class="h2" data-split style="margin-top:12px">Tudo o que a sua operação de milhas precisa, num lugar só</h2></div>
+    <div class="dgrid">
+      <div class="tile big gx-reveal"><img src="/assets/fotos/rio-noite.webp" alt="" loading="lazy" decoding="async"><div class="over"><strong>15 dias</strong><span>de teste grátis no Manager com os recursos do plano Gestor, sem cartão de crédito</span></div></div>
+      <div class="tile gx-reveal"><span class="icon"><svg><use href="#p-fingerprint"/></svg></span><h3>Verificação pelo GOV.BR</h3><p>Quem negocia no Balcão passa por documento, selfie, vídeo e termo assinado.</p></div>
+      <div class="tile gx-reveal"><span class="icon"><svg><use href="#p-nodes"/></svg></span><h3>PIX com intermediação</h3><p>O vendedor só recebe depois da emissão da passagem.</p></div>
+      <div class="tile gx-reveal"><span class="icon"><svg><use href="#p-money"/></svg></span><h3>Custo do milheiro</h3><p>Recalculado a cada compra, transferência e bônus.</p></div>
+      <div class="tile gx-reveal"><span class="icon"><svg><use href="#i-lock"/></svg></span><h3>Dados protegidos</h3><p>Conexões criptografadas e dados tratados conforme a LGPD.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec off" aria-labelledby="duvidas-titulo">
+  <div class="wrap">
+    <div class="center"><span class="kicker">Dúvidas</span><h2 id="duvidas-titulo" class="h2" data-split style="margin-top:12px">Perguntas sobre os planos</h2></div>
+    <div class="faq">
+      <details class="gx-faq"><summary>O que acontece quando o teste grátis do Manager acaba?</summary><p>Depois dos 15 dias a conta continua funcionando no plano Pessoal, sem cobrança. Você só paga se escolher assinar o PRO ou o Gestor.</p></details>
+      <details class="gx-faq"><summary>Preciso assinar os dois produtos?</summary><p>Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos.</p></details>
+      <details class="gx-faq"><summary>Quais são as formas de pagamento do Balcão?</summary><p>Pelo Mercado Pago: PIX (confirmação na hora), cartão em até 12x ou boleto. Os planos podem ser mensais, anuais ou vitalícios, aceitam cupom de desconto e a renovação também pode ser feita pelo próprio bot.</p></details>
+      <details class="gx-faq"><summary>Posso cancelar a assinatura do Balcão?</summary><p>Sim. Não existe cobrança automática: o plano vale pelo período pago e você renova só se quiser. E tem garantia de 7 dias: se desistir em até 7 dias depois do pagamento, o valor pago é devolvido. É só falar com o suporte pelo bot.</p></details>
+    </div>
+  </div>
+</section>
+{{cta}}
+<script>
+// Planos: troca de produto (Manager/Balcão) e interruptor mensal/anual
+(function () {
+  var box = document.querySelector("[data-precos]"); if (!box) return;
+  var prod = "manager", anual = false, sw = box.querySelector(".sw"), desc = box.querySelector("[data-desc]");
+  function render() {
+    var per = anual ? "anual" : "mensal";
+    box.querySelectorAll("[data-grupo]").forEach(function (g) { g.hidden = g.getAttribute("data-grupo") !== prod; });
+    box.querySelectorAll("[data-nota]").forEach(function (n) { n.hidden = n.getAttribute("data-nota") !== prod; });
+    desc.textContent = prod === "balcao" ? "17% off" : "16% off";
+    sw.setAttribute("aria-checked", String(anual));
+    box.querySelectorAll("[data-lbl]").forEach(function (l) { l.classList.toggle("on", l.getAttribute("data-lbl") === per); });
+    box.querySelectorAll("[data-" + per + "]").forEach(function (el) { el.textContent = el.getAttribute("data-" + per); });
+  }
+  box.querySelectorAll("[data-prod]").forEach(function (b) { b.addEventListener("click", function () { prod = b.getAttribute("data-prod"); box.querySelectorAll("[data-prod]").forEach(function (x) { x.setAttribute("aria-selected", String(x === b)); }); render(); }); });
+  sw.addEventListener("click", function () { anual = !anual; render(); });
+  box.querySelectorAll("[data-lbl]").forEach(function (l) { l.addEventListener("click", function () { anual = l.getAttribute("data-lbl") === "anual"; render(); }); });
+})();
+</script>

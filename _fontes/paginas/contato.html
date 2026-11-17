@@ -1,0 +1,50 @@
+<!--
+titulo: Contato | GOMilhasX
+descricao: Fale com a equipe da GOMilhasX pelo WhatsApp, Telegram ou Instagram: dúvidas sobre o GOMilhasX Manager, o GOMilhasX Balcão, planos e parcerias.
+caminho: /contato/
+menu: contato
+migalha: Contato
+-->
+<section class="page-hero" aria-labelledby="titulo">
+  <div class="wrap center">
+    <span class="kicker">Contato</span>
+    <h1 id="titulo" data-split="100">Fale com a nossa equipe</h1>
+    <p class="lead-p gx-reveal" style="--gx-delay:400ms">Dúvidas sobre os produtos, planos ou parcerias: escreva aqui e a mensagem abre pronta no WhatsApp, ou chame no canal que preferir.</p>
+  </div>
+</section>
+<section class="sec" style="padding-top:24px" aria-label="Formas de contato">
+  <div class="wrap contact-wrap">
+    <form class="cform gx-reveal" id="fale" novalidate>
+      <h2>Mande uma mensagem</h2>
+      <p class="hint">Nada fica guardado no site: ao enviar, o WhatsApp abre com a sua mensagem pronta, e você confere antes de mandar.</p>
+      <div class="fgrid">
+        <label>Seu nome<input name="nome" autocomplete="name" maxlength="80" required></label>
+        <label>Assunto<select name="assunto"><option>GOMilhasX Manager</option><option>GOMilhasX Balcão</option><option>Planos e pagamento</option><option>Parcerias</option><option>Outro assunto</option></select></label>
+        <label class="full">Mensagem<textarea name="mensagem" maxlength="800" required placeholder="Conte como podemos ajudar"></textarea></label>
+      </div>
+      <p class="err" role="alert" aria-live="polite"></p>
+      <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Abrir no WhatsApp</button>
+    </form>
+    <div class="channels">
+      <a class="contact gx-card gx-reveal" href="https://wa.me/5521994934776?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GOMilhasX." target="_blank" rel="noopener noreferrer"><span class="icon"><svg><use href="#i-phone"/></svg></span><span><b>WhatsApp</b><small>(21) 99493-4776</small></span></a>
+      <a class="contact gx-card gx-reveal" href="https://t.me/gomilhasx" target="_blank" rel="noopener noreferrer"><span class="icon"><svg><use href="#i-send"/></svg></span><span><b>Telegram</b><small>@gomilhasx</small></span></a>
+      <a class="contact gx-card gx-reveal" href="https://www.instagram.com/gomilhasx/" target="_blank" rel="noopener noreferrer"><span class="icon"><svg><use href="#i-insta"/></svg></span><span><b>Instagram</b><small>@gomilhasx</small></span></a>
+      <p class="note gx-reveal">Já é membro do Balcão? Use <b>Falar com Suporte</b> no próprio bot: a equipe recebe na hora e acompanha até resolver.</p>
+    </div>
+  </div>
+</section>
+{{cta}}
+<script>
+// Contato: monta a mensagem e abre o WhatsApp (nada é enviado ao site)
+(function () {
+  var f = document.getElementById("fale"); if (!f) return;
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var nome = f.nome.value.trim(), msg = f.mensagem.value.trim(), err = f.querySelector(".err");
+    if (!nome || !msg) { err.textContent = "Preencha o seu nome e a mensagem."; (nome ? f.mensagem : f.nome).focus(); return; }
+    err.textContent = "";
+    var texto = "Olá! Sou " + nome + ". Assunto: " + f.assunto.value + ".\n\n" + msg;
+    window.open("https://wa.me/5521994934776?text=" + encodeURIComponent(texto), "_blank", "noopener");
+  });
+})();
+</script>
