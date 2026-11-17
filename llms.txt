@@ -5,12 +5,12 @@
 ## Produtos
 
 - [GO Manager](https://manager.gomilhasx.com/): sistema de gestão de milhas e pontos no navegador. Saldos por titular em cada programa de fidelidade (LATAM Pass, Smiles, Azul Fidelidade, Livelo, Esfera e outros), custo do milheiro recalculado a cada compra, transferência e bônus, simulador de transferências bonificadas, vendas e emissões com lucro por operação, CRM de clientes e passageiros, cartões e faturas, financeiro, equipe com permissões, metas e comissões. Conecta ao Claude (MCP) para consultar a operação em português.
-- [GO Balcão](https://balcao.gomilhasx.com/): balcão de milhas no Telegram. Quem quer comprar publica uma oferta; vendedores verificados (documento, selfie, vídeo e termo assinado pelo GOV.BR) aceitam ou fazem contraproposta. Pagamento por PIX com intermediação: o vendedor só recebe depois da emissão. Reputação pública de cada membro.
+- [GO Balcão](https://balcao.gomilhasx.com/): balcão de milhas no Telegram. Quem quer comprar publica uma oferta; vendedores com identidade conferida (documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe) aceitam ou fazem contraproposta. Com intermediação, o comprador paga ao balcão por PIX e o vendedor recebe depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação. Obrigatória no Módulo Viajante, opcional no Agentes e no Milheiro. Taxa de R$ 0,75 por milheiro, somada ao valor que o comprador paga, só nas negociações intermediadas. Reputação pública de cada membro.
 
 ## Planos (resumo)
 
 - Manager: plano Pessoal grátis; PRO R$ 19,90/mês; Gestor R$ 59,90/mês; desconto no anual; 15 dias de teste com os recursos do Gestor, sem cartão de crédito. Detalhes: https://manager.gomilhasx.com/#planos
-- Balcão: módulos Viajante (R$ 9,90/mês), Agentes (R$ 24,90/mês) e Milheiro (R$ 49,90/mês), também em planos anual (17% de desconto) ou vitalício. Detalhes: https://balcao.gomilhasx.com/#planos
+- Balcão: módulos Viajante (R$ 9,90/mês), Agentes (R$ 24,90/mês) e Milheiro (R$ 49,90/mês), também em planos anual (17% de desconto) ou vitalício, sem cobrança automática e com 7 dias para desistir da assinatura. Vender milhas só no Milheiro. Detalhes: https://balcao.gomilhasx.com/#planos
 
 ## Links
 
@@ -18,7 +18,7 @@
 - [Recursos](https://gomilhasx.com/recursos/), [Planos e preços](https://gomilhasx.com/planos/), [Sobre](https://gomilhasx.com/sobre/), [Dúvidas](https://gomilhasx.com/duvidas/) e [Contato](https://gomilhasx.com/contato/)
 - [Blog](https://gomilhasx.com/blog/): guias sobre custo do milheiro, transferências bonificadas e compra de milhas com segurança
 - Por público: [viajantes](https://gomilhasx.com/para-viajantes/), [milheiros](https://gomilhasx.com/para-milheiros/), [agências e agentes](https://gomilhasx.com/para-agencias/)
-- [Segurança](https://gomilhasx.com/seguranca/): verificação pelo GOV.BR, PIX intermediado até a emissão, reputação pública, proteção de dados e dicas contra golpes
+- [Segurança](https://gomilhasx.com/seguranca/): identidade conferida (documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe), PIX intermediado até a emissão, reputação pública, proteção de dados e dicas contra golpes
 - [Calculadora de custo do milheiro](https://gomilhasx.com/calculadora-custo-do-milheiro/): ferramenta grátis, sem cadastro; considera bônus e proporção de transferência e estima o lucro da venda
 - [Planilha de controle de milhas](https://gomilhasx.com/planilha-de-milhas/): planilha grátis (.xlsx) com contas, movimentações e vendas
 - [GO Manager no Claude](https://gomilhasx.com/claude/): conector MCP do GO Manager para o Claude (planos PRO e Gestor)
