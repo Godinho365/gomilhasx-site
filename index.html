@@ -1,0 +1,551 @@
+<!doctype html>
+<!--
+  Site institucional da GOMilhasX (https://gomilhasx.com). Site estático: veja o README.md.
+  Preços copiados do Manager e do Balcão: ao mudar um preço lá, mude aqui também.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GOMilhasX · Gestão e negociação de milhas</title>
+<meta name="description" content="A GOMilhasX reúne o GOMilhasX Manager, para controlar saldos, custo do milheiro e vendas de milhas, e o GOMilhasX Balcão, o balcão de milhas no Telegram com vendedores verificados e intermediação.">
+<link rel="canonical" href="https://gomilhasx.com/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/icon.png">
+<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GOMilhasX">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://gomilhasx.com/">
+<meta property="og:title" content="GOMilhasX · Gestão e negociação de milhas">
+<meta property="og:description" content="O GOMilhasX Manager organiza saldos, custos e vendas de milhas. O GOMilhasX Balcão conecta quem compra e quem vende, com verificação e intermediação.">
+<meta property="og:image" content="https://gomilhasx.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebSite","@id":"https://gomilhasx.com/#website","url":"https://gomilhasx.com/","name":"GOMilhasX","alternateName":["GO MilhasX","MilhasX"],"inLanguage":"pt-BR","publisher":{"@id":"https://gomilhasx.com/#organization"}},
+ {"@type":"Organization","@id":"https://gomilhasx.com/#organization","name":"GOMilhasX","url":"https://gomilhasx.com/","logo":"https://gomilhasx.com/assets/icon.png","taxID":"70.001.231/0001-03","sameAs":["https://www.instagram.com/gomilhasx/"]},
+ {"@type":"SoftwareApplication","name":"GOMilhasX Manager","url":"https://manager.gomilhasx.com/","applicationCategory":"FinanceApplication","operatingSystem":"Web","publisher":{"@id":"https://gomilhasx.com/#organization"}},
+ {"@type":"SoftwareApplication","name":"GOMilhasX Balcão","url":"https://balcao.gomilhasx.com/","applicationCategory":"BusinessApplication","operatingSystem":"Web","publisher":{"@id":"https://gomilhasx.com/#organization"}}
+]}
+</script>
+<style>
+@font-face { font-family: "Inter"; src: url("/assets/inter.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --panel2: #f1f3f6; --line: #e2e4e9; --text: #18181b; --muted: #646874;
+  --accent: #2563eb; --accent-soft: #dbeafe; --on-accent: #ffffff; --ok: #16a34a; --glow: rgba(37,99,235,.10);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #09090b; --panel: #111114; --panel2: #18181b; --line: #27272a; --text: #f4f4f5; --muted: #a1a1aa;
+    --accent: #60a5fa; --accent-soft: #172554; --on-accent: #09090b; --ok: #4ade80; --glow: rgba(59,130,246,.16);
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3, p { margin: 0; }
+.wrap { width: 100%; max-width: 1152px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 640px) { .wrap { padding: 0 24px; } }
+.muted { color: var(--muted); }
+.kicker { color: var(--accent); font-size: 14px; font-weight: 600; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 40px; padding: 0 18px; border-radius: 10px; font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid transparent; white-space: nowrap; transition: opacity .15s, background .15s; }
+.btn-lg { height: 44px; padding: 0 24px; font-size: 16px; }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { opacity: .9; }
+.btn-ghost { border-color: var(--line); background: var(--panel); }
+.btn-ghost:hover { background: var(--panel2); }
+.btn-subtle:hover { background: var(--panel2); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; }
+.icon { width: 40px; height: 40px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: var(--accent-soft); color: var(--accent); }
+.icon svg { width: 20px; height: 20px; }
+svg { stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Cabeçalho */
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 12px; padding-bottom: 12px; }
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px; letter-spacing: -.01em; text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 22%; }
+.brand b { color: #f59e0b; }
+.nav { display: none; gap: 24px; font-size: 14px; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--accent); }
+@media (min-width: 900px) { .nav { display: flex; } }
+.head-cta { display: flex; gap: 8px; }
+.head-cta .btn-subtle { display: none; }
+@media (min-width: 640px) { .head-cta .btn-subtle { display: inline-flex; } }
+
+/* Abertura */
+.hero { background: radial-gradient(ellipse at top, var(--glow), transparent 65%); text-align: center; padding: 48px 0 56px; }
+@media (min-width: 1024px) { .hero { padding-top: 80px; } }
+.pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 12px; color: var(--muted); }
+.pill svg { width: 14px; height: 14px; }
+.hero h1 { margin: 16px auto 0; max-width: 820px; font-size: clamp(30px, 6vw, 48px); line-height: 1.12; letter-spacing: -.02em; }
+.hero p.lead { margin: 20px auto 0; max-width: 640px; font-size: clamp(16px, 2.2vw, 18px); }
+.hero .slogan { margin-top: 12px; font-size: 14px; font-weight: 600; color: var(--accent); }
+.hero .ctas { margin-top: 32px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+section.block { padding: 64px 0; scroll-margin-top: 16px; }
+.title { max-width: 680px; margin: 0 auto 40px; text-align: center; }
+.title h2 { margin-top: 8px; font-size: clamp(24px, 4vw, 30px); letter-spacing: -.015em; line-height: 1.2; }
+.title p { margin-top: 12px; }
+
+/* Produtos */
+.grid2 { display: grid; gap: 16px; }
+@media (min-width: 768px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+.product { display: flex; flex-direction: column; padding: 24px; }
+.product .icon { width: 44px; height: 44px; margin-bottom: 16px; }
+.product h3 { font-size: 20px; }
+.product p { margin-top: 8px; flex: 1; }
+.product .row { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Logos */
+.logos { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 32px 0; overflow: hidden; }
+.logos h2 { text-align: center; font-size: 14px; font-weight: 500; color: var(--muted); margin-bottom: 20px; }
+.track { display: flex; width: max-content; gap: 32px; animation: marquee 40s linear infinite; }
+.track span { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); white-space: nowrap; }
+.track img { width: 32px; height: 32px; border-radius: 8px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; } .track [aria-hidden] { display: none; } }
+
+/* Produto em detalhe */
+.split { display: grid; gap: 40px; align-items: center; }
+@media (min-width: 1024px) { .split { grid-template-columns: 1fr 1fr; } .split .first-lg { order: -1; } }
+.split h2 { margin-top: 8px; font-size: clamp(24px, 4vw, 30px); line-height: 1.2; letter-spacing: -.015em; }
+.split p.desc { margin-top: 16px; }
+.features { margin-top: 40px; display: grid; gap: 16px; }
+@media (min-width: 640px) { .features { grid-template-columns: 1fr 1fr; } }
+.feature { display: flex; gap: 16px; padding: 20px; }
+.feature h3 { font-size: 16px; }
+.feature p { margin-top: 4px; font-size: 14px; color: var(--muted); }
+
+/* Ilustrações */
+.mock { padding: 20px; }
+.mock .top { display: flex; justify-content: space-between; margin-bottom: 16px; }
+.mock small { display: block; font-size: 12px; color: var(--muted); }
+.mock .big { font-size: 24px; font-weight: 700; }
+.mock .cpm { font-size: 18px; font-weight: 600; color: var(--accent); }
+.mock .rows { border: 1px solid var(--line); border-radius: 12px; }
+.mock .r { display: flex; align-items: center; gap: 12px; padding: 10px 12px; font-size: 14px; }
+.mock .r + .r { border-top: 1px solid var(--line); }
+.mock .r img { width: 28px; height: 28px; border-radius: 8px; }
+.mock .r .n { flex: 1; font-weight: 500; }
+.mock .r .v { font-variant-numeric: tabular-nums; }
+.mock .r .c { width: 80px; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+.mock .note { margin-top: 12px; text-align: center; font-size: 11px; color: var(--muted); }
+.chat .bar { display: flex; align-items: center; gap: 8px; padding-bottom: 12px; border-bottom: 1px solid var(--line); font-size: 14px; font-weight: 600; }
+.chat .bar .icon { width: 32px; height: 32px; border-radius: 999px; }
+.chat .bar .icon svg { width: 16px; height: 16px; }
+.chat .bar small { margin-left: auto; font-weight: 400; }
+.msg { max-width: 85%; margin-top: 12px; padding: 12px 16px; border-radius: 16px; font-size: 14px; border: 1px solid var(--line); border-top-left-radius: 4px; }
+.msg.me { margin-left: auto; background: var(--accent-soft); border-color: transparent; border-radius: 16px; border-top-right-radius: 4px; }
+.msg b { display: block; }
+.msg .ok { color: var(--ok); display: flex; align-items: center; gap: 6px; }
+.msg .ok svg { width: 16px; height: 16px; }
+
+/* Planos */
+.plans-head { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; margin-bottom: 24px; }
+.plans-head svg { width: 20px; height: 20px; color: var(--accent); }
+.toggle { display: flex; width: fit-content; margin: 0 auto 32px; padding: 4px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; }
+.toggle button { font: inherit; font-weight: 500; border: 0; background: none; color: var(--muted); padding: 6px 16px; border-radius: 999px; cursor: pointer; }
+.toggle button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+.grid3 { display: grid; gap: 16px; }
+@media (min-width: 1024px) { .grid3 { grid-template-columns: repeat(3, 1fr); } }
+.plan { position: relative; display: flex; flex-direction: column; padding: 24px; }
+.plan.featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.plan .tag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--on-accent); border-radius: 999px; padding: 2px 12px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.plan h4 { margin: 0; font-size: 18px; }
+.plan .tl { margin-top: 4px; font-size: 14px; color: var(--muted); }
+.plan .price { margin-top: 20px; }
+.plan .price strong { font-size: 30px; }
+.plan .price span { font-size: 14px; color: var(--muted); }
+.plan .sub { font-size: 12px; color: var(--muted); min-height: 18px; }
+.plan ul { list-style: none; margin: 20px 0 0; padding: 0; flex: 1; font-size: 14px; }
+.plan li { display: flex; gap: 8px; margin-top: 8px; }
+.plan li svg { width: 16px; height: 16px; flex: none; margin-top: 3px; color: var(--accent); }
+.plan li.no { color: var(--muted); text-decoration: line-through; }
+.plan li.no svg { color: var(--muted); }
+.plan .btn { margin-top: 24px; width: 100%; }
+.fine { margin-top: 20px; text-align: center; font-size: 12px; color: var(--muted); }
+[hidden] { display: none !important; }
+
+/* Sobre e dúvidas */
+.about { max-width: 896px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+@media (min-width: 640px) { .about { flex-direction: row; } }
+.about h2 { font-size: 18px; }
+.about p { margin-top: 4px; font-size: 14px; color: var(--muted); }
+.about .sec { display: flex; gap: 8px; margin-top: 12px; }
+.about .sec svg { width: 16px; height: 16px; flex: none; margin-top: 3px; color: var(--accent); }
+.faq { max-width: 768px; margin: 0 auto; }
+.faq details { margin-top: 12px; }
+.faq summary { display: flex; justify-content: space-between; gap: 16px; padding: 16px 20px; cursor: pointer; list-style: none; font-weight: 500; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 20px; line-height: 1; color: var(--muted); transition: transform .15s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 20px 16px; font-size: 14px; color: var(--muted); }
+
+/* Rodapé */
+footer { border-top: 1px solid var(--line); margin-top: 24px; }
+footer .cols { display: grid; gap: 32px; padding: 40px 16px; }
+@media (min-width: 640px) { footer .cols { grid-template-columns: repeat(4, 1fr); } }
+footer .brand { font-size: 16px; }
+footer .brand img { width: 28px; height: 28px; }
+footer p, footer li { font-size: 14px; color: var(--muted); }
+footer ul { list-style: none; margin: 0; padding: 0; }
+footer li + li { margin-top: 8px; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--accent); }
+footer .t { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 12px; }
+footer .ig { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 14px; color: var(--muted); }
+footer .ig svg { width: 18px; height: 18px; }
+footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: center; font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<!-- Ícones (Lucide, licença ISC), reaproveitados com <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M8 6h8"/><path d="M16 14v4"/><path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="GOMilhasX, início"><img src="/assets/icon.png" alt="" width="30" height="30"><span>GOMilhas<b>X</b></span></a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#produtos">Produtos</a><a href="#manager">Manager</a><a href="#balcao">Balcão</a><a href="#planos">Planos</a><a href="#sobre">Sobre</a>
+    </nav>
+    <nav class="head-cta">
+      <a class="btn btn-subtle" href="https://balcao.gomilhasx.com/">Balcão</a>
+      <a class="btn btn-primary" href="https://manager.gomilhasx.com/login">Entrar no Manager</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <span class="pill"><svg><use href="#i-plane"/></svg>GOMilhasX · tecnologia para o mercado de milhas</span>
+      <h1>Gestão e negociação de milhas, do controle à venda</h1>
+      <p class="lead muted">Dois produtos que trabalham juntos: o <strong>Manager</strong> organiza saldos, custos e vendas, e o <strong>Balcão</strong> conecta quem compra e quem vende milhas com verificação e intermediação.</p>
+      <p class="slogan">Controle suas milhas. Potencialize suas oportunidades.</p>
+      <div class="ctas">
+        <a class="btn btn-primary btn-lg" href="#manager">Conhecer o Manager</a>
+        <a class="btn btn-ghost btn-lg" href="#balcao">Conhecer o Balcão</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos" class="block" aria-labelledby="produtos-titulo">
+    <div class="wrap">
+      <div class="title"><p class="kicker">Produtos</p><h2 id="produtos-titulo">Escolha por onde começar</h2></div>
+      <div class="grid2">
+        <div class="card product">
+          <div class="icon"><svg><use href="#i-chart"/></svg></div>
+          <h3>GOMilhasX Manager</h3>
+          <p class="muted">Sistema de gestão para quem acumula, compra e vende milhas: carteiras por titular, custo do milheiro, simulador de transferências, vendas, emissões e financeiro. Funciona no navegador, no computador e no celular.</p>
+          <div class="row">
+            <a class="btn btn-primary" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
+            <a class="btn btn-ghost" href="https://manager.gomilhasx.com/">Ver o site <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="card product">
+          <div class="icon"><svg><use href="#i-store"/></svg></div>
+          <h3>GOMilhasX Balcão</h3>
+          <p class="muted">Balcão de milhas no Telegram: quem quer comprar publica uma oferta, vendedores verificados aceitam ou fazem contraproposta, e a negociação acontece com reputação pública e pagamento por PIX com intermediação.</p>
+          <div class="row">
+            <a class="btn btn-primary" href="#planos-balcao">Ver planos do Balcão</a>
+            <a class="btn btn-ghost" href="https://balcao.gomilhasx.com/">Ver o site <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos" aria-labelledby="programas">
+    <h2 id="programas">Para quem trabalha com os principais programas de fidelidade</h2>
+    <div class="track">
+      <span><img src="/assets/smiles.png" alt="" width="32" height="32">Smiles</span>
+      <span><img src="/assets/latam-pass.png" alt="" width="32" height="32">LATAM Pass</span>
+      <span><img src="/assets/azul-fidelidade.png" alt="" width="32" height="32">Azul Fidelidade</span>
+      <span><img src="/assets/livelo.png" alt="" width="32" height="32">Livelo</span>
+      <span><img src="/assets/esfera.png" alt="" width="32" height="32">Esfera</span>
+      <span><img src="/assets/tap-miles-go.png" alt="" width="32" height="32">TAP Miles&amp;Go</span>
+      <span><img src="/assets/flying-blue.png" alt="" width="32" height="32">Flying Blue</span>
+      <span><img src="/assets/iberia.png" alt="" width="32" height="32">Iberia Plus</span>
+      <span><img src="/assets/connectmiles.png" alt="" width="32" height="32">ConnectMiles</span>
+      <span><img src="/assets/all-accor.png" alt="" width="32" height="32">ALL Accor</span>
+      <!-- cópia para o letreiro girar sem emenda -->
+      <span aria-hidden="true"><img src="/assets/smiles.png" alt="" width="32" height="32">Smiles</span>
+      <span aria-hidden="true"><img src="/assets/latam-pass.png" alt="" width="32" height="32">LATAM Pass</span>
+      <span aria-hidden="true"><img src="/assets/azul-fidelidade.png" alt="" width="32" height="32">Azul Fidelidade</span>
+      <span aria-hidden="true"><img src="/assets/livelo.png" alt="" width="32" height="32">Livelo</span>
+      <span aria-hidden="true"><img src="/assets/esfera.png" alt="" width="32" height="32">Esfera</span>
+      <span aria-hidden="true"><img src="/assets/tap-miles-go.png" alt="" width="32" height="32">TAP Miles&amp;Go</span>
+      <span aria-hidden="true"><img src="/assets/flying-blue.png" alt="" width="32" height="32">Flying Blue</span>
+      <span aria-hidden="true"><img src="/assets/iberia.png" alt="" width="32" height="32">Iberia Plus</span>
+      <span aria-hidden="true"><img src="/assets/connectmiles.png" alt="" width="32" height="32">ConnectMiles</span>
+      <span aria-hidden="true"><img src="/assets/all-accor.png" alt="" width="32" height="32">ALL Accor</span>
+    </div>
+  </section>
+
+  <section id="manager" class="block" aria-labelledby="manager-titulo">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="kicker">GOMilhasX Manager</p>
+          <h2 id="manager-titulo">Saiba quanto tem, quanto custou e quanto lucrou</h2>
+          <p class="desc muted">Do viajante que organiza os próprios pontos à agência que administra contas de clientes: o Manager faz as contas de custo médio, saldo e lucro a cada movimento.</p>
+        </div>
+        <div class="card mock" aria-hidden="true">
+          <div class="top">
+            <div><small>Saldo total</small><span class="big">421.650</span> <small style="display:inline">milhas</small></div>
+            <div style="text-align:right"><small>Custo médio</small><span class="cpm">R$ 18,62</span></div>
+          </div>
+          <div class="rows">
+            <div class="r"><img src="/assets/smiles.png" alt=""><span class="n">Smiles</span><span class="v">182.400</span><span class="c">R$ 17,90</span></div>
+            <div class="r"><img src="/assets/latam-pass.png" alt=""><span class="n">LATAM Pass</span><span class="v">96.000</span><span class="c">R$ 24,30</span></div>
+            <div class="r"><img src="/assets/azul-fidelidade.png" alt=""><span class="n">Azul Fidelidade</span><span class="v">143.250</span><span class="c">R$ 15,60</span></div>
+          </div>
+          <p class="note">Exemplo ilustrativo</p>
+        </div>
+      </div>
+      <div class="features">
+        <div class="card feature"><div class="icon"><svg><use href="#i-wallet"/></svg></div><div><h3>Carteiras por titular</h3><p>Saldos de cada CPF em todos os programas, com vencimentos e extrato da origem de cada milha.</p></div></div>
+        <div class="card feature"><div class="icon"><svg><use href="#i-calc"/></svg></div><div><h3>Custo do milheiro</h3><p>Recalculado a cada compra, transferência e bônus. Simulador de transferências bonificadas.</p></div></div>
+        <div class="card feature"><div class="icon"><svg><use href="#i-bars"/></svg></div><div><h3>Vendas e lucro</h3><p>Lucro de cada venda e emissão, CRM de pedidos, clientes, passageiros e fornecedores.</p></div></div>
+        <div class="card feature"><div class="icon"><svg><use href="#i-users"/></svg></div><div><h3>Equipe e financeiro</h3><p>Login próprio para a equipe, permissões por função, contas a pagar e a receber.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="balcao" class="block" aria-labelledby="balcao-titulo">
+    <div class="wrap">
+      <div class="split">
+        <div class="card mock chat" aria-hidden="true">
+          <div class="bar"><span class="icon"><svg><use href="#i-store"/></svg></span>GOMilhasX Balcão<small class="muted">bot</small></div>
+          <div class="msg"><b>Nova oferta de compra</b><span class="muted">85.000 milhas LATAM Pass · 2 passageiros</span><br>R$ 25,00 o milheiro</div>
+          <div class="msg me"><b>Contraproposta</b>R$ 26,50 o milheiro · emissão hoje</div>
+          <div class="msg"><b class="ok"><svg><use href="#i-check"/></svg>Negociação fechada</b><span class="muted">Pagamento por PIX com intermediação · nota 5 de 5</span></div>
+          <p class="note">Exemplo ilustrativo</p>
+        </div>
+        <div class="first-lg">
+          <p class="kicker">GOMilhasX Balcão</p>
+          <h2 id="balcao-titulo">Compre e venda milhas com quem é verificado</h2>
+          <p class="desc muted">Viajantes, agentes e milheiros negociam num só lugar, com regras claras de pagamento, emissão e cancelamento, e a equipe do balcão acompanhando cada negociação intermediada.</p>
+        </div>
+      </div>
+      <div class="features">
+        <div class="card feature"><div class="icon"><svg><use href="#i-chat"/></svg></div><div><h3>Direto no Telegram</h3><p>Quem quer comprar publica a oferta; vendedores aceitam ou fazem contraproposta pelo bot.</p></div></div>
+        <div class="card feature"><div class="icon"><svg><use href="#i-badge"/></svg></div><div><h3>Usuários verificados</h3><p>Documento, selfie, vídeo e termo assinado pelo GOV.BR, analisados pela equipe antes de liberar o acesso.</p></div></div>
+        <div class="card feature"><div class="icon"><svg><use href="#i-hand"/></svg></div><div><h3>Intermediação</h3><p>O comprador paga ao balcão por PIX e o vendedor só recebe depois da emissão da passagem.</p></div></div>
+        <div class="card feature"><div class="icon"><svg><use href="#i-shield"/></svg></div><div><h3>Reputação pública</h3><p>Confiômetro, avaliações e histórico de cada vendedor para negociar com quem entrega.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos" class="block" aria-labelledby="planos-titulo">
+    <div class="wrap">
+      <div class="title"><p class="kicker">Planos</p><h2 id="planos-titulo">Planos de cada produto</h2><p class="muted">Cada produto tem a própria assinatura. Escolha um ou os dois.</p></div>
+
+      <h3 class="plans-head" id="planos-manager"><svg><use href="#i-chart"/></svg>GOMilhasX Manager</h3>
+      <div class="toggle" role="group" aria-label="Período de cobrança do Manager" data-toggle="manager">
+        <button type="button" data-period="mensal" aria-pressed="true">Mensal</button>
+        <button type="button" data-period="anual" aria-pressed="false">Anual (−16%)</button>
+      </div>
+      <div class="grid3" data-plans="manager">
+        <div class="card plan" data-plan="PESSOAL">
+          <h4>Pessoal</h4><p class="tl">Para organizar os seus próprios pontos</p>
+          <p class="price"><strong>Grátis</strong></p><p class="sub"></p>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>Até 5 contas em programas</li>
+            <li><svg><use href="#i-check"/></svg>1 titular</li>
+            <li><svg><use href="#i-check"/></svg>Extrato e relatórios</li>
+            <li><svg><use href="#i-check"/></svg>Simuladores básicos</li>
+            <li><svg><use href="#i-check"/></svg>Alertas de saldo</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
+        </div>
+        <div class="card plan featured" data-plan="PRO">
+          <span class="tag">Mais popular</span>
+          <h4>PRO</h4><p class="tl">Para quem acumula com estratégia</p>
+          <p class="price"><strong data-period="mensal">R$ 19,90</strong><strong data-period="anual" hidden>R$ 16,72</strong><span> /mês</span></p>
+          <p class="sub"><span data-period="anual" hidden>cobrado anualmente</span></p>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>Tudo do Pessoal</li>
+            <li><svg><use href="#i-check"/></svg>Contas ilimitadas</li>
+            <li><svg><use href="#i-check"/></svg>Até 2 titulares</li>
+            <li><svg><use href="#i-check"/></svg>Preço do milheiro, potencial de lucro e sugestor de compra</li>
+            <li><svg><use href="#i-check"/></svg>Comprovantes e limite de CPFs</li>
+            <li><svg><use href="#i-check"/></svg>Evolução e anexos</li>
+            <li><svg><use href="#i-check"/></svg>Página pública com sua cor e banner</li>
+          </ul>
+          <a class="btn btn-primary" href="https://manager.gomilhasx.com/register">Começar teste grátis</a>
+        </div>
+        <div class="card plan" data-plan="GESTOR">
+          <h4>Gestor</h4><p class="tl">Para quem gerencia contas de terceiros e vende emissões</p>
+          <p class="price"><strong data-period="mensal">R$ 59,90</strong><strong data-period="anual" hidden>R$ 50,32</strong><span> /mês</span></p>
+          <p class="sub"><span data-period="anual" hidden>cobrado anualmente</span></p>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>Tudo do PRO</li>
+            <li><svg><use href="#i-check"/></svg>Clientes ilimitados</li>
+            <li><svg><use href="#i-check"/></svg>Contas de clientes e fornecedores</li>
+            <li><svg><use href="#i-check"/></svg>Emissão com fornecedores</li>
+            <li><svg><use href="#i-check"/></svg>Milheiro e saldo por fornecedor</li>
+            <li><svg><use href="#i-check"/></svg>Equipe com permissões, métricas e financeiro</li>
+            <li><svg><use href="#i-check"/></svg>Página do titular</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://manager.gomilhasx.com/register">Começar teste grátis</a>
+        </div>
+      </div>
+      <p class="fine">Toda conta nova começa com <span data-trial>15</span> dias de teste com os recursos do plano Gestor. Não precisa de cartão de crédito.</p>
+
+      <h3 class="plans-head" id="planos-balcao" style="margin-top:64px"><svg><use href="#i-store"/></svg>GOMilhasX Balcão</h3>
+      <div class="toggle" role="group" aria-label="Período da assinatura do Balcão" data-toggle="balcao">
+        <button type="button" data-period="monthly" aria-pressed="false">Mensal</button>
+        <button type="button" data-period="yearly" aria-pressed="true">Anual (−17%)</button>
+        <button type="button" data-period="lifetime" aria-pressed="false">Vitalício</button>
+      </div>
+      <div class="grid3" data-plans="balcao">
+        <div class="card plan">
+          <h4>Módulo Viajante</h4><p class="tl">Para quem quer viajar gastando menos.</p>
+          <p class="price"><strong data-period="monthly" hidden>R$ 9,90</strong><strong data-period="yearly">R$ 99,00</strong><strong data-period="lifetime" hidden>R$ 149,00</strong><span data-period="monthly" hidden> /mês</span><span data-period="yearly"> /ano</span><span data-period="lifetime" hidden> uma vez</span></p>
+          <p class="sub"><span data-period="monthly" hidden>Cobrado todo mês</span><span data-period="yearly">R$ 8,25/mês · economize 17%</span><span data-period="lifetime" hidden>Pagamento único, acesso para sempre</span></p>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>Comprar milhas para as suas viagens</li>
+            <li class="no"><svg><use href="#i-x"/></svg><span><span class="sr">Não inclui: </span>Vender milhas</span></li>
+            <li><svg><use href="#i-check"/></svg>Intermediação do balcão em todas as compras</li>
+            <li><svg><use href="#i-check"/></svg>Um ou mais passageiros</li>
+            <li><svg><use href="#i-check"/></svg>Confiômetro e reputação dos vendedores</li>
+            <li><svg><use href="#i-check"/></svg>Histórico das negociações</li>
+          </ul>
+          <a class="btn btn-ghost" data-subscribe="viajante" href="https://balcao.gomilhasx.com/assinar?plano=viajante&amp;periodo=yearly">Assinar o Viajante</a>
+        </div>
+        <div class="card plan">
+          <h4>Módulo Agentes</h4><p class="tl">Para agências e agentes autônomos que emitem para clientes.</p>
+          <p class="price"><strong data-period="monthly" hidden>R$ 24,90</strong><strong data-period="yearly">R$ 249,00</strong><strong data-period="lifetime" hidden>R$ 379,00</strong><span data-period="monthly" hidden> /mês</span><span data-period="yearly"> /ano</span><span data-period="lifetime" hidden> uma vez</span></p>
+          <p class="sub"><span data-period="monthly" hidden>Cobrado todo mês</span><span data-period="yearly">R$ 20,75/mês · economize 17%</span><span data-period="lifetime" hidden>Pagamento único, acesso para sempre</span></p>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>Comprar milhas para vários CPFs</li>
+            <li class="no"><svg><use href="#i-x"/></svg><span><span class="sr">Não inclui: </span>Vender milhas</span></li>
+            <li><svg><use href="#i-check"/></svg>Selo de agente ou agência certificada</li>
+            <li><svg><use href="#i-check"/></svg>Intermediação opcional</li>
+            <li><svg><use href="#i-check"/></svg>Confiômetro e reputação dos vendedores</li>
+            <li><svg><use href="#i-check"/></svg>Histórico das negociações</li>
+          </ul>
+          <a class="btn btn-ghost" data-subscribe="agente" href="https://balcao.gomilhasx.com/assinar?plano=agente&amp;periodo=yearly">Assinar o Agentes</a>
+        </div>
+        <div class="card plan featured">
+          <span class="tag">Mais completo</span>
+          <h4>Módulo Milheiro</h4><p class="tl">Para quem tem milhas e quer vender.</p>
+          <p class="price"><strong data-period="monthly" hidden>R$ 49,90</strong><strong data-period="yearly">R$ 499,00</strong><strong data-period="lifetime" hidden>R$ 749,00</strong><span data-period="monthly" hidden> /mês</span><span data-period="yearly"> /ano</span><span data-period="lifetime" hidden> uma vez</span></p>
+          <p class="sub"><span data-period="monthly" hidden>Cobrado todo mês</span><span data-period="yearly">R$ 41,58/mês · economize 17%</span><span data-period="lifetime" hidden>Pagamento único, acesso para sempre</span></p>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>Comprar e vender milhas</li>
+            <li><svg><use href="#i-check"/></svg>Contrapropostas nas ofertas</li>
+            <li><svg><use href="#i-check"/></svg>Alertas por programa</li>
+            <li><svg><use href="#i-check"/></svg>Recebimento via PIX</li>
+            <li><svg><use href="#i-check"/></svg>Intermediação opcional</li>
+            <li><svg><use href="#i-check"/></svg>Histórico das negociações</li>
+          </ul>
+          <a class="btn btn-primary" data-subscribe="milheiro" href="https://balcao.gomilhasx.com/assinar?plano=milheiro&amp;periodo=yearly">Assinar o Milheiro</a>
+        </div>
+      </div>
+      <p class="fine">Depois do pagamento, você ativa o plano direto no Telegram. Todo usuário passa por uma verificação única antes de negociar.</p>
+    </div>
+  </section>
+
+  <section id="sobre" class="block" style="padding-top:24px;padding-bottom:24px" aria-labelledby="sobre-titulo">
+    <div class="wrap">
+      <div class="card about">
+        <div class="icon"><svg><use href="#i-building"/></svg></div>
+        <div>
+          <h2 id="sobre-titulo">Sobre a GOMilhasX</h2>
+          <p>A GOMilhasX desenvolve tecnologia para quem vive o mercado de milhas: pessoas que acumulam e viajam, agentes e agências que emitem para clientes e milheiros que vendem. CNPJ 70.001.231/0001-03.</p>
+          <p class="sec"><svg><use href="#i-lock"/></svg><span>Conexões criptografadas, senhas guardadas com hash e dados tratados conforme a LGPD. Leia a <a href="https://manager.gomilhasx.com/privacidade">Política de Privacidade</a> e os <a href="https://manager.gomilhasx.com/termos">Termos de Serviço</a>.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas" class="block" aria-labelledby="duvidas-titulo">
+    <div class="wrap">
+      <div class="title"><p class="kicker">Dúvidas</p><h2 id="duvidas-titulo">Perguntas frequentes</h2></div>
+      <div class="faq">
+        <details class="card"><summary>O que é a GOMilhasX?</summary><p>A GOMilhasX é a empresa por trás de dois produtos para o mercado de milhas: o GOMilhasX Manager, para organizar e acompanhar a operação, e o GOMilhasX Balcão, para comprar e vender milhas com segurança.</p></details>
+        <details class="card"><summary>Preciso assinar os dois?</summary><p>Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos.</p></details>
+        <details class="card"><summary>O Manager tem teste grátis?</summary><p>Sim. Toda conta nova começa com 15 dias com os recursos do plano Gestor, sem cartão de crédito. Depois, continua grátis no plano Pessoal se você não assinar.</p></details>
+        <details class="card"><summary>Como assino o Balcão?</summary><p>Escolha o módulo e o período, pague pela página de assinatura e ative o plano direto no Telegram. Antes de negociar, você faz uma verificação única de identidade.</p></details>
+        <details class="card"><summary>As milhas são transferidas entre contas no Balcão?</summary><p>Não. Os programas de fidelidade não permitem transferir milhas entre contas de terceiros. O vendedor emite a passagem com as milhas dele, em nome dos passageiros informados.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <a class="brand" href="#inicio"><img src="/assets/icon.png" alt="" width="28" height="28"><span>GOMilhas<b>X</b></span></a>
+      <p style="margin-top:12px">Controle suas milhas. Potencialize suas oportunidades.</p>
+      <a class="ig" href="https://www.instagram.com/gomilhasx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da GOMilhasX (abre em nova aba)"><svg><use href="#i-insta"/></svg>@gomilhasx</a>
+    </div>
+    <nav aria-label="Manager"><p class="t">Manager</p><ul>
+      <li><a href="https://manager.gomilhasx.com/">Conhecer o Manager</a></li>
+      <li><a href="https://manager.gomilhasx.com/register">Criar conta</a></li>
+      <li><a href="https://manager.gomilhasx.com/login">Entrar</a></li>
+    </ul></nav>
+    <nav aria-label="Balcão"><p class="t">Balcão</p><ul>
+      <li><a href="https://balcao.gomilhasx.com/">Conhecer o Balcão</a></li>
+      <li><a href="https://balcao.gomilhasx.com/#planos">Planos do Balcão</a></li>
+      <li><a href="https://balcao.gomilhasx.com/#faq">Dúvidas do Balcão</a></li>
+    </ul></nav>
+    <nav aria-label="Políticas"><p class="t">Políticas</p><ul>
+      <li><a href="https://manager.gomilhasx.com/termos">Termos de Serviço</a></li>
+      <li><a href="https://manager.gomilhasx.com/privacidade">Política de Privacidade</a></li>
+      <li><a href="https://manager.gomilhasx.com/privacidade/solicitacao">Pedidos sobre seus dados</a></li>
+    </ul></nav>
+  </div>
+  <p class="copy">© <span id="ano">2026</span> GOMilhasX · CNPJ 70.001.231/0001-03. Todos os direitos reservados.</p>
+</footer>
+
+<style>.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }</style>
+<script>
+// Troca de período dos planos: mostra só os preços do período escolhido e ajusta o link de assinatura do Balcão.
+document.querySelectorAll("[data-toggle]").forEach(function (group) {
+  var plans = document.querySelector('[data-plans="' + group.dataset.toggle + '"]');
+  group.addEventListener("click", function (e) {
+    var btn = e.target.closest("button[data-period]");
+    if (!btn) return;
+    var period = btn.dataset.period;
+    group.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+    plans.querySelectorAll("[data-period]").forEach(function (el) { el.hidden = el.dataset.period !== period; });
+    plans.querySelectorAll("[data-subscribe]").forEach(function (a) {
+      a.href = "https://balcao.gomilhasx.com/assinar?plano=" + a.dataset.subscribe + "&periodo=" + period;
+    });
+  });
+});
+document.getElementById("ano").textContent = String(new Date().getFullYear());
+</script>
+</body>
+</html>
