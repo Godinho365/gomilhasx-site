@@ -115,7 +115,7 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 /* Abertura: título central, chips e foto de viagem com o celular saindo dela */
 .hero { position: relative; margin-top: -70px; padding: 140px 0 0; text-align: center; background: linear-gradient(180deg, #ffffff 0%, var(--bg) 70%); }
 .hero h1 { max-width: 860px; margin: 0 auto; font-size: clamp(36px, 6.4vw, 68px); line-height: 1.02; letter-spacing: -.045em; font-weight: 500; }
-.hero h1 span { color: var(--soft); }
+.hero h1 .dim { color: var(--soft); }
 .hero p.lead { margin: 22px auto 0; max-width: 620px; font-size: clamp(16px, 2vw, 18px); color: var(--muted); }
 .hero .ctas { margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 .chips { margin: 28px auto 0; display: grid; gap: 8px; width: min(320px, 100%); }
@@ -143,7 +143,6 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 
 /* Frase de apresentação */
 .statement { max-width: 860px; margin: 0 auto; font-size: clamp(22px, 3.2vw, 34px); line-height: 1.3; letter-spacing: -.025em; font-weight: 500; }
-.statement span { color: #9a9a9a; }
 .strip { margin-top: 56px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .strip .row { display: flex; gap: 14px; width: max-content; animation: marquee 60s linear infinite; }
 .strip img { width: clamp(150px, 16vw, 210px); height: clamp(150px, 16vw, 210px); object-fit: cover; border-radius: 20px; }
@@ -323,6 +322,20 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 /* Nome grande no fim do rodapé */
 .big-word { margin: 0; padding: 8px 16px 0; text-align: center; font-size: clamp(24px, 9.4vw, 150px); line-height: .95; letter-spacing: -.055em; font-weight: 500; color: #e4e4df; white-space: nowrap; overflow: hidden; user-select: none; }
 
+/* Animações no estilo AppNext (assets/site-motion.js) */
+@keyframes sm-down { from { opacity: 0; transform: translateY(-16px); } }
+@keyframes sm-left { from { opacity: 0; transform: translateX(-20px); } }
+@keyframes sm-right { from { opacity: 0; transform: translateX(20px); } }
+header .bar { animation: sm-down .7s cubic-bezier(.22,.61,.36,1) both; }
+header .brand { animation: sm-left .8s .15s cubic-bezier(.22,.61,.36,1) both; }
+header .head-cta { animation: sm-right .8s .15s cubic-bezier(.22,.61,.36,1) both; }
+.sm-js [data-split] .sm-w { display: inline-block; opacity: 0; transform: translateY(20px); filter: blur(6px); transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1), filter .7s; }
+.sm-js [data-split].sm-in .sm-w { opacity: 1; transform: none; filter: none; }
+.sm-js .sm-sw { transition: opacity .2s linear; }
+.sm-js .strip .row { animation: none; will-change: transform; }
+.stage .phone { transform: translateX(-50%) translateY(var(--sm-y, 0px)); will-change: transform; }
+@media (prefers-reduced-motion: reduce) { header .bar, header .brand, header .head-cta { animation: none; } }
+
 /* Botão flutuante do WhatsApp: acompanha a rolagem, no canto inferior direito */
 .wa-float { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 45;
   display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 20px 0 16px; border-radius: 999px;
@@ -363,6 +376,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 <link rel="stylesheet" href="/assets/motion/gomilhasx-motion.css">
 <link rel="stylesheet" href="/assets/lead.css?v=1">
 <script src="/assets/motion/gomilhasx-motion.js" defer></script>
+<script src="/assets/site-motion.js" defer></script>
 <script src="/assets/lead.js?v=1" defer></script>
 </head>
 <body>
@@ -426,7 +440,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 <main id="inicio">
   <section class="hero">
     <div class="wrap">
-      <h1 class="gx-reveal">Tecnologia para gestão de milhas <span>e negócios de viagens</span></h1>
+      <h1 data-split="100">Tecnologia para gestão de milhas <span class="dim">e negócios de viagens</span></h1>
       <p class="lead gx-reveal" style="--gx-delay:80ms">Dois produtos que trabalham juntos: o <strong>Manager</strong> organiza saldos, custos e vendas, e o <strong>Balcão</strong> conecta quem compra e quem vende milhas com verificação e intermediação.</p>
       <div class="ctas gx-reveal" style="--gx-delay:160ms">
         <a class="btn btn-gold btn-lg" href="#manager">Conhecer o Manager</a>
@@ -439,7 +453,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
     </div>
     <div class="stage gx-reveal" style="--gx-delay:200ms">
       <div class="photo"><img src="/assets/fotos/noronha-dois-irmaos.webp" alt="" width="1920" height="1280" fetchpriority="high">
-        <div class="phone"><img src="/assets/telas/celular-painel.webp" alt="Painel do GOMilhasX Manager no celular, com saldo total e custo do milheiro por programa" width="600" height="1298"></div>
+        <div class="phone" data-parallax="90"><img src="/assets/telas/celular-painel.webp" alt="Painel do GOMilhasX Manager no celular, com saldo total e custo do milheiro por programa" width="600" height="1298"></div>
       </div>
       <div class="tag-float t1" aria-hidden="true"><img src="/assets/smiles.png" alt=""><span><b>R$ 19,40</b><small>custo do milheiro Smiles</small></span></div>
       <div class="tag-float t2" aria-hidden="true"><img src="/assets/latam-pass.png" alt=""><span><b>Negociação fechada</b><small>80.000 pts LATAM Pass</small></span></div>
@@ -449,10 +463,10 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 
   <section class="block" aria-label="Quem é a GOMilhasX">
     <div class="wrap">
-      <p class="statement gx-reveal">A GOMilhasX é uma TravelTech brasileira que troca planilhas, grupos e conta de cabeça por ferramentas com números confiáveis e negociações mais seguras, <span>para quem acumula pontos e viaja, para agentes que emitem passagens e para milheiros que vendem milhas.</span></p>
+      <p class="statement" data-scroll-words>A GOMilhasX é uma TravelTech brasileira que troca planilhas, grupos e conta de cabeça por ferramentas com números confiáveis e negociações mais seguras, para quem acumula pontos e viaja, para agentes que emitem passagens e para milheiros que vendem milhas.</p>
     </div>
     <div class="strip" aria-hidden="true">
-      <div class="row">
+      <div class="row" data-scroll-x="-320">
         <img src="/assets/fotos/noronha-praia-do-leao.webp" alt="" loading="lazy" decoding="async">
         <img src="/assets/fotos/janela-aviao.webp" alt="" loading="lazy" decoding="async">
         <img src="/assets/fotos/maresias.webp" alt="" loading="lazy" decoding="async">
@@ -501,7 +515,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 
   <section id="produtos" class="block white" aria-labelledby="produtos-titulo">
     <div class="wrap">
-      <div class="title gx-reveal"><span class="kicker">Produtos</span><h2 id="produtos-titulo">Escolha por onde começar</h2><p>Cada produto resolve uma parte do dia a dia de quem trabalha com milhas. Use um, ou os dois juntos.</p></div>
+      <div class="title gx-reveal"><span class="kicker">Produtos</span><h2 id="produtos-titulo" data-split>Escolha por onde começar</h2><p>Cada produto resolve uma parte do dia a dia de quem trabalha com milhas. Use um, ou os dois juntos.</p></div>
       <div class="products">
         <article class="card prod gx-card gx-reveal">
           <div class="media">
@@ -550,7 +564,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
     <div class="wrap aud">
       <div class="aud-head gx-reveal">
         <span class="kicker">Para quem é</span>
-        <h2 id="publico-titulo" class="h2">Feito para quem vive o mercado de milhas</h2>
+        <h2 id="publico-titulo" data-split class="h2">Feito para quem vive o mercado de milhas</h2>
         <p>Do viajante que organiza os pontos da família ao milheiro com vários CPFs: cada um usa o que precisa.</p>
         <a class="btn btn-primary" href="#contato">Fale com a gente</a>
       </div>
@@ -566,7 +580,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
     <div class="wrap detail">
       <div class="text gx-reveal">
         <span class="kicker">GOMilhasX Manager</span>
-        <h2 id="manager-titulo" class="h2">Saiba quanto tem, quanto custou e quanto lucrou</h2>
+        <h2 id="manager-titulo" data-split class="h2">Saiba quanto tem, quanto custou e quanto lucrou</h2>
         <p class="desc">Do viajante que organiza os próprios pontos à agência que administra contas de clientes: o Manager faz as contas de custo médio, saldo e lucro a cada movimento.</p>
         <div class="acc">
           <details open><summary><span class="icon"><svg><use href="#p-notebook"/></svg></span>Carteiras por titular</summary><p>Saldos de cada CPF em todos os programas, com vencimentos e extrato da origem de cada milha.</p></details>
@@ -586,7 +600,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
     <div class="wrap detail rev">
       <div class="text gx-reveal">
         <span class="kicker">GOMilhasX Balcão</span>
-        <h2 id="balcao-titulo" class="h2">Compre e venda milhas com quem é verificado</h2>
+        <h2 id="balcao-titulo" data-split class="h2">Compre e venda milhas com quem é verificado</h2>
         <p class="desc">Viajantes, agentes e milheiros negociam num só lugar, com regras claras de pagamento, emissão e cancelamento, e a equipe do balcão acompanhando cada negociação intermediada.</p>
         <div class="acc">
           <details open><summary><span class="icon"><svg><use href="#p-broadcast"/></svg></span>Direto no Telegram</summary><p>Quem quer comprar publica a oferta; vendedores aceitam ou fazem contraproposta pelo bot.</p></details>
@@ -609,7 +623,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 
   <section class="block dark" aria-labelledby="tudo-titulo">
     <div class="wrap">
-      <div class="title gx-reveal"><span class="kicker">Por que a GOMilhasX</span><h2 id="tudo-titulo">Tudo o que a sua operação de milhas precisa, num lugar só</h2></div>
+      <div class="title gx-reveal"><span class="kicker">Por que a GOMilhasX</span><h2 id="tudo-titulo" data-split>Tudo o que a sua operação de milhas precisa, num lugar só</h2></div>
       <div class="bento">
         <div class="tile big gx-reveal">
           <img src="/assets/fotos/rio-noite.webp" alt="" loading="lazy" decoding="async">
@@ -625,7 +639,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 
   <section class="block" aria-labelledby="passos-titulo">
     <div class="wrap">
-      <div class="title gx-reveal"><span class="kicker">Como começar</span><h2 id="passos-titulo">Comece em 3 passos</h2></div>
+      <div class="title gx-reveal"><span class="kicker">Como começar</span><h2 id="passos-titulo" data-split>Comece em 3 passos</h2></div>
       <div class="steps">
         <div class="card step gx-card gx-reveal"><span class="n">01</span><h3>Escolha o produto</h3><p>O Manager para organizar a operação, o Balcão para negociar milhas, ou os dois juntos.</p></div>
         <div class="card step gx-card gx-reveal" style="--gx-delay:80ms"><span class="n">02</span><h3>Crie o seu acesso</h3><p>No Manager, conta com e-mail ou Google e 15 dias de teste. No Balcão, cadastro e verificação única de identidade.</p></div>
@@ -636,7 +650,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 
   <section id="planos" class="block white" aria-labelledby="planos-titulo">
     <div class="wrap">
-      <div class="title gx-reveal"><span class="kicker">Planos</span><h2 id="planos-titulo">Comece grátis ou pelo plano que cabe na sua operação</h2><p>Cada produto tem a própria assinatura. Os planos completos ficam no site de cada um.</p></div>
+      <div class="title gx-reveal"><span class="kicker">Planos</span><h2 id="planos-titulo" data-split>Comece grátis ou pelo plano que cabe na sua operação</h2><p>Cada produto tem a própria assinatura. Os planos completos ficam no site de cada um.</p></div>
       <div class="plans">
         <div class="card plan gx-card gx-reveal">
           <span class="name">GOMilhasX Manager</span>
@@ -668,7 +682,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 
   <section id="sobre" class="block" aria-labelledby="sobre-titulo">
     <div class="wrap">
-      <div class="title gx-reveal"><span class="kicker">Sobre</span><h2 id="sobre-titulo">A GOMilhasX</h2><p>Uma TravelTech brasileira que cria ferramentas para quem trabalha com milhas e viagens.</p></div>
+      <div class="title gx-reveal"><span class="kicker">Sobre</span><h2 id="sobre-titulo" data-split>A GOMilhasX</h2><p>Uma TravelTech brasileira que cria ferramentas para quem trabalha com milhas e viagens.</p></div>
       <div class="about">
         <div class="card gx-reveal">
           <span class="icon"><svg><use href="#i-building"/></svg></span>
@@ -696,7 +710,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
       </picture>
       <div class="founder-text">
         <span class="badge">Sócio fundador</span>
-        <h2 id="fundador-titulo">Prazer, Godinho!</h2>
+        <h2 id="fundador-titulo" data-split>Prazer, Godinho!</h2>
         <p>Sou formado em Análise e Desenvolvimento de Sistemas e trabalho onde a tecnologia encontra o mercado de milhas.</p>
         <p>Criei a GOMilhasX para levar a quem vive esse mercado ferramentas com <strong>números confiáveis</strong> e <strong>negociações mais seguras</strong>: o GOMilhasX Manager, para organizar saldos, custos e vendas, e o GOMilhasX Balcão, para comprar e vender milhas com verificação de identidade e intermediação.</p>
         <p>Meu propósito é seguir desenvolvendo tecnologia para tornar esse ecossistema cada vez mais simples, acessível e confiável.</p>
@@ -706,7 +720,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 
   <section id="contato" class="block" aria-labelledby="contato-titulo">
     <div class="wrap">
-      <div class="title gx-reveal"><span class="kicker">Contato</span><h2 id="contato-titulo">Fale com a gente</h2><p>Dúvidas sobre os produtos, planos ou parcerias: chame no canal que preferir.</p></div>
+      <div class="title gx-reveal"><span class="kicker">Contato</span><h2 id="contato-titulo" data-split>Fale com a gente</h2><p>Dúvidas sobre os produtos, planos ou parcerias: chame no canal que preferir.</p></div>
       <div class="contacts">
         <a class="card contact gx-card gx-reveal" href="https://wa.me/5521994934776?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GOMilhasX." target="_blank" rel="noopener noreferrer">
           <span class="icon"><svg><use href="#i-phone"/></svg></span><span><b>WhatsApp</b><small>(21) 99493-4776</small></span>
@@ -719,7 +733,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
         </a>
       </div>
       <div id="duvidas" style="scroll-margin-top:88px;margin-top:96px">
-        <div class="title gx-reveal"><span class="kicker">Dúvidas</span><h2 id="duvidas-titulo">Perguntas frequentes</h2></div>
+        <div class="title gx-reveal"><span class="kicker">Dúvidas</span><h2 id="duvidas-titulo" data-split>Perguntas frequentes</h2></div>
         <div class="faq">
           <details class="gx-faq"><summary>O que é a GOMilhasX?</summary><p>A GOMilhasX é uma empresa de tecnologia para o mercado de viagens, por trás de dois produtos para quem trabalha com milhas: o GOMilhasX Manager, para organizar e acompanhar a operação, e o GOMilhasX Balcão, para comprar e vender milhas com segurança.</p></details>
           <details class="gx-faq"><summary>Preciso assinar os dois?</summary><p>Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos.</p></details>
@@ -736,7 +750,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
       <div class="final gx-reveal">
         <img src="/assets/fotos/ceu-avioes.webp" alt="" loading="lazy" decoding="async">
         <div class="in">
-          <h2 id="final-titulo">Controle suas milhas. Potencialize suas oportunidades.</h2>
+          <h2 id="final-titulo" data-split>Controle suas milhas. Potencialize suas oportunidades.</h2>
           <p>Comece grátis no Manager ou entre no Balcão para negociar com quem é verificado.</p>
           <div class="ctas">
             <a class="btn btn-gold btn-lg" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
@@ -777,7 +791,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
       <li><a href="https://manager.gomilhasx.com/privacidade/solicitacao">Pedidos sobre seus dados</a></li>
     </ul></nav>
   </div>
-  <p class="big-word" aria-hidden="true">Milhas, simplificadas.</p>
+  <p class="big-word" aria-hidden="true" data-split>Milhas, simplificadas.</p>
   <p class="copy">© <span id="ano">2026</span> GOMilhasX · CNPJ 70.001.231/0001-03. Todos os direitos reservados.</p>
 </footer>
 
