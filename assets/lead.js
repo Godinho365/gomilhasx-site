@@ -1,5 +1,5 @@
 // Modal "Acessar o Balcão": qualquer link com data-lead abre o formulário (sem JavaScript, o link segue para o Balcão).
-// Os dados vão para /api/lead (o Caddy repassa ao GOMilhasX Balcão, no mesmo domínio): nada de cookie, nada de dado
+// Os dados vão para /api/lead (o Caddy repassa ao GO Balcão, no mesmo domínio): nada de cookie, nada de dado
 // pessoal em URL ou em evento. Eventos de métrica: só o nome do evento, o botão clicado e a origem da campanha.
 (function () {
   "use strict";
