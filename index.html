@@ -40,10 +40,11 @@
   --bg: #f4f4f2; --white: #ffffff; --panel: #ffffff; --panel2: #f4f4f2; --line: #e3e3df; --text: #102442; --muted: #6b6b6b; --soft: #8e8e8e;
   --ink: #102442; --ink2: #1a3358; --gold: #d9a441; --gold-2: #e8bd66; --gold-dark: #9c7224; --gold-soft: #fbf1de;
   --accent: #102442; --accent-btn: #102442; --accent-soft: #fbf1de; --on-accent: #ffffff; --ok: #16a34a; --glow: rgba(217,164,65,.25);
-  --gx-cyan: 217, 164, 65; --gx-cyan-strong: 217, 164, 65; /* kit de animação no dourado da marca */
   --sky: #e8f4fb;
   color-scheme: light;
 }
+/* Kit de animação (carregado depois deste estilo) nas cores da marca: html:root vence o :root dele. Borda dourada no hover, sombra e texto em azul-marinho. */
+html:root { --gx-cyan: 217, 164, 65; --gx-cyan-strong: 16, 36, 66; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; overflow-x: hidden; }
