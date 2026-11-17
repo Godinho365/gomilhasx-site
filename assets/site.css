@@ -513,6 +513,7 @@ header .head-cta { animation: sm-right .8s .15s cubic-bezier(.22,.61,.36,1) both
 .cform .err { color: #b42318; font-size: 13px; min-height: 18px; }
 .channels { display: grid; gap: 12px; align-content: start; }
 .channels .contact { min-height: 86px; }
+.doors { margin-top: 22px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 .calc-res b { font-size: 26px; font-weight: 600; letter-spacing: -.02em; color: var(--ink); margin-top: 4px; }
 .calc-res small + b + small { margin-top: 4px; }
 .channels .note { padding: 18px; border-radius: 18px; background: var(--off); font-size: 14px; color: var(--muted); }
