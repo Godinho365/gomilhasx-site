@@ -97,7 +97,7 @@ header .wrap { position: relative; display: flex; align-items: center; justify-c
 @media (min-width: 900px) { .menu-panel { display: none !important; } }
 
 /* Abertura */
-.hero { background: radial-gradient(ellipse at top, var(--glow), transparent 65%); text-align: center; padding: 48px 0 56px; }
+.hero { text-align: center; padding: 48px 0 56px; }
 @media (min-width: 1024px) { .hero { padding-top: 80px; } }
 .pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 12px; color: var(--muted); }
 .pill svg { width: 14px; height: 14px; }
@@ -108,7 +108,7 @@ header .wrap { position: relative; display: flex; align-items: center; justify-c
 .hero-grid { display: grid; gap: 40px; align-items: center; }
 @media (min-width: 1024px) { .hero { text-align: left; } .hero-grid { grid-template-columns: 1.1fr 1fr; gap: 56px; } .hero h1, .hero p.lead { margin-left: 0; } .hero .ctas { justify-content: flex-start; } }
 .hero-visual { position: relative; max-width: 460px; width: 100%; margin: 0 auto; text-align: left; }
-.hero-visual .mock { box-shadow: 0 24px 60px -28px rgba(0,0,0,.35); }
+.hero-visual .mock { box-shadow: 0 24px 60px -28px rgba(0,0,0,.35), 0 0 0 1px rgba(34,211,238,.12); }
 .hero-visual .chat { margin: -28px 0 0 48px; position: relative; }
 @media (max-width: 479px) { .hero-visual .chat { margin-left: 16px; } }
 
@@ -240,6 +240,8 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que é a GOMilhasX?", "acceptedAnswer": {"@type": "Answer", "text": "A GOMilhasX é uma empresa de tecnologia para o mercado de viagens, por trás de dois produtos para quem trabalha com milhas: o GOMilhasX Manager, para organizar e acompanhar a operação, e o GOMilhasX Balcão, para comprar e vender milhas com segurança."}}, {"@type": "Question", "name": "Preciso assinar os dois?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos."}}, {"@type": "Question", "name": "O Manager tem teste grátis?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Toda conta nova começa com 15 dias com os recursos do plano Gestor, sem cartão de crédito. Depois, continua grátis no plano Pessoal se você não assinar."}}, {"@type": "Question", "name": "Como assino o Balcão?", "acceptedAnswer": {"@type": "Answer", "text": "Escolha o módulo e o período, pague pela página de assinatura e ative o plano direto no Telegram. Antes de negociar, você faz uma verificação única de identidade."}}, {"@type": "Question", "name": "As milhas são transferidas entre contas no Balcão?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Os programas de fidelidade não permitem transferir milhas entre contas de terceiros. O vendedor emite a passagem com as milhas dele, em nome dos passageiros informados."}}]}
 </script>
+<link rel="stylesheet" href="/assets/motion/gomilhasx-motion.css">
+<script src="/assets/motion/gomilhasx-motion.js" defer></script>
 </head>
 <body>
 <!-- Ícones (Lucide, licença ISC), reaproveitados com <use> -->
@@ -274,18 +276,18 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
       <a href="#produtos">Produtos</a><a href="#planos">Planos</a><a href="#sobre">Sobre</a><a href="#fundador">Fundador</a><a href="#contato">Contato</a>
     </nav>
     <div class="head-cta">
-      <a class="btn btn-primary" href="https://manager.gomilhasx.com/login">Entrar no Manager</a>
+      <a class="btn btn-primary gx-btn" href="https://manager.gomilhasx.com/login">Entrar no Manager</a>
       <button type="button" class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-site"><svg><use href="#i-menu"/></svg></button>
     </div>
     <div class="menu-panel" id="menu-site" hidden>
       <nav aria-label="Seções"><a href="#produtos">Produtos</a><a href="#planos">Planos</a><a href="#sobre">Sobre</a><a href="#fundador">Fundador</a><a href="#contato">Contato</a></nav>
-      <a class="btn btn-primary" href="https://manager.gomilhasx.com/login">Entrar no Manager</a>
+      <a class="btn btn-primary gx-btn" href="https://manager.gomilhasx.com/login">Entrar no Manager</a>
     </div>
   </div>
 </header>
 
 <main id="inicio">
-  <section class="hero">
+  <section class="hero gx-stage" data-gx-bg="network">
     <div class="wrap hero-grid">
       <div>
       <span class="pill"><svg><use href="#i-plane"/></svg>GOMilhasX · TravelTech brasileira</span>
@@ -293,11 +295,11 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
       <p class="lead muted">Dois produtos que trabalham juntos: o <strong>Manager</strong> organiza saldos, custos e vendas, e o <strong>Balcão</strong> conecta quem compra e quem vende milhas com verificação e intermediação.</p>
       <p class="slogan">Controle suas milhas. Potencialize suas oportunidades.</p>
       <div class="ctas">
-        <a class="btn btn-primary btn-lg" href="#manager">Conhecer o Manager</a>
+        <a class="btn btn-primary gx-btn btn-lg" href="#manager">Conhecer o Manager</a>
         <a class="btn btn-ghost btn-lg" href="#balcao">Conhecer o Balcão</a>
       </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
+      <div class="hero-visual gx-reveal" style="--gx-delay:200ms" aria-hidden="true">
         <div class="card mock">
           <div class="top">
             <div><small>Saldo total · GOMilhasX Manager</small><span class="big">421.650</span> <small style="display:inline">milhas</small></div>
@@ -319,23 +321,23 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
 
   <section id="produtos" class="block" aria-labelledby="produtos-titulo">
     <div class="wrap">
-      <div class="title"><p class="kicker">Produtos</p><h2 id="produtos-titulo">Escolha por onde começar</h2></div>
+      <div class="title gx-reveal"><p class="kicker">Produtos</p><h2 id="produtos-titulo">Escolha por onde começar</h2></div>
       <div class="grid2">
-        <div class="card product">
+        <div class="card product gx-card gx-reveal" style="--gx-delay:0ms">
           <div class="icon"><svg><use href="#i-chart"/></svg></div>
           <h3>GOMilhasX Manager</h3>
           <p class="muted">Sistema de gestão para quem acumula, compra e vende milhas: carteiras por titular, custo do milheiro, simulador de transferências, vendas, emissões e financeiro. Funciona no navegador, no computador e no celular.</p>
           <div class="row">
-            <a class="btn btn-primary" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
+            <a class="btn btn-primary gx-btn" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
             <a class="btn btn-ghost" href="https://manager.gomilhasx.com/">Ver o site <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
-        <div class="card product">
+        <div class="card product gx-card gx-reveal" style="--gx-delay:80ms">
           <div class="icon"><svg><use href="#i-store"/></svg></div>
           <h3>GOMilhasX Balcão</h3>
           <p class="muted">Balcão de milhas no Telegram: quem quer comprar publica uma oferta, vendedores verificados aceitam ou fazem contraproposta, e a negociação acontece com reputação pública e pagamento por PIX com intermediação.</p>
           <div class="row">
-            <a class="btn btn-primary" href="#planos">Ver planos do Balcão</a>
+            <a class="btn btn-primary gx-btn" href="#planos">Ver planos do Balcão</a>
             <a class="btn btn-ghost" href="https://balcao.gomilhasx.com/">Ver o site <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
@@ -372,7 +374,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
 
   <section id="manager" class="block" aria-labelledby="manager-titulo">
     <div class="wrap">
-      <div class="split">
+      <div class="split gx-reveal">
         <div>
           <p class="kicker">GOMilhasX Manager</p>
           <h2 id="manager-titulo">Saiba quanto tem, quanto custou e quanto lucrou</h2>
@@ -392,17 +394,17 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
         </div>
       </div>
       <div class="features">
-        <div class="card feature"><div class="icon"><svg><use href="#i-wallet"/></svg></div><div><h3>Carteiras por titular</h3><p>Saldos de cada CPF em todos os programas, com vencimentos e extrato da origem de cada milha.</p></div></div>
-        <div class="card feature"><div class="icon"><svg><use href="#i-calc"/></svg></div><div><h3>Custo do milheiro</h3><p>Recalculado a cada compra, transferência e bônus. Simulador de transferências bonificadas.</p></div></div>
-        <div class="card feature"><div class="icon"><svg><use href="#i-bars"/></svg></div><div><h3>Vendas e lucro</h3><p>Lucro de cada venda e emissão, CRM de pedidos, clientes, passageiros e fornecedores.</p></div></div>
-        <div class="card feature"><div class="icon"><svg><use href="#i-users"/></svg></div><div><h3>Equipe e financeiro</h3><p>Login próprio para a equipe, permissões por função, contas a pagar e a receber.</p></div></div>
+        <div class="card feature gx-card gx-reveal" style="--gx-delay:0ms"><div class="icon"><svg><use href="#i-wallet"/></svg></div><div><h3>Carteiras por titular</h3><p>Saldos de cada CPF em todos os programas, com vencimentos e extrato da origem de cada milha.</p></div></div>
+        <div class="card feature gx-card gx-reveal" style="--gx-delay:80ms"><div class="icon"><svg><use href="#i-calc"/></svg></div><div><h3>Custo do milheiro</h3><p>Recalculado a cada compra, transferência e bônus. Simulador de transferências bonificadas.</p></div></div>
+        <div class="card feature gx-card gx-reveal" style="--gx-delay:160ms"><div class="icon"><svg><use href="#i-bars"/></svg></div><div><h3>Vendas e lucro</h3><p>Lucro de cada venda e emissão, CRM de pedidos, clientes, passageiros e fornecedores.</p></div></div>
+        <div class="card feature gx-card gx-reveal" style="--gx-delay:240ms"><div class="icon"><svg><use href="#i-users"/></svg></div><div><h3>Equipe e financeiro</h3><p>Login próprio para a equipe, permissões por função, contas a pagar e a receber.</p></div></div>
       </div>
     </div>
   </section>
 
   <section id="balcao" class="block" aria-labelledby="balcao-titulo">
     <div class="wrap">
-      <div class="split">
+      <div class="split gx-reveal">
         <div class="card mock chat" aria-hidden="true">
           <div class="bar"><span class="icon"><svg><use href="#i-store"/></svg></span>GOMilhasX Balcão<small class="muted">bot</small></div>
           <div class="msg"><b>Nova oferta de compra</b><span class="muted">85.000 milhas LATAM Pass · 2 passageiros</span><br>R$ 25,00 o milheiro</div>
@@ -417,19 +419,19 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
         </div>
       </div>
       <div class="features">
-        <div class="card feature"><div class="icon"><svg><use href="#i-chat"/></svg></div><div><h3>Direto no Telegram</h3><p>Quem quer comprar publica a oferta; vendedores aceitam ou fazem contraproposta pelo bot.</p></div></div>
-        <div class="card feature"><div class="icon"><svg><use href="#i-badge"/></svg></div><div><h3>Usuários verificados</h3><p>Documento, selfie, vídeo e termo assinado pelo GOV.BR, analisados pela equipe antes de liberar o acesso.</p></div></div>
-        <div class="card feature"><div class="icon"><svg><use href="#i-hand"/></svg></div><div><h3>Intermediação</h3><p>O comprador paga ao balcão por PIX e o vendedor só recebe depois da emissão da passagem.</p></div></div>
-        <div class="card feature"><div class="icon"><svg><use href="#i-shield"/></svg></div><div><h3>Reputação pública</h3><p>Confiômetro, avaliações e histórico de cada vendedor para negociar com quem entrega.</p></div></div>
+        <div class="card feature gx-card gx-reveal" style="--gx-delay:0ms"><div class="icon"><svg><use href="#i-chat"/></svg></div><div><h3>Direto no Telegram</h3><p>Quem quer comprar publica a oferta; vendedores aceitam ou fazem contraproposta pelo bot.</p></div></div>
+        <div class="card feature gx-card gx-reveal" style="--gx-delay:80ms"><div class="icon"><svg><use href="#i-badge"/></svg></div><div><h3>Usuários verificados</h3><p>Documento, selfie, vídeo e termo assinado pelo GOV.BR, analisados pela equipe antes de liberar o acesso.</p></div></div>
+        <div class="card feature gx-card gx-reveal" style="--gx-delay:160ms"><div class="icon"><svg><use href="#i-hand"/></svg></div><div><h3>Intermediação</h3><p>O comprador paga ao balcão por PIX e o vendedor só recebe depois da emissão da passagem.</p></div></div>
+        <div class="card feature gx-card gx-reveal" style="--gx-delay:240ms"><div class="icon"><svg><use href="#i-shield"/></svg></div><div><h3>Reputação pública</h3><p>Confiômetro, avaliações e histórico de cada vendedor para negociar com quem entrega.</p></div></div>
       </div>
     </div>
   </section>
 
   <section id="planos" class="block" aria-labelledby="planos-titulo">
     <div class="wrap">
-      <div class="title"><p class="kicker">Planos</p><h2 id="planos-titulo">Comece grátis ou pelo plano que cabe na sua operação</h2><p class="muted">Cada produto tem a própria assinatura. Os planos completos ficam no site de cada um.</p></div>
+      <div class="title gx-reveal"><p class="kicker">Planos</p><h2 id="planos-titulo">Comece grátis ou pelo plano que cabe na sua operação</h2><p class="muted">Cada produto tem a própria assinatura. Os planos completos ficam no site de cada um.</p></div>
       <div class="grid2">
-        <div class="card plan-sum">
+        <div class="card plan-sum gx-card gx-reveal" style="--gx-delay:0ms">
           <div class="icon"><svg><use href="#i-chart"/></svg></div>
           <h3>GOMilhasX Manager</h3>
           <p class="from"><strong>Grátis</strong> no plano Pessoal</p>
@@ -438,11 +440,11 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
             <li><svg><use href="#i-check"/></svg>15 dias de teste com os recursos do Gestor, sem cartão de crédito</li>
           </ul>
           <div class="row">
-            <a class="btn btn-primary" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
+            <a class="btn btn-primary gx-btn" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
             <a class="btn btn-ghost" href="https://manager.gomilhasx.com/#planos">Ver os planos <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
-        <div class="card plan-sum">
+        <div class="card plan-sum gx-card gx-reveal" style="--gx-delay:80ms">
           <div class="icon"><svg><use href="#i-store"/></svg></div>
           <h3>GOMilhasX Balcão</h3>
           <p class="from">A partir de <strong>R$ 9,90/mês</strong></p>
@@ -451,7 +453,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
             <li><svg><use href="#i-check"/></svg>Mensal, anual (economize 17%) ou vitalício; ativação direto no Telegram</li>
           </ul>
           <div class="row">
-            <a class="btn btn-primary" href="https://balcao.gomilhasx.com/#planos">Ver os planos do Balcão</a>
+            <a class="btn btn-primary gx-btn" href="https://balcao.gomilhasx.com/#planos">Ver os planos do Balcão</a>
           </div>
         </div>
       </div>
@@ -460,8 +462,8 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
 
   <section id="sobre" class="block" aria-labelledby="sobre-titulo">
     <div class="wrap">
-      <div class="title"><p class="kicker">Sobre</p><h2 id="sobre-titulo">A GOMilhasX</h2><p class="muted">Uma TravelTech brasileira que cria ferramentas para quem trabalha com milhas e viagens.</p></div>
-      <div class="card about">
+      <div class="title gx-reveal"><p class="kicker">Sobre</p><h2 id="sobre-titulo">A GOMilhasX</h2><p class="muted">Uma TravelTech brasileira que cria ferramentas para quem trabalha com milhas e viagens.</p></div>
+      <div class="card about gx-card gx-reveal" style="--gx-delay:0ms">
         <div class="icon"><svg><use href="#i-building"/></svg></div>
         <div>
           <h3 class="about-h">Quem somos</h3>
@@ -476,7 +478,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
 
   <section id="fundador" class="block" aria-labelledby="fundador-titulo">
     <div class="wrap">
-      <div class="founder">
+      <div class="founder gx-reveal">
         <div class="founder-text">
           <span class="badge">Sócio fundador</span>
           <h2 id="fundador-titulo">Prazer, Godinho!</h2>
@@ -494,15 +496,15 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
 
   <section id="contato" class="block" aria-labelledby="contato-titulo">
     <div class="wrap">
-      <div class="title"><p class="kicker">Contato</p><h2 id="contato-titulo">Fale com a gente</h2><p class="muted">Dúvidas sobre os produtos, planos ou parcerias: chame no canal que preferir.</p></div>
+      <div class="title gx-reveal"><p class="kicker">Contato</p><h2 id="contato-titulo">Fale com a gente</h2><p class="muted">Dúvidas sobre os produtos, planos ou parcerias: chame no canal que preferir.</p></div>
       <div class="contacts">
-        <a class="card contact" href="https://wa.me/5521994934776?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GOMilhasX." target="_blank" rel="noopener noreferrer">
+        <a class="card contact gx-card gx-reveal" style="--gx-delay:0ms" href="https://wa.me/5521994934776?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GOMilhasX." target="_blank" rel="noopener noreferrer">
           <span class="icon"><svg><use href="#i-phone"/></svg></span><span><b>WhatsApp</b><small class="muted">(21) 99493-4776</small></span>
         </a>
-        <a class="card contact" href="https://t.me/gomilhasx" target="_blank" rel="noopener noreferrer">
+        <a class="card contact gx-card gx-reveal" style="--gx-delay:80ms" href="https://t.me/gomilhasx" target="_blank" rel="noopener noreferrer">
           <span class="icon"><svg><use href="#i-send"/></svg></span><span><b>Telegram</b><small class="muted">@gomilhasx</small></span>
         </a>
-        <a class="card contact" href="https://www.instagram.com/gomilhasx/" target="_blank" rel="noopener noreferrer">
+        <a class="card contact gx-card gx-reveal" style="--gx-delay:160ms" href="https://www.instagram.com/gomilhasx/" target="_blank" rel="noopener noreferrer">
           <span class="icon"><svg><use href="#i-insta"/></svg></span><span><b>Instagram</b><small class="muted">@gomilhasx</small></span>
         </a>
       </div>
@@ -511,13 +513,13 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px; text-align: cen
 
   <section id="duvidas" class="block" aria-labelledby="duvidas-titulo">
     <div class="wrap">
-      <div class="title"><p class="kicker">Dúvidas</p><h2 id="duvidas-titulo">Perguntas frequentes</h2></div>
+      <div class="title gx-reveal"><p class="kicker">Dúvidas</p><h2 id="duvidas-titulo">Perguntas frequentes</h2></div>
       <div class="faq">
-        <details class="card"><summary>O que é a GOMilhasX?</summary><p>A GOMilhasX é uma empresa de tecnologia para o mercado de viagens, por trás de dois produtos para quem trabalha com milhas: o GOMilhasX Manager, para organizar e acompanhar a operação, e o GOMilhasX Balcão, para comprar e vender milhas com segurança.</p></details>
-        <details class="card"><summary>Preciso assinar os dois?</summary><p>Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos.</p></details>
-        <details class="card"><summary>O Manager tem teste grátis?</summary><p>Sim. Toda conta nova começa com 15 dias com os recursos do plano Gestor, sem cartão de crédito. Depois, continua grátis no plano Pessoal se você não assinar.</p></details>
-        <details class="card"><summary>Como assino o Balcão?</summary><p>Escolha o módulo e o período, pague pela página de assinatura e ative o plano direto no Telegram. Antes de negociar, você faz uma verificação única de identidade.</p></details>
-        <details class="card"><summary>As milhas são transferidas entre contas no Balcão?</summary><p>Não. Os programas de fidelidade não permitem transferir milhas entre contas de terceiros. O vendedor emite a passagem com as milhas dele, em nome dos passageiros informados.</p></details>
+        <details class="card gx-faq"><summary>O que é a GOMilhasX?</summary><p>A GOMilhasX é uma empresa de tecnologia para o mercado de viagens, por trás de dois produtos para quem trabalha com milhas: o GOMilhasX Manager, para organizar e acompanhar a operação, e o GOMilhasX Balcão, para comprar e vender milhas com segurança.</p></details>
+        <details class="card gx-faq"><summary>Preciso assinar os dois?</summary><p>Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos.</p></details>
+        <details class="card gx-faq"><summary>O Manager tem teste grátis?</summary><p>Sim. Toda conta nova começa com 15 dias com os recursos do plano Gestor, sem cartão de crédito. Depois, continua grátis no plano Pessoal se você não assinar.</p></details>
+        <details class="card gx-faq"><summary>Como assino o Balcão?</summary><p>Escolha o módulo e o período, pague pela página de assinatura e ative o plano direto no Telegram. Antes de negociar, você faz uma verificação única de identidade.</p></details>
+        <details class="card gx-faq"><summary>As milhas são transferidas entre contas no Balcão?</summary><p>Não. Os programas de fidelidade não permitem transferir milhas entre contas de terceiros. O vendedor emite a passagem com as milhas dele, em nome dos passageiros informados.</p></details>
       </div>
     </div>
   </section>

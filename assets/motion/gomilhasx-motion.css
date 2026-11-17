@@ -1,0 +1,98 @@
+/*!
+ * GOMilhasX Motion Kit v1.0.0
+ * Fonte oficial: repositório gomilhasx-site, pasta assets/motion. Manager e Balcão usam uma cópia deste arquivo
+ * (mesma versão no cabeçalho); ao mudar aqui, copie para lá. Sem dependências.
+ *
+ * Uso (só em páginas públicas; nunca nas telas de trabalho do app):
+ *   <section class="gx-stage" data-gx-bg="network|grid|flow"> … </section>   fundo tecnológico
+ *   class="gx-reveal" (+ style="--gx-delay:120ms")                          entrada com fade e slide
+ *   class="gx-card"                                                          hover com elevação e borda ciano
+ *   class="gx-btn"                                                           microanimação de botão
+ *   class="gx-glow"                                                          iluminação suave
+ *   <details class="gx-faq">                                                 abertura animada
+ *   <span data-gx-count="1234">1.234</span>                                  contador (só com dado real)
+ * Tudo some com prefers-reduced-motion.
+ */
+
+:root {
+  --gx-cyan: 34, 211, 238;      /* ciano da marca (rgb) */
+  --gx-cyan-strong: 6, 182, 212;
+  --gx-gold: 245, 184, 0;       /* dourado da seta */
+  --gx-navy: 2, 11, 38;
+  --gx-ease: cubic-bezier(.22, .61, .36, 1);
+  --gx-dur: .6s;
+}
+
+/* ---------- Fundo tecnológico ---------- */
+.gx-stage { position: relative; isolation: isolate; overflow: hidden; }
+.gx-stage > .gx-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent); mask-image: linear-gradient(to bottom, #000 65%, transparent); }
+.gx-bg canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .9; }
+/* gradientes radiais ciano (e um toque dourado) */
+.gx-bg::before {
+  content: ""; position: absolute; inset: -20% -10% auto -10%; height: 120%;
+  background:
+    radial-gradient(40% 50% at 20% 10%, rgba(var(--gx-cyan), .16), transparent 70%),
+    radial-gradient(35% 45% at 85% 20%, rgba(var(--gx-cyan-strong), .12), transparent 70%),
+    radial-gradient(25% 30% at 75% 55%, rgba(var(--gx-gold), .06), transparent 70%);
+}
+/* linhas luminosas em movimento lento */
+.gx-bg .gx-beam {
+  position: absolute; left: -30%; width: 60%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(var(--gx-cyan), .55), transparent);
+  box-shadow: 0 0 12px rgba(var(--gx-cyan), .35);
+  animation: gx-beam 14s linear infinite; opacity: .55;
+}
+.gx-bg .gx-beam:nth-child(2) { top: 28%; animation-duration: 18s; animation-delay: -6s; }
+.gx-bg .gx-beam:nth-child(3) { top: 62%; animation-duration: 22s; animation-delay: -11s; opacity: .4; }
+.gx-bg .gx-beam:nth-child(4) { top: 84%; animation-duration: 26s; animation-delay: -3s; opacity: .3;
+  background: linear-gradient(90deg, transparent, rgba(var(--gx-gold), .5), transparent); box-shadow: none; }
+@keyframes gx-beam { from { transform: translateX(0); } to { transform: translateX(230%); } }
+/* Manager: grade de dados discreta (organização, controle) */
+.gx-bg[data-variant="grid"]::after {
+  content: ""; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(var(--gx-cyan), .07) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--gx-cyan), .07) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 30%, #000 40%, transparent 100%);
+          mask-image: radial-gradient(70% 70% at 50% 30%, #000 40%, transparent 100%);
+}
+/* Balcão: feixes mais presentes (negócios, agilidade) */
+.gx-bg[data-variant="flow"] .gx-beam { opacity: .75; animation-duration: 9s; }
+.gx-bg[data-variant="flow"] .gx-beam:nth-child(2) { animation-duration: 12s; }
+.gx-bg[data-variant="flow"] .gx-beam:nth-child(3) { animation-duration: 15s; }
+
+/* ---------- Entrada com fade e slide ---------- */
+.gx-reveal { opacity: 0; transform: translateY(18px); transition: opacity var(--gx-dur) var(--gx-ease), transform var(--gx-dur) var(--gx-ease); transition-delay: var(--gx-delay, 0ms); }
+.gx-reveal.gx-in { opacity: 1; transform: none; }
+/* sem JS, o conteúdo aparece normalmente */
+html:not(.gx-js) .gx-reveal { opacity: 1; transform: none; }
+
+/* ---------- Cards: elevação discreta e borda ciano ---------- */
+.gx-card { transition: transform .25s var(--gx-ease), box-shadow .25s var(--gx-ease), border-color .25s var(--gx-ease); }
+.gx-card:hover { transform: translateY(-3px); border-color: rgba(var(--gx-cyan), .55) !important; box-shadow: 0 14px 34px -18px rgba(var(--gx-cyan-strong), .45); }
+.gx-card:focus-within { border-color: rgba(var(--gx-cyan), .7) !important; }
+
+/* ---------- Botões: microanimação ---------- */
+.gx-btn { position: relative; overflow: hidden; transition: transform .18s var(--gx-ease), box-shadow .2s var(--gx-ease), filter .2s; }
+.gx-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px -12px rgba(var(--gx-cyan-strong), .7); }
+.gx-btn:active { transform: translateY(0) scale(.98); }
+.gx-btn::after { content: ""; position: absolute; inset: 0; transform: translateX(-120%); background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%); pointer-events: none; }
+.gx-btn:hover::after { transform: translateX(120%); transition: transform .7s var(--gx-ease); }
+
+/* ---------- Iluminação suave ---------- */
+.gx-glow { box-shadow: 0 0 0 1px rgba(var(--gx-cyan), .12), 0 24px 60px -30px rgba(var(--gx-cyan-strong), .55); }
+
+/* ---------- FAQ ---------- */
+.gx-faq > summary { transition: color .2s; }
+.gx-faq > summary:hover { color: rgb(var(--gx-cyan-strong)); }
+.gx-faq[open] > :not(summary) { animation: gx-faq-in .35s var(--gx-ease); }
+@keyframes gx-faq-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Movimento reduzido: nada se mexe, tudo aparece ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .gx-bg .gx-beam, .gx-bg canvas { display: none; }
+  .gx-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .gx-card, .gx-btn, .gx-btn::after { transition: none !important; }
+  .gx-card:hover, .gx-btn:hover { transform: none; }
+  .gx-faq[open] > :not(summary) { animation: none; }
+}
