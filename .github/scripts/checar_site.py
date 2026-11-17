@@ -78,7 +78,7 @@ for f in list(ROOT.glob("assets/**/*.css")) + list(ROOT.glob("assets/**/*.js")):
     for m in re.finditer(r"url\(\s*['\"]?([^'\")]+)", f.read_text(encoding="utf-8")):
         refs.append((str((f.parent / m.group(1)).relative_to(ROOT)) if not m.group(1).startswith("/") else m.group(1), str(f.relative_to(ROOT))))
 for ref, linha in refs:
-    if re.match(r"^(https?:|mailto:|tel:|data:|#|//)", ref) or ref.startswith("/api/"):
+    if re.match(r"^(https?:|mailto:|tel:|data:|#|//)", ref) or ref.startswith(("/api/", "/stats/")):  # /api e /stats vêm do Caddy (Balcão e Umami)
         continue
     caminho = ref.split("#")[0].split("?")[0].lstrip("/")
     if caminho and not (ROOT / caminho).resolve().exists():

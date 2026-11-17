@@ -96,7 +96,9 @@ def com_utm(saida: str, onde: str, padrao: str = "") -> str:
         conteudo = md.group(1) if md else padrao
         if not conteudo:
             raise SystemExit(f'{onde}: link para {url} sem data-utm="identificador_do_botao"')
-        return tag.replace(mh.group(0), f' href="{html.escape(url_com_utm(url, conteudo), quote=True)}"')
+        # Umami: o mesmo identificador vira o nome do botão no evento de clique (sem cookie, sem dado pessoal)
+        evento = f' data-umami-event="clique_produto" data-umami-event-botao="{conteudo}"'
+        return tag.replace(mh.group(0), f' href="{html.escape(url_com_utm(url, conteudo), quote=True)}"{evento}')
     return re.sub(r"<a\b[^>]*>", troca, saida)
 
 
