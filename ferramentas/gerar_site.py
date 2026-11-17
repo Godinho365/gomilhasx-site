@@ -200,7 +200,7 @@ def principal() -> None:
         lista = {"@context": "https://schema.org", "@type": "Blog", "name": "Blog da GOMilhasX", "url": SITE + "/blog/",
                  "publisher": {"@id": SITE + "/#organization"},
                  "blogPost": [{"@type": "BlogPosting", "headline": p["titulo_curto"], "url": f"{SITE}/blog/{p['slug']}/", "datePublished": p["data"]} for p in posts]}
-        meta = {"titulo": "Blog | GOMilhasX", "descricao": "Guias práticos sobre milhas, custo do milheiro, transferências bonificadas e como comprar e vender milhas com segurança.",
+        meta = {"titulo": "Blog de milhas: custo do milheiro e transferências | GOMilhasX", "descricao": "Guias práticos sobre milhas, custo do milheiro, transferências bonificadas e como comprar e vender milhas com segurança.",
                 "caminho": "/blog/", "menu": "blog", "migalha": "Blog"}
         gravar("/blog/", montar(meta, corpo, [lista]), gerados)
         urls.append(("/blog/", posts[0]["data"]))
