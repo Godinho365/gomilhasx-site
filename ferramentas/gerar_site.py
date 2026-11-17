@@ -104,7 +104,7 @@ def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None 
         ld.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": meta.get("migalha", meta["titulo"].split(" | ")[0]), "item": SITE + caminho}]})
-    imagem = meta.get("imagem", "/og-image.png")
+    imagem = meta.get("imagem", "/og-image.png?v=2")
     valores = {
         **COMUM,
         "titulo": html.escape(meta["titulo"], quote=True),
