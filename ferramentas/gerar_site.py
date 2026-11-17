@@ -215,7 +215,7 @@ def principal() -> None:
     <span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · {data_br(p["data"])} · {p["leitura"]} min de leitura</span>
     <h1 data-split="80">{html.escape(p["titulo_curto"])}</h1>
     <p class="lead-p">{html.escape(p["resumo"])}</p>
-    <div class="post-autor"><img src="/assets/fundador.webp" alt="" width="40" height="40"><span><b>Godinho</b><small>Sócio fundador da GOMilhasX</small></span></div>
+    <div class="post-autor"><img src="/assets/fundador.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GOMilhasX</small></span></div>
   </div>
   <figure class="post-capa wrap gx-reveal"><img src="{p["imagem"]}" alt="" fetchpriority="high"></figure>
   <div class="post-corpo wrap">
@@ -229,7 +229,7 @@ def principal() -> None:
         artigo = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["titulo_curto"], "description": p["resumo"],
                   "datePublished": p["data"], "dateModified": p.get("atualizado", p["data"]), "inLanguage": "pt-BR",
                   "image": SITE + p["imagem"], "mainEntityOfPage": f"{SITE}/blog/{p['slug']}/",
-                  "author": {"@id": SITE + "/#fundador"}, "publisher": {"@id": SITE + "/#organization"}}
+                  "author": {"@type": "Person", "@id": SITE + "/#fundador", "name": "Raphael Godinho", "url": SITE + "/sobre/#fundador"}, "publisher": {"@id": SITE + "/#organization"}}
         migalhas = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Blog", "item": SITE + "/blog/"},
