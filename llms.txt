@@ -1,0 +1,22 @@
+# GOMilhasX
+
+> GOMilhasX é uma TravelTech brasileira (CNPJ 70.001.231/0001-03) que cria tecnologia para o mercado de milhas e viagens: pessoas que acumulam pontos e viajam, agentes e agências que emitem passagens para clientes e milheiros que vendem milhas. Tem dois produtos: o GOMilhasX Manager (gestão de milhas) e o GOMilhasX Balcão (compra e venda de milhas).
+
+## Produtos
+
+- [GOMilhasX Manager](https://manager.gomilhasx.com/): sistema de gestão de milhas e pontos no navegador. Saldos por titular em cada programa de fidelidade (LATAM Pass, Smiles, Azul Fidelidade, Livelo, Esfera e outros), custo do milheiro recalculado a cada compra, transferência e bônus, simulador de transferências bonificadas, vendas e emissões com lucro por operação, CRM de clientes e passageiros, cartões e faturas, financeiro, equipe com permissões, metas e comissões. Conecta ao Claude (MCP) para consultar a operação em português.
+- [GOMilhasX Balcão](https://balcao.gomilhasx.com/): balcão de milhas no Telegram. Quem quer comprar publica uma oferta; vendedores verificados (documento, selfie, vídeo e termo assinado pelo GOV.BR) aceitam ou fazem contraproposta. Pagamento por PIX com intermediação: o vendedor só recebe depois da emissão. Reputação pública de cada membro.
+
+## Planos (resumo)
+
+- Manager: plano Pessoal grátis; PRO R$ 19,90/mês; Gestor R$ 59,90/mês; desconto no anual; 15 dias de teste com os recursos do Gestor, sem cartão de crédito. Detalhes: https://manager.gomilhasx.com/#planos
+- Balcão: módulos Viajante (a partir de R$ 9,90/mês), Agentes e Milheiro, em planos mensal, anual ou vitalício. Detalhes: https://balcao.gomilhasx.com/#planos
+
+## Links
+
+- [Site da empresa](https://gomilhasx.com/): apresentação, produtos, fundador e contato
+- [Novidades do Manager](https://manager.gomilhasx.com/novidades): novos recursos, melhorias e correções
+- [Política de Privacidade](https://manager.gomilhasx.com/privacidade)
+- [Termos de Serviço](https://manager.gomilhasx.com/termos)
+- Instagram: https://www.instagram.com/gomilhasx/
+- Contato: WhatsApp (21) 99493-4776 e Telegram @gomilhasx
