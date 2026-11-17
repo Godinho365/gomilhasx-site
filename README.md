@@ -15,10 +15,15 @@ Não precisa reiniciar nada: o Caddy lê os arquivos a cada pedido (o HTML vai c
 
 ## Preços
 
-Os preços são copiados dos apps. Ao mudar um preço lá, mude aqui também:
+A página mostra só um resumo (os planos completos ficam nos sites de cada produto). Os valores do resumo são
+copiados dos apps; ao mudar um preço lá, confira a seção "Planos" do index.html:
 
-- **Manager**: `src/domain/plans.ts` no repositório MilhasX (`PLANS`, `ANNUAL_DISCOUNT_PCT`, `TRIAL_DAYS`). O preço anual por mês é o mensal com o desconto, arredondado.
-- **Balcão**: `DEFAULT_PRICES` em `bot/config.py` no repositório do Balcão, que pode ser trocado no `.env` (`PRICE_<MÓDULO>_<PERÍODO>`).
+- **Manager**: `src/domain/plans.ts` no repositório do Manager (PRO, Gestor e o teste grátis).
+- **Balcão**: `DEFAULT_PRICES` em `bot/config.py` no repositório do Balcão (o "a partir de" é o Viajante mensal).
+
+## Contato
+
+WhatsApp e Telegram da seção "Fale com a gente" são os mesmos de suporte do Balcão (SUPPORT_WHATSAPP e o canal).
 
 ## Ver localmente
 
