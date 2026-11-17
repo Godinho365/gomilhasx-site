@@ -76,6 +76,44 @@
     });
   });
 
+  /* Perguntas: abre deslizando, a resposta aparece suave, uma aberta por vez (como no modelo) */
+  Array.prototype.forEach.call(doc.querySelectorAll(".faq"), function (faq) {
+    var items = Array.prototype.slice.call(faq.querySelectorAll("details"));
+    items.forEach(function (d) {
+      var sum = d.querySelector("summary"), wrap = doc.createElement("div");
+      wrap.className = "resp";
+      while (sum.nextSibling) wrap.appendChild(sum.nextSibling);
+      d.appendChild(wrap);
+      function anima(abrir) {
+        if (reduce) { d.open = abrir; return; }
+        var de = abrir ? 0 : wrap.scrollHeight;
+        if (abrir) { d.open = true; d.classList.add("abrindo"); }
+        else d.classList.add("fechando");
+        var ate = abrir ? wrap.scrollHeight : 0;
+        wrap.style.height = de + "px";
+        wrap.getBoundingClientRect();
+        wrap.style.transition = "height .45s cubic-bezier(.22,.61,.36,1)";
+        requestAnimationFrame(function () { d.classList.remove("abrindo"); wrap.style.height = ate + "px"; });
+        clearTimeout(d._t);
+        d._t = setTimeout(function () { wrap.style.transition = ""; wrap.style.height = ""; d.classList.remove("fechando"); if (!abrir) d.open = false; }, 460);
+      }
+      sum.addEventListener("click", function (e) {
+        e.preventDefault();
+        var abrir = !d.open || d.classList.contains("fechando");
+        if (abrir) items.forEach(function (o) { if (o !== d && o.open && !o.classList.contains("fechando")) o._fecha(); });
+        anima(abrir);
+      });
+      d._fecha = function () { anima(false); };
+    });
+    if (!("IntersectionObserver" in window)) items.forEach(function (d) { d.classList.add("sm-in"); });
+    else if (!reduce) {
+      var io2 = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("sm-in"); io2.unobserve(e.target); } });
+      }, { rootMargin: "0px 0px -6% 0px" });
+      items.forEach(function (d, i) { d.style.transitionDelay = (i % 8) * 70 + "ms"; d.addEventListener("transitionend", function f(ev) { if (ev.propertyName === "transform") { d.style.transitionDelay = ""; d.removeEventListener("transitionend", f); } }); io2.observe(d); });
+    }
+  });
+
   /* Carrossel de telas */
   Array.prototype.forEach.call(doc.querySelectorAll("[data-car]"), function (box) {
     var phones = box.querySelectorAll(".car .phone"), cap = box.querySelector(".car-cap"), btns = box.querySelectorAll(".car-nav button");
