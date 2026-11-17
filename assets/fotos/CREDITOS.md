@@ -15,4 +15,4 @@ Todas em domínio público (CC0), do Wikimedia Commons. Uso comercial livre, sem
 | rio-noite.webp | https://commons.wikimedia.org/wiki/File:Vidigal,_Rio_de_Janeiro,_Brazil.jpg |
 | pouso-cidade.webp | https://commons.wikimedia.org/wiki/File:Sky_Aerial_View_From_Airplane_Window_(Rome_to_Addis_Ababa)_in_2025.04.jpg |
 
-As telas em `assets/telas/` são do GOMilhasX Manager com a conta de demonstração (dados fictícios).
+As telas em `assets/telas/` são do GO Manager com a conta de demonstração (dados fictícios).
