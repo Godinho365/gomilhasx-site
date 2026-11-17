@@ -10,8 +10,9 @@
 (function () {
   "use strict";
   var doc = document;
-  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  doc.documentElement.classList.add("sm-js");
+  // Com "reduzir movimento": abas, sanfona e carrossel continuam funcionando no clique, mas nada se move sozinho.
+  var reduce = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+  if (!reduce) doc.documentElement.classList.add("sm-js");
 
   /* Quebra o texto de um elemento em palavras, mantendo os elementos internos (como <span> e <strong>). */
   function splitWords(el, cls) {
@@ -34,7 +35,7 @@
 
   /* Títulos palavra por palavra, quando entram na tela */
   var splits = doc.querySelectorAll("[data-split]");
-  if (splits.length && "IntersectionObserver" in window) {
+  if (!reduce && splits.length && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("sm-in"); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px" });
@@ -45,12 +46,55 @@
     });
   }
 
+  /* Abas: trocam o texto e a tela; avançam sozinhas a cada 4,5 s até a pessoa clicar */
+  Array.prototype.forEach.call(doc.querySelectorAll("[data-tabs]"), function (box) {
+    var tabs = box.querySelectorAll('[role="tab"]');
+    var texts = box.querySelectorAll(".tab-text p, .pow-text p");
+    var shots = box.querySelectorAll(".tab-phone .phone img");
+    var cur = 0, timer = null;
+    function show(i) {
+      cur = i;
+      Array.prototype.forEach.call(tabs, function (t, k) { t.setAttribute("aria-selected", String(k === i)); });
+      Array.prototype.forEach.call(texts, function (t, k) { t.classList.toggle("on", k === i); });
+      Array.prototype.forEach.call(shots, function (t, k) { t.classList.toggle("on", k === i); });
+    }
+    function auto() { if (!reduce) timer = setInterval(function () { show((cur + 1) % tabs.length); }, 4500); }
+    Array.prototype.forEach.call(tabs, function (t, k) { t.addEventListener("click", function () { clearInterval(timer); show(k); }); });
+    auto();
+  });
+
+  /* Sanfona: abre um item por vez; a barra dourada enche e passa para o próximo */
+  Array.prototype.forEach.call(doc.querySelectorAll("[data-acc]"), function (acc) {
+    var items = acc.querySelectorAll(".acc-item"), cur = 0, manual = false;
+    function open(i) {
+      cur = i;
+      Array.prototype.forEach.call(items, function (it, k) { it.classList.toggle("open", k === i); it.querySelector("button").setAttribute("aria-expanded", String(k === i)); });
+    }
+    Array.prototype.forEach.call(items, function (it, k) {
+      it.querySelector("button").addEventListener("click", function () { manual = true; open(k); });
+      it.querySelector(".bar i").addEventListener("animationend", function () { if (!manual && k === cur) open((cur + 1) % items.length); });
+    });
+  });
+
+  /* Carrossel de telas */
+  Array.prototype.forEach.call(doc.querySelectorAll("[data-car]"), function (box) {
+    var phones = box.querySelectorAll(".car .phone"), cap = box.querySelector(".car-cap"), btns = box.querySelectorAll(".car-nav button");
+    var caps = ["CRM Milhas com cada negociação por etapa e o lucro de cada uma", "Painel com o saldo e o custo do milheiro de cada programa", "Central de Cartões com faturas e pontos a receber"];
+    var cur = 1, timer;
+    function show(i) { cur = (i + phones.length) % phones.length; Array.prototype.forEach.call(phones, function (p, k) { p.classList.toggle("on", k === cur); }); if (cap) cap.textContent = caps[cur] || ""; }
+    btns[0].addEventListener("click", function () { clearInterval(timer); show(cur - 1); });
+    btns[1].addEventListener("click", function () { clearInterval(timer); show(cur + 1); });
+    if (!reduce) timer = setInterval(function () { show(cur + 1); }, 4000);
+  });
+
   /* Parágrafo que acende com a rolagem */
+  if (reduce) return;
   var scrollTexts = Array.prototype.map.call(doc.querySelectorAll("[data-scroll-words]"), function (el) {
     return { el: el, words: splitWords(el, "sm-sw") };
   });
   var parallax = Array.prototype.slice.call(doc.querySelectorAll("[data-parallax]"));
   var sliders = Array.prototype.slice.call(doc.querySelectorAll("[data-scroll-x]"));
+  var stacks = Array.prototype.slice.call(doc.querySelectorAll("[data-stack]"));
 
   var queued = false;
   function frame() {
@@ -70,14 +114,28 @@
       var p = Math.max(0, Math.min(1, (vh - r.top) / (vh + r.height)));
       el.style.setProperty("--sm-y", ((1 - p * 1.6) * n).toFixed(1) + "px");
     });
+    stackFrame(vh);
     sliders.forEach(function (el) {
       var r = el.getBoundingClientRect(), n = parseFloat(el.getAttribute("data-scroll-x")) || -120;
       if (r.bottom < -200 || r.top > vh + 200) return;
       el.style.transform = "translate3d(" + (((vh - r.top) / vh) * n).toFixed(1) + "px,0,0)";
     });
   }
+  function stackFrame(vh) {
+    stacks.forEach(function (st) {
+      var sec = st.closest(".stack-sec"), r = sec.getBoundingClientRect();
+      var p = Math.max(0, Math.min(1, -r.top / (r.height - vh)));
+      var imgs = st.querySelectorAll("img"), n = imgs.length;
+      Array.prototype.forEach.call(imgs, function (im, i) {
+        var a = i / n, b = (i + 1) / n, q = Math.max(0, Math.min(1, (p - a) / (b - a)));
+        if (i === 0) q = Math.max(q, 1);
+        var e = 1 - Math.pow(1 - q, 3);
+        im.style.setProperty("--y", ((1 - e) * vh * 1.1).toFixed(1) + "px");
+      });
+    });
+  }
   function request() { if (!queued) { queued = true; requestAnimationFrame(frame); } }
-  if (scrollTexts.length || parallax.length || sliders.length) {
+  if (scrollTexts.length || parallax.length || sliders.length || stacks.length) {
     addEventListener("scroll", request, { passive: true });
     addEventListener("resize", request);
     frame();
