@@ -54,6 +54,7 @@ class Checador(HTMLParser):
 
 
 paginas = sorted(p for p in ROOT.rglob("index.html") if not any(parte.startswith((".", "_")) for parte in p.relative_to(ROOT).parts))
+paginas += [ROOT / "404.html"] if (ROOT / "404.html").exists() else []  # página de erro: mesma checagem, sem exigir JSON-LD
 refs = []
 total_jsonld = 0
 for pagina in paginas:
@@ -67,7 +68,7 @@ for pagina in paginas:
             json.loads(bloco)
         except json.JSONDecodeError as e:
             erros.append(f"{nome}:{linha}: JSON-LD inválido ({e})")
-    if not c.jsonld:
+    if not c.jsonld and nome != "404.html":
         erros.append(f"{nome}: sem JSON-LD")
     total_jsonld += len(c.jsonld)
     refs += [(r, f"{nome}:{l}") for r, l in c.refs]
@@ -77,7 +78,7 @@ for f in list(ROOT.glob("assets/**/*.css")) + list(ROOT.glob("assets/**/*.js")):
     for m in re.finditer(r"url\(\s*['\"]?([^'\")]+)", f.read_text(encoding="utf-8")):
         refs.append((str((f.parent / m.group(1)).relative_to(ROOT)) if not m.group(1).startswith("/") else m.group(1), str(f.relative_to(ROOT))))
 for ref, linha in refs:
-    if re.match(r"^(https?:|mailto:|tel:|data:|#|//)", ref) or ref.startswith("/api/"):
+    if re.match(r"^(https?:|mailto:|tel:|data:|#|//)", ref) or ref.startswith(("/api/", "/stats/")):  # /api e /stats vêm do Caddy (Balcão e Umami)
         continue
     caminho = ref.split("#")[0].split("?")[0].lstrip("/")
     if caminho and not (ROOT / caminho).resolve().exists():

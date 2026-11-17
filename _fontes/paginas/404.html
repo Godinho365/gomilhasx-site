@@ -1,0 +1,30 @@
+<!--
+titulo: Página não encontrada | GOMilhasX
+descricao: O endereço que você abriu não existe ou mudou de lugar. Veja as páginas principais da GOMilhasX, do GO Manager e do GO Balcão.
+caminho: /404.html
+robots: noindex, follow
+-->
+<!-- Servida pelo Caddy quando um endereço do site não existe (handle_errors 404 no bloco gomilhasx.com do Caddyfile do Manager).
+     Todos os links e arquivos com caminho absoluto, porque a página aparece em qualquer endereço. Fica fora do sitemap. -->
+<section class="page-hero" aria-labelledby="titulo">
+  <div class="wrap center">
+    <span class="kicker">Erro 404</span>
+    <h1 id="titulo">Esta página não existe</h1>
+    <p class="lead-p">O endereço pode ter sido digitado errado ou a página mudou de lugar. Escolha um caminho abaixo.</p>
+    <div class="ctas"><a class="btn btn-primary" href="/">Ir para o início</a><a class="btn btn-ghost" href="/blog/">Ler o blog</a></div>
+  </div>
+</section>
+<section class="sec" style="padding-top:24px" aria-labelledby="caminhos-titulo">
+  <div class="wrap" style="max-width:1040px">
+    <h2 id="caminhos-titulo" class="h2 center" style="font-size:clamp(24px,3vw,32px)">Páginas mais procuradas</h2>
+    <div class="channels" style="margin-top:28px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))">
+      <a class="contact gx-card" href="/planos/"><span><b>Planos e preços</b><small>GO Manager grátis para começar e GO Balcão a partir de R$ 9,90.</small></span></a>
+      <a class="contact gx-card" href="/recursos/"><span><b>Recursos</b><small>O que o GO Manager e o GO Balcão fazem, tela por tela.</small></span></a>
+      <a class="contact gx-card" href="/calculadora-custo-do-milheiro/"><span><b>Calculadora do milheiro</b><small>O custo de uma compra ou transferência, grátis e sem cadastro.</small></span></a>
+      <a class="contact gx-card" href="/para-viajantes/"><span><b>Para viajantes</b><small>Organize os pontos da família e compre milhas com segurança.</small></span></a>
+      <a class="contact gx-card" href="/para-milheiros/"><span><b>Para milheiros</b><small>Custo do milheiro, lucro por venda e o Módulo Milheiro.</small></span></a>
+      <a class="contact gx-card" href="/para-agencias/"><span><b>Para agências</b><small>Contas de clientes, equipe e emissões com fornecedores.</small></span></a>
+    </div>
+    <p class="center" style="margin-top:28px">Procurava o app? <a href="https://manager.gomilhasx.com/login" data-utm="erro404_login_manager">Entrar no GO Manager</a> · <a href="https://balcao.gomilhasx.com/" data-utm="erro404_balcao">Abrir o GO Balcão</a> · <a href="/contato/">Falar com a equipe</a></p>
+  </div>
+</section>

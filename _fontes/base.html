@@ -9,8 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{titulo}}</title>
 <meta name="description" content="{{descricao}}">
-<link rel="canonical" href="https://gomilhasx.com{{caminho}}">
-<link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
+{{canonical}}<link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="/assets/marca/icone.svg">
 <link rel="preload" as="font" type="font/woff2" href="/assets/stack-sans-headline-latin.woff2" crossorigin>
 {{preload}}<link rel="apple-touch-icon" href="/assets/apple-icon.png?v=2">
@@ -26,13 +25,15 @@
 <meta name="twitter:title" content="{{titulo}}">
 <meta name="twitter:description" content="{{descricao}}">
 <meta name="twitter:image" content="{{imagem}}">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="{{robots}}">
 {{jsonld}}<link rel="stylesheet" href="/assets/site.css?v={{v_css}}">
 <link rel="stylesheet" href="/assets/motion/gomilhasx-motion.css">
-<link rel="stylesheet" href="/assets/lead.css?v=1">
+<link rel="stylesheet" href="/assets/lead.css?v={{v_lead_css}}">
 <script src="/assets/motion/gomilhasx-motion.js" defer></script>
 <script src="/assets/site-motion.js?v={{v_js}}" defer></script>
-<script src="/assets/lead.js?v=1" defer></script>
+<script src="/assets/lead.js?v={{v_lead_js}}" defer></script>
+<!-- Umami (analytics sem cookie, no próprio servidor): script e coleta em /stats/, painel em stats.gomilhasx.com -->
+<script defer src="/stats/script.js" data-website-id="35a98baa-31ee-4aa0-b2e8-d56b581d0caa" data-host-url="https://gomilhasx.com/stats" data-domains="gomilhasx.com"></script>
 </head>
 <body class="{{classe}}">
 {{icones}}
@@ -43,12 +44,12 @@
       {{menu}}
     </nav>
     <div class="head-cta">
-      <a class="btn btn-primary" href="https://manager.gomilhasx.com/login">Entrar no Manager</a>
+      <a class="btn btn-primary" href="https://manager.gomilhasx.com/login" data-utm="topo_login_manager">Entrar no Manager</a>
       <button type="button" class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-site"><svg><use href="#i-menu"/></svg></button>
     </div>
     <div class="menu-panel" id="menu-site" hidden>
       <nav aria-label="Páginas">{{menu}}</nav>
-      <a class="btn btn-primary" href="https://manager.gomilhasx.com/login">Entrar no Manager</a>
+      <a class="btn btn-primary" href="https://manager.gomilhasx.com/login" data-utm="menu_login_manager">Entrar no Manager</a>
     </div>
   </div>
 </header>
@@ -67,9 +68,14 @@
     <nav aria-label="Produtos"><p class="t">Produtos</p><ul>
       <li><a href="/recursos/">Recursos</a></li>
       <li><a href="/planos/">Planos</a></li>
-      <li><a href="https://manager.gomilhasx.com/">GO Manager</a></li>
-      <li><a href="https://balcao.gomilhasx.com/">GO Balcão</a></li>
+      <li><a href="https://manager.gomilhasx.com/" data-utm="rodape_manager">GO Manager</a></li>
+      <li><a href="https://balcao.gomilhasx.com/" data-utm="rodape_balcao">GO Balcão</a></li>
       <li><a href="/claude/">GO Manager no Claude</a></li>
+    </ul></nav>
+    <nav aria-label="Para quem"><p class="t">Para quem</p><ul>
+      <li><a href="/para-viajantes/">Para viajantes</a></li>
+      <li><a href="/para-milheiros/">Para milheiros</a></li>
+      <li><a href="/para-agencias/">Para agências</a></li>
     </ul></nav>
     <nav aria-label="Ferramentas grátis"><p class="t">Ferramentas grátis</p><ul>
       <li><a href="/calculadora-custo-do-milheiro/">Calculadora do milheiro</a></li>
@@ -83,9 +89,9 @@
       <li><a href="/seguranca/">Segurança</a></li>
     </ul></nav>
     <nav aria-label="Acessos"><p class="t">Acessos</p><ul>
-      <li><a href="https://manager.gomilhasx.com/register">Criar conta no Manager</a></li>
-      <li><a href="https://manager.gomilhasx.com/login">Entrar no Manager</a></li>
-      <li><a href="https://balcao.gomilhasx.com/" data-lead="rodape">Acessar o Balcão</a></li>
+      <li><a href="https://manager.gomilhasx.com/register" data-utm="rodape_criar_conta_manager">Criar conta no Manager</a></li>
+      <li><a href="https://manager.gomilhasx.com/login" data-utm="rodape_login_manager">Entrar no Manager</a></li>
+      <li><a href="https://balcao.gomilhasx.com/" data-lead="rodape" data-utm="rodape_acessar_balcao">Acessar o Balcão</a></li>
     </ul></nav>
     <nav aria-label="Políticas"><p class="t">Políticas</p><ul>
       <li><a href="https://manager.gomilhasx.com/termos">Termos de Serviço</a></li>
