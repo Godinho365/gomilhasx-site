@@ -1,0 +1,108 @@
+<!doctype html>
+<!--
+  Site institucional da GOMilhasX (https://gomilhasx.com). Página GERADA por ferramentas/gerar_site.py a partir de _fontes/:
+  não edite este arquivo; edite a fonte e rode "python3 ferramentas/gerar_site.py". Veja o README.md.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{titulo}}</title>
+<meta name="description" content="{{descricao}}">
+<link rel="canonical" href="https://gomilhasx.com{{caminho}}">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/marca/icone.svg">
+<link rel="preload" as="font" type="font/woff2" href="/assets/stack-sans-headline-latin.woff2" crossorigin>
+{{preload}}<link rel="apple-touch-icon" href="/assets/apple-icon.png">
+<meta name="theme-color" content="#102442">
+<meta property="og:type" content="{{og_tipo}}">
+<meta property="og:site_name" content="GOMilhasX">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://gomilhasx.com{{caminho}}">
+<meta property="og:title" content="{{titulo}}">
+<meta property="og:description" content="{{descricao}}">
+<meta property="og:image" content="{{imagem}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{titulo}}">
+<meta name="twitter:description" content="{{descricao}}">
+<meta name="twitter:image" content="{{imagem}}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+{{jsonld}}<link rel="stylesheet" href="/assets/site.css?v={{v_css}}">
+<link rel="stylesheet" href="/assets/motion/gomilhasx-motion.css">
+<link rel="stylesheet" href="/assets/lead.css?v=1">
+<script src="/assets/motion/gomilhasx-motion.js" defer></script>
+<script src="/assets/site-motion.js?v={{v_js}}" defer></script>
+<script src="/assets/lead.js?v=1" defer></script>
+</head>
+<body class="{{classe}}">
+{{icones}}
+<header>
+  <div class="bar">
+    <a class="brand" href="/" aria-label="GOMilhasX, início"><img class="mark" src="/assets/marca/icone.svg" alt="" width="34" height="34"><span class="wm" aria-hidden="true"><b class="go">GO</b><b class="mi">Milhas</b><b class="x">X</b></span></a>
+    <nav class="nav" aria-label="Páginas">
+      {{menu}}
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-primary" href="https://manager.gomilhasx.com/login">Entrar no Manager</a>
+      <button type="button" class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-site"><svg><use href="#i-menu"/></svg></button>
+    </div>
+    <div class="menu-panel" id="menu-site" hidden>
+      <nav aria-label="Páginas">{{menu}}</nav>
+      <a class="btn btn-primary" href="https://manager.gomilhasx.com/login">Entrar no Manager</a>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+{{conteudo}}
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <a class="brand" href="/" aria-label="GOMilhasX, início"><img class="mark" src="/assets/marca/icone.svg" alt="" width="34" height="34"><span class="wm" aria-hidden="true"><b class="go">GO</b><b class="mi">Milhas</b><b class="x">X</b></span></a>
+      <p style="margin-top:12px">Controle suas milhas. Potencialize suas oportunidades.</p>
+      <a class="ig" href="https://www.instagram.com/gomilhasx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da GOMilhasX (abre em nova aba)"><svg><use href="#i-insta"/></svg>@gomilhasx</a>
+    </div>
+    <nav aria-label="Produtos"><p class="t">Produtos</p><ul>
+      <li><a href="/recursos/">Recursos</a></li>
+      <li><a href="/planos/">Planos</a></li>
+      <li><a href="https://manager.gomilhasx.com/">GOMilhasX Manager</a></li>
+      <li><a href="https://balcao.gomilhasx.com/">GOMilhasX Balcão</a></li>
+    </ul></nav>
+    <nav aria-label="Empresa"><p class="t">Empresa</p><ul>
+      <li><a href="/sobre/">Sobre</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contato/">Contato</a></li>
+      <li><a href="/duvidas/">Dúvidas</a></li>
+    </ul></nav>
+    <nav aria-label="Acessos"><p class="t">Acessos</p><ul>
+      <li><a href="https://manager.gomilhasx.com/register">Criar conta no Manager</a></li>
+      <li><a href="https://manager.gomilhasx.com/login">Entrar no Manager</a></li>
+      <li><a href="https://balcao.gomilhasx.com/" data-lead="rodape">Acessar o Balcão</a></li>
+    </ul></nav>
+    <nav aria-label="Políticas"><p class="t">Políticas</p><ul>
+      <li><a href="https://manager.gomilhasx.com/termos">Termos de Serviço</a></li>
+      <li><a href="https://manager.gomilhasx.com/privacidade">Política de Privacidade</a></li>
+      <li><a href="https://manager.gomilhasx.com/privacidade/solicitacao">Pedidos sobre seus dados</a></li>
+    </ul></nav>
+  </div>
+  <p class="big-word" aria-hidden="true" data-split>Milhas, simplificadas.</p>
+  <p class="copy">© <span id="ano">2026</span> GOMilhasX · CNPJ 70.001.231/0001-03. Todos os direitos reservados.</p>
+</footer>
+
+{{formulario}}
+{{whatsapp}}
+<script>
+// Menu do celular: abre e fecha (Esc e clique num item fecham)
+(function () {
+  var btn = document.querySelector(".menu-btn"), panel = document.getElementById("menu-site");
+  function set(open) { panel.hidden = !open; btn.setAttribute("aria-expanded", String(open)); btn.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu"); btn.querySelector("use").setAttribute("href", open ? "#i-close" : "#i-menu"); }
+  btn.addEventListener("click", function () { set(panel.hidden); });
+  panel.addEventListener("click", function (e) { if (e.target.closest("a")) set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+})();
+document.getElementById("ano").textContent = String(new Date().getFullYear());
+</script>
+</body>
+</html>
