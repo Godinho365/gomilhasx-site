@@ -40,10 +40,11 @@
   --bg: #f4f4f2; --white: #ffffff; --panel: #ffffff; --panel2: #f4f4f2; --line: #e3e3df; --text: #102442; --muted: #6b6b6b; --soft: #8e8e8e;
   --ink: #102442; --ink2: #1a3358; --gold: #d9a441; --gold-2: #e8bd66; --gold-dark: #9c7224; --gold-soft: #fbf1de;
   --accent: #102442; --accent-btn: #102442; --accent-soft: #fbf1de; --on-accent: #ffffff; --ok: #16a34a; --glow: rgba(217,164,65,.25);
-  --gx-cyan: 217, 164, 65; --gx-cyan-strong: 217, 164, 65; /* kit de animação no dourado da marca */
   --sky: #e8f4fb;
   color-scheme: light;
 }
+/* Kit de animação (carregado depois deste estilo) nas cores da marca: html:root vence o :root dele. Borda dourada no hover, sombra e texto em azul-marinho. */
+html:root { --gx-cyan: 217, 164, 65; --gx-cyan-strong: 16, 36, 66; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; overflow-x: hidden; }
@@ -93,7 +94,6 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 .wm .go { color: var(--ink); }
 .wm .mi { color: #6b6b6b; font-weight: 700; }
 .wm .x { position: relative; color: var(--gold); font-weight: 900; }
-.wm .x svg { position: absolute; right: -10px; top: -8px; width: 14px; height: 14px; stroke: var(--gold); stroke-width: 3.6; }
 @media (max-width: 380px) { .wm { font-size: 18px; } .brand img.mark { width: 30px; height: 30px; } }
 .nav { display: none; gap: 2px; font-size: 14px; font-weight: 500; }
 .nav a { padding: 8px 12px; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background .2s; }
@@ -379,7 +379,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 
 <header>
   <div class="bar">
-    <a class="brand" href="#inicio" aria-label="GOMilhasX, início"><img class="mark" src="/assets/marca/icone.svg" alt="" width="34" height="34"><span class="wm" aria-hidden="true"><b class="go">GO</b><b class="mi">Milhas</b><b class="x">X<svg viewBox="0 0 24 24"><path d="M5 19 19 5"/><path d="M9 5h10v10"/></svg></b></span></a>
+    <a class="brand" href="#inicio" aria-label="GOMilhasX, início"><img class="mark" src="/assets/marca/icone.svg" alt="" width="34" height="34"><span class="wm" aria-hidden="true"><b class="go">GO</b><b class="mi">Milhas</b><b class="x">X</b></span></a>
     <nav class="nav" aria-label="Seções">
       <a href="#produtos">Produtos</a><a href="#planos">Planos</a><a href="#sobre">Sobre</a><a href="#fundador">Fundador</a><a href="#contato">Contato</a>
     </nav>
@@ -706,7 +706,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
 <footer>
   <div class="wrap cols">
     <div>
-      <a class="brand" href="#inicio" aria-label="GOMilhasX, início"><img class="mark" src="/assets/marca/icone.svg" alt="" width="34" height="34"><span class="wm" aria-hidden="true"><b class="go">GO</b><b class="mi">Milhas</b><b class="x">X<svg viewBox="0 0 24 24"><path d="M5 19 19 5"/><path d="M9 5h10v10"/></svg></b></span></a>
+      <a class="brand" href="#inicio" aria-label="GOMilhasX, início"><img class="mark" src="/assets/marca/icone.svg" alt="" width="34" height="34"><span class="wm" aria-hidden="true"><b class="go">GO</b><b class="mi">Milhas</b><b class="x">X</b></span></a>
       <p style="margin-top:12px">Controle suas milhas. Potencialize suas oportunidades.</p>
       <a class="ig" href="https://www.instagram.com/gomilhasx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da GOMilhasX (abre em nova aba)"><svg><use href="#i-insta"/></svg>@gomilhasx</a>
     </div>
