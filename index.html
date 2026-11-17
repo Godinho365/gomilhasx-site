@@ -54,7 +54,7 @@ h1, h2, h3, p { margin: 0; }
 .wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 16px; }
 @media (min-width: 640px) { .wrap { padding: 0 24px; } }
 .muted { color: var(--muted); }
-svg { stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+svg { stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 [hidden] { display: none !important; }
 
@@ -73,7 +73,7 @@ svg { stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; 
 
 .card { position: relative; background: var(--white); border: 1px solid var(--line); border-radius: 22px; }
 .icon { width: 40px; height: 40px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: var(--panel2); border: 1px solid var(--line); color: var(--ink); }
-.icon svg { width: 19px; height: 19px; }
+.icon svg { width: 22px; height: 22px; }
 .kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--muted); }
 .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 999px; background: var(--gold); }
 .title { max-width: 720px; margin: 0 auto 48px; text-align: center; }
@@ -307,6 +307,22 @@ header .bar { position: relative; max-width: 780px; margin: 0 auto; display: fle
 .final p { margin-top: 14px; color: rgba(255,255,255,.88); }
 .final .ctas { margin-top: 26px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 
+/* Para quem é: título à esquerda, lista com divisórias à direita (como na AppNext) */
+.aud { display: grid; gap: 40px; }
+@media (min-width: 960px) { .aud { grid-template-columns: 1fr 1.2fr; gap: 72px; align-items: start; } .aud-head { position: sticky; top: 110px; } }
+.aud-head .h2 { margin-top: 12px; }
+.aud-head p { margin-top: 16px; color: var(--muted); font-size: 17px; }
+.aud-head .btn { margin-top: 26px; }
+.aud-list { border-top: 1px solid var(--line); }
+.aud-item { display: flex; gap: 18px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+.aud-item .icon { width: 44px; height: 44px; background: var(--gold-soft); border-color: transparent; color: var(--gold-dark); }
+.aud-item .icon svg { width: 22px; height: 22px; }
+.aud-item h3 { font-size: clamp(20px, 2.4vw, 26px); font-weight: 500; letter-spacing: -.03em; }
+.aud-item p { margin-top: 8px; color: var(--muted); font-size: 16px; }
+
+/* Nome grande no fim do rodapé */
+.big-word { margin: 0; padding: 8px 16px 0; text-align: center; font-size: clamp(24px, 9.4vw, 150px); line-height: .95; letter-spacing: -.055em; font-weight: 500; color: #e4e4df; white-space: nowrap; overflow: hidden; user-select: none; }
+
 /* Botão flutuante do WhatsApp: acompanha a rolagem, no canto inferior direito */
 .wa-float { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 45;
   display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 20px 0 16px; border-radius: 999px;
@@ -375,6 +391,19 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
   <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
   <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+  <!-- Ícones Phosphor (licença MIT), os mesmos do modelo AppNext no Framer -->
+  <symbol id="p-notebook" viewBox="0 0 24 24"><g><path d="M 0.75 18 C 0.336 18 0 17.664 0 17.25 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 14.25 0 C 14.664 0 15 0.336 15 0.75 L 15 17.25 C 15 17.664 14.664 18 14.25 18 Z" fill-opacity="0" fill="currentColor" transform="translate(4.5 3)"></path><path d="M 0.75 18 C 0.336 18 0 17.664 0 17.25 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 14.25 0 C 14.664 0 15 0.336 15 0.75 L 15 17.25 C 15 17.664 14.664 18 14.25 18 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(4.5 3)"></path><path d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z" fill="currentColor" transform="translate(6.75 6.375)"></path><path d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z" fill="currentColor" transform="translate(6.75 15.375)"></path><path d="M 0 1.125 C 0 0.504 0.504 0 1.125 0 C 1.746 0 2.25 0.504 2.25 1.125 C 2.25 1.746 1.746 2.25 1.125 2.25 C 0.504 2.25 0 1.746 0 1.125 Z" fill="currentColor" transform="translate(6.75 10.875)"></path></g></symbol>
+  <symbol id="p-flag" viewBox="0 0 24 24"><g><path d="M 0 12.75 C 6 7.554 10.5 17.947 16.5 12.75 L 16.5 1.5 C 10.5 6.697 6 -3.696 0 1.5 Z" fill-opacity="0" fill="currentColor" transform="translate(4.5 3.75)"></path><path d="M 0 15.75 L 0 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(4.5 5.25)"></path><path d="M 0 12.75 C 6 7.554 10.5 17.947 16.5 12.75 L 16.5 1.5 C 10.5 6.697 6 -3.696 0 1.5" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(4.5 3.75)"></path></g></symbol>
+  <symbol id="p-user-plus" viewBox="0 0 24 24"><g><path d="M 9.001 0 C 5.274 0 1.932 2.297 0.597 5.777 C -0.737 9.257 0.211 13.2 2.982 15.692 L 2.982 15.692 C 4.134 13.426 6.46 12 9.001 12 C 6.93 12 5.251 10.321 5.251 8.25 C 5.251 6.179 6.93 4.5 9.001 4.5 C 11.072 4.5 12.751 6.179 12.751 8.25 C 12.751 10.321 11.072 12 9.001 12 C 11.542 11.999 13.868 13.426 15.02 15.691 C 17.79 13.198 18.738 9.256 17.403 5.777 C 16.069 2.297 12.728 0 9.001 0 Z" fill-opacity="0" fill="currentColor" transform="translate(2.999 3)"></path><path d="M 0 3.75 C 0 1.679 1.679 0 3.75 0 C 5.821 0 7.5 1.679 7.5 3.75 C 7.5 5.821 5.821 7.5 3.75 7.5 C 1.679 7.5 0 5.821 0 3.75 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(8.25 7.5)"></path><path d="M 0 3.694 C 1.151 1.428 3.477 0 6.019 0 C 8.561 0 10.887 1.428 12.037 3.694" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(5.981 14.997)"></path><path d="M 0 0 L 4.5 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(16.5 5.25)"></path><path d="M 0 0 L 0 4.5" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(18.75 3)"></path><path d="M 17.861 7.501 C 18.51 11.358 16.591 15.193 13.114 16.986 C 9.637 18.778 5.4 18.118 2.634 15.352 C -0.132 12.586 -0.793 8.349 1 4.872 C 2.793 1.395 6.628 -0.524 10.485 0.125" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(3.015 2.999)"></path></g></symbol>
+  <symbol id="p-chart" viewBox="0 0 24 24"><g><path d="M 0 15.75 L 0 0 L 5.25 0 L 5.25 15.75 Z" fill-opacity="0" fill="currentColor" transform="translate(14.25 3.75)"></path><path d="M 0 6.75 L 0 0 L 4.5 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(4.5 12.75)"></path><path d="M 18 0 L 0 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(3 19.5)"></path><path d="M 0 11.25 L 0 0 L 5.25 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(9 8.25)"></path><path d="M 0 15.75 L 0 0 L 5.25 0 L 5.25 15.75" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(14.25 3.75)"></path></g></symbol>
+  <symbol id="p-thumbs-up" viewBox="0 0 24 24"><g><path d="M 0.75 0 L 5.25 0 L 5.25 0 L 5.25 9.75 L 5.25 9.75 L 0.75 9.75 C 0.336 9.75 0 9.414 0 9 L 0 0.75 C 0 0.336 0.336 0 0.75 0 Z" fill-opacity="0" fill="currentColor" transform="translate(2.25 9.75)"></path><path d="M 0.75 0 L 5.25 0 L 5.25 0 L 5.25 9.75 L 5.25 9.75 L 0.75 9.75 C 0.336 9.75 0 9.414 0 9 L 0 0.75 C 0 0.336 0.336 0 0.75 0 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(2.25 9.75)"></path><path d="M 0 7.5 L 3.75 0 C 5.407 0 6.75 1.343 6.75 3 L 6.75 5.25 L 12.75 5.25 C 13.18 5.25 13.59 5.435 13.875 5.758 C 14.159 6.081 14.292 6.51 14.238 6.938 L 13.113 15.938 C 13.018 16.687 12.381 17.25 11.625 17.25 L 0 17.25" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(7.5 2.25)"></path></g></symbol>
+  <symbol id="p-user-focus" viewBox="0 0 24 24"><g><path d="M 9.001 0 C 5.274 0 1.932 2.297 0.597 5.777 C -0.737 9.257 0.211 13.2 2.982 15.692 L 2.982 15.692 C 4.134 13.426 6.46 12 9.001 12 C 6.93 12 5.251 10.321 5.251 8.25 C 5.251 6.179 6.93 4.5 9.001 4.5 C 11.072 4.5 12.751 6.179 12.751 8.25 C 12.751 10.321 11.072 12 9.001 12 C 11.542 11.999 13.868 13.426 15.02 15.691 C 17.79 13.198 18.738 9.256 17.403 5.777 C 16.069 2.297 12.728 0 9.001 0 Z" fill-opacity="0" fill="currentColor" transform="translate(2.999 3)"></path><path d="M 0 3.75 C 0 1.679 1.679 0 3.75 0 C 5.821 0 7.5 1.679 7.5 3.75 C 7.5 5.821 5.821 7.5 3.75 7.5 C 1.679 7.5 0 5.821 0 3.75 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(8.25 7.5)"></path><path d="M 0 0.287 C 1.476 -0.096 3.024 -0.096 4.5 0.287" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(9.75 2.994)"></path><path d="M 0 3.896 C 0.406 2.427 1.181 1.086 2.25 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(3.327 5.694)"></path><path d="M 4.5 0 C 3.024 0.383 1.476 0.383 0 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(9.75 20.719)"></path><path d="M 0 0 C 1.07 1.087 1.844 2.428 2.25 3.898" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(18.423 5.693)"></path><path d="M 17.348 0 C 16.888 1.651 15.967 3.136 14.693 4.282 C 13.542 2.015 11.216 0.587 8.674 0.587 C 6.132 0.587 3.806 2.015 2.655 4.282 C 1.38 3.136 0.459 1.651 0 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(3.326 14.409)"></path></g></symbol>
+  <symbol id="p-money" viewBox="0 0 24 24"><g><path d="M 0 1.238 L 0 12.488 C 8.591 8.291 12.409 16.459 21 12.261 L 21 1.011 C 12.409 5.209 8.591 -2.959 0 1.238 Z M 10.5 9 C 9.257 9 8.25 7.993 8.25 6.75 C 8.25 5.507 9.257 4.5 10.5 4.5 C 11.743 4.5 12.75 5.507 12.75 6.75 C 12.75 7.993 11.743 9 10.5 9 Z" fill-opacity="0" fill="currentColor" transform="translate(1.5 5.25)"></path><path d="M 21 12.261 C 12.409 16.459 8.591 8.291 0 12.488 L 0 1.238 C 8.591 -2.959 12.409 5.209 21 1.011 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(1.5 5.25)"></path><path d="M 0 2.25 C 0 1.007 1.007 0 2.25 0 C 3.493 0 4.5 1.007 4.5 2.25 C 4.5 3.493 3.493 4.5 2.25 4.5 C 1.007 4.5 0 3.493 0 2.25 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(9.75 9.75)"></path><path d="M 0 0 L 0 4.5" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(4.5 9)"></path><path d="M 0 0 L 0 4.5" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(19.5 10.5)"></path></g></symbol>
+  <symbol id="p-check-bold" viewBox="0 0 24 24"><g><path d="M 18 0 L 1.5 0 C 0.672 0 0 0.672 0 1.5 L 0 15 C 0 15.828 0.672 16.5 1.5 16.5 L 18 16.5 C 18.828 16.5 19.5 15.828 19.5 15 L 19.5 1.5 C 19.5 0.672 18.828 0 18 0 Z" fill-opacity="0" fill="currentColor" transform="translate(2.25 3.75)"></path><path d="M 0 5.25 L 3.75 9 L 12.75 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" stroke="currentColor" transform="translate(6 7.5)"></path></g></symbol>
+  <symbol id="p-alarm" viewBox="0 0 24 24"><g><path d="M 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 C 16.5 12.806 12.806 16.5 8.25 16.5 C 3.694 16.5 0 12.806 0 8.25 Z" fill-opacity="0" fill="currentColor" transform="translate(3.75 4.5)"></path><path d="M 0 8.25 C 0 3.694 3.694 0 8.25 0 C 12.806 0 16.5 3.694 16.5 8.25 C 16.5 12.806 12.806 16.5 8.25 16.5 C 3.694 16.5 0 12.806 0 8.25 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(3.75 4.5)"></path><path d="M 3 0 L 0 3" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(2.25 3)"></path><path d="M 0 0 L 3 3" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(18.75 3)"></path><path d="M 0 0 L 0 5.25 L 5.25 5.25" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(12 7.5)"></path></g></symbol>
+  <symbol id="p-nodes" viewBox="0 0 24 24"><g><path d="M 0.75 4.5 C 0.336 4.5 0 4.164 0 3.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 3.75 0 C 4.164 0 4.5 0.336 4.5 0.75 L 4.5 3.75 C 4.5 4.164 4.164 4.5 3.75 4.5 Z" fill-opacity="0" fill="currentColor" transform="translate(15.75 3.75)"></path><path d="M 0.75 4.5 C 0.336 4.5 0 4.164 0 3.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 3.75 0 C 4.164 0 4.5 0.336 4.5 0.75 L 4.5 3.75 C 4.5 4.164 4.164 4.5 3.75 4.5 Z" fill-opacity="0" fill="currentColor" transform="translate(3.75 3.75)"></path><path d="M 0.75 4.5 C 0.336 4.5 0 4.164 0 3.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 3.75 0 C 4.164 0 4.5 0.336 4.5 0.75 L 4.5 3.75 C 4.5 4.164 4.164 4.5 3.75 4.5 Z" fill-opacity="0" fill="currentColor" transform="translate(15.75 15.75)"></path><path d="M 0.75 4.5 C 0.336 4.5 0 4.164 0 3.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 3.75 0 C 4.164 0 4.5 0.336 4.5 0.75 L 4.5 3.75 C 4.5 4.164 4.164 4.5 3.75 4.5 Z" fill-opacity="0" fill="currentColor" transform="translate(3.75 15.75)"></path><path d="M 0.75 4.5 C 0.336 4.5 0 4.164 0 3.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 3.75 0 C 4.164 0 4.5 0.336 4.5 0.75 L 4.5 3.75 C 4.5 4.164 4.164 4.5 3.75 4.5 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(15.75 3.75)"></path><path d="M 0.75 4.5 C 0.336 4.5 0 4.164 0 3.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 3.75 0 C 4.164 0 4.5 0.336 4.5 0.75 L 4.5 3.75 C 4.5 4.164 4.164 4.5 3.75 4.5 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(3.75 3.75)"></path><path d="M 0.75 4.5 C 0.336 4.5 0 4.164 0 3.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 3.75 0 C 4.164 0 4.5 0.336 4.5 0.75 L 4.5 3.75 C 4.5 4.164 4.164 4.5 3.75 4.5 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(15.75 15.75)"></path><path d="M 0.75 4.5 C 0.336 4.5 0 4.164 0 3.75 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 3.75 0 C 4.164 0 4.5 0.336 4.5 0.75 L 4.5 3.75 C 4.5 4.164 4.164 4.5 3.75 4.5 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(3.75 15.75)"></path><path d="M 0 7.5 L 0 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(6 8.25)"></path><path d="M 7.5 0 L 0 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(8.25 18)"></path><path d="M 0 0 L 0 7.5" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(18 8.25)"></path><path d="M 0 0 L 7.5 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(8.25 6)"></path></g></symbol>
+  <symbol id="p-broadcast" viewBox="0 0 24 24"><g><path d="M 0 3 C 0 1.343 1.343 0 3 0 C 4.657 0 6 1.343 6 3 C 6 4.657 4.657 6 3 6 C 1.343 6 0 4.657 0 3 Z" fill-opacity="0" fill="currentColor" transform="translate(9 9)"></path><path d="M 0 3 C 0 1.343 1.343 0 3 0 C 4.657 0 6 1.343 6 3 C 6 4.657 4.657 6 3 6 C 1.343 6 0 4.657 0 3 Z" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(9 9)"></path><path d="M 0 0 C 2.294 2.561 2.294 6.439 0 9" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(17.032 7.5)"></path><path d="M 1.721 9 C -0.574 6.439 -0.574 2.561 1.721 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(5.248 7.5)"></path><path d="M 0 0 C 4.006 4.08 4.006 10.616 0 14.696" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(19.5 4.652)"></path><path d="M 3.004 14.696 C -1.001 10.616 -1.001 4.08 3.004 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(1.496 4.652)"></path></g></symbol>
+  <symbol id="p-fingerprint" viewBox="0 0 24 24"><g><path d="M 0 9 C 0 4.029 4.029 0 9 0 C 13.971 0 18 4.029 18 9 C 18 13.971 13.971 18 9 18 C 4.029 18 0 13.971 0 9 Z" fill-opacity="0" fill="currentColor" transform="translate(3 3)"></path><path d="M 1.688 0 C 1.689 2.933 1.116 5.838 0 8.551" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(14.813 12)"></path><path d="M 9.539 1.497 C 8.295 0.109 6.323 -0.369 4.581 0.297 C 2.84 0.962 1.689 2.633 1.688 4.497 C 1.69 6.784 1.109 9.034 0 11.035" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(5.813 7.503)"></path><path d="M 0 0.512 C 2.755 -0.459 5.81 -0.033 8.195 1.654 C 10.579 3.34 11.998 6.079 12 9 C 12.001 11.019 11.777 13.031 11.331 15" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(9 3)"></path><path d="M 0 10.458 C 0.54 9.282 0.819 8.002 0.818 6.708 C 0.816 4.146 1.907 1.706 3.818 0" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(2.182 5.292)"></path><path d="M 0.616 0 C 0.428 0.414 0.223 0.821 0 1.219" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(9.749 19.5)"></path><path d="M 0.563 0 C 0.565 1.518 0.376 3.03 0 4.5" fill="transparent" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" transform="translate(11.438 12)"></path></g></symbol>
 </svg>
 
 <header>
@@ -404,8 +433,8 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
         <a class="btn btn-ghost btn-lg" href="#balcao">Conhecer o Balcão</a>
       </div>
       <div class="chips gx-reveal" style="--gx-delay:220ms" aria-hidden="true">
-        <div class="chip"><span class="icon"><svg><use href="#i-calc"/></svg></span>Custo do milheiro a cada movimento</div>
-        <div class="chip"><span class="icon"><svg><use href="#i-shield"/></svg></span>Negociação com intermediação por PIX</div>
+        <div class="chip"><span class="icon"><svg><use href="#p-money"/></svg></span>Custo do milheiro a cada movimento</div>
+        <div class="chip"><span class="icon"><svg><use href="#p-check-bold"/></svg></span>Negociação com intermediação por PIX</div>
       </div>
     </div>
     <div class="stage gx-reveal" style="--gx-delay:200ms">
@@ -517,6 +546,22 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
     </div>
   </section>
 
+  <section class="block audience" aria-labelledby="publico-titulo">
+    <div class="wrap aud">
+      <div class="aud-head gx-reveal">
+        <span class="kicker">Para quem é</span>
+        <h2 id="publico-titulo" class="h2">Feito para quem vive o mercado de milhas</h2>
+        <p>Do viajante que organiza os pontos da família ao milheiro com vários CPFs: cada um usa o que precisa.</p>
+        <a class="btn btn-primary" href="#contato">Fale com a gente</a>
+      </div>
+      <div class="aud-list">
+        <div class="aud-item gx-reveal"><span class="icon"><svg><use href="#i-plane"/></svg></span><div><h3>Viajantes</h3><p>Organize os pontos de toda a família num só lugar, saiba quanto custou cada milha e compre milhas no Balcão de quem é verificado.</p></div></div>
+        <div class="aud-item gx-reveal" style="--gx-delay:80ms"><span class="icon"><svg><use href="#p-user-plus"/></svg></span><div><h3>Agentes e agências</h3><p>Administre as contas dos clientes, registre emissões com o lucro de cada uma e encontre milhas para emitir no Balcão.</p></div></div>
+        <div class="aud-item gx-reveal" style="--gx-delay:160ms"><span class="icon"><svg><use href="#p-chart"/></svg></span><div><h3>Milheiros</h3><p>Acompanhe o custo médio e os CPFs livres de cada titular, controle as vendas e venda milhas com pagamento intermediado.</p></div></div>
+      </div>
+    </div>
+  </section>
+
   <section id="manager" class="block" aria-labelledby="manager-titulo">
     <div class="wrap detail">
       <div class="text gx-reveal">
@@ -524,10 +569,10 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
         <h2 id="manager-titulo" class="h2">Saiba quanto tem, quanto custou e quanto lucrou</h2>
         <p class="desc">Do viajante que organiza os próprios pontos à agência que administra contas de clientes: o Manager faz as contas de custo médio, saldo e lucro a cada movimento.</p>
         <div class="acc">
-          <details open><summary><span class="icon"><svg><use href="#i-wallet"/></svg></span>Carteiras por titular</summary><p>Saldos de cada CPF em todos os programas, com vencimentos e extrato da origem de cada milha.</p></details>
-          <details><summary><span class="icon"><svg><use href="#i-calc"/></svg></span>Custo do milheiro</summary><p>Recalculado a cada compra, transferência e bônus. Simulador de transferências bonificadas.</p></details>
-          <details><summary><span class="icon"><svg><use href="#i-bars"/></svg></span>Vendas e lucro</summary><p>Lucro de cada venda e emissão, CRM de pedidos, clientes, passageiros e fornecedores.</p></details>
-          <details><summary><span class="icon"><svg><use href="#i-users"/></svg></span>Equipe e financeiro</summary><p>Login próprio para a equipe, permissões por função, contas a pagar e a receber.</p></details>
+          <details open><summary><span class="icon"><svg><use href="#p-notebook"/></svg></span>Carteiras por titular</summary><p>Saldos de cada CPF em todos os programas, com vencimentos e extrato da origem de cada milha.</p></details>
+          <details><summary><span class="icon"><svg><use href="#p-money"/></svg></span>Custo do milheiro</summary><p>Recalculado a cada compra, transferência e bônus. Simulador de transferências bonificadas.</p></details>
+          <details><summary><span class="icon"><svg><use href="#p-chart"/></svg></span>Vendas e lucro</summary><p>Lucro de cada venda e emissão, CRM de pedidos, clientes, passageiros e fornecedores.</p></details>
+          <details><summary><span class="icon"><svg><use href="#p-user-plus"/></svg></span>Equipe e financeiro</summary><p>Login próprio para a equipe, permissões por função, contas a pagar e a receber.</p></details>
         </div>
       </div>
       <div class="showcase gx-reveal" style="--gx-delay:120ms">
@@ -544,10 +589,10 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
         <h2 id="balcao-titulo" class="h2">Compre e venda milhas com quem é verificado</h2>
         <p class="desc">Viajantes, agentes e milheiros negociam num só lugar, com regras claras de pagamento, emissão e cancelamento, e a equipe do balcão acompanhando cada negociação intermediada.</p>
         <div class="acc">
-          <details open><summary><span class="icon"><svg><use href="#i-chat"/></svg></span>Direto no Telegram</summary><p>Quem quer comprar publica a oferta; vendedores aceitam ou fazem contraproposta pelo bot.</p></details>
-          <details><summary><span class="icon"><svg><use href="#i-badge"/></svg></span>Usuários verificados</summary><p>Documento, selfie, vídeo e termo assinado pelo GOV.BR, analisados pela equipe antes de liberar o acesso.</p></details>
-          <details><summary><span class="icon"><svg><use href="#i-hand"/></svg></span>Intermediação</summary><p>O comprador paga ao balcão por PIX e o vendedor só recebe depois da emissão da passagem.</p></details>
-          <details><summary><span class="icon"><svg><use href="#i-shield"/></svg></span>Reputação pública</summary><p>Confiômetro, avaliações e histórico de cada vendedor para negociar com quem entrega.</p></details>
+          <details open><summary><span class="icon"><svg><use href="#p-broadcast"/></svg></span>Direto no Telegram</summary><p>Quem quer comprar publica a oferta; vendedores aceitam ou fazem contraproposta pelo bot.</p></details>
+          <details><summary><span class="icon"><svg><use href="#p-fingerprint"/></svg></span>Usuários verificados</summary><p>Documento, selfie, vídeo e termo assinado pelo GOV.BR, analisados pela equipe antes de liberar o acesso.</p></details>
+          <details><summary><span class="icon"><svg><use href="#p-nodes"/></svg></span>Intermediação</summary><p>O comprador paga ao balcão por PIX e o vendedor só recebe depois da emissão da passagem.</p></details>
+          <details><summary><span class="icon"><svg><use href="#p-thumbs-up"/></svg></span>Reputação pública</summary><p>Confiômetro, avaliações e histórico de cada vendedor para negociar com quem entrega.</p></details>
         </div>
       </div>
       <div class="showcase balcao gx-reveal" style="--gx-delay:120ms">
@@ -556,7 +601,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
           <div class="bar2"><span class="icon"><svg><use href="#i-store"/></svg></span>GOMilhasX Balcão<small>bot</small></div>
           <div class="bubble"><b>Nova oferta de compra</b><span class="muted">85.000 milhas LATAM Pass · 2 passageiros · R$ 25,00 o milheiro</span></div>
           <div class="bubble me"><b>Contraproposta</b><span class="muted">R$ 26,50 o milheiro · emissão hoje</span></div>
-          <div class="bubble"><b class="ok"><svg><use href="#i-check"/></svg>Negociação fechada</b><span class="muted">PIX com intermediação · nota 5 de 5</span></div>
+          <div class="bubble"><b class="ok"><svg><use href="#p-check-bold"/></svg>Negociação fechada</b><span class="muted">PIX com intermediação · nota 5 de 5</span></div>
         </div>
       </div>
     </div>
@@ -570,9 +615,9 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
           <img src="/assets/fotos/rio-noite.webp" alt="" loading="lazy" decoding="async">
           <div class="over"><strong>15 dias</strong><span>de teste grátis no Manager com os recursos do plano Gestor, sem cartão de crédito</span></div>
         </div>
-        <div class="tile gx-reveal" style="--gx-delay:60ms"><span class="icon"><svg><use href="#i-badge"/></svg></span><h3>Verificação pelo GOV.BR</h3><p>Quem negocia no Balcão passa por documento, selfie, vídeo e termo assinado.</p></div>
-        <div class="tile gx-reveal" style="--gx-delay:120ms"><span class="icon"><svg><use href="#i-hand"/></svg></span><h3>PIX com intermediação</h3><p>O vendedor só recebe depois da emissão da passagem.</p></div>
-        <div class="tile gx-reveal" style="--gx-delay:180ms"><span class="icon"><svg><use href="#i-calc"/></svg></span><h3>Custo do milheiro</h3><p>Recalculado a cada compra, transferência e bônus.</p></div>
+        <div class="tile gx-reveal" style="--gx-delay:60ms"><span class="icon"><svg><use href="#p-fingerprint"/></svg></span><h3>Verificação pelo GOV.BR</h3><p>Quem negocia no Balcão passa por documento, selfie, vídeo e termo assinado.</p></div>
+        <div class="tile gx-reveal" style="--gx-delay:120ms"><span class="icon"><svg><use href="#p-nodes"/></svg></span><h3>PIX com intermediação</h3><p>O vendedor só recebe depois da emissão da passagem.</p></div>
+        <div class="tile gx-reveal" style="--gx-delay:180ms"><span class="icon"><svg><use href="#p-money"/></svg></span><h3>Custo do milheiro</h3><p>Recalculado a cada compra, transferência e bônus.</p></div>
         <div class="tile gx-reveal" style="--gx-delay:240ms"><span class="icon"><svg><use href="#i-lock"/></svg></span><h3>Dados protegidos</h3><p>Conexões criptografadas e dados tratados conforme a LGPD.</p></div>
       </div>
     </div>
@@ -597,8 +642,8 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
           <span class="name">GOMilhasX Manager</span>
           <p class="price"><strong>Grátis</strong>no plano Pessoal</p>
           <ul>
-            <li><svg><use href="#i-check"/></svg>PRO por R$ 19,90/mês e Gestor por R$ 59,90/mês, com desconto no anual</li>
-            <li><svg><use href="#i-check"/></svg>15 dias de teste com os recursos do Gestor, sem cartão de crédito</li>
+            <li><svg><use href="#p-check-bold"/></svg>PRO por R$ 19,90/mês e Gestor por R$ 59,90/mês, com desconto no anual</li>
+            <li><svg><use href="#p-check-bold"/></svg>15 dias de teste com os recursos do Gestor, sem cartão de crédito</li>
           </ul>
           <div class="row">
             <a class="btn btn-primary" href="https://manager.gomilhasx.com/register">Criar conta grátis</a>
@@ -609,8 +654,8 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
           <span class="name">GOMilhasX Balcão</span>
           <p class="price">A partir de <strong>R$ 9,90</strong>/mês</p>
           <ul>
-            <li><svg><use href="#i-check"/></svg>Módulos Viajante, Agentes e Milheiro, conforme o seu objetivo</li>
-            <li><svg><use href="#i-check"/></svg>Mensal, anual (economize 17%) ou vitalício; ativação direto no Telegram</li>
+            <li><svg><use href="#p-check-bold"/></svg>Módulos Viajante, Agentes e Milheiro, conforme o seu objetivo</li>
+            <li><svg><use href="#p-check-bold"/></svg>Mensal, anual (economize 17%) ou vitalício; ativação direto no Telegram</li>
           </ul>
           <div class="row">
             <a class="btn btn-primary" href="https://balcao.gomilhasx.com/" data-lead="planos">Acessar o Balcão</a>
@@ -732,6 +777,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
       <li><a href="https://manager.gomilhasx.com/privacidade/solicitacao">Pedidos sobre seus dados</a></li>
     </ul></nav>
   </div>
+  <p class="big-word" aria-hidden="true">Milhas, simplificadas.</p>
   <p class="copy">© <span id="ano">2026</span> GOMilhasX · CNPJ 70.001.231/0001-03. Todos os direitos reservados.</p>
 </footer>
 
@@ -771,7 +817,7 @@ footer .copy { border-top: 1px solid var(--line); padding: 16px 16px 88px; text-
       </form>
     </div>
     <div id="lead-step2" class="lead-ok" hidden aria-live="polite">
-      <div class="icon"><svg><use href="#i-check"/></svg></div>
+      <div class="icon"><svg><use href="#p-check-bold"/></svg></div>
       <h2 id="lead-ok-t">Pronto!</h2>
       <p id="lead-ok-p"></p>
       <a id="lead-go" class="btn btn-primary gx-btn" href="https://balcao.gomilhasx.com/" target="_blank" rel="noopener">Abrir no Telegram</a>
