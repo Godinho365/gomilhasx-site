@@ -590,6 +590,7 @@ header .head-cta { animation: sm-right .8s .15s cubic-bezier(.22,.61,.36,1) both
 .post-corpo th, .post-corpo td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; }
 .post-corpo th { font-weight: 600; color: var(--text); background: var(--off); }
 
-/* Topo de cada página: aparece pronto, sem a entrada animada. O que está na primeira tela não espera animação para ficar
-   completo (Speed Index do PageSpeed); as seções de baixo continuam entrando ao rolar. */
-.hero .gx-reveal, .page-hero .gx-reveal, .post-head .gx-reveal, .post-capa.gx-reveal { opacity: 1; transform: none; transition: none; }
+/* Topo de cada página: entrada animada curta (sem atraso, 0,35 s), para a primeira tela ficar completa logo (Speed Index do
+   PageSpeed). As seções de baixo continuam com a animação normal. No celular o topo continua parado (regra mais acima). */
+.hero .gx-reveal, .page-hero .gx-reveal, .post-head .gx-reveal, .post-capa.gx-reveal { --gx-delay: 0ms !important; --gx-dur: .35s; }
+.sm-js .hero [data-split] .sm-w, .sm-js .page-hero [data-split] .sm-w, .sm-js .post-head [data-split] .sm-w { transition-duration: .35s; }

@@ -37,15 +37,16 @@
   }
 
   /* Títulos palavra por palavra, quando entram na tela */
-  // o título do topo da página aparece pronto: animar o que já está na tela atrasa a primeira tela completa (Speed Index)
-  var splits = Array.prototype.filter.call(doc.querySelectorAll("[data-split]"), function (el) { return !el.closest(".hero, .page-hero, .post-head"); });
+  var splits = doc.querySelectorAll("[data-split]");
   if (!leve && splits.length && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("sm-in"); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px" });
     Array.prototype.forEach.call(splits, function (el) {
-      var base = parseInt(el.getAttribute("data-split"), 10) || 0;
-      splitWords(el, "sm-w").forEach(function (w, i) { w.style.transitionDelay = (base + i * 45) + "ms"; });
+      // topo da página: versão curta (começa na hora, 20 ms entre palavras) para a primeira tela ficar completa logo
+      var topo = !!el.closest(".hero, .page-hero, .post-head");
+      var base = topo ? 0 : parseInt(el.getAttribute("data-split"), 10) || 0, passo = topo ? 20 : 45;
+      splitWords(el, "sm-w").forEach(function (w, i) { w.style.transitionDelay = (base + i * passo) + "ms"; });
       io.observe(el);
     });
   }
