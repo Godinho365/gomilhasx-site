@@ -30,7 +30,7 @@ python3 ferramentas/gerar_site.py
   `blockquote`, `<div class="conta">` para destacar uma conta, `<p class="aviso">` para a nota final).
 - `leia:` no artigo monta o quadro "Leia também" no fim do texto: páginas do site (`/para-viajantes/`, `/para-milheiros/`,
   `/para-agencias/`, `/calculadora-custo-do-milheiro/`, `/planilha-de-milhas/`, `/seguranca/`) e/ou `manager`, `balcao`.
-- Links para o Manager e o Balcão: todo `<a>` para `manager.gomilhasx.com` ou `balcao.gomilhasx.com` leva
+- Links para o Manager e o Balcão: todo `<a>` para `manager.gonorte.com.br` ou `balcao.gomilhasx.com` leva
   `data-utm="identificador_do_botao"` na fonte (ex.: `hero_manager`, `planos_gestor`, `rodape_balcao`). O gerador troca o
   atributo por `?utm_source=gonorte.com.br&utm_medium=site&utm_content=<identificador>`, mantendo os parâmetros que o link já
   tem (`plano`, `periodo`...). Sem `data-utm` a geração para com erro, exceto nos artigos (vira `blog_<slug>`), nas páginas de
