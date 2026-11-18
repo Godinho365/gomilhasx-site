@@ -10,7 +10,7 @@ import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
-HOST = "gomilhasx.com"
+HOST = "gonorte.com.br"
 CHAVE = "b528c2642209b4e65e586ba0f00c86c7"
 
 

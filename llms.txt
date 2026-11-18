@@ -14,14 +14,14 @@
 
 ## Links
 
-- [Site da empresa](https://gomilhasx.com/): apresentação, produtos, fundador e contato
-- [Recursos](https://gomilhasx.com/recursos/), [Planos e preços](https://gomilhasx.com/planos/), [Sobre](https://gomilhasx.com/sobre/), [Dúvidas](https://gomilhasx.com/duvidas/) e [Contato](https://gomilhasx.com/contato/)
-- [Blog](https://gomilhasx.com/blog/): guias sobre custo do milheiro, transferências bonificadas e compra de milhas com segurança
-- Por público: [viajantes](https://gomilhasx.com/para-viajantes/), [milheiros](https://gomilhasx.com/para-milheiros/), [agências e agentes](https://gomilhasx.com/para-agencias/)
-- [Segurança](https://gomilhasx.com/seguranca/): identidade conferida (documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe), PIX intermediado até a emissão, reputação pública, proteção de dados e dicas contra golpes
-- [Calculadora de custo do milheiro](https://gomilhasx.com/calculadora-custo-do-milheiro/): ferramenta grátis, sem cadastro; considera bônus e proporção de transferência e estima o lucro da venda
-- [Planilha de controle de milhas](https://gomilhasx.com/planilha-de-milhas/): planilha grátis (.xlsx) com contas, movimentações e vendas
-- [GO Manager no Claude](https://gomilhasx.com/claude/): conector MCP do GO Manager para o Claude (planos PRO e Gestor)
+- [Site da empresa](https://gonorte.com.br/): apresentação, produtos, fundador e contato
+- [Recursos](https://gonorte.com.br/recursos/), [Planos e preços](https://gonorte.com.br/planos/), [Sobre](https://gonorte.com.br/sobre/), [Dúvidas](https://gonorte.com.br/duvidas/) e [Contato](https://gonorte.com.br/contato/)
+- [Blog](https://gonorte.com.br/blog/): guias sobre custo do milheiro, transferências bonificadas e compra de milhas com segurança
+- Por público: [viajantes](https://gonorte.com.br/para-viajantes/), [milheiros](https://gonorte.com.br/para-milheiros/), [agências e agentes](https://gonorte.com.br/para-agencias/)
+- [Segurança](https://gonorte.com.br/seguranca/): identidade conferida (documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe), PIX intermediado até a emissão, reputação pública, proteção de dados e dicas contra golpes
+- [Calculadora de custo do milheiro](https://gonorte.com.br/calculadora-custo-do-milheiro/): ferramenta grátis, sem cadastro; considera bônus e proporção de transferência e estima o lucro da venda
+- [Planilha de controle de milhas](https://gonorte.com.br/planilha-de-milhas/): planilha grátis (.xlsx) com contas, movimentações e vendas
+- [GO Manager no Claude](https://gonorte.com.br/claude/): conector MCP do GO Manager para o Claude (planos PRO e Gestor)
 - [Novidades do Manager](https://manager.gomilhasx.com/novidades): novos recursos, melhorias e correções
 - [Política de Privacidade](https://manager.gomilhasx.com/privacidade)
 - [Termos de Serviço](https://manager.gomilhasx.com/termos)

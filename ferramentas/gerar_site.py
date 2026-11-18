@@ -23,13 +23,13 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 RAIZ = Path(__file__).resolve().parents[1]
 FONTES = RAIZ / "_fontes"
-SITE = "https://gomilhasx.com"
+SITE = "https://gonorte.com.br"
 MENU = [("recursos", "/recursos/", "Recursos"), ("planos", "/planos/", "Planos"), ("sobre", "/sobre/", "Sobre"),
         ("blog", "/blog/", "Blog"), ("contato", "/contato/", "Contato")]
 # Links para os produtos levam a origem (utm_*) para o Manager e o Balcão saberem de qual botão do site a pessoa veio.
 PRODUTO_URL = re.compile(r"^https://(?:manager|balcao)\.gomilhasx\.com(?=[/?#]|$)")
 SEM_UTM = ("/privacidade", "/termos")  # páginas legais dos produtos: link informativo, sem medição
-UTM_FIXO = (("utm_source", "gomilhasx.com"), ("utm_medium", "site"))
+UTM_FIXO = (("utm_source", "gonorte.com.br"), ("utm_medium", "site"))
 MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
 
 
@@ -220,7 +220,7 @@ def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None 
             {"@type": "ListItem", "position": 1, "name": "Início", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": meta.get("migalha", meta["titulo"].split(" | ")[0]), "item": SITE + caminho}]})
     conteudo = imagens_responsivas(conteudo)
-    imagem = meta.get("imagem", "/og-image.png?v=3")
+    imagem = meta.get("imagem", "/og-image.png?v=4")
     valores = {
         **COMUM,
         "titulo": html.escape(meta["titulo"], quote=True),
