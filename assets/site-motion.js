@@ -62,9 +62,13 @@
       Array.prototype.forEach.call(texts, function (t, k) { t.classList.toggle("on", k === i); });
       Array.prototype.forEach.call(shots, function (t, k) { t.classList.toggle("on", k === i); });
     }
-    function auto() { if (!reduce) timer = setInterval(function () { show((cur + 1) % tabs.length); }, 4500); }
-    Array.prototype.forEach.call(tabs, function (t, k) { t.addEventListener("click", function () { clearInterval(timer); show(k); }); });
-    auto();
+    var manual = false;
+    function auto() { if (!reduce && !manual && !timer) timer = setInterval(function () { show((cur + 1) % tabs.length); }, 4500); }
+    function stop() { clearInterval(timer); timer = null; }
+    Array.prototype.forEach.call(tabs, function (t, k) { t.addEventListener("click", function () { manual = true; stop(); show(k); }); });
+    // só troca sozinha enquanto está na tela: fora dela não gasta processamento nem deixa texto pela metade da transição
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { es[0].isIntersecting ? auto() : stop(); }).observe(box);
+    else auto();
   });
 
   /* Sanfona: abre um item por vez; a barra dourada enche e passa para o próximo */
