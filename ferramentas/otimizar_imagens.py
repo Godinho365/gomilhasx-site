@@ -5,7 +5,7 @@
 
 Rode de novo só quando trocar ou acrescentar uma foto/tela; a saída vai para o git (o servidor não roda isto).
 Saída:
-  assets/r/<pasta>-<nome>-<largura>.webp   versões de 480, 720, 960 e 1440 px (fotos) ou 300 e 450 px (telas de celular),
+  assets/r/<pasta>-<nome>-<largura>.webp   versões de 360, 480, 640, 720, 960 e 1440 px (fotos) ou 300, 380 e 450 px (telas de celular),
                                            só as menores que o original; o original continua sendo a maior opção do srcset
   assets/r/fundador-96.webp                avatar quadrado do fundador (40–44 px na tela)
   assets/r/<programa>-96.webp              logos dos programas (26 a 40 px na tela; o PNG de 128 px continua para quem usa)
@@ -24,7 +24,7 @@ from PIL import Image
 RAIZ = Path(__file__).resolve().parents[1]
 SAIDA = RAIZ / "assets/r"
 QUALIDADE = 74
-GRUPOS = {"fotos": (480, 720, 960, 1440), "telas": (300, 450)}
+GRUPOS = {"fotos": (360, 480, 640, 720, 960, 1440), "telas": (300, 380, 450)}
 PROGRAMAS = ["smiles", "latam-pass", "azul-fidelidade", "livelo", "esfera", "tap-miles-go", "flying-blue", "iberia",
              "connectmiles", "all-accor"]
 
