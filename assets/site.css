@@ -589,3 +589,7 @@ header .head-cta { animation: sm-right .8s .15s cubic-bezier(.22,.61,.36,1) both
 .post-corpo table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 15.5px; }
 .post-corpo th, .post-corpo td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; }
 .post-corpo th { font-weight: 600; color: var(--text); background: var(--off); }
+
+/* Topo de cada página: aparece pronto, sem a entrada animada. O que está na primeira tela não espera animação para ficar
+   completo (Speed Index do PageSpeed); as seções de baixo continuam entrando ao rolar. */
+.hero .gx-reveal, .page-hero .gx-reveal, .post-head .gx-reveal, .post-capa.gx-reveal { opacity: 1; transform: none; transition: none; }

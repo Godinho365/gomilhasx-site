@@ -37,7 +37,8 @@
   }
 
   /* Títulos palavra por palavra, quando entram na tela */
-  var splits = doc.querySelectorAll("[data-split]");
+  // o título do topo da página aparece pronto: animar o que já está na tela atrasa a primeira tela completa (Speed Index)
+  var splits = Array.prototype.filter.call(doc.querySelectorAll("[data-split]"), function (el) { return !el.closest(".hero, .page-hero, .post-head"); });
   if (!leve && splits.length && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("sm-in"); io.unobserve(e.target); } });
