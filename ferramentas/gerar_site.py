@@ -27,7 +27,7 @@ SITE = "https://gonorte.com.br"
 MENU = [("recursos", "/recursos/", "Recursos"), ("planos", "/planos/", "Planos"), ("sobre", "/sobre/", "Sobre"),
         ("blog", "/blog/", "Blog"), ("contato", "/contato/", "Contato")]
 # Links para os produtos levam a origem (utm_*) para o Manager e o Balcão saberem de qual botão do site a pessoa veio.
-PRODUTO_URL = re.compile(r"^https://(?:manager|balcao)\.gomilhasx\.com(?=[/?#]|$)")
+PRODUTO_URL = re.compile(r"^https://(?:manager|balcao)\.(?:gomilhasx\.com|gonorte\.com\.br)(?=[/?#]|$)")
 SEM_UTM = ("/privacidade", "/termos")  # páginas legais dos produtos: link informativo, sem medição
 UTM_FIXO = (("utm_source", "gonorte.com.br"), ("utm_medium", "site"))
 MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
@@ -75,7 +75,7 @@ def url_com_utm(url: str, conteudo: str) -> str:
 
 
 def com_utm(saida: str, onde: str, padrao: str = "") -> str:
-    """Em cada <a> para manager./balcao.gomilhasx.com, troca o atributo data-utm="identificador" pelos parâmetros utm_* no href.
+    """Em cada <a> para manager./balcao.gonorte.com.br, troca o atributo data-utm="identificador" pelos parâmetros utm_* no href.
     Sem data-utm: usa o padrão da página (artigos: blog_<slug>); sem padrão, para a geração, para nenhum botão ficar sem
     origem. Links internos, de terceiros, páginas legais dos produtos e links que já trazem utm_source ficam como estão."""
     def troca(m: re.Match) -> str:
@@ -269,7 +269,7 @@ LEIA = {
     "/comprar-milhas/": ("Comprar milhas", "Como a compra funciona e o que conferir antes de pagar."),
     "/golpes-de-milhas/": ("Golpes com milhas", "Os golpes mais comuns e como se proteger."),
     "manager": ("https://manager.gomilhasx.com/register", "GO Manager, grátis para começar", "O custo do milheiro recalculado a cada compra, transferência e venda."),
-    "balcao": ("https://balcao.gomilhasx.com/", "GO Balcão", "Compre e venda milhas com quem tem identidade conferida e PIX intermediado."),
+    "balcao": ("https://balcao.gonorte.com.br/", "GO Balcão", "Compre e venda milhas com quem tem identidade conferida e PIX intermediado."),
 }
 
 
