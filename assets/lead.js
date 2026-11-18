@@ -128,7 +128,7 @@
   function withUtm(link, content) {
     try {
       var u = new URL(link);
-      if (u.hostname !== "balcao.gomilhasx.com" || u.searchParams.has("utm_source")) return link;
+      if (!/^balcao\.(gonorte\.com\.br|gomilhasx\.com)$/.test(u.hostname) || u.searchParams.has("utm_source")) return link;
       u.searchParams.set("utm_source", "gonorte.com.br"); u.searchParams.set("utm_medium", "site"); u.searchParams.set("utm_content", content);
       return u.toString();
     } catch (e) { return link; }
@@ -137,8 +137,8 @@
   function done(j, nome) {
     var t = document.getElementById("lead-ok-t"), p = document.getElementById("lead-ok-p"), go = document.getElementById("lead-go");
     var steps = document.getElementById("lead-steps");
-    var safe = /^https:\/\/(t\.me|balcao\.gomilhasx\.com)\//.test(j.link || "");
-    go.href = withUtm(safe ? j.link : "https://balcao.gomilhasx.com/", "modal_lead_balcao");
+    var safe = /^https:\/\/(t\.me|balcao\.gonorte\.com\.br|balcao\.gomilhasx\.com)\//.test(j.link || "");
+    go.href = withUtm(safe ? j.link : "https://balcao.gonorte.com.br/", "modal_lead_balcao");
     if (j.tipo === "convite") {
       t.textContent = "Tudo certo, " + nome + "! Seu convite está pronto";
       p.textContent = "Você ganhou o " + j.plano + " · " + j.periodo + ". Abra o convite no Telegram para ativar (ele vale por " + j.validade_horas + " horas).";
