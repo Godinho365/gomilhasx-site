@@ -1,6 +1,6 @@
 # gomilhasx-site
 
-Site institucional da GOMilhasX em https://gomilhasx.com: apresenta o GO Manager e o GO Balcão e os planos de cada um.
+Site institucional da GO Norte em https://gomilhasx.com: apresenta o GO Manager e o GO Balcão e os planos de cada um.
 
 Site estático (HTML, CSS e imagens). As páginas são geradas por `ferramentas/gerar_site.py` a partir de `_fontes/` e o resultado vai para o git, então o servidor não precisa de build. No servidor fica em `/home/deploy/gomilhasx-app` e o Caddy do Manager
 (projeto `milhasx`) monta a pasta em `/srv/institucional` e a serve direto no bloco `gomilhasx.com`.
