@@ -54,7 +54,7 @@ def principal() -> None:
     ws.title = "Como usar"
     ws.column_dimensions["A"].width = 100
     textos = [
-        ("Planilha de controle de milhas · GO Norte", Font(bold=True, size=16, color=MARINHO)),
+        ("Planilha de controle de milhas · GONorte", Font(bold=True, size=16, color=MARINHO)),
         ("Grátis para usar e adaptar. As colunas com fundo cinza são calculadas: não precisa preencher.", Font(color=CINZA)),
         ("", None),
         ("1. Contas: uma linha por programa e titular, com o saldo e quanto você pagou no total por ele.", None),
@@ -138,7 +138,7 @@ def principal() -> None:
         c.border = Border(top=Side(style="medium", color=DOURADO))
 
     wb.properties.title = "Planilha de controle de milhas"
-    wb.properties.creator = "GO Norte"
+    wb.properties.creator = "GONorte"
     DESTINO.parent.mkdir(parents=True, exist_ok=True)
     wb.save(DESTINO)
     print(DESTINO.relative_to(RAIZ))
