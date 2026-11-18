@@ -1,6 +1,6 @@
-# GOMilhasX
+# GONORTE
 
-> GOMilhasX é uma empresa brasileira de tecnologia para viagens (CNPJ 70.001.231/0001-03) que cria tecnologia para o mercado de milhas e viagens: pessoas que acumulam pontos e viajam, agentes e agências que emitem passagens para clientes e milheiros que vendem milhas. Tem dois produtos: o GO Manager (gestão de milhas) e o GO Balcão (compra e venda de milhas).
+> GONORTE é uma empresa brasileira de tecnologia para viagens (CNPJ 70.001.231/0001-03) que cria tecnologia para o mercado de milhas e viagens: pessoas que acumulam pontos e viajam, agentes e agências que emitem passagens para clientes e milheiros que vendem milhas. Tem dois produtos: o GO Manager (gestão de milhas) e o GO Balcão (compra e venda de milhas).
 
 ## Produtos
 
