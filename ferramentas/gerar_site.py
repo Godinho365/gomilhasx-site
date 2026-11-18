@@ -354,10 +354,10 @@ def principal() -> None:
   }}); }});
 }})();
 </script>'''
-        lista = {"@context": "https://schema.org", "@type": "Blog", "name": "Blog da GONorte", "url": SITE + "/blog/",
+        lista = {"@context": "https://schema.org", "@type": "Blog", "name": "Blog da GONORTE", "url": SITE + "/blog/",
                  "publisher": {"@id": SITE + "/#organization"},
                  "blogPost": [{"@type": "BlogPosting", "headline": p["titulo_curto"], "url": f"{SITE}/blog/{p['slug']}/", "datePublished": p["data"]} for p in posts]}
-        meta = {"titulo": "Blog de milhas: custo do milheiro e transferências | GONorte", "descricao": "Guias práticos sobre milhas, custo do milheiro, transferências bonificadas e como comprar e vender milhas com segurança.",
+        meta = {"titulo": "Blog de milhas: custo do milheiro e transferências | GONORTE", "descricao": "Guias práticos sobre milhas, custo do milheiro, transferências bonificadas e como comprar e vender milhas com segurança.",
                 "caminho": "/blog/", "menu": "blog", "migalha": "Blog"}
         gravar("/blog/", montar(meta, corpo, [lista]), gerados)
         urls.append(("/blog/", posts[0]["data"]))
@@ -372,7 +372,7 @@ def principal() -> None:
     <span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · {data_br(p["data"])} · {p["leitura"]} min de leitura</span>
     <h1 data-split="80">{html.escape(p["titulo_curto"])}</h1>
     <p class="lead-p">{html.escape(p["resumo"])}</p>
-    <div class="post-autor"><img src="/assets/r/fundador-96.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GONorte</small></span></div>
+    <div class="post-autor"><img src="/assets/r/fundador-96.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GONORTE</small></span></div>
   </div>
   <figure class="post-capa wrap gx-reveal"><img sizes="(max-width: 767px) 100vw, 992px" src="{p["imagem"]}" alt=""{dimensoes(p["imagem"])} fetchpriority="high"></figure>
   <div class="post-corpo wrap">
