@@ -67,13 +67,21 @@ def principal() -> None:
         ("Lembre de atualizar a aba Contas depois de cada movimentação: a planilha não soma sozinha entre as abas.", Font(italic=True, color=CINZA)),
         ("", None),
         ("Quer tudo isso automático, por titular e por programa, com o custo do milheiro recalculado a cada movimento?", Font(bold=True, color=MARINHO)),
-        ("O GO Manager faz essas contas sozinho e tem plano grátis: https://manager.gomilhasx.com/register", Font(color=MARINHO)),
-        ("Calculadora rápida do custo do milheiro: https://gomilhasx.com/calculadora-custo-do-milheiro/", Font(color=MARINHO)),
+        ("O GO Manager faz essas contas sozinho e tem plano grátis: manager.gomilhasx.com/register", Font(color=MARINHO, underline="single")),
+        ("Calculadora rápida do custo do milheiro: gomilhasx.com/calculadora-custo-do-milheiro", Font(color=MARINHO, underline="single")),
     ]
+    # Links clicáveis com a origem (utm_*), para o painel de estatísticas e o Manager saberem que a pessoa veio da planilha
+    utm = "utm_source=planilha&utm_medium=xlsx&utm_campaign=planilha_de_milhas&utm_content="
+    links = {
+        len(textos) - 1: f"https://manager.gomilhasx.com/register?{utm}como_usar_manager",
+        len(textos): f"https://gomilhasx.com/calculadora-custo-do-milheiro/?{utm}como_usar_calculadora",
+    }
     for i, (t, fonte) in enumerate(textos, start=1):
         c = ws.cell(row=i, column=1, value=t)
         if fonte:
             c.font = fonte
+        if i in links:
+            c.hyperlink = links[i]
     ws["A1"].border = Border(bottom=Side(style="medium", color=DOURADO))
 
     # Contas
