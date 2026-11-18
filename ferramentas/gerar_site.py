@@ -262,6 +262,12 @@ LEIA = {
     "/calculadora-custo-do-milheiro/": ("Calculadora do custo do milheiro", "Grátis e sem cadastro: o custo de uma compra ou transferência."),
     "/planilha-de-milhas/": ("Planilha de milhas grátis", "Saldos, custo médio e vendas por programa, para baixar."),
     "/seguranca/": ("Segurança no GO Balcão", "Verificação de identidade, intermediação e reputação pública."),
+    "/gestao-de-milhas/": ("Gestão de milhas", "O guia completo: custo, vencimentos, lucro e ferramentas grátis."),
+    "/controle-de-milhas/": ("Controle de milhas", "Saldo, validade e custo de cada conta, por titular e programa."),
+    "/calculadora-valor-da-milha/": ("Calculadora de valor da milha", "Quanto cada milheiro rende numa passagem, comparado ao custo."),
+    "/vender-milhas/": ("Vender milhas", "Regras dos programas, riscos e como vender com segurança."),
+    "/comprar-milhas/": ("Comprar milhas", "Como a compra funciona e o que conferir antes de pagar."),
+    "/golpes-de-milhas/": ("Golpes com milhas", "Os golpes mais comuns e como se proteger."),
     "manager": ("https://manager.gomilhasx.com/register", "GO Manager, grátis para começar", "O custo do milheiro recalculado a cada compra, transferência e venda."),
     "balcao": ("https://balcao.gomilhasx.com/", "GO Balcão", "Compre e venda milhas com quem tem identidade conferida e PIX intermediado."),
 }

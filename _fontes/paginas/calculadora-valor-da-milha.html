@@ -1,0 +1,100 @@
+<!--
+titulo: Calculadora de valor da milha em reais, grátis | GOMilhasX
+descricao: Descubra quanto cada milheiro rende numa passagem, compare com o custo das suas milhas e com o preço de venda, e saiba se vale emitir com milhas.
+caminho: /calculadora-valor-da-milha/
+menu: ferramentas
+migalha: Calculadora de valor da milha
+jsonld: faq-pagina
+-->
+<section class="page-hero" aria-labelledby="titulo">
+  <div class="wrap center">
+    <span class="kicker">Ferramenta grátis</span>
+    <h1 id="titulo" data-split="100">Calculadora de valor da milha</h1>
+    <p class="lead-p gx-reveal" style="--gx-delay:400ms">Informe o preço da passagem em dinheiro e quantas milhas ela custa. A calculadora mostra quanto cada milheiro rende nessa emissão e compara com o custo das suas milhas. Nada é enviado: a conta acontece no seu navegador.</p>
+  </div>
+</section>
+<section class="sec" style="padding-top:24px" aria-label="Calculadora">
+  <div class="wrap contact-wrap">
+    <form class="cform gx-reveal" id="calc" novalidate>
+      <h2>A passagem</h2>
+      <p class="hint">Use vírgula para centavos (ex.: 1.250,00). Campos com * são obrigatórios.</p>
+      <div class="fgrid">
+        <label>Preço em dinheiro (R$) *<input name="dinheiro" inputmode="decimal" autocomplete="off" placeholder="1.250,00" required></label>
+        <label>Milhas pedidas *<input name="milhas" inputmode="numeric" autocomplete="off" placeholder="40.000" required></label>
+        <label>Taxas pagas na emissão com milhas (R$)<input name="taxas" inputmode="decimal" autocomplete="off" placeholder="0" value="0"></label>
+        <label>Custo do seu milheiro (R$, opcional)<input name="custo" inputmode="decimal" autocomplete="off" placeholder="Ex.: 17,50"></label>
+        <label class="full">Preço de venda do milheiro (R$, opcional)<input name="venda" inputmode="decimal" autocomplete="off" placeholder="Ex.: 22,00"></label>
+      </div>
+      <p class="err" role="alert" aria-live="polite"></p>
+      <button class="btn btn-primary" type="submit">Calcular</button>
+    </form>
+    <div class="channels" id="resultado" aria-live="polite">
+      <div class="contact gx-card calc-res">
+        <span><small>Cada milheiro rende nesta emissão</small><b data-out="valor">–</b></span>
+      </div>
+      <div class="contact gx-card calc-res" data-custo hidden>
+        <span><small>Comparado com o custo das suas milhas</small><b data-out="economia">–</b><small data-out="economia-txt"></small></span>
+      </div>
+      <div class="contact gx-card calc-res" data-venda hidden>
+        <span><small>Comparado com vender as milhas</small><b data-out="venda">–</b><small data-out="venda-txt"></small></span>
+      </div>
+      <p class="note">Quer saber o custo real do seu milheiro, por titular e por programa, atualizado a cada compra e transferência? O <a href="https://manager.gomilhasx.com/register" data-utm="calculadora_valor_manager">GO Manager</a> faz essa conta para você, com plano grátis.</p>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding-top:0" aria-labelledby="como-titulo">
+  <div class="wrap" style="max-width:820px">
+    <h2 id="como-titulo" class="h2 center" style="font-size:clamp(24px,3vw,32px)">Como a conta é feita</h2>
+    <div class="faq" style="margin-top:28px">
+      <details class="gx-faq"><summary>O que é o valor da milha numa emissão?</summary><p>É quanto você deixa de pagar em dinheiro para cada 1.000 milhas usadas. A fórmula é: (preço em dinheiro − taxas da emissão com milhas) ÷ milhas × 1.000. Exemplo: passagem de R$ 1.250,00 por 40.000 milhas e R$ 50,00 de taxas dá R$ 30,00 por milheiro.</p></details>
+      <details class="gx-faq"><summary>Por que descontar as taxas?</summary><p>Na emissão com milhas, a companhia costuma cobrar taxas de embarque em dinheiro. Esse valor você paga de qualquer jeito, então ele não conta como economia das milhas. Se o preço em dinheiro já não inclui taxas, deixe o campo em zero.</p></details>
+      <details class="gx-faq"><summary>Como sei se vale emitir com milhas?</summary><p>Compare o valor da emissão com o custo do seu milheiro. Se a emissão rende mais do que as milhas custaram, usar milhas sai mais barato do que pagar em dinheiro. Se rende menos, pagar em dinheiro e guardar as milhas pode ser melhor.</p></details>
+      <details class="gx-faq"><summary>E se eu pudesse vender as milhas?</summary><p>Se o preço de venda do milheiro for maior do que o valor da emissão, vender rende mais em reais. Antes, leia o regulamento do seu programa e veja o guia <a href="/vender-milhas/">vender milhas com segurança</a>.</p></details>
+      <details class="gx-faq"><summary>Os dados que eu digito ficam salvos?</summary><p>Não. A conta é feita no seu navegador e nada é enviado para a GOMilhasX.</p></details>
+    </div>
+    <p class="center" style="margin-top:28px"><a class="btn btn-ghost" href="/blog/quanto-vale-uma-milha/">Ler o guia: quanto vale uma milha em reais</a></p>
+  </div>
+</section>
+{{cta}}
+<script>
+// Calculadora de valor da milha: tudo no navegador, nada é enviado
+(function () {
+  var f = document.getElementById("calc"); if (!f) return;
+  var err = f.querySelector(".err");
+  function num(v) {
+    v = String(v || "").trim().replace(/\s|R\$/g, "");
+    if (!v) return NaN;
+    if (v.indexOf(",") >= 0) v = v.replace(/\./g, "").replace(",", ".");
+    else if (/^\d{1,3}(\.\d{3})+$/.test(v)) v = v.replace(/\./g, "");
+    return Number(v);
+  }
+  var brl = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
+  function out(k, t) { var el = document.querySelector('[data-out="' + k + '"]'); if (el) el.textContent = t; }
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var dinheiro = num(f.dinheiro.value), milhas = num(f.milhas.value), taxas = num(f.taxas.value || "0");
+    var custo = num(f.custo.value), venda = num(f.venda.value);
+    if (!(dinheiro > 0)) { err.textContent = "Informe o preço da passagem em dinheiro."; f.dinheiro.focus(); return; }
+    if (!(milhas > 0)) { err.textContent = "Informe quantas milhas a passagem pede."; f.milhas.focus(); return; }
+    if (!(taxas >= 0)) { err.textContent = "As taxas precisam ser 0 ou mais."; f.taxas.focus(); return; }
+    if (taxas >= dinheiro) { err.textContent = "As taxas não podem ser maiores que o preço em dinheiro."; f.taxas.focus(); return; }
+    err.textContent = "";
+    var valor = (dinheiro - taxas) / milhas * 1000;
+    out("valor", brl.format(valor));
+    var boxC = document.querySelector("[data-custo]"), boxV = document.querySelector("[data-venda]");
+    if (custo > 0) {
+      var dif = (valor - custo) * milhas / 1000;
+      out("economia", (dif >= 0 ? "Economia de " : "Perda de ") + brl.format(Math.abs(dif)));
+      out("economia-txt", dif >= 0 ? "Emitir com milhas sai mais barato do que as milhas custaram." : "As milhas custaram mais do que rendem nesta emissão: pagar em dinheiro pode ser melhor.");
+      boxC.hidden = false;
+    } else { boxC.hidden = true; }
+    if (venda > 0) {
+      var difV = (venda - valor) * milhas / 1000;
+      out("venda", (difV > 0 ? "Vender renderia " : "Emitir rende ") + brl.format(Math.abs(difV)) + " a mais");
+      out("venda-txt", "Venda de " + brl.format(venda) + " o milheiro, sem contar taxas da negociação.");
+      boxV.hidden = false;
+    } else { boxV.hidden = true; }
+    if (window.innerWidth < 900) document.getElementById("resultado").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+})();
+</script>
