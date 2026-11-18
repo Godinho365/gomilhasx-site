@@ -68,13 +68,13 @@ def principal() -> None:
         ("", None),
         ("Quer tudo isso automático, por titular e por programa, com o custo do milheiro recalculado a cada movimento?", Font(bold=True, color=MARINHO)),
         ("O GO Manager faz essas contas sozinho e tem plano grátis: manager.gomilhasx.com/register", Font(color=MARINHO, underline="single")),
-        ("Calculadora rápida do custo do milheiro: gomilhasx.com/calculadora-custo-do-milheiro", Font(color=MARINHO, underline="single")),
+        ("Calculadora rápida do custo do milheiro: gonorte.com.br/calculadora-custo-do-milheiro", Font(color=MARINHO, underline="single")),
     ]
     # Links clicáveis com a origem (utm_*), para o painel de estatísticas e o Manager saberem que a pessoa veio da planilha
     utm = "utm_source=planilha&utm_medium=xlsx&utm_campaign=planilha_de_milhas&utm_content="
     links = {
         len(textos) - 1: f"https://manager.gomilhasx.com/register?{utm}como_usar_manager",
-        len(textos): f"https://gomilhasx.com/calculadora-custo-do-milheiro/?{utm}como_usar_calculadora",
+        len(textos): f"https://gonorte.com.br/calculadora-custo-do-milheiro/?{utm}como_usar_calculadora",
     }
     for i, (t, fonte) in enumerate(textos, start=1):
         c = ws.cell(row=i, column=1, value=t)

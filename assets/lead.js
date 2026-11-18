@@ -129,7 +129,7 @@
     try {
       var u = new URL(link);
       if (u.hostname !== "balcao.gomilhasx.com" || u.searchParams.has("utm_source")) return link;
-      u.searchParams.set("utm_source", "gomilhasx.com"); u.searchParams.set("utm_medium", "site"); u.searchParams.set("utm_content", content);
+      u.searchParams.set("utm_source", "gonorte.com.br"); u.searchParams.set("utm_medium", "site"); u.searchParams.set("utm_content", content);
       return u.toString();
     } catch (e) { return link; }
   }

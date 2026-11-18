@@ -32,7 +32,7 @@ python3 ferramentas/gerar_site.py
   `/para-agencias/`, `/calculadora-custo-do-milheiro/`, `/planilha-de-milhas/`, `/seguranca/`) e/ou `manager`, `balcao`.
 - Links para o Manager e o Balcão: todo `<a>` para `manager.gomilhasx.com` ou `balcao.gomilhasx.com` leva
   `data-utm="identificador_do_botao"` na fonte (ex.: `hero_manager`, `planos_gestor`, `rodape_balcao`). O gerador troca o
-  atributo por `?utm_source=gomilhasx.com&utm_medium=site&utm_content=<identificador>`, mantendo os parâmetros que o link já
+  atributo por `?utm_source=gonorte.com.br&utm_medium=site&utm_content=<identificador>`, mantendo os parâmetros que o link já
   tem (`plano`, `periodo`...). Sem `data-utm` a geração para com erro, exceto nos artigos (vira `blog_<slug>`), nas páginas de
   privacidade e termos (ficam sem UTM) e em links que já trazem `utm_source`.
 - `_fontes/paginas/404.html` gera o `404.html` da raiz (fora do sitemap, `noindex`, sem canonical). O Caddy só mostra essa
