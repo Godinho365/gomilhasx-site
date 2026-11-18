@@ -81,7 +81,7 @@ def fonte_marca() -> None:
     for f in list((RAIZ / "_fontes").rglob("*.html")) + [RAIZ / "assets/lead.js", RAIZ / "assets/site.css"]:
         texto += re.sub(r"<[^>]+>", " ", f.read_text(encoding="utf-8"))
     sobra = {c for c in texto if ord(c) > 0x7F and ord(c) not in stack and c.isprintable()}
-    letras = "GOMilhasX" + "".join(sorted(sobra))
+    letras = "GONORTEMilhasX" + "".join(sorted(sobra))
     opcoes = subset.Options()
     opcoes.flavor = "woff2"
     opcoes.layout_features = ["kern", "liga", "calt"]
