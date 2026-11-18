@@ -1,4 +1,40 @@
 {
+ "/assets/fotos/agenda-aberta.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-agenda-aberta-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-agenda-aberta-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-agenda-aberta-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/fotos/agente-notebook.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-agente-notebook-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-agente-notebook-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-agente-notebook-960.webp",
+    960
+   ]
+  ]
+ },
  "/assets/fotos/asa-aviao.webp": {
   "w": 900,
   "h": 1200,
@@ -10,6 +46,42 @@
    [
     "/assets/r/fotos-asa-aviao-720.webp",
     720
+   ]
+  ]
+ },
+ "/assets/fotos/balcao-celular.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-balcao-celular-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-balcao-celular-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-balcao-celular-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/fotos/calculadora-mesa.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-calculadora-mesa-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-calculadora-mesa-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-calculadora-mesa-960.webp",
+    960
    ]
   ]
  },
@@ -32,6 +104,60 @@
    [
     "/assets/r/fotos-ceu-avioes-1440.webp",
     1440
+   ]
+  ]
+ },
+ "/assets/fotos/cofrinho.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-cofrinho-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-cofrinho-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-cofrinho-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/fotos/despertador.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-despertador-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-despertador-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-despertador-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/fotos/documentos-mesa.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-documentos-mesa-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-documentos-mesa-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-documentos-mesa-960.webp",
+    960
    ]
   ]
  },
@@ -63,6 +189,24 @@
    ],
    [
     "/assets/r/fotos-maresias-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/fotos/moedas.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-moedas-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-moedas-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-moedas-960.webp",
     960
    ]
   ]
