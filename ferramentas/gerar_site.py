@@ -185,6 +185,8 @@ COMUM = {
                   css_minimo(ler(RAIZ / "assets/site.css") + ler(RAIZ / "assets/motion/gomilhasx-motion.css"))),
     "fonte_titulo": com_versao("/assets/stack-sans-headline-latin.woff2"),
     "icone": com_versao("/assets/marca/icone.svg"),
+    # fonte do nome no logo (3 KB): pré-carregada para não esperar o CSS pedir (cadeia de rede do PageSpeed)
+    "fonte_marca": com_versao("/assets/inter-marca.woff2"),
     "motion_js": com_versao("/assets/motion/gomilhasx-motion.js"),
     "v_js": versao(RAIZ / "assets/site-motion.js"),
     "v_lead_css": versao(RAIZ / "assets/lead.css"),
