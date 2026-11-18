@@ -60,8 +60,8 @@ header .bar { position: relative; max-width: 760px; margin: 0 auto; display: fle
 .wm b { font-weight: 800; }
 .wm .go { color: var(--ink); }
 .wm .mi { color: #6b6b6b; font-weight: 700; }
-.wm .x { color: var(--gold); font-weight: 900; }
-@media (max-width: 380px) { .wm { font-size: 17px; } .brand img.mark { width: 28px; height: 28px; } }
+.wm .x { color: #A47520; font-weight: 900; } /* dourado mais fechado no texto do logo: contraste 4,1 no branco (o --gold dá 2,2) */
+@media (max-width: 380px) { .wm { font-size: 19px; } .brand img.mark { width: 28px; height: 28px; } }
 .nav { display: none; gap: 2px; font-size: 14px; font-weight: 500; }
 .nav a { padding: 8px 12px; border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .2s, background .2s; }
 .nav a:hover { color: var(--text); }
