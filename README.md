@@ -39,8 +39,22 @@ python3 ferramentas/gerar_site.py
   página com um `handle_errors` no bloco `gomilhasx.com` (veja abaixo).
 - O gerador também refaz `sitemap.xml`. A checagem do CI (`.github/scripts/checar_site.py`) confere todas as páginas e avisa se
   alguma página não foi gerada de novo depois de mudar a fonte.
-- Estilos em `assets/site.css`; animações em `assets/site-motion.js` (as páginas usam a versão do arquivo no endereço, então a
-  mudança aparece na hora).
+- Estilos em `assets/site.css` e `assets/motion/gomilhasx-motion.css`: o gerador põe os dois (sem comentários) num `<style>`
+  dentro de cada página, para a primeira pintura não esperar outro arquivo. Mudou o CSS, gere as páginas de novo.
+  `assets/lead.css` (só o modal do Balcão) carrega sem bloquear. Animações em `assets/site-motion.js` (as páginas usam a
+  versão do arquivo no endereço, então a mudança aparece na hora).
+- Imagens: fotos (`assets/fotos/`) e telas (`assets/telas/`) ganham `srcset` automático com as versões menores de
+  `assets/r/` (lista em `assets/imagens.json`). Na fonte, ponha `sizes="..."` com a largura em que a imagem aparece
+  (sem `sizes`: foto = `100vw`, tela = `(max-width: 767px) 280px, 360px`); `loading="lazy"` em tudo que está fora da
+  primeira dobra e `fetchpriority="high"` na imagem principal do topo (o `preload:` da página repete o mesmo srcset).
+  Trocou ou acrescentou uma foto/tela? Gere as versões e depois as páginas:
+
+  ```bash
+  /home/deploy/balcao_gomilhasx-app/.venv/bin/python ferramentas/otimizar_imagens.py   # precisa de Pillow, fontTools e brotli
+  python3 ferramentas/gerar_site.py
+  ```
+
+  O mesmo script refaz `assets/inter-marca.woff2` (Inter só com as letras do nome da marca e os símbolos que caem nela).
 - Novas páginas precisam ser liberadas no Caddy do Manager (`docker/Caddyfile`, bloco `gomilhasx.com`, matcher `@site`).
 - Página de erro: para o `404.html` aparecer nos endereços que não existem dentro do site (ex.: `/blog/nao-existe/`), o bloco
   `gomilhasx.com` do Caddyfile precisa de:

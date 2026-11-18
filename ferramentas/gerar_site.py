@@ -102,6 +102,72 @@ def com_utm(saida: str, onde: str, padrao: str = "") -> str:
     return re.sub(r"<a\b[^>]*>", troca, saida)
 
 
+def css_minimo(texto: str) -> str:
+    """Tira comentários e espaços que não mudam nada (o CSS vai inteiro dentro de cada página)."""
+    texto = re.sub(r"/\*.*?\*/", "", texto, flags=re.S)
+    texto = re.sub(r"\s+", " ", texto)
+    return re.sub(r"\s*([{};,])\s*", r"\1", texto).replace(";}", "}").strip()
+
+
+# Imagens com versões menores (ferramentas/otimizar_imagens.py): srcset montado aqui; "sizes" vem da fonte ou do padrão.
+IMAGENS: dict[str, dict] = json.loads(ler(RAIZ / "assets/imagens.json"))
+SIZES_PADRAO = {"/assets/fotos/": "100vw", "/assets/telas/": "(max-width: 767px) 280px, 360px"}
+
+
+_VERSOES: dict[str, str] = {}
+
+
+def com_versao(url: str) -> str:
+    """/assets/... ganha ?v=<hash do arquivo>: o endereço muda quando o arquivo muda, então o Caddy pode guardar por 1 ano."""
+    if not url.startswith("/assets/") or "?" in url:
+        return url
+    if url not in _VERSOES:
+        _VERSOES[url] = versao(RAIZ / url.lstrip("/"))
+    return f"{url}?v={_VERSOES[url]}"
+
+
+def imagens_responsivas(saida: str) -> str:
+    """Em cada <img> de /assets/: endereço com versão e, nas fotos e telas com versões menores, srcset + sizes."""
+    def troca(m: re.Match) -> str:
+        tag = m.group(0)
+        ms = re.search(r'\ssrc="([^"]+)"', tag)
+        if not ms:
+            return tag
+        src = ms.group(1)
+        info = IMAGENS.get(src.split("?")[0])
+        novo = f' src="{com_versao(src)}"'
+        if info and info["versoes"] and " srcset=" not in tag:
+            srcset = ", ".join(f"{com_versao(u)} {w}w" for u, w in info["versoes"]) + f", {com_versao(src)} {info['w']}w"
+            novo += f' srcset="{srcset}"'
+            if " sizes=" not in tag:
+                padrao = next(v for k, v in SIZES_PADRAO.items() if src.startswith(k))
+                tag = tag.replace("<img ", f'<img sizes="{padrao}" ', 1)
+        return tag.replace(ms.group(0), novo, 1)
+    return re.sub(r"<img\b[^>]*>", troca, saida)
+
+
+def dimensoes(src: str) -> str:
+    """width/height do original: o navegador reserva o espaço antes da imagem chegar (sem deslocar o layout)."""
+    info = IMAGENS.get(src.split("?")[0])
+    return f' width="{info["w"]}" height="{info["h"]}"' if info else ""
+
+
+def preload_imagens(lista: str, conteudo: str) -> str:
+    """<link rel=preload> da imagem do LCP com o mesmo srcset/sizes do <img> (senão o navegador baixa duas versões)."""
+    links = []
+    for src in filter(None, (x.strip() for x in lista.split(","))):
+        m = re.search(r'<img\b[^>]*\ssrc="(' + re.escape(src) + r'(?:\?v=\w+)?)"[^>]*>', conteudo)
+        extra = ""
+        if m:
+            src = m.group(1)
+            for attr, nome in (("srcset", "imagesrcset"), ("sizes", "imagesizes")):
+                a = re.search(rf'\s{attr}="([^"]*)"', m.group(0))
+                if a:
+                    extra += f' {nome}="{a.group(1)}"'
+        links.append(f'<link rel="preload" as="image" href="{src}"{extra} fetchpriority="high">\n')
+    return "".join(links)
+
+
 def jsonld(itens: list[dict | str]) -> str:
     out = []
     for it in itens:
@@ -115,7 +181,11 @@ COMUM = {
     "icones": ler(FONTES / "icones.svg").strip(),
     "formulario": ler(FONTES / "formulario-balcao.html").strip(),
     "whatsapp": ler(FONTES / "whatsapp.html").strip(),
-    "v_css": versao(RAIZ / "assets/site.css"),
+    "css": re.sub(r'url\("(/assets/[^"?]+)"\)', lambda m: f'url("{com_versao(m.group(1))}")',
+                  css_minimo(ler(RAIZ / "assets/site.css") + ler(RAIZ / "assets/motion/gomilhasx-motion.css"))),
+    "fonte_titulo": com_versao("/assets/stack-sans-headline-latin.woff2"),
+    "icone": com_versao("/assets/marca/icone.svg"),
+    "motion_js": com_versao("/assets/motion/gomilhasx-motion.js"),
     "v_js": versao(RAIZ / "assets/site-motion.js"),
     "v_lead_css": versao(RAIZ / "assets/lead.css"),
     "v_lead_js": versao(RAIZ / "assets/lead.js"),
@@ -149,6 +219,7 @@ def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None 
         ld.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": meta.get("migalha", meta["titulo"].split(" | ")[0]), "item": SITE + caminho}]})
+    conteudo = imagens_responsivas(conteudo)
     imagem = meta.get("imagem", "/og-image.png?v=2")
     valores = {
         **COMUM,
@@ -160,7 +231,7 @@ def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None 
         "canonical": f'<link rel="canonical" href="{SITE}{caminho}">\n' if indexavel else "",
         "og_tipo": meta.get("og_tipo", "website"),
         "imagem": imagem if imagem.startswith("http") else SITE + imagem,
-        "preload": "".join(f'<link rel="preload" as="image" href="{p.strip()}" fetchpriority="high">\n' for p in meta.get("preload", "").split(",") if p.strip()),
+        "preload": preload_imagens(meta.get("preload", ""), conteudo),
         "jsonld": jsonld(ld),
         "classe": meta.get("classe", "pagina"),
         "menu": menu_html(meta.get("menu", "")),
@@ -214,8 +285,9 @@ def leia_tambem(slug: str, itens: str) -> str:
 
 def cartao_post(p: dict, destaque: bool = False) -> str:
     classe = "post-card destaque" if destaque else "post-card"
+    sizes = "(max-width: 767px) 100vw, " + ("610px" if destaque else "360px")
     return (f'<a class="{classe} gx-card gx-reveal" href="/blog/{p["slug"]}/">'
-            f'<span class="pc-img"><img src="{p["imagem"]}" alt="" loading="lazy" decoding="async"></span>'
+            f'<span class="pc-img"><img sizes="{sizes}" src="{p["imagem"]}" alt=""{dimensoes(p["imagem"])} loading="lazy" decoding="async"></span>'
             f'<span class="pc-body"><span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · {data_br(p["data"])} · {p["leitura"]} min de leitura</span>'
             f'<span class="pc-t">{html.escape(p["titulo_curto"])}</span><span class="pc-r">{html.escape(p["resumo"])}</span></span></a>')
 
@@ -294,9 +366,9 @@ def principal() -> None:
     <span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · {data_br(p["data"])} · {p["leitura"]} min de leitura</span>
     <h1 data-split="80">{html.escape(p["titulo_curto"])}</h1>
     <p class="lead-p">{html.escape(p["resumo"])}</p>
-    <div class="post-autor"><img src="/assets/fundador.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GOMilhasX</small></span></div>
+    <div class="post-autor"><img src="/assets/r/fundador-96.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GOMilhasX</small></span></div>
   </div>
-  <figure class="post-capa wrap gx-reveal"><img src="{p["imagem"]}" alt="" fetchpriority="high"></figure>
+  <figure class="post-capa wrap gx-reveal"><img sizes="(max-width: 767px) 100vw, 992px" src="{p["imagem"]}" alt=""{dimensoes(p["imagem"])} fetchpriority="high"></figure>
   <div class="post-corpo wrap">
 {p["corpo"].rstrip()}{leia_tambem(p["slug"], p.get("leia", ""))}
   </div>
