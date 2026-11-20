@@ -268,7 +268,6 @@ LEIA = {
     "/controle-de-milhas/": ("Controle de milhas", "Saldo, validade e custo de cada conta, por titular e programa."),
     "/calculadora-valor-da-milha/": ("Calculadora de valor da milha", "Quanto cada milheiro rende numa passagem, comparado ao custo."),
     "/simulador-transferencia-bonificada/": ("Simulador de transferência bonificada", "Milhas que chegam, novo custo do milheiro e lucro se vender."),
-    "/milheiro-hoje/": ("Milheiro hoje", "Referência do preço do milheiro por programa, a partir das ofertas no GO Balcão."),
     "/vender-milhas/": ("Vender milhas", "Regras dos programas, riscos e como vender com segurança."),
     "/comprar-milhas/": ("Comprar milhas", "Como a compra funciona e o que conferir antes de pagar."),
     "/golpes-de-milhas/": ("Golpes com milhas", "Os golpes mais comuns e como se proteger."),

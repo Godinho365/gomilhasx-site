@@ -63,7 +63,7 @@ jsonld: faq-pagina
       <details class="gx-faq"><summary>Como fica o custo do milheiro depois do bônus?</summary><p>É o valor pago pelos pontos dividido pelas milhas que chegam, vezes 1.000. Com R$ 1.750,00 por 50.000 pontos (R$ 35,00 o milheiro) e 100% de bônus, o custo cai para R$ 17,50 por milheiro.</p></details>
       <details class="gx-faq"><summary>O que é pointsback e como entra na conta?</summary><p>Algumas promoções devolvem parte dos pontos ao programa de origem. Os pontos devolvidos valem o mesmo custo do milheiro que você pagou e são descontados do valor pago antes de calcular o novo custo. É a mesma conta do simulador do GO Manager.</p></details>
       <details class="gx-faq"><summary>Como é calculado o lucro se vender?</summary><p>Lucro = (preço de venda do milheiro − custo do milheiro depois do bônus) × milhas ÷ 1.000. É uma estimativa: não inclui taxas, impostos, limite de bônus da promoção nem custos de emissão.</p></details>
-      <details class="gx-faq"><summary>Qual preço de venda devo usar?</summary><p>O preço que você consegue de verdade para aquele programa. A página <a href="/milheiro-hoje/">milheiro hoje</a> mostra uma referência a partir das ofertas no GO Balcão, quando há ofertas suficientes. Não é cotação oficial.</p></details>
+      <details class="gx-faq"><summary>Qual preço de venda devo usar?</summary><p>O preço que você consegue de verdade para aquele programa. Quando há ofertas suficientes no GO Balcão para o programa de destino, o simulador sugere a mediana delas como referência. Não é cotação oficial.</p></details>
       <details class="gx-faq"><summary>Os dados que eu digito ficam salvos?</summary><p>Não. A conta é feita no seu navegador e nada é enviado para a GONORTE.</p></details>
     </div>
     <p class="center" style="margin-top:28px"><a class="btn btn-ghost" href="/blog/transferencia-bonificada-vale-a-pena/">Ler o guia da transferência bonificada</a></p>
@@ -86,7 +86,7 @@ jsonld: faq-pagina
   var brl = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
   var int = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 0 });
   function out(k, t) { var el = document.querySelector('[data-out="' + k + '"]'); if (el) el.textContent = t; }
-  // Referência do GO Balcão (milheiro hoje) para o destino escolhido; sem dados suficientes ou sem rede, não mostra nada
+  // Referência do GO Balcão (mediana das ofertas, /api/milheiro-hoje) para o destino escolhido; sem dados suficientes ou sem rede, não mostra nada
   function mostrarReferencia() {
     refEl.hidden = true; refEl.textContent = "";
     var p = referencias && referencias[f.destino.value];
