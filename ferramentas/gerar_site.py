@@ -21,6 +21,11 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
+
+def data_iso(d: str) -> str:
+    """Data do artigo (AAAA-MM-DD) no formato completo com fuso de Brasília, como o Google recomenda no BlogPosting."""
+    return f"{d}T09:00:00-03:00" if len(d) == 10 else d
+
 RAIZ = Path(__file__).resolve().parents[1]
 FONTES = RAIZ / "_fontes"
 SITE = "https://gonorte.com.br"
@@ -358,7 +363,7 @@ def principal() -> None:
 </script>'''
         lista = {"@context": "https://schema.org", "@type": "Blog", "name": "Blog da GONORTE", "url": SITE + "/blog/",
                  "publisher": {"@id": SITE + "/#organization"},
-                 "blogPost": [{"@type": "BlogPosting", "headline": p["titulo_curto"], "url": f"{SITE}/blog/{p['slug']}/", "datePublished": p["data"]} for p in posts]}
+                 "blogPost": [{"@type": "BlogPosting", "headline": p["titulo_curto"], "url": f"{SITE}/blog/{p['slug']}/", "datePublished": data_iso(p["data"])} for p in posts]}
         meta = {"titulo": "Blog de milhas: custo do milheiro e transferências | GONORTE", "descricao": "Guias práticos sobre milhas, custo do milheiro, transferências bonificadas e como comprar e vender milhas com segurança.",
                 "caminho": "/blog/", "menu": "blog", "migalha": "Blog"}
         gravar("/blog/", montar(meta, corpo, [lista]), gerados)
@@ -386,7 +391,7 @@ def principal() -> None:
 </section>
 {CTA}'''
         artigo = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["titulo_curto"], "description": p["resumo"],
-                  "datePublished": p["data"], "dateModified": p.get("atualizado", p["data"]), "inLanguage": "pt-BR",
+                  "datePublished": data_iso(p["data"]), "dateModified": data_iso(p.get("atualizado", p["data"])), "inLanguage": "pt-BR",
                   "image": SITE + p["imagem"], "mainEntityOfPage": f"{SITE}/blog/{p['slug']}/",
                   "author": {"@type": "Person", "@id": SITE + "/#fundador", "name": "Raphael Godinho", "url": SITE + "/sobre/#fundador"}, "publisher": {"@id": SITE + "/#organization"}}
         migalhas = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
