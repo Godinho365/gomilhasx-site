@@ -56,6 +56,9 @@ python3 ferramentas/gerar_site.py
 
   O mesmo script refaz `assets/inter-marca.woff2` (Inter só com as letras do nome da marca e os símbolos que caem nela).
 - Novas páginas precisam ser liberadas no Caddy do Manager (`docker/Caddyfile`, bloco `gomilhasx.com`, matcher `@site`).
+- `/milheiro-hoje/` busca os números em `/api/milheiro-hoje` (agregados do GO Balcão, `bot/milheiro_hoje.py` no repositório
+  do Balcão). O Caddy repassa esse caminho para o `balcao-bot:8080`, como faz com `/api/lead*`; sem o repasse, a página
+  mostra "não foi possível carregar" e o simulador de transferência só não sugere o preço de referência.
 - Página de erro: para o `404.html` aparecer nos endereços que não existem dentro do site (ex.: `/blog/nao-existe/`), o bloco
   `gomilhasx.com` do Caddyfile precisa de:
 

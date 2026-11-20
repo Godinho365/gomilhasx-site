@@ -20,6 +20,8 @@
 - Por público: [viajantes](https://gonorte.com.br/para-viajantes/), [milheiros](https://gonorte.com.br/para-milheiros/), [agências e agentes](https://gonorte.com.br/para-agencias/)
 - [Segurança](https://gonorte.com.br/seguranca/): identidade conferida (documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe), PIX intermediado até a emissão, reputação pública, proteção de dados e dicas contra golpes
 - [Calculadora de custo do milheiro](https://gonorte.com.br/calculadora-custo-do-milheiro/): ferramenta grátis, sem cadastro; considera bônus e proporção de transferência e estima o lucro da venda
+- [Simulador de transferência bonificada](https://gonorte.com.br/simulador-transferencia-bonificada/): ferramenta grátis, sem cadastro; pontos do banco (Livelo, Esfera e outros) com bônus para o programa aéreo: milhas recebidas, pointsback, novo custo do milheiro e lucro pelo preço de venda informado
+- [Milheiro hoje](https://gonorte.com.br/milheiro-hoje/): referência do preço do milheiro por programa (mediana e faixa central) a partir das ofertas de compra no GO Balcão nos últimos 30 dias; só aparece com pelo menos 3 ofertas de 3 compradores diferentes; não é cotação oficial
 - [Planilha de controle de milhas](https://gonorte.com.br/planilha-de-milhas/): planilha grátis (.xlsx) com contas, movimentações e vendas
 - [GO Manager no Claude](https://gonorte.com.br/claude/): conector MCP do GO Manager para o Claude (planos PRO e Gestor)
 - [Novidades do Manager](https://manager.gonorte.com.br/novidades): novos recursos, melhorias e correções
