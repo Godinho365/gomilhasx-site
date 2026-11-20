@@ -181,6 +181,32 @@
    ]
   ]
  },
+ "/assets/fotos/contando-dinheiro.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-contando-dinheiro-360.webp",
+    360
+   ],
+   [
+    "/assets/r/fotos-contando-dinheiro-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-contando-dinheiro-640.webp",
+    640
+   ],
+   [
+    "/assets/r/fotos-contando-dinheiro-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-contando-dinheiro-960.webp",
+    960
+   ]
+  ]
+ },
  "/assets/fotos/despertador.webp": {
   "w": 1440,
   "h": 960,
