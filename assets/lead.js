@@ -1,3 +1,33 @@
+// Código do lead do GO Leads (glr): o link mandado na DM do Instagram chega com ?glr=<código>. O site guarda o código
+// por 30 dias neste navegador e o repassa em todo link para o Manager e o Balcão, para o cadastro e a venda se ligarem
+// sozinhos ao lead. O código é aleatório (8 letras e números), não é dado pessoal e não sai do site para mais ninguém.
+(function () {
+  "use strict";
+  var KEY = "gonorte_glr", MAX = 30 * 864e5, RE = /^[2-9A-HJ-NP-Z]{8}$/, code = "";
+  try {
+    var fromUrl = (new URLSearchParams(location.search).get("glr") || "").toUpperCase();
+    if (RE.test(fromUrl)) { code = fromUrl; localStorage.setItem(KEY, JSON.stringify({ c: code, t: Date.now() })); }
+    else {
+      var saved = JSON.parse(localStorage.getItem(KEY) || "null");
+      if (saved && RE.test(saved.c) && Date.now() - saved.t < MAX) code = saved.c; else localStorage.removeItem(KEY);
+    }
+  } catch (e) {}
+  if (!code) return;
+  var HOSTS = /^(manager|balcao)\.(gonorte\.com\.br|gomilhasx\.com)$/;
+  function tag(a) {
+    try {
+      var u = new URL(a.href);
+      if (!HOSTS.test(u.hostname) || u.searchParams.has("glr")) return;
+      u.searchParams.set("glr", code);
+      a.href = u.toString();
+    } catch (e) {}
+  }
+  function all() { Array.prototype.forEach.call(document.querySelectorAll("a[href]"), tag); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", all); else all();
+  // Links trocados depois (ex.: o botão do modal do Balcão) ganham o código na hora do clique
+  document.addEventListener("click", function (ev) { var a = ev.target && ev.target.closest && ev.target.closest("a[href]"); if (a) tag(a); }, true);
+})();
+
 // Modal "Acessar o Balcão": qualquer link com data-lead abre o formulário (sem JavaScript, o link segue para o Balcão).
 // Os dados vão para /api/lead (o Caddy repassa ao GO Balcão, no mesmo domínio): nada de cookie, nada de dado
 // pessoal em URL ou em evento. Eventos de métrica: só o nome do evento, o botão clicado e a origem da campanha.
