@@ -18,9 +18,11 @@ class Checador(HTMLParser):
         self.refs: list[tuple[str, int]] = []
         self.jsonld: list[tuple[str, int]] = []
         self._em_jsonld = False
+        self.atalho = False
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        self.atalho = self.atalho or (tag == "meta" and (a.get("http-equiv") or "").lower() == "refresh")
         linha = self.getpos()[0]
         for k in ("src", "href", "poster"):
             if a.get(k):
@@ -68,7 +70,7 @@ for pagina in paginas:
             json.loads(bloco)
         except json.JSONDecodeError as e:
             erros.append(f"{nome}:{linha}: JSON-LD inválido ({e})")
-    if not c.jsonld and nome != "404.html":
+    if not c.jsonld and nome != "404.html" and not c.atalho:  # atalho (meta refresh para outro site) não leva JSON-LD
         erros.append(f"{nome}: sem JSON-LD")
     total_jsonld += len(c.jsonld)
     refs += [(r, f"{nome}:{l}") for r, l in c.refs]

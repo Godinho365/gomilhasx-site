@@ -1,10 +1,11 @@
 <!--
 titulo: Simulador de transferência bonificada grátis | GONORTE
-descricao: Simule a transferência de pontos do banco (Livelo, Esfera e outros) para LATAM Pass, Smiles ou Azul com bônus: milhas recebidas, novo custo do milheiro e lucro se vender.
+descricao: Simule a transferência bonificada de pontos (Livelo, Esfera etc.) para LATAM Pass, Smiles ou Azul: milhas recebidas, novo custo do milheiro e lucro se vender.
 caminho: /simulador-transferencia-bonificada/
+atualizado: 2026-11-25
 menu: ferramentas
 migalha: Simulador de transferência bonificada
-jsonld: faq-pagina
+jsonld: faq-pagina, aplicativo
 -->
 <section class="page-hero" aria-labelledby="titulo">
   <div class="wrap center">
@@ -152,6 +153,7 @@ jsonld: faq-pagina
         " por milheiro (" + String(margem).replace(".", ",") + "% do preço de venda)");
       box.hidden = false;
     } else { box.hidden = true; }
+    if (window.umami && umami.track) umami.track("usar_calculadora", { qual: "transferencia_bonificada" }); // Umami: só o nome da ferramenta, nenhum valor digitado
     if (window.innerWidth < 900) document.getElementById("resultado").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 })();

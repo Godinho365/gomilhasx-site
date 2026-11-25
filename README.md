@@ -25,16 +25,31 @@ python3 ferramentas/gerar_site.py
 - `_fontes/base.html`: cabeçalho, rodapé, scripts e metadados comuns.
 - `_fontes/paginas/<nome>.html`: cada página, começando por um bloco `<!-- titulo: ... descricao: ... caminho: ... -->`.
   `jsonld: faq-pagina` monta o FAQ para o Google com as perguntas da própria página; `{{cta}}` coloca a chamada final.
+  Outros valores de `jsonld:` (separados por vírgula): `aplicativo` (WebApplication das calculadoras e do simulador),
+  `ofertas-pagina` (Offer de cada plano, lido dos preços que estão na própria página de planos) e o nome de qualquer
+  arquivo `_fontes/jsonld-<nome>.json` (`organizacao`, `faq`, `sobre`, `contato`).
+  `atualizado: AAAA-MM-DD` é obrigatório nas páginas indexáveis: vira o `lastmod` do `sitemap.xml`. Mudou o conteúdo da
+  página, mude a data (o gerador não usa o histórico do git, para o CI gerar de novo e dar o mesmo resultado).
 - `_fontes/blog/<slug>.html`: cada artigo (o nome do arquivo vira o endereço `/blog/<slug>/`). Metadados: `titulo`, `titulo_curto`,
-  `descricao`, `resumo`, `data` (AAAA-MM-DD), `categoria`, `imagem`. O corpo é HTML simples (`h2`, `p`, `ul`, `ol`, `table`,
+  `descricao`, `resumo`, `data` (AAAA-MM-DD), `categoria`, `imagem`, `imagem_alt` (descrição curta da foto de capa; obrigatório). O corpo é HTML simples (`h2`, `p`, `ul`, `ol`, `table`,
   `blockquote`, `<div class="conta">` para destacar uma conta, `<p class="aviso">` para a nota final).
 - `leia:` no artigo monta o quadro "Leia também" no fim do texto: páginas do site (`/para-viajantes/`, `/para-milheiros/`,
   `/para-agencias/`, `/calculadora-custo-do-milheiro/`, `/planilha-de-milhas/`, `/seguranca/`) e/ou `manager`, `balcao`.
-- Links para o Manager e o Balcão: todo `<a>` para `manager.gonorte.com.br` ou `balcao.gomilhasx.com` leva
+- Links para o Manager, o Balcão e o GO Educação: todo `<a>` para `manager.`, `balcao.` ou `educacao.gonorte.com.br` leva
   `data-utm="identificador_do_botao"` na fonte (ex.: `hero_manager`, `planos_gestor`, `rodape_balcao`). O gerador troca o
   atributo por `?utm_source=gonorte.com.br&utm_medium=site&utm_content=<identificador>`, mantendo os parâmetros que o link já
   tem (`plano`, `periodo`...). Sem `data-utm` a geração para com erro, exceto nos artigos (vira `blog_<slug>`), nas páginas de
   privacidade e termos (ficam sem UTM) e em links que já trazem `utm_source`.
+- Medição (Umami, sem cookie e sem dado pessoal): `clique_produto` (botão; posto pelo gerador nos links acima),
+  `clique_contato` (canal: `whatsapp`, `telegram` ou `email`; posto pelo gerador em todo link `wa.me`, `t.me/gonorte` e
+  `mailto:contato@`, e pelo formulário de `/contato/`), `baixar_planilha` (botão da planilha) e `usar_calculadora`
+  (propriedade `qual`: `custo_do_milheiro`, `valor_da_milha` ou `transferencia_bonificada`; só quando a conta é feita).
+- Atalhos para outros sites: `ATALHOS` em `gerar_site.py` gera uma página mínima com `meta refresh` e `canonical` para o
+  destino (hoje `/educacao/` → `https://educacao.gonorte.com.br/`), fora do sitemap. Como toda página nova, o endereço
+  precisa entrar no `@site` do Caddy do Manager; melhor ainda é um `redir /educacao* https://educacao.gonorte.com.br/ 301` lá.
+- Planilha: `ferramentas/gerar_planilha.py` grava `planilha-de-milhas/planilha-de-milhas-gonorte.xlsx`. O arquivo com o
+  nome antigo (`planilha-de-milhas-gomilhasx.xlsx`) é uma cópia mantida para os links que já circulam; ao gerar a planilha
+  de novo, copie por cima.
 - `_fontes/paginas/404.html` gera o `404.html` da raiz (fora do sitemap, `noindex`, sem canonical). O Caddy só mostra essa
   página com um `handle_errors` no bloco `gomilhasx.com` (veja abaixo).
 - O gerador também refaz `sitemap.xml`. A checagem do CI (`.github/scripts/checar_site.py`) confere todas as páginas e avisa se

@@ -2,8 +2,10 @@
 titulo: Contato: WhatsApp, Telegram e Instagram | GONORTE
 descricao: Fale com a equipe da GONORTE pelo WhatsApp, Telegram ou Instagram: dúvidas sobre o GO Manager, o GO Balcão, planos e parcerias.
 caminho: /contato/
+atualizado: 2026-11-25
 menu: contato
 migalha: Contato
+jsonld: contato
 -->
 <section class="page-hero" aria-labelledby="titulo">
   <div class="wrap center">
@@ -28,6 +30,7 @@ migalha: Contato
     <div class="channels">
       <a class="contact gx-card gx-reveal" href="https://wa.me/5521994934776?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GONORTE." target="_blank" rel="noopener noreferrer"><span class="icon"><svg><use href="#i-phone"/></svg></span><span><b>WhatsApp</b><small>(21) 99493-4776</small></span></a>
       <a class="contact gx-card gx-reveal" href="https://t.me/gonorte" target="_blank" rel="noopener noreferrer"><span class="icon"><svg><use href="#i-send"/></svg></span><span><b>Telegram</b><small>@gonorte</small></span></a>
+      <a class="contact gx-card gx-reveal" href="mailto:contato@gonorte.com.br"><span class="icon"><svg><use href="#i-mail"/></svg></span><span><b>E-mail</b><small>contato@gonorte.com.br</small></span></a>
       <a class="contact gx-card gx-reveal" href="https://www.instagram.com/somosgonorte/" target="_blank" rel="noopener noreferrer"><span class="icon"><svg><use href="#i-insta"/></svg></span><span><b>Instagram</b><small>@somosgonorte</small></span></a>
       <a class="contact gx-card gx-reveal" href="https://www.youtube.com/@gonorte" target="_blank" rel="noopener noreferrer"><span class="icon"><svg><use href="#i-youtube"/></svg></span><span><b>YouTube</b><small>@gonorte</small></span></a>
       <p class="note gx-reveal">Já é membro do Balcão? Use <b>Falar com Suporte</b> no próprio bot: a equipe recebe na hora e acompanha até resolver.</p>
@@ -45,6 +48,7 @@ migalha: Contato
     if (!nome || !msg) { err.textContent = "Preencha o seu nome e a mensagem."; (nome ? f.mensagem : f.nome).focus(); return; }
     err.textContent = "";
     var texto = "Olá! Sou " + nome + ". Assunto: " + f.assunto.value + ".\n\n" + msg;
+    if (window.umami && umami.track) umami.track("clique_contato", { canal: "whatsapp", origem: "formulario" }); // Umami: sem o texto da mensagem
     window.open("https://wa.me/5521994934776?text=" + encodeURIComponent(texto), "_blank", "noopener");
   });
 })();

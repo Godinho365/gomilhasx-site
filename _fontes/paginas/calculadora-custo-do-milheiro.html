@@ -2,9 +2,10 @@
 titulo: Calculadora de custo do milheiro grátis | GONORTE
 descricao: Calcule o custo do milheiro de uma compra de pontos ou milhas, com bônus de transferência, e veja o lucro se vender. Grátis, sem cadastro.
 caminho: /calculadora-custo-do-milheiro/
+atualizado: 2026-11-25
 menu: ferramentas
 migalha: Calculadora de custo do milheiro
-jsonld: faq-pagina
+jsonld: faq-pagina, aplicativo
 -->
 <section class="page-hero" aria-labelledby="titulo">
   <div class="wrap center">
@@ -91,6 +92,7 @@ jsonld: faq-pagina
       out("lucro-milheiro", (lucro >= 0 ? "Lucro de " : "Prejuízo de ") + brl.format(Math.abs(venda - cpm)) + " por milheiro");
       box.hidden = false;
     } else { box.hidden = true; }
+    if (window.umami && umami.track) umami.track("usar_calculadora", { qual: "custo_do_milheiro" }); // Umami: só o nome da ferramenta, nenhum valor digitado
     if (window.innerWidth < 900) document.getElementById("resultado").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 })();

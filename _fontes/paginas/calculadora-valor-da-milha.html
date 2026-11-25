@@ -2,9 +2,10 @@
 titulo: Calculadora de valor da milha em reais, grátis | GONORTE
 descricao: Descubra quanto cada milheiro rende numa passagem, compare com o custo das suas milhas e com o preço de venda, e saiba se vale emitir com milhas.
 caminho: /calculadora-valor-da-milha/
+atualizado: 2026-11-25
 menu: ferramentas
 migalha: Calculadora de valor da milha
-jsonld: faq-pagina
+jsonld: faq-pagina, aplicativo
 -->
 <section class="page-hero" aria-labelledby="titulo">
   <div class="wrap center">
@@ -94,6 +95,7 @@ jsonld: faq-pagina
       out("venda-txt", "Venda de " + brl.format(venda) + " o milheiro, sem contar taxas da negociação.");
       boxV.hidden = false;
     } else { boxV.hidden = true; }
+    if (window.umami && umami.track) umami.track("usar_calculadora", { qual: "valor_da_milha" }); // Umami: só o nome da ferramenta, nenhum valor digitado
     if (window.innerWidth < 900) document.getElementById("resultado").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 })();
