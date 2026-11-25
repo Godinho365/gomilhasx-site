@@ -196,3 +196,52 @@
     frame();
   }
 })();
+
+/*
+ * Origem da visita até o GO Manager. Quem chega com utm_* ou glr no endereço (link da bio, anúncio, link do GO Leads) tem
+ * esses parâmetros guardados na sessionStorage "mx_origem" (some ao fechar a aba; nunca o fbclid). Ao ir para o Manager,
+ * o link troca os utm_* que o gerador pôs (gonorte.com.br / site / botão) pelos da chegada e leva o glr, e o cadastro grava
+ * a origem verdadeira. Sem origem guardada, o link fica como está. Legítimo interesse: Política de Privacidade, seção 3.
+ * O botão clicado continua medido no Umami (clique_produto).
+ */
+(function () {
+  "use strict";
+  var KEY = "mx_origem", UTM = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
+  function pick(get) {
+    var o = {}, n = 0;
+    UTM.forEach(function (k) { var v = (get(k) || "").trim().slice(0, 200); if (v) { o[k] = v; n++; } });
+    var glr = (get("glr") || "").trim();
+    if (/^[A-Za-z0-9]{6,16}$/.test(glr)) { o.glr = glr; n++; }
+    return n ? o : null;
+  }
+  var origem = null;
+  try {
+    var q = new URLSearchParams(location.search), agora = pick(function (k) { return q.get(k); });
+    // links internos do próprio site não contam como origem
+    if (agora && agora.utm_source === "gonorte.com.br") agora = null;
+    var raw = sessionStorage.getItem(KEY), salva = raw ? JSON.parse(raw) : null;
+    salva = salva && typeof salva === "object" ? pick(function (k) { return typeof salva[k] === "string" ? salva[k] : null; }) : null;
+    if (agora) {
+      if (!agora.glr && salva && salva.glr) agora.glr = salva.glr;
+      sessionStorage.setItem(KEY, JSON.stringify(agora));
+    }
+    origem = agora || salva;
+  } catch (e) { origem = null; /* navegação privada sem armazenamento */ }
+  if (!origem) return;
+
+  function ajusta(a) {
+    if (!a || !a.href || a.hostname !== "manager.gonorte.com.br") return;
+    var u;
+    try { u = new URL(a.href); } catch (e) { return; }
+    if (u.searchParams.get("utm_source") !== "gonorte.com.br") return; // privacidade, termos e afins ficam como estão
+    if (origem.utm_source) UTM.forEach(function (k) { if (origem[k]) u.searchParams.set(k, origem[k]); else u.searchParams.delete(k); });
+    if (origem.glr) u.searchParams.set("glr", origem.glr);
+    a.href = u.toString();
+  }
+  function todos() { Array.prototype.forEach.call(document.querySelectorAll('a[href*="manager.gonorte.com.br"]'), ajusta); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", todos); else todos();
+  // links que aparecem depois (modal do Balcão): ajusta na hora do clique
+  ["pointerdown", "click", "auxclick"].forEach(function (t) {
+    document.addEventListener(t, function (ev) { ajusta(ev.target && ev.target.closest ? ev.target.closest("a[href]") : null); }, true);
+  });
+})();
