@@ -2,7 +2,7 @@
 titulo: Sistema de milhas para agências de viagens | GONORTE
 descricao: Para agências e agentes: clientes, fornecedores, lucro por emissão e equipe com permissões no GO Manager; compra de milhas com CNPJ conferido no GO Balcão.
 caminho: /para-agencias/
-atualizado: 2026-11-18
+atualizado: 2026-11-25
 menu: recursos
 migalha: Para agências
 jsonld: faq-pagina
@@ -11,7 +11,7 @@ jsonld: faq-pagina
   <div class="wrap center">
     <span class="kicker">Para agências e agentes</span>
     <h1 id="titulo" data-split="100">Emita com milhas, controle o lucro e organize a equipe</h1>
-    <p class="lead-p gx-reveal" style="--gx-delay:400ms">Administre as contas dos clientes e fornecedores, registre cada emissão com o lucro e dê acesso à equipe no GO Manager. Compre milhas para vários CPFs com o selo de agência no GO Balcão.</p>
+    <p class="lead-p gx-reveal" style="--gx-delay:400ms">Administre as contas dos clientes e fornecedores, registre cada emissão com o lucro e dê acesso à equipe no GO Manager. Compre milhas para vários CPFs no GO Balcão, com o CNPJ conferido no seu perfil.</p>
     <p class="gx-reveal" style="--gx-delay:550ms;margin-top:24px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
       <a class="btn btn-gold" href="https://manager.gonorte.com.br/register" data-utm="agencias_hero_manager">Testar o plano Gestor grátis</a>
       <a class="btn btn-ghost" href="https://balcao.gonorte.com.br/" data-utm="agencias_hero_balcao">Conhecer o GO Balcão</a>
@@ -41,15 +41,40 @@ jsonld: faq-pagina
     <p class="center" style="margin-top:24px"><a class="btn btn-ghost" href="/planos/">Ver planos e preços</a></p>
   </div>
 </section>
+<section class="sec" style="padding-top:0" aria-labelledby="gestor-preco-titulo">
+  <div class="wrap porque">
+    <h2 id="gestor-preco-titulo" class="h2 center" style="font-size:clamp(24px,3vw,32px)">Por que o Gestor custa R$ 59,90</h2>
+    <div class="gx-reveal">
+      <p>Numa agência, a conta que importa é o lucro de cada emissão depois de pagar milhas, fornecedor e equipe. O Gestor junta isso num lugar só. Nele, a equipe, o financeiro e os clientes ficam no mesmo sistema em que você controla as milhas, sem plano “sob consulta” e sem cobrança por pessoa da equipe.</p>
+      <p>E ele conversa com o mercado: você vê as ofertas do GO Balcão com o lucro calculado pelo seu custo do milheiro, propõe sem sair do app e, se quiser, pede ao Claude para preparar a proposta, que só sai com a sua confirmação.</p>
+      <p>Se você controla só os seus pontos e vende de vez em quando, o PRO (R$ 19,90) resolve. Na dúvida, use os 15 dias com tudo do Gestor e decida com os seus números.</p>
+    </div>
+    <table class="cmp gx-reveal">
+      <caption class="center" style="caption-side:top;padding-bottom:4px;font-weight:600">PRO × Gestor</caption>
+      <thead><tr><th scope="col">Recurso</th><th scope="col">PRO</th><th scope="col">Gestor</th></tr></thead>
+      <tbody>
+        <tr><th scope="row" style="font-weight:400">Titulares</th><td>Até 2</td><td>Ilimitados</td></tr>
+        <tr><th scope="row" style="font-weight:400">Vendas com o lucro de cada uma</th><td>Incluído</td><td>Incluído</td></tr>
+        <tr><th scope="row" style="font-weight:400">GO Balcão dentro do app: ver ofertas, propor e comprar</th><td>Incluído</td><td>Incluído</td></tr>
+        <tr><th scope="row" style="font-weight:400">Conector do Claude</th><td>Incluído</td><td>Incluído</td></tr>
+        <tr><th scope="row" style="font-weight:400">Fornecedores e emissão com fornecedor</th><td>Não</td><td>Incluído</td></tr>
+        <tr><th scope="row" style="font-weight:400">Página do titular para o seu cliente</th><td>Não</td><td>Incluído</td></tr>
+        <tr><th scope="row" style="font-weight:400">Financeiro: contas a pagar e a receber, fluxo de caixa</th><td>Não</td><td>Incluído</td></tr>
+        <tr><th scope="row" style="font-weight:400">CRM de passagens</th><td>Não</td><td>Incluído</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 <section class="sec" style="padding-top:0" aria-labelledby="duvidas-titulo">
   <div class="wrap" style="max-width:820px">
     <h2 id="duvidas-titulo" class="h2 center" style="font-size:clamp(24px,3vw,32px)">Dúvidas de agências e agentes</h2>
     <div class="faq" style="margin-top:28px">
-      <details class="gx-faq"><summary>Quanto custa o plano Gestor?</summary><p>R$ 59,90 por mês, ou R$ 50,32 por mês no plano anual. Toda conta nova começa com 15 dias de teste com os recursos do Gestor, sem cartão de crédito.</p></details>
+      <details class="gx-faq"><summary>Quanto custa o plano Gestor?</summary><p>R$ 59,90 por mês, ou R$ 50,32 por mês no plano anual. Inclui fornecedores, financeiro, CRM de passagens e a página do titular, além de tudo do PRO. Toda conta nova começa com 15 dias de teste com os recursos do Gestor, sem cartão de crédito: compare com o que você usa hoje.</p></details>
+      <details class="gx-faq"><summary>Preciso do PRO ou do Gestor?</summary><p>Se você emite só com as suas milhas e sem clientes de terceiros, o PRO resolve. Se você trabalha para clientes, com fornecedores, financeiro e CRM de passagens, é o Gestor.</p></details>
       <details class="gx-faq"><summary>E o Módulo Agentes do GO Balcão?</summary><p>R$ 24,90 por mês, com opções anual e vitalícia (R$ 379,00 em pagamento único). Sem renovação automática e com 7 dias para desistir da assinatura.</p></details>
       <details class="gx-faq"><summary>Minha equipe vê tudo?</summary><p>Não. Cada pessoa tem login próprio, e as permissões são definidas por função.</p></details>
       <details class="gx-faq"><summary>Como funciona a emissão com milhas compradas?</summary><p>Os programas não permitem transferir milhas entre contas de pessoas diferentes: o vendedor emite a passagem com as milhas dele, em nome dos passageiros que você informar.</p></details>
     </div>
   </div>
 </section>
-{{cta}}
+{{cta_b2b}}

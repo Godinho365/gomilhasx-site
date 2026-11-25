@@ -206,7 +206,10 @@ COMUM = {
     "v_lead_css": versao(RAIZ / "assets/lead.css"),
     "v_lead_js": versao(RAIZ / "assets/lead.js"),
 }
+# Chamada final por jornada: {{cta}} = duas portas (páginas neutras, blog); {{cta_b2b}} = quem trabalha com milhas;
+# {{cta_b2c}} = quem viaja com milhas
 CTA = ler(FONTES / "cta-final.html").strip()
+CTAS = {"{{cta_b2b}}": ler(FONTES / "cta-final-b2b.html").strip(), "{{cta_b2c}}": ler(FONTES / "cta-final-b2c.html").strip(), "{{cta}}": CTA}
 JSONLD_ARQ = {f.stem.removeprefix("jsonld-"): ler(f) for f in sorted(FONTES.glob("jsonld-*.json"))}
 
 
@@ -375,7 +378,8 @@ def principal() -> None:
     # Páginas
     for f in sorted((FONTES / "paginas").glob("*.html")):
         meta, corpo = meta_e_corpo(ler(f))
-        corpo = corpo.replace("{{cta}}", CTA)
+        for marca, bloco in CTAS.items():
+            corpo = corpo.replace(marca, bloco)
         if "{{blog_recentes}}" in corpo:
             corpo = corpo.replace("{{blog_recentes}}", "\n".join(cartao_post(p) for p in posts[:3]))
         gravar(meta["caminho"], montar(meta, corpo), gerados)
@@ -434,7 +438,7 @@ def principal() -> None:
     <span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · <time datetime="{p["data"]}">{data_br(p["data"])}</time> · {p["leitura"]} min de leitura</span>
     <h1 data-split="80">{html.escape(p["titulo_curto"])}</h1>
     <p class="lead-p">{html.escape(p["resumo"])}</p>
-    <div class="post-autor"><img src="/assets/r/fundador-96.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GONORTE</small></span></div>
+    <div class="post-autor"><img src="/assets/r/fundador-96.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GONORTE · vende milhas há mais de 3 anos</small></span></div>
   </div>
   <figure class="post-capa wrap gx-reveal"><img sizes="(max-width: 767px) 100vw, 992px" src="{p["imagem"]}" alt="{html.escape(p["imagem_alt"], quote=True)}"{dimensoes(p["imagem"])} fetchpriority="high"></figure>
   <div class="post-corpo wrap">
