@@ -590,6 +590,7 @@ header .head-cta { animation: sm-right .8s .15s cubic-bezier(.22,.61,.36,1) both
 .post-corpo .leia-tambem .produto b { color: #fff; } .post-corpo .leia-tambem .produto span { color: #c9d3e2; }
 .post-corpo .conta { margin: 22px 0; padding: 20px 22px; border-radius: 18px; background: var(--ink); color: #fff; font-size: 16px; }
 .post-corpo .conta b { color: var(--gold); font-weight: 600; }
+.post-corpo .curso-cta { background: var(--off); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin-top: 28px; }
 .post-corpo .aviso { font-size: 14.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 18px; margin-top: 32px; }
 .post-corpo table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 15.5px; }
 .post-corpo th, .post-corpo td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; }
