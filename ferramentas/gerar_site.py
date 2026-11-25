@@ -206,7 +206,11 @@ COMUM = {
     "v_lead_css": versao(RAIZ / "assets/lead.css"),
     "v_lead_js": versao(RAIZ / "assets/lead.js"),
 }
+# Chamada final por jornada: {{cta}} = duas portas (páginas neutras, blog); {{cta_b2b}} = quem trabalha com milhas;
+# {{cta_b2c}} = quem viaja com milhas; {{cta_iniciante}} = quem está começando (renda extra ou viajar pagando menos)
 CTA = ler(FONTES / "cta-final.html").strip()
+CTAS = {"{{cta_b2b}}": ler(FONTES / "cta-final-b2b.html").strip(), "{{cta_b2c}}": ler(FONTES / "cta-final-b2c.html").strip(),
+        "{{cta_iniciante}}": ler(FONTES / "cta-final-iniciante.html").strip(), "{{cta}}": CTA}
 JSONLD_ARQ = {f.stem.removeprefix("jsonld-"): ler(f) for f in sorted(FONTES.glob("jsonld-*.json"))}
 
 
@@ -315,6 +319,7 @@ def gravar(caminho: str, conteudo: str, gerados: list[str]) -> None:
 LEIA = {
     "/para-viajantes/": ("Para viajantes", "Organize os pontos da família e compre milhas com o pagamento intermediado."),
     "/para-milheiros/": ("Para milheiros", "Custo do milheiro, lucro por venda e o Módulo Milheiro do GO Balcão."),
+    "/comecar-com-milhas/": ("Começar com milhas", "Como funciona, o que os programas proíbem, os riscos e os primeiros passos."),
     "/para-agencias/": ("Para agências", "Contas de clientes, equipe e emissões com fornecedores, num lugar só."),
     "/calculadora-custo-do-milheiro/": ("Calculadora do custo do milheiro", "Grátis e sem cadastro: o custo de uma compra ou transferência."),
     "/planilha-de-milhas/": ("Planilha de milhas grátis", "Saldos, custo médio e vendas por programa, para baixar."),
@@ -375,7 +380,8 @@ def principal() -> None:
     # Páginas
     for f in sorted((FONTES / "paginas").glob("*.html")):
         meta, corpo = meta_e_corpo(ler(f))
-        corpo = corpo.replace("{{cta}}", CTA)
+        for marca, bloco in CTAS.items():
+            corpo = corpo.replace(marca, bloco)
         if "{{blog_recentes}}" in corpo:
             corpo = corpo.replace("{{blog_recentes}}", "\n".join(cartao_post(p) for p in posts[:3]))
         gravar(meta["caminho"], montar(meta, corpo), gerados)
@@ -434,7 +440,7 @@ def principal() -> None:
     <span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · <time datetime="{p["data"]}">{data_br(p["data"])}</time> · {p["leitura"]} min de leitura</span>
     <h1 data-split="80">{html.escape(p["titulo_curto"])}</h1>
     <p class="lead-p">{html.escape(p["resumo"])}</p>
-    <div class="post-autor"><img src="/assets/r/fundador-96.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GONORTE</small></span></div>
+    <div class="post-autor"><img src="/assets/r/fundador-96.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GONORTE · vende milhas há mais de 3 anos</small></span></div>
   </div>
   <figure class="post-capa wrap gx-reveal"><img sizes="(max-width: 767px) 100vw, 992px" src="{p["imagem"]}" alt="{html.escape(p["imagem_alt"], quote=True)}"{dimensoes(p["imagem"])} fetchpriority="high"></figure>
   <div class="post-corpo wrap">
