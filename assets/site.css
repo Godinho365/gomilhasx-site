@@ -595,3 +595,6 @@ header .head-cta { animation: sm-right .8s .15s cubic-bezier(.22,.61,.36,1) both
    PageSpeed). As seções de baixo continuam com a animação normal. No celular o topo continua parado (regra mais acima). */
 .hero .gx-reveal, .page-hero .gx-reveal, .post-head .gx-reveal, .post-capa.gx-reveal { --gx-delay: 0ms !important; --gx-dur: .35s; }
 .sm-js .hero [data-split] .sm-w, .sm-js .page-hero [data-split] .sm-w, .sm-js .post-head [data-split] .sm-w { transition-duration: .35s; }
+/* Rodapé centralizado: colunas, marca e redes no centro de cada coluna */
+footer .cols { text-align: center; }
+footer .cols .brand, footer .social { justify-content: center; }
