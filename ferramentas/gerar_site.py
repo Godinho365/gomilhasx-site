@@ -31,10 +31,16 @@ FONTES = RAIZ / "_fontes"
 SITE = "https://gonorte.com.br"
 MENU = [("recursos", "/recursos/", "Recursos"), ("planos", "/planos/", "Planos"), ("sobre", "/sobre/", "Sobre"),
         ("blog", "/blog/", "Blog"), ("contato", "/contato/", "Contato")]
-# Links para os produtos levam a origem (utm_*) para o Manager e o Balcão saberem de qual botão do site a pessoa veio.
-PRODUTO_URL = re.compile(r"^https://(?:manager|balcao)\.(?:gomilhasx\.com|gonorte\.com\.br)(?=[/?#]|$)")
+# Links para os produtos levam a origem (utm_*) para o Manager, o Balcão e o GO Educação saberem de qual botão do site a pessoa veio.
+PRODUTO_URL = re.compile(r"^https://(?:manager|balcao|educacao)\.(?:gomilhasx\.com|gonorte\.com\.br)(?=[/?#]|$)")
 SEM_UTM = ("/privacidade", "/termos")  # páginas legais dos produtos: link informativo, sem medição
 UTM_FIXO = (("utm_source", "gonorte.com.br"), ("utm_medium", "site"))
+# Endereços curtos que só levam a outro site: página mínima (meta refresh + canonical), fora do sitemap.
+# Para responder com 301 de verdade, o Caddy do Manager precisa de um "redir" (veja o README).
+ATALHOS = {"/educacao/": ("GO Educação", "https://educacao.gonorte.com.br/", "atalho_educacao")}
+# Canais de contato: o clique vira o evento "clique_contato" no Umami, com o canal
+CONTATO_URL = (("https://wa.me/", "whatsapp"), ("https://api.whatsapp.com/", "whatsapp"), ("https://t.me/gonorte", "telegram"),
+               ("mailto:contato@", "email"))
 MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
 
 
@@ -80,7 +86,7 @@ def url_com_utm(url: str, conteudo: str) -> str:
 
 
 def com_utm(saida: str, onde: str, padrao: str = "") -> str:
-    """Em cada <a> para manager./balcao.gonorte.com.br, troca o atributo data-utm="identificador" pelos parâmetros utm_* no href.
+    """Em cada <a> para manager./balcao./educacao.gonorte.com.br, troca o atributo data-utm="identificador" pelos parâmetros utm_* no href.
     Sem data-utm: usa o padrão da página (artigos: blog_<slug>); sem padrão, para a geração, para nenhum botão ficar sem
     origem. Links internos, de terceiros, páginas legais dos produtos e links que já trazem utm_source ficam como estão."""
     def troca(m: re.Match) -> str:
@@ -93,7 +99,10 @@ def com_utm(saida: str, onde: str, padrao: str = "") -> str:
         url = html.unescape(mh.group(1)) if mh else ""
         if not PRODUTO_URL.match(url):
             if md:
-                raise SystemExit(f"{onde}: data-utm em link que não é do Manager nem do Balcão: {url or tag}")
+                raise SystemExit(f"{onde}: data-utm em link que não é do Manager, do Balcão nem do GO Educação: {url or tag}")
+            canal = next((c for prefixo, c in CONTATO_URL if url.startswith(prefixo)), "")
+            if canal and "data-umami-event" not in tag:
+                tag = tag.replace(mh.group(0), f'{mh.group(0)} data-umami-event="clique_contato" data-umami-event-canal="{canal}"')
             return tag
         q = dict(parse_qsl(urlsplit(url).query))
         if not md and (urlsplit(url).path.startswith(SEM_UTM) or "utm_source" in q):
@@ -198,7 +207,7 @@ COMUM = {
     "v_lead_js": versao(RAIZ / "assets/lead.js"),
 }
 CTA = ler(FONTES / "cta-final.html").strip()
-JSONLD_ARQ = {"organizacao": ler(FONTES / "jsonld-organizacao.json"), "faq": ler(FONTES / "jsonld-faq.json")}
+JSONLD_ARQ = {f.stem.removeprefix("jsonld-"): ler(f) for f in sorted(FONTES.glob("jsonld-*.json"))}
 
 
 def faq_da_pagina(conteudo: str) -> dict:
@@ -210,11 +219,52 @@ def faq_da_pagina(conteudo: str) -> dict:
     return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": itens}
 
 
+def preco_numero(texto: str) -> str:
+    """"R$ 1.200,64" -> "1200.64"; "Grátis" -> "0"."""
+    m = re.search(r"\d[\d.]*(?:,\d+)?", texto)
+    return m.group(0).replace(".", "").replace(",", ".") if m else "0"
+
+
+def ofertas_da_pagina(conteudo: str) -> dict:
+    """Offer de cada plano com os preços que estão na própria página de planos (grupos data-grupo="manager|balcao", um
+    <h3> por plano e <strong data-mensal="R$ ..." data-anual="R$ ...">): o dado estruturado nunca diverge do que se lê."""
+    apps = []
+    for chave, bloco in re.findall(r'<div class="pgroup" data-grupo="(\w+)"[^>]*>(.*?)(?=<div class="pgroup"|<div class="proof)', conteudo, re.S):
+        ofertas = []
+        for nome, mensal, anual in re.findall(r'<h3>(.*?)</h3>.*?<strong data-mensal="([^"]*)" data-anual="([^"]*)"', bloco, re.S):
+            nome = html.unescape(re.sub(r"<[^>]+>", "", nome)).strip()
+            for periodo, preco in (("mensal", mensal), ("anual", anual)):
+                if preco_numero(preco) == "0" and periodo == "anual":
+                    continue  # plano grátis: uma oferta só
+                ofertas.append({"@type": "Offer", "name": nome if preco_numero(preco) == "0" else f"{nome}, {periodo}",
+                                "price": preco_numero(preco), "priceCurrency": "BRL", "url": SITE + "/planos/"})
+        if not ofertas:
+            raise SystemExit(f"/planos/: nenhum preço encontrado no grupo {chave} (jsonld ofertas-pagina)")
+        apps.append({"@type": "SoftwareApplication", "@id": f"{SITE}/#{chave}", "name": {"manager": "GO Manager", "balcao": "GO Balcão"}[chave],
+                     "url": f"https://{chave}.gonorte.com.br/", "applicationCategory": "BusinessApplication",
+                     "operatingSystem": "Web" if chave == "manager" else "Web, Telegram", "offers": ofertas})
+    if not apps:
+        raise SystemExit("jsonld ofertas-pagina: a página não tem grupos de planos")
+    return {"@context": "https://schema.org", "@graph": apps}
+
+
+def aplicativo_da_pagina(meta: dict[str, str]) -> dict:
+    """WebApplication das calculadoras e do simulador: ferramenta grátis que roda no navegador."""
+    return {"@context": "https://schema.org", "@type": "WebApplication", "name": meta.get("migalha", meta["titulo"].split(" | ")[0]),
+            "url": SITE + meta["caminho"], "description": meta["descricao"], "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Web", "browserRequirements": "Requer JavaScript", "inLanguage": "pt-BR", "isAccessibleForFree": True,
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"}, "publisher": {"@id": SITE + "/#organization"}}
+
+
 def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None = None, utm_padrao: str = "") -> str:
     ld: list[dict | str] = []
     for n in filter(None, (x.strip() for x in meta.get("jsonld", "").split(","))):
         if n == "faq-pagina":
             ld.append(faq_da_pagina(conteudo))
+        elif n == "ofertas-pagina":
+            ld.append(ofertas_da_pagina(conteudo))
+        elif n == "aplicativo":
+            ld.append(aplicativo_da_pagina(meta))
         elif n in JSONLD_ARQ:
             ld.append(JSONLD_ARQ[n])
         else:
@@ -302,7 +352,7 @@ def cartao_post(p: dict, destaque: bool = False) -> str:
     sizes = "(max-width: 767px) 100vw, " + ("610px" if destaque else "360px")
     return (f'<a class="{classe} gx-card gx-reveal" href="/blog/{p["slug"]}/">'
             f'<span class="pc-img"><img sizes="{sizes}" src="{p["imagem"]}" alt=""{dimensoes(p["imagem"])} loading="lazy" decoding="async"></span>'
-            f'<span class="pc-body"><span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · {data_br(p["data"])} · {p["leitura"]} min de leitura</span>'
+            f'<span class="pc-body"><span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · <time datetime="{p["data"]}">{data_br(p["data"])}</time> · {p["leitura"]} min de leitura</span>'
             f'<span class="pc-t">{html.escape(p["titulo_curto"])}</span><span class="pc-r">{html.escape(p["resumo"])}</span></span></a>')
 
 
@@ -316,6 +366,8 @@ def principal() -> None:
         meta, corpo = meta_e_corpo(ler(f))
         meta["slug"] = f.stem
         meta["corpo"] = corpo
+        if not meta.get("imagem_alt"):
+            raise SystemExit(f"blog/{f.stem}: falta imagem_alt (descrição curta da foto de capa)")
         meta.setdefault("leitura", str(max(2, round(len(re.sub(r"<[^>]+>", " ", corpo).split()) / 200))))
         posts.append(meta)
     posts.sort(key=lambda p: p["data"], reverse=True)
@@ -328,7 +380,9 @@ def principal() -> None:
             corpo = corpo.replace("{{blog_recentes}}", "\n".join(cartao_post(p) for p in posts[:3]))
         gravar(meta["caminho"], montar(meta, corpo), gerados)
         if "noindex" not in meta.get("robots", ""):
-            urls.append((meta["caminho"], meta.get("atualizado", "")))
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta.get("atualizado", "")):
+                raise SystemExit(f"paginas/{f.name}: falta atualizado: AAAA-MM-DD (data da última mudança; vira o lastmod do sitemap)")
+            urls.append((meta["caminho"], meta["atualizado"]))
 
     # Lista do blog
     if posts:
@@ -368,7 +422,7 @@ def principal() -> None:
         meta = {"titulo": "Blog de milhas: custo do milheiro e transferências | GONORTE", "descricao": "Guias práticos sobre milhas, custo do milheiro, transferências bonificadas e como comprar e vender milhas com segurança.",
                 "caminho": "/blog/", "menu": "blog", "migalha": "Blog"}
         gravar("/blog/", montar(meta, corpo, [lista]), gerados)
-        urls.append(("/blog/", posts[0]["data"]))
+        urls.append(("/blog/", max(p.get("atualizado", p["data"]) for p in posts)))
 
     # Cada artigo
     for i, p in enumerate(posts):
@@ -377,12 +431,12 @@ def principal() -> None:
         corpo = f'''<article class="post">
   <div class="post-head wrap">
     <a class="post-back" href="/blog/"><svg style="transform:rotate(180deg)"><use href="#i-arrow"/></svg>Blog</a>
-    <span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · {data_br(p["data"])} · {p["leitura"]} min de leitura</span>
+    <span class="pc-meta"><b>{html.escape(p["categoria"])}</b> · <time datetime="{p["data"]}">{data_br(p["data"])}</time> · {p["leitura"]} min de leitura</span>
     <h1 data-split="80">{html.escape(p["titulo_curto"])}</h1>
     <p class="lead-p">{html.escape(p["resumo"])}</p>
     <div class="post-autor"><img src="/assets/r/fundador-96.webp" alt="" width="40" height="40"><span><b>Raphael Godinho</b><small>Sócio fundador da GONORTE</small></span></div>
   </div>
-  <figure class="post-capa wrap gx-reveal"><img sizes="(max-width: 767px) 100vw, 992px" src="{p["imagem"]}" alt=""{dimensoes(p["imagem"])} fetchpriority="high"></figure>
+  <figure class="post-capa wrap gx-reveal"><img sizes="(max-width: 767px) 100vw, 992px" src="{p["imagem"]}" alt="{html.escape(p["imagem_alt"], quote=True)}"{dimensoes(p["imagem"])} fetchpriority="high"></figure>
   <div class="post-corpo wrap">
 {p["corpo"].rstrip()}{leia_tambem(p["slug"], p.get("leia", ""))}
   </div>
@@ -404,9 +458,30 @@ def principal() -> None:
         gravar(meta["caminho"], montar(meta, corpo, [artigo, migalhas], utm_padrao="blog_" + p["slug"].replace("-", "_")), gerados)
         urls.append((meta["caminho"], p.get("atualizado", p["data"])))
 
+    # Atalhos para outros sites (ex.: /educacao/ -> educacao.gonorte.com.br): fora do sitemap
+    for caminho, (nome, destino, utm) in ATALHOS.items():
+        com_origem = html.escape(url_com_utm(destino, utm), quote=True)
+        gravar(caminho, f'''<!doctype html>
+<!-- Página GERADA por ferramentas/gerar_site.py (ATALHOS): não edite este arquivo. -->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{html.escape(nome)} | GONORTE</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="{destino}">
+<meta http-equiv="refresh" content="0; url={com_origem}">
+</head>
+<body>
+<p>Abrindo o <a href="{com_origem}">{html.escape(nome)}</a>.</p>
+</body>
+</html>
+''', gerados)
+
     # Mapa do site
-    # lastmod só com data informada (artigos e páginas com "atualizado:"), para a saída não mudar sozinha a cada dia
-    linhas = "\n".join(f"  <url><loc>{SITE}{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>" for u, d in urls)
+    # lastmod em todas as URLs, sempre de uma data escrita na fonte ("atualizado:" nas páginas; "data"/"atualizado" nos
+    # artigos), para a saída não mudar sozinha a cada dia nem depender do histórico do git (o CI gera de novo e compara)
+    linhas = "\n".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
     (RAIZ / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{linhas}\n</urlset>\n', encoding="utf-8")
     gerados.append("sitemap.xml")
     print("\n".join(gerados))

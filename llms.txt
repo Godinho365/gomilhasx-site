@@ -6,6 +6,7 @@
 
 - [GO Manager](https://manager.gonorte.com.br/): sistema de gestão de milhas e pontos no navegador. Saldos por titular em cada programa de fidelidade (LATAM Pass, Smiles, Azul Fidelidade, Livelo, Esfera e outros), custo do milheiro recalculado a cada compra, transferência e bônus, simulador de transferências bonificadas, vendas e emissões com lucro por operação, CRM de clientes e passageiros, cartões e faturas, financeiro, equipe com permissões, metas e comissões. Conecta ao Claude (MCP) para consultar a operação em português.
 - [GO Balcão](https://balcao.gonorte.com.br/): balcão de milhas no Telegram. Quem quer comprar publica uma oferta; vendedores com identidade conferida (documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe) aceitam ou fazem contraproposta. Com intermediação, o comprador paga ao balcão por PIX e o vendedor recebe depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação. Obrigatória no Módulo Viajante, opcional no Agentes e no Milheiro. Taxa de R$ 0,75 por milheiro, somada ao valor que o comprador paga, só nas negociações intermediadas. Reputação pública de cada membro.
+- [GO Educação](https://educacao.gonorte.com.br/): cursos e mentorias para quem trabalha com milhas e emissão, na plataforma GO Academy.
 
 ## Planos (resumo)
 
@@ -27,4 +28,4 @@
 - [Política de Privacidade](https://manager.gonorte.com.br/privacidade)
 - [Termos de Serviço](https://manager.gonorte.com.br/termos)
 - Instagram: https://www.instagram.com/somosgonorte/
-- Contato: WhatsApp (21) 99493-4776 e Telegram @gonorte
+- Contato: WhatsApp (21) 99493-4776, Telegram @gonorte e e-mail contato@gonorte.com.br

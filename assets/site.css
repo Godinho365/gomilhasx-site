@@ -286,6 +286,10 @@ header .bar { position: relative; max-width: 760px; margin: 0 auto; display: fle
 @media (min-width: 800px) { .plans { grid-template-columns: 1fr 1fr; } }
 .plan { display: flex; flex-direction: column; padding: 30px; border-radius: 24px; background: #fff; border: 1px solid var(--line); }
 .plan .plogo { height: 40px; width: auto; align-self: flex-start; }
+/* GO Educação: linha discreta abaixo dos planos */
+.edu-linha { margin: 16px auto 0; max-width: 980px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 18px; font-size: 14.5px; color: var(--muted); }
+.edu-linha img { height: 32px; width: auto; }
+.edu-linha span { flex: 1 1 260px; }
 .plan .name { font-size: 15px; font-weight: 500; color: var(--muted); }
 .plan .price { margin-top: 14px; font-size: 15px; color: var(--muted); }
 .plan .price strong { font-size: clamp(34px, 4.4vw, 46px); letter-spacing: -.04em; color: var(--text); font-weight: 500; margin-right: 4px; }

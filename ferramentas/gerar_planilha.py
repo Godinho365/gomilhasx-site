@@ -14,7 +14,7 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 
 RAIZ = Path(__file__).resolve().parent.parent
-DESTINO = RAIZ / "planilha-de-milhas" / "planilha-de-milhas-gomilhasx.xlsx"
+DESTINO = RAIZ / "planilha-de-milhas" / "planilha-de-milhas-gonorte.xlsx"
 
 MARINHO, DOURADO, CINZA, OFF = "102442", "D9A441", "6B6B6B", "F5F5F3"
 LINHAS = 200
