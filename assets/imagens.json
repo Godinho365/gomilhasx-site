@@ -99,6 +99,32 @@
    ]
   ]
  },
+ "/assets/fotos/caderno-mesa.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-caderno-mesa-360.webp",
+    360
+   ],
+   [
+    "/assets/r/fotos-caderno-mesa-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-caderno-mesa-640.webp",
+    640
+   ],
+   [
+    "/assets/r/fotos-caderno-mesa-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-caderno-mesa-960.webp",
+    960
+   ]
+  ]
+ },
  "/assets/fotos/cafe-trabalho.webp": {
   "w": 1440,
   "h": 960,
@@ -147,6 +173,32 @@
    ],
    [
     "/assets/r/fotos-calculadora-mesa-960.webp",
+    960
+   ]
+  ]
+ },
+ "/assets/fotos/celular-maos.webp": {
+  "w": 1440,
+  "h": 960,
+  "versoes": [
+   [
+    "/assets/r/fotos-celular-maos-360.webp",
+    360
+   ],
+   [
+    "/assets/r/fotos-celular-maos-480.webp",
+    480
+   ],
+   [
+    "/assets/r/fotos-celular-maos-640.webp",
+    640
+   ],
+   [
+    "/assets/r/fotos-celular-maos-720.webp",
+    720
+   ],
+   [
+    "/assets/r/fotos-celular-maos-960.webp",
     960
    ]
   ]
