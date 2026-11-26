@@ -9,7 +9,7 @@ Fontes:
   _fontes/blog/<slug>.html           um artigo; metadados + corpo do texto em HTML simples (h2, p, ul, ol, blockquote)
   _fontes/icones.svg, formulario-balcao.html, whatsapp.html, jsonld-*.json
 Saída (vai para o git; publicar continua sendo só "git pull"):
-  index.html, <caminho>/index.html, blog/index.html, blog/<slug>/index.html, sitemap.xml
+  index.html, <caminho>/index.html, blog/index.html, blog/<slug>/index.html, sitemap.xml, llms.txt, llms-full.txt
 """
 from __future__ import annotations
 
@@ -17,7 +17,9 @@ import hashlib
 import html
 import json
 import re
-from datetime import date
+import subprocess
+from datetime import date, datetime, timedelta, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
@@ -41,11 +43,68 @@ ATALHOS = {"/educacao/": ("GO Educação", "https://educacao.gonorte.com.br/", "
 # Canais de contato: o clique vira o evento "clique_contato" no Umami, com o canal
 CONTATO_URL = (("https://wa.me/", "whatsapp"), ("https://api.whatsapp.com/", "whatsapp"), ("https://t.me/gonorte", "telegram"),
                ("mailto:contato@", "email"))
+# Método Norte (GO Educação): o texto da oferta muda sozinho depois do fim da pré-venda. Passada a data, a CI acusa
+# diferença entre o site gerado e o commitado; é só gerar de novo e enviar. Sem preço riscado e sem promessa de renda.
+METODO_NORTE_PRE_VENDA_ATE = date(2026, 12, 31)
+METODO_NORTE_AULAS = "15/01/2027"
+BRASILIA = timezone(timedelta(hours=-3))  # sem horário de verão desde 2019
 MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
 
 
 def ler(p: Path) -> str:
     return p.read_text(encoding="utf-8")
+
+
+def hoje() -> date:
+    return datetime.now(BRASILIA).date()
+
+
+def metodo_norte_oferta() -> str:
+    """{{metodo_norte_oferta}} nas fontes: preço de pré-venda até a data limite; depois, só o início das aulas."""
+    aulas = f"Aulas a partir de {METODO_NORTE_AULAS}."
+    if hoje() <= METODO_NORTE_PRE_VENDA_ATE:
+        return f"Pré-venda: R$ 297 até {METODO_NORTE_PRE_VENDA_ATE:%d/%m/%Y} (depois, R$ 497). {aulas}"
+    return aulas
+
+
+def _git(*args: str) -> str | None:
+    try:
+        r = subprocess.run(["git", "-C", str(RAIZ), *args], capture_output=True, text=True, check=True)
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    return r.stdout.strip()
+
+
+_RASO = _git("rev-parse", "--is-shallow-repository")
+if _RASO == "true":
+    raise SystemExit("repositório raso (git clone --depth): as datas do sitemap vêm do histórico do git; use fetch-depth: 0")
+
+
+def data_da_fonte(f: Path, padrao: str = "") -> str:
+    """Data da última mudança da fonte (AAAA-MM-DD, horário de Brasília): o último commit que tocou o arquivo. Arquivo com
+    mudança ainda não enviada conta como hoje (gere e faça o commit no mesmo dia). Fora de um repositório git, usa o
+    campo escrito na fonte. A data vem do git, e não do relógio, para a CI gerar de novo e chegar ao mesmo resultado."""
+    rel = str(f.relative_to(RAIZ))
+    if _RASO is None:
+        if not padrao:
+            raise SystemExit(f"{rel}: fora do git e sem data na fonte (atualizado: AAAA-MM-DD)")
+        return padrao
+    if _git("status", "--porcelain", "--", rel):
+        return hoje().isoformat()
+    ts = _git("log", "-1", "--format=%ct", "--", rel)
+    if not ts:
+        return hoje().isoformat()
+    return datetime.fromtimestamp(int(ts), BRASILIA).date().isoformat()
+
+
+def sem_comentarios(saida: str) -> str:
+    """Tira os comentários HTML internos da página final (anotações das fontes que não precisam ir ao visitante).
+    Ficam o aviso de "página gerada" do topo e os comentários condicionais (<!--[if ...]>)."""
+    def troca(m: re.Match) -> str:
+        c = m.group(0)
+        return c if "Página GERADA" in c or c.startswith("<!--[if") or c.startswith("<![endif]") else ""
+    saida = re.sub(r"<!--.*?-->", troca, saida, flags=re.S)
+    return re.sub(r"\n[ \t]*(?=\n)", "", saida)  # linha que ficou só com espaços some
 
 
 def meta_e_corpo(texto: str) -> tuple[dict[str, str], str]:
@@ -301,6 +360,7 @@ def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None 
     saida = BASE
     for k, v in valores.items():
         saida = saida.replace("{{" + k + "}}", v)
+    saida = sem_comentarios(saida.replace("{{metodo_norte_oferta}}", metodo_norte_oferta()))
     resto = re.findall(r"\{\{\w+\}\}", saida)
     if resto:
         raise SystemExit(f"marcadores sem valor em {caminho}: {resto}")
@@ -362,9 +422,115 @@ def cartao_post(p: dict, destaque: bool = False) -> str:
             f'<span class="pc-t">{html.escape(p["titulo_curto"])}</span><span class="pc-r">{html.escape(p["resumo"])}</span></span></a>')
 
 
+# llms.txt: as páginas do sitemap, agrupadas (toda página indexável precisa estar num grupo; artigos vão para o blog)
+LLMS_GRUPOS = [
+    ("Páginas dos produtos", ["/recursos/", "/planos/", "/seguranca/", "/claude/"]),
+    ("Por público", ["/para-viajantes/", "/para-milheiros/", "/para-agencias/", "/comecar-com-milhas/"]),
+    ("Ferramentas grátis (sem cadastro)", ["/calculadora-custo-do-milheiro/", "/calculadora-valor-da-milha/",
+                                           "/simulador-transferencia-bonificada/", "/planilha-de-milhas/"]),
+    ("Guias", ["/gestao-de-milhas/", "/controle-de-milhas/", "/comprar-milhas/", "/vender-milhas/", "/golpes-de-milhas/"]),
+    ("Blog", ["/blog/"]),  # + cada artigo, do mais novo ao mais antigo
+    ("Institucional", ["/", "/sobre/", "/duvidas/", "/contato/"]),
+]
+
+
+class _Texto(HTMLParser):
+    """HTML do conteúdo -> texto simples (títulos com #, itens com -), sem scripts, estilos, ícones, formulários e
+    sem o que é só ilustração (aria-hidden), como os mocks de telas com nomes de exemplo."""
+    PULAR = {"script", "style", "svg", "form", "template", "noscript", "button"}
+    BLOCO = {"p", "div", "section", "article", "aside", "header", "footer", "li", "tr", "details", "summary", "figure",
+             "figcaption", "blockquote", "ul", "ol", "table", "h1", "h2", "h3", "h4", "br", "dt", "dd"}
+    VAZIAS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.partes: list[str] = []
+        self.pulando = 0
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if self.pulando:
+            if tag not in self.VAZIAS:
+                self.pulando += 1
+            return
+        if tag in self.PULAR or a.get("aria-hidden") == "true" or "hidden" in a:
+            if tag not in self.VAZIAS:
+                self.pulando = 1
+            return
+        if tag in self.BLOCO:
+            self.partes.append("\n")
+        if tag in ("h1", "h2", "h3", "h4"):
+            self.partes.append("#" * (int(tag[1]) + 1) + " ")
+        elif tag == "li":
+            self.partes.append("- ")
+        elif tag == "img" and a.get("alt"):
+            self.partes.append(f"[{a['alt']}]")
+
+    def handle_endtag(self, tag):
+        if self.pulando:
+            if tag not in self.VAZIAS:
+                self.pulando -= 1
+            return
+        if tag in self.BLOCO:
+            self.partes.append("\n")
+        elif tag in ("td", "th"):
+            self.partes.append(" | ")
+        elif tag in ("a", "span", "small", "b", "strong"):
+            self.partes.append(" ")  # botões e rótulos lado a lado não grudam ("15 diasde teste")
+
+    def handle_data(self, data):
+        if not self.pulando:
+            self.partes.append(data)
+
+    def texto(self) -> str:
+        linhas = (re.sub(r" ([,.;:!?)])", r"\1", re.sub(r"[ \t\r\f\v]+", " ", l)).strip() for l in "".join(self.partes).split("\n"))
+        return "\n\n".join(l for l in linhas if l and l not in ("-", "#", "##", "###", "####", "#####"))
+
+
+def texto_limpo(conteudo: str) -> str:
+    conteudo = re.sub(r"<!--.*?-->", "", conteudo, flags=re.S)
+    conteudo = re.sub(r"\{\{\w+\}\}", "", conteudo.replace("{{metodo_norte_oferta}}", metodo_norte_oferta()))
+    t = _Texto()
+    t.feed(conteudo)
+    t.close()
+    return t.texto()
+
+
+def gravar_llms(urls: list[tuple[str, str]], paginas: dict[str, tuple[str, str, str]], gerados: list[str]) -> None:
+    """llms.txt (índice para assistentes de IA: o cabeçalho de _fontes/llms.txt + as páginas do sitemap, agrupadas, com título e
+    descrição) e llms-full.txt (o texto de cada página e artigo, sem HTML)."""
+    no_sitemap = [u for u, _ in urls]
+    artigos = [u for u in no_sitemap if u.startswith("/blog/") and u != "/blog/"]
+    agrupadas = [u for _, lista in LLMS_GRUPOS for u in lista]
+    faltam = set(no_sitemap) - set(agrupadas) - set(artigos)
+    sobram = set(agrupadas) - set(no_sitemap)
+    if faltam or sobram:
+        raise SystemExit(f"LLMS_GRUPOS em gerar_site.py: sem grupo {sorted(faltam)}; fora do sitemap {sorted(sobram)}")
+    nome = lambda u: paginas[u][0].removesuffix(" | GONORTE")
+    secoes, completo = [], []
+    for titulo, lista in LLMS_GRUPOS:
+        if titulo == "Blog":
+            lista = lista + artigos
+        secoes.append(f"## {titulo}\n\n" + "\n".join(f"- [{nome(u)}]({SITE}{u}): {paginas[u][1]}" for u in lista))
+        for u in lista:
+            corpo = texto_limpo(paginas[u][2])
+            completo.append(f"# {nome(u)}\n\nEndereço: {SITE}{u}\n\n{paginas[u][1]}" + (f"\n\n{corpo}" if corpo else ""))
+    modelo = ler(FONTES / "llms.txt").replace("{{metodo_norte_oferta}}", metodo_norte_oferta())
+    if "{{paginas}}" not in modelo:
+        raise SystemExit("_fontes/llms.txt: falta o marcador {{paginas}}")
+    indice = modelo.replace("{{paginas}}", "\n\n".join(secoes)).rstrip() + "\n"
+    (RAIZ / "llms.txt").write_text(indice, encoding="utf-8")
+    cabeca = modelo.split("{{paginas}}")[0].split("\n## ")[0].rstrip()  # título e resumo da empresa
+    (RAIZ / "llms-full.txt").write_text(
+        f"{cabeca}\n\nTexto completo das páginas e artigos de {SITE}/ (índice em {SITE}/llms.txt).\n\n"
+        + "\n\n---\n\n".join(completo) + "\n", encoding="utf-8")
+    gerados += ["llms.txt", "llms-full.txt"]
+
+
 def principal() -> None:
     gerados: list[str] = []
     urls: list[tuple[str, str]] = []
+    paginas_llms: dict[str, tuple[str, str, str]] = {}  # caminho -> (título, descrição, HTML do conteúdo)
 
     # Artigos do blog
     posts = []
@@ -375,6 +541,8 @@ def principal() -> None:
         if not meta.get("imagem_alt"):
             raise SystemExit(f"blog/{f.stem}: falta imagem_alt (descrição curta da foto de capa)")
         meta.setdefault("leitura", str(max(2, round(len(re.sub(r"<[^>]+>", " ", corpo).split()) / 200))))
+        # dateModified e lastmod: a mudança mais recente da fonte (git), nunca antes da data de publicação
+        meta["modificado"] = max(meta["data"], data_da_fonte(f, meta.get("atualizado", meta["data"])))
         posts.append(meta)
     posts.sort(key=lambda p: p["data"], reverse=True)
 
@@ -387,9 +555,10 @@ def principal() -> None:
             corpo = corpo.replace("{{blog_recentes}}", "\n".join(cartao_post(p) for p in posts[:3]))
         gravar(meta["caminho"], montar(meta, corpo), gerados)
         if "noindex" not in meta.get("robots", ""):
-            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta.get("atualizado", "")):
-                raise SystemExit(f"paginas/{f.name}: falta atualizado: AAAA-MM-DD (data da última mudança; vira o lastmod do sitemap)")
-            urls.append((meta["caminho"], meta["atualizado"]))
+            if meta.get("atualizado") and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta["atualizado"]):
+                raise SystemExit(f"paginas/{f.name}: atualizado: precisa ser AAAA-MM-DD")
+            urls.append((meta["caminho"], data_da_fonte(f, meta.get("atualizado", ""))))
+            paginas_llms[meta["caminho"]] = (meta["titulo"], meta["descricao"], meta_e_corpo(ler(f))[1])  # sem a chamada final
 
     # Lista do blog
     if posts:
@@ -429,7 +598,8 @@ def principal() -> None:
         meta = {"titulo": "Blog de milhas: custo do milheiro e transferências | GONORTE", "descricao": "Guias práticos sobre milhas, custo do milheiro, transferências bonificadas e como comprar e vender milhas com segurança.",
                 "caminho": "/blog/", "menu": "blog", "migalha": "Blog"}
         gravar("/blog/", montar(meta, corpo, [lista]), gerados)
-        urls.append(("/blog/", max(p.get("atualizado", p["data"]) for p in posts)))
+        urls.append(("/blog/", max(p["modificado"] for p in posts)))
+        paginas_llms["/blog/"] = (meta["titulo"], meta["descricao"], "")
 
     # Cada artigo
     for i, p in enumerate(posts):
@@ -453,7 +623,7 @@ def principal() -> None:
 </section>
 {CTA}'''
         artigo = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["titulo_curto"], "description": p["resumo"],
-                  "datePublished": data_iso(p["data"]), "dateModified": data_iso(p.get("atualizado", p["data"])), "inLanguage": "pt-BR",
+                  "datePublished": data_iso(p["data"]), "dateModified": data_iso(p["modificado"]), "inLanguage": "pt-BR",
                   "image": SITE + p["imagem"], "mainEntityOfPage": f"{SITE}/blog/{p['slug']}/",
                   "author": {"@type": "Person", "@id": SITE + "/#fundador", "name": "Raphael Godinho", "url": SITE + "/sobre/#fundador"}, "publisher": {"@id": SITE + "/#organization"}}
         migalhas = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -463,7 +633,8 @@ def principal() -> None:
         meta = {"titulo": p["titulo"], "descricao": p["descricao"], "caminho": f"/blog/{p['slug']}/", "menu": "blog",
                 "og_tipo": "article", "imagem": p["imagem"], "preload": p["imagem"], "classe": "pagina artigo"}
         gravar(meta["caminho"], montar(meta, corpo, [artigo, migalhas], utm_padrao="blog_" + p["slug"].replace("-", "_")), gerados)
-        urls.append((meta["caminho"], p.get("atualizado", p["data"])))
+        urls.append((meta["caminho"], p["modificado"]))
+        paginas_llms[meta["caminho"]] = (p["titulo"], p["descricao"], f'<h1>{html.escape(p["titulo_curto"])}</h1><p>{html.escape(p["resumo"])}</p>' + p["corpo"])
 
     # Atalhos para outros sites (ex.: /educacao/ -> educacao.gonorte.com.br): fora do sitemap
     for caminho, (nome, destino, utm) in ATALHOS.items():
@@ -486,11 +657,12 @@ def principal() -> None:
 ''', gerados)
 
     # Mapa do site
-    # lastmod em todas as URLs, sempre de uma data escrita na fonte ("atualizado:" nas páginas; "data"/"atualizado" nos
-    # artigos), para a saída não mudar sozinha a cada dia nem depender do histórico do git (o CI gera de novo e compara)
+    # lastmod em todas as URLs: último commit que mudou a fonte da página ou do artigo (data_da_fonte), determinístico
+    # para a CI, que gera de novo e compara (o checkout da CI precisa do histórico inteiro: fetch-depth: 0)
     linhas = "\n".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
     (RAIZ / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{linhas}\n</urlset>\n', encoding="utf-8")
     gerados.append("sitemap.xml")
+    gravar_llms(urls, paginas_llms, gerados)
     print("\n".join(gerados))
 
 

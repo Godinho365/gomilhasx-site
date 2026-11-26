@@ -1,0 +1,2497 @@
+# GONORTE
+
+> GONORTE é uma empresa brasileira de tecnologia para viagens (CNPJ 70.001.231/0001-03) que cria tecnologia para o mercado de milhas e viagens: pessoas que acumulam pontos e viajam, agentes e agências que emitem passagens para clientes e milheiros que vendem milhas. Tem três frentes: o GO Manager (gestão de milhas), o GO Balcão (compra e venda de milhas) e a GO Educação (cursos em educacao.gonorte.com.br).
+
+Texto completo das páginas e artigos de https://gonorte.com.br/ (índice em https://gonorte.com.br/llms.txt).
+
+# Recursos da gestão e do balcão de milhas
+
+Endereço: https://gonorte.com.br/recursos/
+
+Carteira por CPF, custo do milheiro, lucro por venda, CRM e equipe no GO Manager; ofertas de membros com identidade conferida e PIX intermediado no GO Balcão.
+
+Recursos
+
+## Tudo para organizar e negociar milhas, sem complicação
+
+Dos saldos de cada titular ao lucro de cada venda, e da oferta no Telegram à emissão com intermediação: dois produtos que conversam entre si.
+
+Ver os planos Sobre a GONORTE
+
+15 dias de teste grátis no Manager, com os recursos do plano Gestor
+
+GO Manager
+
+### Os recursos que movem a sua operação
+
+Gestão de milhas e pontos no navegador, no computador e no celular.
+
+#### Carteiras por titular
+
+Saldos de cada CPF em todos os programas, com vencimentos e extrato da origem de cada milha.
+
+#### Custo do milheiro
+
+Recalculado a cada compra, transferência e bônus, para saber o lucro real de cada venda.
+
+#### Simulador de transferências
+
+Veja quantas milhas recebe e o novo custo do milheiro antes de transferir com bônus.
+
+#### Vendas e emissões
+
+Lucro de cada venda e emissão, CRM de pedidos, clientes, passageiros e fornecedores.
+
+#### Cartões e faturas
+
+Compras de pontos, clubes e emissões caem na fatura certa, com os pontos a receber de cada cartão.
+
+#### Equipe e financeiro
+
+Login próprio para a equipe, permissões por função, metas, comissões e contas a pagar e a receber.
+
+#### Alertas
+
+Avisos de saldo abaixo do limite, pontos a receber e lançamentos agendados para não perder prazo.
+
+#### Conecta ao Claude
+
+Pergunte sobre a sua operação em português; ações só acontecem se você permitir e confirmar.
+
+GO Balcão
+
+### Compra e venda de milhas com identidade conferida
+
+Um balcão de milhas no Telegram, com conferência de identidade e PIX intermediado.
+
+Quem quer comprar publica a oferta com programa, quantidade e preço do milheiro; vendedores aceitam ou fazem contraproposta pelo bot.
+
+Documento (frente e verso), selfie com o documento, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe antes de liberar o acesso.
+
+Com intermediação, o comprador paga ao balcão por PIX e o vendedor recebe depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação. Obrigatória no Módulo Viajante, opcional no Agentes e no Milheiro.
+
+Reputação pública, avaliações e histórico de cada membro para negociar com quem entrega.
+
+Para quem é
+
+### Feito para operações de todos os tamanhos
+
+Fale com a gente
+
+#### Viajantes
+
+Organize os pontos da família, saiba quanto custou cada milha e compre milhas no Balcão com a intermediação em todas as compras. Saiba mais
+
+#### Agentes e agências
+
+Administre as contas dos clientes, registre emissões com o lucro de cada uma e compre de vendedores com identidade conferida, com o CNPJ conferido no perfil. Saiba mais
+
+#### Milheiros
+
+Acompanhe o custo médio e os CPFs livres de cada titular, controle as vendas e venda milhas com contrapropostas e alertas por programa. Saiba mais
+
+Como funciona
+
+### Comece em 3 passos
+
+1
+
+#### Escolha o produto
+
+O Manager para organizar a operação, o Balcão para negociar milhas, ou os dois juntos.
+
+2
+
+#### Crie o seu acesso
+
+No Manager, conta com e-mail ou Google e 15 dias de teste. No Balcão, assinatura e verificação única de identidade.
+
+3
+
+#### Organize e negocie
+
+Acompanhe saldos, custos e lucro no Manager e feche negociações intermediadas no Balcão.
+
+---
+
+# Planos e preços do GO Manager e do GO Balcão
+
+Endereço: https://gonorte.com.br/planos/
+
+Planos do GO Manager (Pessoal grátis, PRO e Gestor) e do GO Balcão (módulos Viajante, Agentes e Milheiro), com preços mensais, anuais e vitalícios.
+
+Planos
+
+## GO Manager grátis para começar. GO Balcão a partir de R$ 9,90.
+
+Comece grátis no Manager e escolha no Balcão o módulo do seu objetivo. Cada produto tem a própria assinatura.
+
+Ver os recursos Dúvidas
+
+Manager: 15 dias de teste, sem cartão · Balcão: sem cobrança automática e 7 dias para desistir
+
+### Escolha o plano que cabe no seu momento
+
+Comece simples e mude de plano quando a operação crescer.
+
+Mensal
+
+Anual
+
+16% off
+
+#### Pessoal
+
+Para organizar os seus próprios pontos
+
+Grátis
+
+para sempre
+
+- Até 5 contas em programas
+
+- 1 titular
+
+- Extrato e relatórios
+
+- Simuladores básicos
+
+- Alertas de saldo
+
+Criar conta grátis
+
+#### PRO
+
+Para quem acumula com estratégia
+
+R$ 19,90 /mês
+
+cobrado por mês
+
+- Tudo do Pessoal
+
+- Contas ilimitadas
+
+- Até 2 titulares
+
+- Preço do milheiro, potencial de lucro e sugestor de compra
+
+- Comprovantes e limite de CPFs
+
+- Evolução e anexos
+
+- Página pública com sua cor e banner
+
+Começar teste grátis
+
+#### Gestor
+
+Para quem gerencia contas de terceiros e vende emissões
+
+R$ 59,90 /mês
+
+cobrado por mês
+
+- Tudo do PRO
+
+- Clientes ilimitados
+
+- Contas de clientes e fornecedores
+
+- Emissão com fornecedores
+
+- Milheiro e saldo por fornecedor
+
+- Equipe com permissões, métricas e financeiro
+
+- Página do titular
+
+Começar teste grátis
+
+15 dias de teste com os recursos do Gestor, sem cartão de crédito
+
+### Por que o Gestor custa R$ 59,90
+
+O Gestor é o plano de quem trabalha para outras pessoas. Nele, a equipe, o financeiro e os clientes ficam no mesmo sistema em que você controla as milhas, sem plano “sob consulta” e sem cobrança por pessoa da equipe.
+
+E ele conversa com o mercado: você vê as ofertas do GO Balcão com o lucro calculado pelo seu custo do milheiro, propõe sem sair do app e, se quiser, pede ao Claude para preparar a proposta, que só sai com a sua confirmação.
+
+Se você controla só os seus pontos e vende de vez em quando, o PRO (R$ 19,90) resolve. Na dúvida, use os 15 dias com tudo do Gestor e decida com os seus números.
+
+PRO × Gestor
+
+Recurso | PRO | Gestor |
+
+Titulares | Até 2 | Ilimitados |
+
+Vendas com o lucro de cada uma | Incluído | Incluído |
+
+GO Balcão dentro do app: ver ofertas, propor e comprar | Incluído | Incluído |
+
+Conector do Claude | Incluído | Incluído |
+
+Fornecedores e emissão com fornecedor | Não | Incluído |
+
+Página do titular para o seu cliente | Não | Incluído |
+
+Financeiro: contas a pagar e a receber, fluxo de caixa | Não | Incluído |
+
+CRM de passagens | Não | Incluído |
+
+### Qual combinação é a sua?
+
+Para viajantes Pessoal grátis no Manager para os pontos da família e o Módulo Viajante do Balcão para comprar milhas com PIX intermediado.
+
+Para milheiros PRO no Manager para o custo do milheiro e o lucro de cada venda, e o Módulo Milheiro do Balcão para vender.
+
+Para agências Gestor no Manager para contas de clientes e equipe, e o Módulo Agentes do Balcão para comprar para vários CPFs.
+
+Incluído
+
+### O que vem em cada produto
+
+15 dias de teste grátis no Manager com os recursos do plano Gestor, sem cartão de crédito
+
+#### Identidade conferida
+
+A entrada no Balcão exige documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe.
+
+#### PIX com intermediação
+
+Com intermediação, o comprador paga ao balcão por PIX e o vendedor recebe depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação. Obrigatória no Viajante, opcional no Agentes e no Milheiro.
+
+#### Custo do milheiro
+
+Recalculado a cada compra, transferência e bônus.
+
+#### Dados protegidos
+
+Conexões criptografadas e dados tratados conforme a LGPD.
+
+Dúvidas
+
+### Perguntas sobre os planos
+
+O que acontece quando o teste grátis do Manager acaba?
+
+Depois dos 15 dias a conta continua funcionando no plano Pessoal, sem cobrança. Você só paga se escolher assinar o PRO ou o Gestor.
+
+Preciso assinar os dois produtos?
+
+Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos.
+
+Quais são as formas de pagamento do Balcão?
+
+Pelo Mercado Pago: PIX (confirmação na hora), cartão em até 12x ou boleto. Os planos podem ser mensais, anuais ou vitalícios, aceitam cupom de desconto e a renovação também pode ser feita pelo próprio bot.
+
+Posso cancelar a assinatura do Balcão?
+
+Sim. Não existe cobrança automática: o plano vale pelo período pago e você renova só se quiser. E você tem 7 dias para desistir da assinatura: se desistir em até 7 dias depois do pagamento, o valor pago é devolvido. É só falar com o suporte pelo bot.
+
+---
+
+# Como o GO Balcão protege a compra de milhas
+
+Endereço: https://gonorte.com.br/seguranca/
+
+Como o GO Balcão reduz o risco na negociação de milhas: identidade conferida, PIX intermediado até a emissão, reputação pública e LGPD.
+
+Segurança
+
+## Como o GO Balcão reduz o risco de quem negocia milhas
+
+Golpe em milhas costuma ter duas causas: o dinheiro vai antes da passagem e ninguém sabe quem está do outro lado. O GO Balcão trata as duas: confere a identidade de quem entra e oferece PIX intermediado até a emissão. Nenhum sistema elimina o risco; estas são as regras que valem aqui.
+
+### Na negociação, no GO Balcão
+
+1. Identidade conferida A entrada no balcão exige conferência de identidade: documento (frente e verso), selfie com o documento, um vídeo curto e um termo assinado com a conta GOV.BR. A equipe confere antes de liberar o acesso.
+
+2. PIX intermediado até a emissão Com intermediação, você paga ao balcão por PIX. O vendedor recebe depois da emissão: quando você confirma ou em até 3 dias, se não houver reclamação. É obrigatória no Módulo Viajante e opcional no Agentes e no Milheiro. Taxa: R$ 0,75 por milheiro, somada ao valor que o comprador paga.
+
+3. Onde fica o dinheiro Nas negociações intermediadas, o PIX é recebido pela GONORTE (CNPJ 70.001.231/0001-03) pelo Mercado Pago e repassado ao vendedor depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação.
+
+4. Reputação pública Reputação, avaliações e histórico de cada membro. Qualquer pessoa pode consultar a reputação pelo @ do Telegram.
+
+5. Desistência com regra clara Antes da emissão, a desistência tem estorno. Depois, o cancelamento segue o prazo e os descontos informados nas perguntas frequentes do GO Balcão.
+
+6. Se a emissão for cancelada depois Pelas regras do GO Balcão, se a emissão for cancelada, bloqueada ou perdida, o comprador é reembolsado integralmente. Se a apuração concluir que a perda foi por negligência do vendedor ou do titular da conta, o vendedor faz uma nova emissão equivalente, sem custo. Se a perda foi só por falha da companhia aérea, a nova emissão é por conta do comprador.
+
+7. Suporte dentro do bot Falar com Suporte e Reportar problema chegam na hora à equipe, que acompanha até resolver.
+
+8. Assinatura sem armadilha Planos pagos pelo Mercado Pago, sem renovação automática e com 7 dias para desistir da assinatura.
+
+Conhecer o GO Balcão
+
+### Nos seus dados, no GO Manager
+
+Conexão criptografada Todo o acesso é por HTTPS, e as senhas são guardadas com hash, nunca em texto.
+
+Cada um vê o que deve A equipe entra com login próprio e permissões por função. O titular pode receber um acesso só de leitura ao que é dele.
+
+IA só com a sua permissão O conector do Claude vê só o que a sua conta vê, só faz ações se você autorizar e pode ser desconectado na hora.
+
+Backups diários Os dados do GO Manager e do GO Balcão têm cópia de segurança todos os dias.
+
+LGPD Dados tratados conforme a LGPD, com política de privacidade e um canal para pedidos sobre os seus dados.
+
+Cookies só com permissão Cookies analíticos e de marketing só funcionam se você aceitar, e a escolha pode ser mudada a qualquer momento.
+
+### Dicas para não cair em golpe
+
+Não pague antes da emissão sem intermediação
+
+No PIX direto, o combinado é pagar depois de conferir a passagem, em até 20 horas depois da emissão; nesse caso a GONORTE não segura o dinheiro. Se alguém pedir o dinheiro antes, fora da intermediação, recuse e avise o suporte.
+
+Consulte a reputação antes
+
+Veja a reputação, as avaliações e o histórico do membro na consulta de membros. Perfil sem histórico pede mais cuidado.
+
+Confira a passagem emitida
+
+Antes de confirmar o recebimento, abra a reserva no site da companhia aérea com o localizador e confira nomes, datas e trechos.
+
+Sua conta no programa é sua responsabilidade
+
+Cada programa de fidelidade tem o próprio regulamento. Leia o regulamento do programa antes de negociar: a responsabilidade pelo uso da conta é do titular.
+
+Algo estranho? Fale com o suporte
+
+Use Reportar problema no bot do GO Balcão ou fale com a gente pelo contato.
+
+---
+
+# GO Manager no Claude: sua carteira de milhas
+
+Endereço: https://gonorte.com.br/claude/
+
+Conecte o GO Manager ao Claude e pergunte sobre saldos, custo do milheiro, vendas, CRM Milhas e ofertas do GO Balcão. Cada pessoa entra com a própria conta.
+
+GO Manager + Claude
+
+## Pergunte ao Claude sobre a sua carteira de milhas
+
+O GO Manager tem um conector para o Claude, o assistente de IA da Anthropic. Depois de conectar, você conversa sobre saldos, custo do milheiro, vendas, CRM Milhas e o GO Balcão, com os seus próprios dados.
+
+### O que dá para pedir
+
+Carteira "Qual o meu saldo e o custo do milheiro por programa?" Totais por programa e por titular, com o valor de mercado.
+
+Contas "Quais contas da Smiles têm CPF livre?" Saldo, pontos pendentes, custo e CPFs disponíveis de cada conta.
+
+Vendas "Quanto lucrei nos últimos 30 dias e o que falta receber?" Faturamento, resultado e pendências do período.
+
+Calcular lucro "Vale a pena emitir esta passagem com milhas?" O lucro de uma emissão pelo custo das suas milhas.
+
+CRM Milhas Ver as negociações em cada etapa e, com a sua permissão, mudar a etapa.
+
+GO Balcão Ver ofertas, suas propostas e negociações, ler a conversa e, com a sua permissão, mandar proposta ou mensagem.
+
+### Como conectar
+
+Passo a passo
+
+No GO Manager, abra Configurações › Claude e copie o endereço do conector. No Claude, adicione um conector personalizado com esse endereço e entre com a sua conta do GO Manager. Pronto: é só conversar.
+
+Em qual plano está disponível?
+
+O conector faz parte do plano PRO e do plano Gestor do GO Manager. Veja os planos.
+
+O Claude vê os dados de todo mundo?
+
+Não. Cada pessoa entra com a própria conta do GO Manager, e o Claude vê só o que essa conta pode ver, com as mesmas permissões da equipe.
+
+O Claude pode fazer alterações sozinho?
+
+Ações como mandar proposta no GO Balcão ou mudar a etapa no CRM só funcionam se você autorizar ações ao conectar. Sem essa autorização, o acesso é só de leitura.
+
+Como desconectar?
+
+Em Configurações › Claude, no GO Manager, aparecem os aplicativos conectados com o botão Desconectar. O acesso para na hora.
+
+Preciso pagar o Claude?
+
+O uso do Claude sai da conta Claude de cada pessoa, conforme o plano dela na Anthropic. O GO Manager não cobra a mais pelo conector.
+
+Começar grátis no GO Manager
+
+---
+
+# Milhas para viajantes: organize e compre milhas
+
+Endereço: https://gonorte.com.br/para-viajantes/
+
+Para quem viaja com milhas: controle os pontos da família de graça no GO Manager e compre no GO Balcão de quem tem identidade conferida, com PIX intermediado.
+
+Para viajantes
+
+## Viaje mais com os pontos que você já tem
+
+Junte os pontos da família num lugar só, saiba quanto custou cada milha e, quando faltar, compre de vendedores com identidade conferida e PIX intermediado até a emissão.
+
+Organizar meus pontos grátis
+
+Comprar milhas no GO Balcão
+
+### O que muda no seu dia a dia
+
+Pontos da família num lugar só Saldos de cada programa, com vencimentos e a origem de cada milha. O plano Pessoal do GO Manager é grátis para sempre.
+
+Saber se a passagem com milhas compensa O custo do milheiro é recalculado a cada compra, transferência e bônus. Use também a calculadora grátis.
+
+Transferir na hora certa O simulador mostra quantas milhas chegam e o novo custo do milheiro antes de transferir com bônus.
+
+Comprar milhas com o pagamento intermediado No Módulo Viajante do GO Balcão, toda compra tem intermediação: você paga ao balcão por PIX e o vendedor recebe depois da emissão, quando você confirma ou em até 3 dias, se não houver reclamação. Taxa de R$ 0,75 por milheiro, somada ao valor que você paga.
+
+### Os planos que fazem sentido para você
+
+GO Manager · Pessoal Grátis para sempre: até 5 contas em programas, 1 titular, extrato, relatórios, simuladores básicos e alertas de saldo. Para os pontos de mais pessoas da família, o PRO tem contas ilimitadas e até 2 titulares.
+
+GO Balcão · Módulo Viajante A partir de R$ 9,90/mês: comprar milhas para as suas viagens, para um ou mais passageiros, com intermediação em todas as compras e a reputação de cada vendedor.
+
+Ver todos os planos e preços
+
+### Dúvidas de quem viaja com milhas
+
+As milhas compradas no GO Balcão vão para a minha conta?
+
+Não. Os programas de fidelidade não permitem transferir milhas entre contas de pessoas diferentes. O vendedor emite a passagem com as milhas dele, em nome dos passageiros que você informar.
+
+E se a passagem não for emitida?
+
+No Módulo Viajante, toda compra é intermediada: o vendedor só recebe depois da emissão. Antes dela, a desistência tem estorno. Depois da emissão, dá para cancelar dentro do prazo informado na página do GO Balcão, com os descontos que aparecem lá.
+
+Quem são os vendedores?
+
+Membros com identidade conferida: documento (frente e verso), selfie com o documento, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe antes de liberar o acesso. Cada um tem reputação pública, que você pode consultar.
+
+Preciso pagar para organizar meus pontos?
+
+Não. O plano Pessoal do GO Manager é grátis para sempre, e toda conta nova começa com 15 dias de teste com os recursos do plano Gestor, sem cartão de crédito.
+
+---
+
+# Sistema para milheiros: custo e venda de milhas
+
+Endereço: https://gonorte.com.br/para-milheiros/
+
+Para quem compra e vende milhas: custo médio e CPFs livres de cada titular no GO Manager, e venda com contrapropostas e alertas por programa no GO Balcão.
+
+Para milheiros
+
+## Saiba o custo de cada milha e venda para quem tem identidade conferida
+
+Controle saldo, custo médio e CPFs livres de cada titular no GO Manager. Venda no GO Balcão com contrapropostas, alertas por programa e recebimento por PIX.
+
+Começar grátis no GO Manager
+
+Vender no GO Balcão
+
+### A operação sob controle no GO Manager
+
+Custo do milheiro de verdade Recalculado a cada compra, transferência e bônus, por titular e por programa, para saber o lucro real de cada venda.
+
+CPFs livres por conta Limite de CPFs de cada titular e quantos ainda estão livres, para planejar as próximas emissões.
+
+Vendas e lucro Lucro de cada venda e emissão, CRM de pedidos e o que falta receber.
+
+Cartões e pontos a receber Compras de pontos e clubes na fatura certa, com os pontos a receber de cada cartão.
+
+Preço do milheiro e potencial de lucro No plano PRO, o sugestor de compra e o potencial de lucro de cada conta.
+
+Pergunte ao Claude Nos planos PRO e Gestor, o conector do Claude responde sobre saldos, custo e vendas.
+
+### Venda no GO Balcão com o Módulo Milheiro
+
+Ofertas de compra no Telegram Compradores publicam programa, quantidade e preço do milheiro; você aceita ou faz contraproposta pelo bot.
+
+Alertas por programa Receba as ofertas dos programas em que você tem milhas.
+
+Recebimento por PIX Com intermediação, você recebe depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação. No Módulo Milheiro a intermediação é opcional: sem ela, o comprador paga direto a você em até 20 horas depois da emissão; nesse caso a GONORTE não segura o dinheiro.
+
+Reputação que vende Reputação, avaliações e histórico públicos: quem entrega bem fica visível para os compradores.
+
+Ver planos e preços
+
+Vai transferir pontos do banco com bônus? Simule o novo custo do milheiro e o lucro no simulador de transferência bonificada.
+
+### Dúvidas de quem vende milhas
+
+Quanto custa o Módulo Milheiro?
+
+R$ 49,90 por mês, com opções anual e vitalícia (R$ 749,00 em pagamento único). Não há renovação automática e você tem 7 dias para desistir da assinatura.
+
+Tem taxa nas negociações?
+
+Só nas intermediadas: R$ 0,75 por milheiro, somada ao valor que o comprador paga.
+
+Preciso dos dois produtos?
+
+Não. Cada produto tem a própria conta e os próprios planos. O GO Manager organiza a operação; o GO Balcão é onde você negocia.
+
+Preciso conhecer as regras do meu programa?
+
+Sim. Cada programa de fidelidade tem as próprias regras. Leia o regulamento do programa antes de negociar: a responsabilidade pelo uso da conta é do titular.
+
+---
+
+# Sistema de milhas para agências de viagens
+
+Endereço: https://gonorte.com.br/para-agencias/
+
+Para agências e agentes: clientes, fornecedores, lucro por emissão e equipe com permissões no GO Manager; compra de milhas com CNPJ conferido no GO Balcão.
+
+Para agências e agentes
+
+## Emita com milhas, controle o lucro e organize a equipe
+
+Administre as contas dos clientes e fornecedores, registre cada emissão com o lucro e dê acesso à equipe no GO Manager. Compre milhas para vários CPFs no GO Balcão, com o CNPJ conferido no seu perfil.
+
+Testar o plano Gestor grátis
+
+Conhecer o GO Balcão
+
+### O plano Gestor do GO Manager
+
+Clientes e fornecedores Clientes ilimitados, contas de clientes e de fornecedores, e o milheiro e o saldo de cada fornecedor.
+
+Emissões com lucro Cada emissão registrada com o lucro, no CRM de pedidos, clientes, passageiros e fornecedores.
+
+Equipe com permissões Login próprio para cada pessoa, permissões por função, metas, comissões e financeiro.
+
+Página do titular O titular recebe por e-mail um link para ver, só para leitura, os saldos e movimentos dele, sem acesso ao resto da operação.
+
+### Compre milhas no GO Balcão com o Módulo Agentes
+
+Vários CPFs Compre milhas para emitir para os seus clientes.
+
+CNPJ conferido Seu perfil mostra aos vendedores o CNPJ conferido no perfil.
+
+Vendedores com identidade conferida Documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe. Cada um tem reputação pública.
+
+Intermediação quando quiser No Módulo Agentes a intermediação é opcional: com ela, você paga ao balcão por PIX e o vendedor recebe depois da emissão, quando você confirma ou em até 3 dias, se não houver reclamação. Taxa de R$ 0,75 por milheiro, só quando usada.
+
+Ver planos e preços
+
+### Por que o Gestor custa R$ 59,90
+
+Numa agência, a conta que importa é o lucro de cada emissão depois de pagar milhas, fornecedor e equipe. O Gestor junta isso num lugar só. Nele, a equipe, o financeiro e os clientes ficam no mesmo sistema em que você controla as milhas, sem plano “sob consulta” e sem cobrança por pessoa da equipe.
+
+E ele conversa com o mercado: você vê as ofertas do GO Balcão com o lucro calculado pelo seu custo do milheiro, propõe sem sair do app e, se quiser, pede ao Claude para preparar a proposta, que só sai com a sua confirmação.
+
+Se você controla só os seus pontos e vende de vez em quando, o PRO (R$ 19,90) resolve. Na dúvida, use os 15 dias com tudo do Gestor e decida com os seus números.
+
+PRO × Gestor
+
+Recurso | PRO | Gestor |
+
+Titulares | Até 2 | Ilimitados |
+
+Vendas com o lucro de cada uma | Incluído | Incluído |
+
+GO Balcão dentro do app: ver ofertas, propor e comprar | Incluído | Incluído |
+
+Conector do Claude | Incluído | Incluído |
+
+Fornecedores e emissão com fornecedor | Não | Incluído |
+
+Página do titular para o seu cliente | Não | Incluído |
+
+Financeiro: contas a pagar e a receber, fluxo de caixa | Não | Incluído |
+
+CRM de passagens | Não | Incluído |
+
+### Dúvidas de agências e agentes
+
+Quanto custa o plano Gestor?
+
+R$ 59,90 por mês, ou R$ 50,32 por mês no plano anual. Inclui fornecedores, financeiro, CRM de passagens e a página do titular, além de tudo do PRO. Toda conta nova começa com 15 dias de teste com os recursos do Gestor, sem cartão de crédito: compare com o que você usa hoje.
+
+Preciso do PRO ou do Gestor?
+
+Se você emite só com as suas milhas e sem clientes de terceiros, o PRO resolve. Se você trabalha para clientes, com fornecedores, financeiro e CRM de passagens, é o Gestor.
+
+E o Módulo Agentes do GO Balcão?
+
+R$ 24,90 por mês, com opções anual e vitalícia (R$ 379,00 em pagamento único). Sem renovação automática e com 7 dias para desistir da assinatura.
+
+Minha equipe vê tudo?
+
+Não. Cada pessoa tem login próprio, e as permissões são definidas por função.
+
+Como funciona a emissão com milhas compradas?
+
+Os programas não permitem transferir milhas entre contas de pessoas diferentes: o vendedor emite a passagem com as milhas dele, em nome dos passageiros que você informar.
+
+---
+
+# Como começar a trabalhar com milhas
+
+Endereço: https://gonorte.com.br/comecar-com-milhas/
+
+Quer renda extra com milhas ou viajar pagando menos? Veja como funciona, o que os programas proíbem, os riscos e os primeiros passos, sem promessa.
+
+Para quem está começando
+
+## Como começar a trabalhar com milhas
+
+Quer uma renda extra com milhas? Quer viajar pagando menos com os seus pontos? Veja como funciona, quanto custa, o que os programas proíbem e quais são os riscos, antes de gastar o primeiro real.
+
+Organizar meus pontos grátis
+
+Ver os primeiros passos
+
+### Dois motivos para começar, dois caminhos
+
+Quero viajar pagando menos Junte os pontos que você já tem, veja quanto cada milha custou e transfira na hora certa. Ferramentas: o plano Pessoal do GO Manager (grátis), o simulador de transferência bonificada, a calculadora de valor da milha e o guia quanto vale uma milha. Para viajar, não é preciso vender nada.
+
+Quero uma renda extra com milhas Aqui entram custo do milheiro, regras dos programas, imposto e risco de bloqueio. Pode haver ganho, mas ele depende do seu custo, das regras de cada programa e do tempo que você dedica, e não há garantia. Leia esta página inteira antes de comprar pontos para revender.
+
+### O que é trabalhar com milhas
+
+Milhas e pontos não passam de uma conta para outra. Quem "trabalha com milhas" costuma fazer uma destas coisas:
+
+- Emitir passagens para outras pessoas. Você usa as milhas da sua conta para emitir em nome de um passageiro e cobra pela passagem. É o que fazem agentes e emissores.
+
+- Vender milhas. Na prática, você emite com as suas milhas para o passageiro indicado por um comprador e recebe um valor por milheiro (cada 1.000 milhas). Veja como a venda funciona.
+
+- Comprar milhas para emitir. Você compra de quem tem milhas para emitir passagens para os seus clientes. Veja como a compra funciona.
+
+Se você só quer viajar com os seus próprios pontos, nada disso é necessário: basta organizar o que já tem e usar bem as transferências.
+
+### O que os programas permitem e o que proíbem
+
+Cada programa de fidelidade tem o próprio regulamento, e ele vale mais do que qualquer conselho de internet. Os principais programas aéreos dizem, no regulamento ou na central de ajuda, que não permitem negociar milhas com terceiros e preveem suspensão ou exclusão da conta de quem faz isso. Emitir passagens para outras pessoas costuma ser permitido, mas com limite de beneficiários (CPFs) por conta.
+
+Leia o regulamento do seu programa antes de negociar: a responsabilidade pelo uso da conta é do titular.
+
+### Os riscos reais
+
+- Bloqueio da conta. O programa pode suspender a conta, cancelar passagens emitidas e confiscar o saldo de quem descumpre o regulamento.
+
+- Limite de CPFs. Cada conta tem um limite de beneficiários. Quando acaba, você não consegue emitir para novas pessoas por um tempo.
+
+- Golpes. Pagamento antes da emissão sem garantia, reserva falsa e pedido do código de confirmação da sua conta. Veja os golpes mais comuns.
+
+- Calote e passagem cancelada. Quem emite antes de receber pode não receber; quem compra pode ver a passagem cair.
+
+- Imposto. O ganho com a venda de milhas pode ser tributado. Se você pretende vender com frequência, fale com um contador.
+
+- Mudança de regras. Programas mudam tabelas, bônus e regulamentos sem aviso longo. Um custo que dava margem ontem pode não dar amanhã.
+
+### Quanto custa e quanto tempo leva para começar
+
+Não existe um valor certo. O que define se uma operação tem margem é o custo do milheiro: quanto você pagou, em média, por cada 1.000 milhas, somando compras, transferências e bônus. Se o custo fica acima do que alguém paga pelo milheiro, a conta não fecha. Antes de comprar pontos, simule com a calculadora do custo do milheiro e o simulador de transferência bonificada.
+
+Também conta o tempo: acompanhar promoções, controlar vencimentos e CPFs, atender quem compra e conferir cada emissão. Comece pequeno, com os pontos que você já tem, e só aumente quando entender os seus números.
+
+### Primeiros passos, em ordem
+
+- Organize os pontos que você já tem. O plano Pessoal do GO Manager é grátis para sempre: saldos, vencimentos e o custo de cada milha, num lugar só.
+
+- Entenda o seu custo. Use a calculadora do custo do milheiro e o simulador de transferência bonificada antes de comprar ou transferir.
+
+- Baixe a planilha de milhas grátis, se preferir começar no papel.
+
+- Leia os guias de entrada: o que é milheiro, como comprar milhas com segurança, golpes com milhas e quanto cobrar por uma passagem emitida com milhas.
+
+- Se quiser aprender o processo do zero, com exercícios e aulas ao vivo, o Método Norte, da GO Educação. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027.
+
+- Quando for negociar, use o GO Balcão: todos os membros têm identidade conferida e, com intermediação, o PIX fica retido até a emissão. Veja como funciona a segurança.
+
+Esta página explica como o mercado de milhas funciona e não é promessa de ganho, consultoria jurídica nem contábil. Regras conferidas em 25 de novembro de 2026; confira sempre o regulamento do seu programa.
+
+### Dúvidas de quem está começando
+
+Dá para ganhar dinheiro com milhas?
+
+Pode dar, mas não há garantia. O resultado depende do seu custo do milheiro, das regras de cada programa, do preço que alguém paga e do tempo que você dedica. Os programas podem proibir a venda e bloquear contas. Faça as contas antes de comprar pontos.
+
+Preciso de CNPJ?
+
+Depende do volume e de como você vai operar. O ganho com a venda de milhas pode ser tributado. Converse com um contador antes de vender com frequência; esta página não substitui essa orientação.
+
+Posso ter a conta bloqueada?
+
+Sim. Os principais programas preveem suspensão ou exclusão da conta de quem negocia milhas com terceiros. Leia o regulamento do seu programa.
+
+Quanto preciso para começar?
+
+Não há um valor certo. Comece com os pontos que você já tem e descubra o seu custo do milheiro na calculadora grátis. Se o custo ficar acima do que alguém paga pelo milheiro, a operação não tem margem.
+
+Por onde começo?
+
+Organize os seus pontos no plano Pessoal do GO Manager, que é grátis, entenda o seu custo com a calculadora e o simulador, e leia os guias de entrada do blog. Se quiser aprender com aulas, conheça o Método Norte, da GO Educação. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027.
+
+---
+
+# Calculadora de custo do milheiro grátis
+
+Endereço: https://gonorte.com.br/calculadora-custo-do-milheiro/
+
+Calcule o custo do milheiro de uma compra de pontos ou milhas, com bônus de transferência, e veja o lucro se vender. Grátis, sem cadastro.
+
+Ferramenta grátis
+
+## Calculadora de custo do milheiro
+
+Informe quanto pagou e quantos pontos recebeu. Se transferiu com bônus, a conta já inclui. Nada é enviado: o cálculo acontece no seu navegador.
+
+Milhas no programa –
+
+Custo do milheiro (R$ por 1.000 milhas) –
+
+Quer esse número atualizado sozinho a cada compra, transferência e venda, por titular e por programa? O GO Manager faz essa conta para você, com plano grátis.
+
+### Como a conta é feita
+
+O que é o custo do milheiro?
+
+É quanto você pagou, em média, por cada 1.000 milhas ou pontos. A fórmula é: valor pago ÷ milhas recebidas × 1.000. Exemplo: R$ 1.750,00 por 50.000 milhas dá R$ 35,00 o milheiro.
+
+Como o bônus de transferência entra na conta?
+
+O bônus aumenta as milhas que chegam ao programa sem mudar o valor pago. Com 50.000 pontos e 100% de bônus, chegam 100.000 milhas, e o custo do milheiro cai pela metade.
+
+Para que serve o campo "pontos para cada milha"?
+
+Alguns programas transferem em proporção diferente de 1 para 1. Se cada 2 pontos viram 1 milha, informe 2. Na dúvida, confira a regra da transferência no site do programa.
+
+Como é calculado o lucro?
+
+Lucro = (preço de venda do milheiro − custo do milheiro) × milhas ÷ 1.000. É uma estimativa: não inclui taxas, impostos ou custos de emissão.
+
+Os dados que eu digito ficam salvos?
+
+Não. A conta é feita no seu navegador e nada é enviado para a GONORTE.
+
+Ler o guia completo do custo do milheiro
+
+---
+
+# Calculadora de valor da milha em reais, grátis
+
+Endereço: https://gonorte.com.br/calculadora-valor-da-milha/
+
+Descubra quanto cada milheiro rende numa passagem, compare com o custo das suas milhas e com o preço de venda, e saiba se vale emitir com milhas.
+
+Ferramenta grátis
+
+## Calculadora de valor da milha
+
+Informe o preço da passagem em dinheiro e quantas milhas ela custa. A calculadora mostra quanto cada milheiro rende nessa emissão e compara com o custo das suas milhas. Nada é enviado: a conta acontece no seu navegador.
+
+Cada milheiro rende nesta emissão –
+
+Quer saber o custo real do seu milheiro, por titular e por programa, atualizado a cada compra e transferência? O GO Manager faz essa conta para você, com plano grátis.
+
+### Como a conta é feita
+
+O que é o valor da milha numa emissão?
+
+É quanto você deixa de pagar em dinheiro para cada 1.000 milhas usadas. A fórmula é: (preço em dinheiro − taxas da emissão com milhas) ÷ milhas × 1.000. Exemplo: passagem de R$ 1.250,00 por 40.000 milhas e R$ 50,00 de taxas dá R$ 30,00 por milheiro.
+
+Por que descontar as taxas?
+
+Na emissão com milhas, a companhia costuma cobrar taxas de embarque em dinheiro. Esse valor você paga de qualquer jeito, então ele não conta como economia das milhas. Se o preço em dinheiro já não inclui taxas, deixe o campo em zero.
+
+Como sei se vale emitir com milhas?
+
+Compare o valor da emissão com o custo do seu milheiro. Se a emissão rende mais do que as milhas custaram, usar milhas sai mais barato do que pagar em dinheiro. Se rende menos, pagar em dinheiro e guardar as milhas pode ser melhor.
+
+E se eu pudesse vender as milhas?
+
+Se o preço de venda do milheiro for maior do que o valor da emissão, vender rende mais em reais. Antes, leia o regulamento do seu programa e veja o guia vender milhas com segurança.
+
+Os dados que eu digito ficam salvos?
+
+Não. A conta é feita no seu navegador e nada é enviado para a GONORTE.
+
+Ler o guia: quanto vale uma milha em reais
+
+---
+
+# Simulador de transferência bonificada grátis
+
+Endereço: https://gonorte.com.br/simulador-transferencia-bonificada/
+
+Simule a transferência bonificada de pontos (Livelo, Esfera etc.) para LATAM Pass, Smiles ou Azul: milhas recebidas, novo custo do milheiro e lucro se vender.
+
+Ferramenta grátis
+
+## Simulador de transferência bonificada
+
+Informe os pontos do banco, quanto pagou por eles e o bônus da promoção. O simulador mostra quantas milhas chegam, o novo custo do milheiro e quanto sobra se vender. Nada é enviado: a conta acontece no seu navegador.
+
+Milhas que chegam no destino –
+
+Custo do milheiro depois do bônus –
+
+Faz transferências toda promoção? O GO Manager registra cada compra e transferência e recalcula o custo do milheiro de cada conta sozinho, com plano grátis. Criar conta grátis.
+
+### Como a simulação é feita
+
+Como são calculadas as milhas que chegam?
+
+Primeiro os pontos viram milhas pela proporção do programa (pontos ÷ pontos para cada milha). Depois entra o bônus: milhas × bônus ÷ 100, arredondado para baixo. Exemplo: 50.000 pontos em 1 para 1 com 100% de bônus chegam como 100.000 milhas.
+
+Como fica o custo do milheiro depois do bônus?
+
+É o valor pago pelos pontos dividido pelas milhas que chegam, vezes 1.000. Com R$ 1.750,00 por 50.000 pontos (R$ 35,00 o milheiro) e 100% de bônus, o custo cai para R$ 17,50 por milheiro.
+
+O que é pointsback e como entra na conta?
+
+Algumas promoções devolvem parte dos pontos ao programa de origem. Os pontos devolvidos valem o mesmo custo do milheiro que você pagou e são descontados do valor pago antes de calcular o novo custo. É a mesma conta do simulador do GO Manager.
+
+Como é calculado o lucro se vender?
+
+Lucro = (preço de venda do milheiro − custo do milheiro depois do bônus) × milhas ÷ 1.000. É uma estimativa: não inclui taxas, impostos, limite de bônus da promoção nem custos de emissão.
+
+Qual preço de venda devo usar?
+
+O preço que você consegue de verdade para aquele programa. Quando há ofertas suficientes no GO Balcão para o programa de destino, o simulador sugere a mediana delas como referência. Não é cotação oficial.
+
+Os dados que eu digito ficam salvos?
+
+Não. A conta é feita no seu navegador e nada é enviado para a GONORTE.
+
+Ler o guia da transferência bonificada
+
+---
+
+# Planilha de controle de milhas grátis (Excel)
+
+Endereço: https://gonorte.com.br/planilha-de-milhas/
+
+Baixe grátis a planilha de milhas da GONORTE: saldos por titular e programa, custo do milheiro, transferências com bônus e lucro das vendas.
+
+Ferramenta grátis
+
+## Planilha de controle de milhas
+
+Saldos por titular e programa, custo do milheiro, transferências com bônus e lucro das vendas, com as fórmulas prontas. Abre no Excel, no Google Planilhas e no LibreOffice.
+
+Baixar a planilha grátis (.xlsx)
+
+Sem cadastro e sem e-mail.
+
+### O que vem na planilha
+
+Contas Uma linha por programa e titular, com saldo, total pago, vencimento e o custo do milheiro calculado.
+
+Movimentações Compras, transferências, bônus, vendas e emissões, com as milhas creditadas calculadas pela proporção e pelo bônus.
+
+Vendas Receita, custo e lucro de cada venda pelo preço e pelo custo do milheiro, com os totais no fim.
+
+Como usar O passo a passo para preencher. As colunas calculadas ficam em cinza.
+
+### Perguntas sobre a planilha
+
+A planilha é grátis mesmo?
+
+Sim. Pode baixar, usar e adaptar à sua operação, sem cadastro.
+
+Funciona no Google Planilhas?
+
+Sim. Abra o Google Planilhas, vá em Arquivo › Importar e escolha o arquivo baixado. As fórmulas continuam funcionando.
+
+Como a planilha calcula o custo do milheiro?
+
+Na aba Contas: total pago ÷ saldo × 1.000. Para uma compra isolada, use a calculadora de custo do milheiro.
+
+Qual o limite da planilha?
+
+Ela não soma sozinha entre as abas: depois de cada movimentação, você atualiza o saldo e o total pago na aba Contas. Com muitos titulares e programas, isso vira trabalho manual.
+
+Qual a diferença para o GO Manager?
+
+No GO Manager cada compra, transferência e venda atualiza o saldo e o custo do milheiro na hora, por titular e por programa, com o lucro de cada venda. Tem plano grátis.
+
+---
+
+# Gestão de milhas: o que é e como fazer bem
+
+Endereço: https://gonorte.com.br/gestao-de-milhas/
+
+Guia de gestão de milhas: o que é, para quem é, como calcular o custo do milheiro, cuidar de vencimentos e medir o lucro, com ferramentas grátis.
+
+Guia
+
+## Gestão de milhas: o que é, como fazer e quanto custa
+
+Gestão de milhas é saber, a qualquer momento, quantas milhas você tem, quanto pagou por elas, quando vencem e quanto cada uso ou venda rendeu. Este guia junta tudo o que a GONORTE publicou sobre o assunto.
+
+### O que é gestão de milhas
+
+É o controle organizado das contas em programas de fidelidade: saldos, vencimentos, origem de cada milha e o custo de cada lote. Vai além de anotar o saldo. A pergunta que a gestão responde é: quanto custou cada mil milhas, e quanto elas valem agora?
+
+Sem essa resposta, não dá para saber se uma transferência com bônus valeu a pena, se uma emissão foi barata ou se uma venda deu lucro.
+
+### Para quem é
+
+- Viajante que acumula muito. Pontos do cartão, de clubes e de compras, espalhados em vários programas e em nome da família.
+
+- Milheiro. Quem compra pontos em promoção, transfere com bônus e vende ou emite para terceiros. Aqui, a gestão é a diferença entre lucro e prejuízo.
+
+- Agente e agência. Quem administra contas de clientes e emite passagens com milhas, próprias ou de fornecedores.
+
+### Os 4 números que importam
+
+- Saldo por titular e programa. As milhas são da pessoa (CPF) e não passam livremente de uma conta para outra.
+
+- Custo do milheiro. Valor pago ÷ milhas recebidas × 1.000. Quando as milhas chegam de compras diferentes, vale o custo médio da conta. Veja como calcular o custo do milheiro.
+
+- Vencimento. Milha vencida é dinheiro perdido. Cada programa tem regra própria de validade.
+
+- Resultado de cada uso. Numa emissão, quanto a passagem custaria em dinheiro. Numa venda, o preço recebido menos o custo das milhas usadas.
+
+Lucro da venda = (preço de venda do milheiro − custo do milheiro) × milhas ÷ 1.000
+
+### Como fazer a gestão de milhas
+
+#### Sozinho, com planilha
+
+Funciona bem para poucas contas. A planilha de milhas grátis já tem as fórmulas de custo e de lucro. O custo é o tempo: cada movimento pede uma atualização manual, e um esquecimento muda o custo médio.
+
+#### Com um sistema de controle de milhas
+
+Um sistema guarda cada movimento e refaz as contas sozinho. No controle de milhas do GO Manager, o custo do milheiro é recalculado a cada compra, transferência e bônus, e cada venda mostra o lucro com o custo real das milhas usadas.
+
+#### Quanto custa
+
+A planilha é grátis. No GO Manager, o plano Pessoal é grátis para sempre (até 5 contas e 1 titular), e os planos PRO e Gestor são pagos. Os valores atualizados estão em planos e preços.
+
+### Guias de gestão de milhas
+
+- Como calcular o custo do milheiro, com exemplos
+
+- Transferência bonificada: quando vale a pena
+
+- Milhas vencendo: o que fazer
+
+- Quanto vale uma milha em reais
+
+- O que é milheiro: glossário de milhas
+
+- Controle de milhas: saldo, validade e custo por titular
+
+### Ferramentas grátis
+
+- Calculadora de custo do milheiro: o custo de uma compra ou transferência, com bônus.
+
+- Calculadora de valor da milha: quanto cada milha rende numa emissão, comparado com o custo.
+
+- Simulador de transferência bonificada: milhas que chegam, novo custo do milheiro e lucro se vender.
+
+- Planilha de controle de milhas: saldos, custo médio e vendas, para baixar.
+
+Se a ideia é vender as milhas que sobram, o próximo passo é o guia vender milhas com segurança.
+
+### Perguntas sobre gestão de milhas
+
+Qual a diferença entre controle e gestão de milhas?
+
+Controle é saber o saldo e o vencimento. Gestão inclui o custo de cada milha e o resultado de cada uso ou venda, para decidir o que comprar, transferir, emitir ou vender.
+
+Preciso de um sistema para fazer a gestão?
+
+Não. Com poucas contas, uma planilha basta. O sistema compensa quando há vários titulares e programas, ou quando você vende milhas e precisa do lucro real de cada venda.
+
+A gestão de milhas é só para quem vende?
+
+Não. Quem só viaja também ganha ao saber o custo das milhas: dá para comparar com o preço da passagem em dinheiro e não deixar milhas vencerem.
+
+---
+
+# Controle de milhas por titular e por programa
+
+Endereço: https://gonorte.com.br/controle-de-milhas/
+
+Controle de milhas por titular e programa: saldos, vencimentos, custo do milheiro e lucro de cada venda no GO Manager. Comece grátis ou baixe a planilha.
+
+Controle de milhas
+
+## Controle de milhas com saldo, validade e custo de cada conta
+
+Quando as milhas estão em vários programas e em nome de várias pessoas, a planilha começa a errar. O GO Manager guarda cada conta por titular, recalcula o custo do milheiro a cada movimento e mostra o lucro de cada venda.
+
+Começar grátis no GO Manager
+
+Baixar a planilha grátis
+
+### O que um bom controle de milhas precisa mostrar
+
+Saldo por titular e programa Cada CPF com as contas dele, em todos os programas, num lugar só.
+
+Vencimentos Quando cada lote de milhas vence, para usar ou vender antes de perder.
+
+Custo do milheiro Quanto custou cada mil milhas, recalculado a cada compra, transferência e bônus.
+
+Origem de cada milha Extrato com compras, transferências, bônus, vendas e emissões de cada conta.
+
+Lucro de cada venda Preço de venda menos o custo real das milhas usadas, venda por venda.
+
+Pontos a receber Compras no cartão e clubes com os pontos que ainda vão cair, na fatura certa.
+
+### Planilha ou aplicativo de controle de milhas?
+
+Para uma ou duas contas, uma planilha resolve. A planilha de milhas grátis da GONORTE já vem com o custo do milheiro calculado e uma aba para o lucro das vendas.
+
+O problema aparece com o volume. Na planilha, cada compra, transferência ou venda pede que você atualize o saldo e o total pago à mão. Com vários titulares e programas, um esquecimento muda o custo médio e, com ele, o lucro que você acha que teve.
+
+| Planilha | GO Manager |
+
+Custo | Grátis | Plano Pessoal grátis; PRO e Gestor pagos |
+
+Saldo e custo médio | Atualizados à mão | Atualizados a cada lançamento |
+
+Vários titulares | Uma aba ou linha por titular | Carteira por titular (no Pessoal, 1 titular) |
+
+Lucro por venda | Fórmula por linha | Calculado com o custo das milhas usadas |
+
+Equipe | Arquivo compartilhado | Login próprio e permissões por função (Gestor) |
+
+Celular | Depende do aplicativo de planilhas | No navegador, no computador e no celular |
+
+Os limites de cada plano estão em planos e preços.
+
+### Como começar o controle em 3 passos
+
+- Liste as contas. Programa, titular, saldo atual e data de vencimento de cada uma.
+
+- Registre quanto pagou. Se não souber o histórico, comece pelo saldo de hoje e o valor que considera justo; a partir daí, cada compra entra com o valor real.
+
+- Lance cada movimento. Compras, transferências com bônus, vendas e emissões. É isso que mantém o custo do milheiro certo.
+
+Para entender a conta por trás do custo, leia como calcular o custo do milheiro ou use a calculadora grátis. O guia completo do tema está em gestão de milhas.
+
+### Dúvidas sobre o controle de milhas
+
+O GO Manager é grátis?
+
+Tem o plano Pessoal, grátis para sempre, com até 5 contas em programas e 1 titular. Ao criar a conta, você tem 15 dias de teste com os recursos do plano Gestor, sem cartão de crédito.
+
+Preciso informar a senha dos programas?
+
+Não. O controle é feito com os lançamentos que você registra: saldo, compras, transferências, vendas e emissões. Se quiser, pode guardar o login de cada conta no próprio Manager, criptografado; é opcional.
+
+Dá para controlar milhas da família ou de clientes?
+
+Sim. Cada titular tem a própria carteira. O PRO permite até 2 titulares, e o Gestor, clientes ilimitados, com contas de clientes e fornecedores.
+
+Funciona no celular?
+
+Sim. O GO Manager funciona no navegador, no computador e no celular.
+
+---
+
+# Comprar milhas com segurança: como funciona
+
+Endereço: https://gonorte.com.br/comprar-milhas/
+
+Como comprar milhas de outra pessoa: o que você recebe, onde estão os riscos, o que conferir antes de pagar e como o GO Balcão intermedia o PIX até a emissão.
+
+Guia
+
+## Comprar milhas com segurança
+
+Comprar milhas pode deixar a passagem bem mais barata, mas o dinheiro e a emissão passam por pessoas que muitas vezes não se conhecem. Veja como a compra funciona, onde estão os riscos e o que conferir antes de pagar.
+
+Comprar no GO Balcão
+
+Como funciona a segurança
+
+### O que você recebe ao comprar milhas
+
+Na prática, ninguém transfere milhas de uma conta para outra. Quem vende emite a passagem com as milhas da própria conta, em nome dos passageiros que você informa. Você paga pelo milheiro combinado e recebe a reserva emitida, com o localizador.
+
+Por isso, os nomes e documentos precisam estar exatamente como nos documentos oficiais, e você depende de o vendedor emitir o que foi combinado.
+
+### Quanto custa
+
+O preço é combinado por milheiro (cada 1.000 milhas). Para saber se a compra compensa, compare o total com o preço da passagem em dinheiro. A calculadora de valor da milha faz essa conta.
+
+Total da compra = milhas da passagem ÷ 1.000 × preço do milheiro + taxas de embarque
+
+### Onde estão os riscos
+
+- Pagar antes, a desconhecidos. Em grupos e conversas diretas, o comprador costuma pagar primeiro e só depois descobre se a emissão acontece.
+
+- Identidade não confirmada. Qualquer pessoa pode se apresentar como vendedor.
+
+- Emissão cancelada depois. A passagem pode ser cancelada pela companhia ou pelo dono da conta depois de emitida.
+
+- Sem regra para desistência. Se o voo mudar ou você desistir, não há nada escrito sobre o que acontece.
+
+Os golpes mais comuns estão em golpes com milhas: como reconhecer e se proteger.
+
+### Checklist antes de pagar
+
+- Quem vende tem a identidade conferida por alguém além de você?
+
+- O pagamento é intermediado, com o vendedor recebendo só depois da emissão?
+
+- Existe reputação pública, com avaliações e histórico?
+
+- As regras de desistência e cancelamento estão escritas?
+
+- Os dados dos passageiros estão iguais aos documentos?
+
+### Como comprar no GO Balcão
+
+- Assine o módulo. O Módulo Viajante é para as suas viagens; o Módulo Agentes, para agentes e agências que emitem para clientes. Preços em planos.
+
+- Faça a verificação única. Documento, selfie com o documento, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe.
+
+- Publique a oferta de compra. Programa, quantidade e preço do milheiro. Vendedores aceitam ou fazem contraproposta pelo bot no Telegram.
+
+- Pague com intermediação. O PIX vai para a GONORTE, e o vendedor recebe depois da emissão: quando você confirma ou em até 3 dias, se não houver reclamação. É obrigatória no Viajante e opcional no Agentes, com taxa de R$ 0,75 por milheiro.
+
+- Confira e avalie. Abra a reserva no site da companhia com o localizador, confira tudo e avalie o vendedor.
+
+O passo a passo completo, com mais detalhes, está no artigo como comprar milhas com segurança. Do outro lado da negociação, veja o guia vender milhas.
+
+### Dúvidas de quem compra milhas
+
+Comprar milhas é seguro?
+
+Depende de como a negociação é feita. O risco cai quando a identidade do vendedor é conferida, o pagamento é intermediado até a emissão e há reputação pública. Nenhum sistema elimina o risco por completo.
+
+As milhas vão para a minha conta?
+
+Não. O vendedor emite a passagem com as milhas da conta dele, em nome dos passageiros que você informar.
+
+E se a passagem for cancelada depois da emissão?
+
+Pelas regras do GO Balcão, se a emissão for cancelada, bloqueada ou perdida, o comprador é reembolsado integralmente. Se a apuração concluir que a perda foi por negligência do vendedor ou do titular da conta, o vendedor faz uma nova emissão equivalente, sem custo. Se a perda foi só por falha da companhia aérea, a nova emissão é por conta do comprador.
+
+Posso desistir depois de pagar?
+
+Antes da emissão, a desistência tem estorno. Depois, o cancelamento segue o prazo e os descontos informados nas perguntas frequentes do GO Balcão.
+
+---
+
+# Vender milhas com segurança: como funciona
+
+Endereço: https://gonorte.com.br/vender-milhas/
+
+Como funciona a venda de milhas, os riscos de negociar com desconhecidos, como saber se a venda dá lucro e como vender com mais segurança no GO Balcão.
+
+Guia
+
+## Vender milhas com segurança
+
+Como a venda de milhas funciona, como saber se ela dá lucro e o que fazer para não levar calote nem cair em golpe.
+
+### Como a venda de milhas funciona
+
+As milhas não passam de uma conta para outra. Quem "vende milhas" emite uma passagem com as milhas da própria conta, em nome de um passageiro indicado pelo comprador, e recebe por isso um valor combinado por milheiro (cada 1.000 milhas). O comprador pode ser uma pessoa, uma agência ou uma empresa que compra milhas.
+
+### Antes de tudo: o regulamento do seu programa
+
+Cada programa de fidelidade tem regras próprias sobre emissões para terceiros. Leia o regulamento do seu programa antes de negociar: a responsabilidade pelo uso da conta é do titular.
+
+### Os riscos de quem vende
+
+- Passagem cancelada. Se a emissão for cancelada depois, o comprador vai cobrar de você.
+
+- Calote. Emitir antes de receber, sem intermediação, para alguém que você não conhece.
+
+- Golpe com os seus dados. Pedidos de login, senha ou código de confirmação da sua conta. Nunca passe. Veja os golpes mais comuns.
+
+### Como vender com mais segurança
+
+- Leia o regulamento do seu programa, em especial as regras de emissão para terceiros.
+
+- Saiba o seu custo. Sem o custo do milheiro, você não sabe se a venda dá lucro. Use a calculadora de custo do milheiro.
+
+- Respeite os limites de emissão para terceiros do seu programa.
+
+- Negocie com quem tem identidade conferida e, de preferência, com pagamento intermediado.
+
+- Emita exatamente o combinado, com os nomes iguais aos documentos, e guarde os comprovantes.
+
+- Nunca passe login, senha ou código da sua conta para ninguém.
+
+### Como funciona a venda no GO Balcão
+
+No GO Balcão, quem quer comprar publica a oferta (programa, quantidade e preço do milheiro) e você aceita ou faz contraproposta pelo bot no Telegram, com alertas dos programas em que tem milhas. Todos os membros passam por verificação de identidade conferida pela equipe. Com intermediação, o comprador paga à GONORTE e você recebe por PIX depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação. A venda faz parte do Módulo Milheiro (veja os planos).
+
+O GO Balcão não muda as regras dos programas: a responsabilidade pelo uso da conta continua sendo do titular.
+
+Do outro lado da negociação, veja o guia comprar milhas. Para organizar custo e lucro antes de vender, veja o guia de gestão de milhas.
+
+### Dúvidas de quem quer vender milhas
+
+Como recebo pela venda no GO Balcão?
+
+Por PIX. Com intermediação, você recebe depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação. Sem intermediação, o comprador paga direto a você em até 20 horas depois da emissão; nesse caso a GONORTE não segura o dinheiro.
+
+Quanto se paga pelo milheiro?
+
+Não há tabela oficial. O preço é combinado entre comprador e vendedor e varia por programa, quantidade e prazo de emissão.
+
+Preciso declarar no imposto de renda?
+
+A Receita Federal não publicou orientação específica sobre a venda de milhas por pessoa física. Converse com um contador.
+
+---
+
+# Golpes com milhas: como reconhecer e se proteger
+
+Endereço: https://gonorte.com.br/golpes-de-milhas/
+
+Os golpes mais comuns na compra e venda de milhas e passagens com milhas, com casos noticiados pela polícia e pelos programas, e como se proteger de cada um.
+
+Segurança
+
+## Golpes com milhas: como reconhecer e se proteger
+
+Quase todo golpe com milhas tem uma de duas causas: o dinheiro vai antes da passagem, ou alguém consegue acesso à sua conta. Veja os golpes que a polícia e os programas já noticiaram e como evitar cada um.
+
+### 1. Pagamento antecipado por uma passagem que não existe
+
+O golpista anuncia passagens com milhas muito abaixo do preço, recebe o PIX e some, ou envia uma reserva falsa. A Polícia Civil do Piauí prendeu um suspeito desse golpe em 2023.
+
+Como se proteger: desconfie de preço bom demais, não pague antes da emissão sem intermediação e confira a reserva no site da companhia com o localizador.
+
+### 2. Passagem cancelada dias antes do voo
+
+A passagem é emitida de verdade, mas cancelada perto da viagem, e o dinheiro não volta. Em outubro de 2026, a Polícia Civil do Ceará prendeu uma suspeita em Fortaleza por esse tipo de golpe.
+
+Como se proteger: negocie com quem tem identidade conferida e reputação, e prefira plataformas com regra escrita para cancelamento depois da emissão.
+
+### 3. Emissão com milhas de terceiros, cancelada pelo dono da conta
+
+O intermediário emite com milhas de outra pessoa, que depois cancela a passagem. Em agosto de 2026, a Polícia Civil de Santa Catarina investigou um caso com prejuízo de mais de R$ 500 mil.
+
+Como se proteger: saiba quem é o dono da conta que vai emitir e como o vendedor responde se a emissão for cancelada.
+
+### 4. Invasão de contas e "passagens de desistência"
+
+Criminosos usam dados vazados para entrar em contas de programas e de agências e emitir passagens, revendidas como "desistência". Em 2024, a polícia do Distrito Federal desarticulou uma quadrilha que fazia isso.
+
+Como se proteger: use senha única no programa, ative a verificação em duas etapas quando houver e desconfie de passagem "de desistência" barata.
+
+### 5. Sites falsos e falso atendente
+
+Mensagens dizendo que as suas milhas vão expirar levam a sites falsos que pedem login e senha. Outra variação é o falso atendente, que pede o código de confirmação. A LATAM tem uma página oficial sobre esses golpes.
+
+Como se proteger: entre no programa digitando o endereço, nunca pelo link da mensagem, e nunca passe senha ou código para ninguém.
+
+### Os 6 sinais de alerta
+
+- Preço muito abaixo do que se vê em outros lugares.
+
+- Pressa: "só hoje", "último lugar".
+
+- Pagamento antes da emissão, direto para uma pessoa que você não conhece.
+
+- Perfil sem histórico ou sem identidade conferida.
+
+- Pedido de login, senha ou código da sua conta.
+
+- Reserva que você não consegue abrir no site da companhia.
+
+### Caiu num golpe?
+
+- Registre um boletim de ocorrência (em muitos estados dá para fazer pela internet).
+
+- Fale com o seu banco e peça a contestação do PIX pelo Mecanismo Especial de Devolução (MED).
+
+- Se a sua conta no programa foi invadida, fale com a central do programa e troque a senha.
+
+### Como o GO Balcão trata esses riscos
+
+No GO Balcão, todos os membros passam por verificação de identidade conferida pela equipe, e o PIX pode ser intermediado até a emissão. Cada membro tem reputação pública. Pelo termo que todo membro assina, se a emissão for cancelada, o comprador deve ser reembolsado. Veja os detalhes em segurança no GO Balcão e os guias comprar milhas e vender milhas.
+
+Está começando com milhas? Veja por onde começar, com as regras dos programas e os riscos.
+
+Casos conferidos em 18 de novembro de 2026, nas fontes indicadas. Nenhum sistema elimina o risco por completo.
+
+### Dúvidas sobre golpes com milhas
+
+Qual é o golpe mais comum com milhas?
+
+Pedir o pagamento antes da emissão e não entregar a passagem, ou entregar uma reserva falsa. Por isso, a intermediação do pagamento até a emissão é a proteção mais importante.
+
+Como confiro se a passagem é verdadeira?
+
+Abra a reserva no site ou no aplicativo da companhia aérea com o localizador e o sobrenome, e confira nomes, datas e trechos.
+
+Posso passar o código que chegou no meu celular?
+
+Não. Nenhum comprador, vendedor ou atendente legítimo precisa do código de confirmação da sua conta.
+
+---
+
+# Blog de milhas: custo do milheiro e transferências
+
+Endereço: https://gonorte.com.br/blog/
+
+Guias práticos sobre milhas, custo do milheiro, transferências bonificadas e como comprar e vender milhas com segurança.
+
+---
+
+# Como trabalhar com milhas: guia sem promessa
+
+Endereço: https://gonorte.com.br/blog/como-trabalhar-com-milhas/
+
+O que faz quem trabalha com milhas, as três formas de atuar, quanto tempo e dinheiro a operação exige, os riscos reais e como começar pequeno.
+
+## Como trabalhar com milhas: um guia sem promessa
+
+Trabalhar com milhas é comprar, transferir, emitir e vender com controle de custo. Veja as três formas de atuar, o que a rotina exige e os riscos antes de começar.
+
+Quem pesquisa "como trabalhar com milhas" encontra muita promessa de dinheiro rápido. Este guia não faz nenhuma. Ele explica o que a pessoa que trabalha com milhas faz no dia a dia, o que essa rotina exige e onde estão os riscos, para você decidir com os pés no chão.
+
+### O que é trabalhar com milhas
+
+Trabalhar com milhas é transformar pontos e milhas em dinheiro ou em passagens para outras pessoas, sabendo quanto cada milha custou. Na prática, a rotina tem quatro partes:
+
+- Acumular ou comprar: pontos do cartão, compras de pontos com desconto e transferências bonificadas.
+
+- Controlar: saldo, validade e custo do milheiro de cada conta, por titular.
+
+- Usar: emitir passagens para clientes ou vender as milhas a quem emite.
+
+- Atender: cotar, combinar o pagamento, emitir e resolver alteração ou cancelamento.
+
+Quem pula a segunda parte costuma descobrir tarde que vendeu abaixo do que pagou.
+
+### As três formas de atuar
+
+Forma | O que faz | O que exige |
+
+Emissor para clientes | Emite passagens com milhas para clientes finais e cobra pela passagem. | Conhecer os programas, buscar disponibilidade, atender e saber quanto cobrar. |
+
+Milheiro | Compra ou acumula milhas e vende o milheiro a quem emite. | Controle rigoroso do custo, conhecer as regras de cada programa e vender com segurança. |
+
+Agência que emite com milhas | Inclui a emissão com milhas no que a agência já vende. | Equipe treinada, controle das contas dos clientes e regras claras de remarcação. |
+
+As formas se misturam: muita gente começa vendendo milhas próprias e depois passa a emitir para clientes.
+
+### Quanto tempo e dinheiro a operação exige
+
+Não existe um número certo, e desconfie de quem promete renda por mês. O que dá para dizer com segurança:
+
+- Tempo: cada emissão envolve cotação, busca de disponibilidade, conferência de dados e atendimento depois da viagem. No começo, uma emissão leva bem mais tempo do que parece.
+
+- Dinheiro parado: milhas compradas são dinheiro que só volta quando você emite ou vende. Promoções de transferência pedem pontos já comprados.
+
+- Margem que muda: o valor do milheiro no mercado sobe e desce de semana para semana. Uma operação que dava lucro pode deixar de dar.
+
+Comece com um volume que você aguentaria perder sem apertar as contas da casa.
+
+### Os riscos reais
+
+- Regras do programa: cada programa tem regulamento próprio, e vários limitam ou proíbem a venda de milhas e a emissão para terceiros. Leia o regulamento do programa que você usa antes de começar.
+
+- Bloqueio de conta: movimento fora do padrão, muitos beneficiários e uso de CPFs de terceiros podem levar o programa a bloquear a conta, às vezes com o saldo dentro.
+
+- Golpes: comprador que some depois da emissão, pagamento falso e pedido de senha. Veja os golpes mais comuns e como se proteger.
+
+- Preço errado: vender ou emitir sem saber o custo da conta. É o erro mais silencioso, porque só aparece no fim do mês.
+
+- Impostos: se a atividade virar fonte de renda, converse com um contador sobre como declarar e formalizar.
+
+### Como começar pequeno
+
+- Organize as contas que você já tem: saldo, validade e custo de cada uma. A planilha grátis resolve no começo.
+
+- Faça as contas de uma emissão de verdade antes de oferecer: piso, teto e o valor de mercado das milhas.
+
+- Comece com conhecidos, com as regras de remarcação e cancelamento combinadas por escrito.
+
+- Ao vender milhas, prefira quem tem identidade conferida e pagamento intermediado.
+
+- Anote tudo. Sem registro, você não sabe se a operação deu lucro.
+
+### Onde aprender e organizar
+
+Para controlar as contas, o GO Manager calcula o custo do milheiro de cada conta a partir do que você lança, e o plano Pessoal é grátis. Para aprender do começo, com emissão, custo, preço e compra e venda com segurança, o Método Norte, da GO Educação. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027.
+
+---
+
+# Quanto cobrar por uma passagem emitida com milhas
+
+Endereço: https://gonorte.com.br/blog/quanto-cobrar-passagem-emitida-com-milhas/
+
+Como montar o preço de uma emissão com milhas: custo do milheiro, taxas, o valor de mercado das milhas e a margem, com um exemplo do começo ao fim.
+
+## Quanto cobrar do cliente por uma passagem emitida com milhas
+
+O preço certo fica entre dois limites: o que a emissão custa para você e o que o cliente pagaria em dinheiro. Veja como calcular os dois e o custo que quase ninguém conta.
+
+Quem emite com milhas para clientes costuma errar o preço de dois jeitos: cobra pouco porque olha só o que pagou nas milhas, ou cobra muito e perde a venda para a tarifa em dinheiro. O preço certo fica entre dois limites, e dá para calcular os dois antes de responder o cliente.
+
+### O piso: quanto a emissão custa para você
+
+O custo de uma emissão tem três partes: as milhas usadas, multiplicadas pelo seu custo do milheiro; as taxas de embarque, pagas em dinheiro; e o seu tempo, se você cobra taxa de serviço. O custo do milheiro é a média do que você pagou por cada mil milhas daquela conta, contando compras, transferências e bônus.
+
+Exemplo: 50.000 milhas LATAM Pass numa conta com custo de R$ 22 por milheiro custam R$ 1.100. Com R$ 120 de taxas, o piso é R$ 1.220.
+
+piso = (milhas ÷ 1.000 × custo do milheiro) + taxas = (50 × R$ 22,00) + R$ 120,00 = R$ 1.220,00
+
+Abaixo disso, você paga para trabalhar.
+
+### O teto: quanto o cliente pagaria em dinheiro
+
+O limite de cima é a tarifa em dinheiro do mesmo voo, na mesma data e classe, com as mesmas regras de bagagem. Se a emissão com milhas sai mais cara que isso, o cliente compra direto na companhia. No exemplo, a mesma passagem custa R$ 2.400 em dinheiro.
+
+### O custo que quase ninguém conta: o valor de mercado das milhas
+
+As milhas que você usa na emissão poderiam ser vendidas. Se o milheiro LATAM sai a R$ 30 entre profissionais, aquelas 50.000 milhas valem R$ 1.500 hoje, e não os R$ 1.100 que você pagou.
+
+preço mínimo para valer mais que vender = (50 × R$ 30,00) + R$ 120,00 = R$ 1.620,00
+
+Emitir só vale mais a pena que vender as milhas quando o preço ao cliente passa desse valor.
+
+### Montando o preço
+
+Preço ao cliente | Lucro sobre o que você pagou | Ganho sobre vender as milhas |
+
+R$ 1.500 | R$ 280 | −R$ 120 (melhor vender) |
+
+R$ 1.900 | R$ 680 | R$ 280 |
+
+R$ 2.200 | R$ 980 | R$ 580 |
+
+Com R$ 1.900, o cliente economiza R$ 500 em relação à tarifa e você ganha R$ 280 a mais do que ganharia vendendo as milhas. É um preço fácil de defender: o cliente vê a economia, e você sabe exatamente quanto ganhou.
+
+Os valores são de exemplo. O custo do milheiro muda de conta para conta, e o valor de mercado muda de semana para semana.
+
+### Três cuidados
+
+- Confira a tarifa em dinheiro no dia da cotação. Ela muda rápido, e o teto muda junto.
+
+- Use o custo do milheiro da conta que vai emitir, não uma média geral. Contas diferentes têm custos diferentes.
+
+- Deixe claras as regras de remarcação e cancelamento da emissão com milhas, que costumam ser diferentes das da tarifa paga.
+
+O passo a passo da emissão em si, do pedido ao localizador, está em como emitir passagem com milhas para clientes.
+
+### Fazendo a conta sem planilha
+
+No GO Manager, o custo do milheiro de cada conta é calculado sozinho a partir do que você lança, e cada venda registrada mostra o lucro. Antes de responder o cliente, você já sabe o piso da conta que vai emitir. O teste do plano Gestor é grátis por 15 dias, sem cartão.
+
+Quer aprender isso do zero, com exercícios e aulas ao vivo? O Método Norte é a formação da GO Educação em emissão de passagens com milhas, custo do milheiro e preço de venda. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027.
+
+---
+
+# Como funciona um balcão de milhas e como avaliar
+
+Endereço: https://gonorte.com.br/blog/como-funciona-um-balcao-de-milhas/
+
+O que é um balcão de milhas, como uma negociação acontece do anúncio à emissão e os pontos para avaliar um balcão antes de comprar ou vender milhas.
+
+## Como funciona um balcão de milhas
+
+O que é um balcão de milhas, como a negociação acontece do anúncio à emissão e o que conferir antes de confiar num deles.
+
+Um balcão de milhas é o lugar onde quem tem milhas sobrando encontra quem quer viajar pagando menos. O nome vem dos grupos de mensagens em que compradores e vendedores publicavam ofertas, como num balcão de negócios. Hoje existem desde grupos abertos no Telegram e no WhatsApp até plataformas com verificação e pagamento intermediado.
+
+Este artigo explica como uma negociação funciona e o que avaliar antes de confiar num balcão. Para o passo a passo de cada lado, veja os guias comprar milhas e vender milhas.
+
+### Como uma negociação acontece
+
+- A oferta. O comprador diz o programa, quantas milhas precisa e quanto paga por milheiro. Em alguns balcões, é o vendedor que anuncia.
+
+- O acordo. O outro lado aceita ou faz uma contraproposta, até fecharem preço e prazo de emissão.
+
+- O pagamento. Direto ao vendedor ou, nos balcões com intermediação, a um terceiro que segura o valor.
+
+- A emissão. O vendedor emite a passagem com as milhas da conta dele, em nome dos passageiros do comprador, e envia o localizador.
+
+- A conferência. O comprador confere a reserva no site da companhia. Com intermediação, só então o vendedor recebe.
+
+As milhas não mudam de conta: o que se negocia é a emissão. Por isso a passagem fica ligada à conta do vendedor, e problemas nessa conta podem afetar a viagem.
+
+### Grupo aberto ou balcão com regras
+
+| Grupo aberto | Balcão com regras |
+
+Quem entra | Qualquer pessoa | Quem passa pela verificação |
+
+Pagamento | Direto, em geral antes da emissão | Pode ser intermediado até a emissão |
+
+Histórico | Mensagens que se perdem | Reputação e avaliações públicas |
+
+Problemas | Resolvidos entre as partes | Suporte e regras escritas |
+
+Custo | Em geral grátis | Assinatura e/ou taxa |
+
+### Como avaliar um balcão antes de negociar
+
+- Quem está por trás? Empresa com CNPJ, endereço de contato e termos publicados.
+
+- Como a identidade é conferida? Documento e selfie conferidos por uma equipe, não só um cadastro com e-mail.
+
+- Para onde vai o dinheiro? Se há intermediação, quem recebe o PIX e quando o vendedor é pago.
+
+- Existe reputação pública? Avaliações e histórico de negociações concluídas, consultáveis antes de fechar.
+
+- As regras de desistência estão escritas? Antes e depois da emissão.
+
+- O que acontece se a passagem for cancelada depois? Deve haver regra para reembolso ou nova emissão.
+
+- Há suporte? Um canal para reportar problema durante a negociação.
+
+### Como o GO Balcão funciona
+
+O GO Balcão é um balcão de milhas no Telegram, da GONORTE. Quem quer comprar publica a oferta pelo bot; vendedores aceitam ou fazem contraproposta. Todos os membros passam por uma verificação única (documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe). Com intermediação, o PIX é recebido pela GONORTE e repassado ao vendedor depois da emissão. Cada membro tem reputação pública.
+
+Os detalhes, incluindo o que acontece se a emissão for cancelada, estão em segurança no GO Balcão.
+
+Este artigo descreve como funcionam as negociações de milhas entre pessoas e não substitui a leitura dos regulamentos dos programas de fidelidade nem dos termos de cada balcão.
+
+---
+
+# Emitir passagem com milhas para clientes
+
+Endereço: https://gonorte.com.br/blog/emitir-passagem-com-milhas-para-clientes/
+
+Passo a passo para agentes e agências emitirem passagens com milhas para clientes: cotação, limites de terceiros dos programas, conferência e registro do lucro.
+
+## Como emitir passagem com milhas para clientes
+
+Da cotação ao localizador: os passos de uma emissão com milhas para cliente, os limites de terceiros de cada programa e como registrar o lucro.
+
+Emitir passagens com milhas para clientes é o trabalho do dia a dia de muitos agentes de viagem. A conta parece simples: o cliente paga em dinheiro, o agente emite com milhas e fica com a diferença. Na prática, cada emissão tem regras do programa, prazos e números que precisam fechar.
+
+Este guia mostra os passos de uma emissão para cliente, do pedido ao localizador, e o que registrar para saber o lucro de verdade.
+
+### 1. Pegue os dados certos do pedido
+
+Antes de cotar, anote:
+
+- origem, destino, datas e flexibilidade;
+
+- nome completo de cada passageiro, igual ao documento, e a data de nascimento;
+
+- CPF ou passaporte, conforme o voo;
+
+- bagagem, classe e se há criança ou bebê.
+
+Nome errado é a causa mais comum de retrabalho: em muitas tarifas, corrigir o nome depois da emissão exige cancelar e emitir de novo.
+
+### 2. Cote em milhas e em dinheiro
+
+Compare o preço em milhas com a tarifa em dinheiro do mesmo voo. A conta do valor que cada milheiro rende é:
+
+valor do milheiro = (preço em dinheiro − taxas) ÷ milhas × 1.000
+
+Se o valor do milheiro for menor que o seu custo, emitir com milhas dá prejuízo, e é melhor vender a tarifa em dinheiro. A calculadora de valor da milha faz essa conta e compara com o seu custo.
+
+### 3. Escolha a conta que vai emitir
+
+Com várias contas, a escolha muda o lucro. Olhe três coisas:
+
+- Custo do milheiro de cada conta. Use a mais barata que tenha saldo suficiente.
+
+- Validade das milhas. Prefira as que vencem primeiro.
+
+- Limite de terceiros do programa naquela conta, que vem a seguir.
+
+### 4. Confira o limite de terceiros do programa
+
+Todo programa permite emitir para outras pessoas, mas com limite. Os regulamentos lidos em novembro de 2026 dizem:
+
+Programa | Regra para emitir a terceiros |
+
+Smiles | O titular emite para si e para até 25 pessoas distintas por ano civil. A contagem recomeça a cada ano. |
+
+LATAM Pass | O regulamento limita os resgates a 25 terceiros distintos a cada 12 meses. |
+
+Azul Fidelidade | Lista de beneficiários com limite por categoria e prazo de espera para cada nome novo. Os números mudaram nos últimos anos: confira no regulamento atual. |
+
+Passar do limite descumpre o regulamento do programa. Controle, por conta, quantas pessoas diferentes já receberam emissões no período.
+
+### 5. Emita e confira a reserva
+
+- Emita com o nome exatamente como no documento.
+
+- Pegue o localizador e confira a reserva no site ou no app da companhia, com o sobrenome do passageiro.
+
+- Envie ao cliente o localizador, o horário, a bagagem incluída e as regras de alteração e cancelamento.
+
+### 6. Registre a emissão com o lucro
+
+O lucro de uma emissão é o que o cliente pagou menos o custo das milhas usadas e as taxas:
+
+lucro = valor cobrado − (milhas ÷ 1.000 × custo do milheiro) − taxas
+
+Exemplo ilustrativo: o cliente paga R$ 1.400,00. A emissão usa 40.000 milhas de uma conta com custo de R$ 18,00 o milheiro, e as taxas são R$ 120,00.
+
+R$ 1.400,00 − (40 × R$ 18,00) − R$ 120,00 = R$ 560,00 de lucro
+
+Sem esse registro, o saldo da conta cai, mas ninguém sabe quanto cada emissão rendeu. É aí que a planilha costuma falhar quando o volume cresce.
+
+### 7. Quando as milhas vêm de um fornecedor
+
+Se a conta não tem saldo, há agentes que compram a emissão de um fornecedor. As milhas não mudam de conta: o fornecedor emite com as milhas dele, em nome dos seus passageiros. Nesse caso:
+
+- confira a identidade e a reputação do fornecedor antes de pagar;
+
+- combine prazo de emissão e o que acontece se o bilhete for cancelado;
+
+- prefira pagamento que só libera o dinheiro depois da emissão;
+
+- confira o localizador no site da companhia antes de avisar o cliente.
+
+O guia golpes com milhas mostra os sinais de alerta mais comuns.
+
+### Como a GONORTE ajuda
+
+No GO Manager, cada emissão fica registrada no CRM de passagens com cliente, passageiros, fornecedor e lucro, e o custo do milheiro de cada conta é recalculado a cada compra e transferência. No GO Balcão, o Módulo Agentes permite comprar milhas para emitir para vários CPFs, com vendedores de identidade conferida e intermediação opcional.
+
+Quer aprender isso do zero, com exercícios e aulas ao vivo? O Método Norte é a formação da GO Educação em emissão de passagens com milhas e mercado de milhas. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027.
+
+Cada programa de fidelidade tem o próprio regulamento, e as regras mudam. Leia o regulamento do programa antes de emitir: a responsabilidade pelo uso da conta é do titular.
+
+---
+
+# Milhas vencendo: o que fazer em cada programa
+
+Endereço: https://gonorte.com.br/blog/milhas-vencendo-o-que-fazer/
+
+A validade das milhas na Smiles, LATAM Pass e Azul Fidelidade, como ver o que vence primeiro e as saídas para não perder milhas, com as fontes de cada regra.
+
+## Milhas vencendo: o que fazer
+
+A validade em cada programa, como descobrir o que vence primeiro e as saídas para não perder milhas.
+
+Milha vencida é dinheiro que some da conta. E vence mais do que parece: as milhas costumam expirar por lote, cada um com a sua data, e o aviso do programa nem sempre chega a tempo. Este guia mostra a validade nos três maiores programas e o que fazer quando o prazo está perto. Ele faz parte do guia de gestão de milhas.
+
+### Quanto tempo valem as milhas
+
+Programa | Validade | Fonte |
+
+Smiles | 36 meses (Smiles e Prata), 48 (Ouro) e 120 (Diamante e Diamante Magno) | regulamento, cl. 8.1 |
+
+Clube Smiles | 10 anos nos planos de 1.000 a 5.000; sem validade para as milhas mensais dos planos de 7.000, 10.000 e 20.000 creditadas desde 02/10/2024 | regulamento do Clube |
+
+LATAM Pass | 36 meses, renovados por mais 36 a cada voo pago na LATAM | termos, item 4.4 |
+
+Azul Fidelidade | 3 anos (Topázio), 4 (Safira), 5 (Diamante) e 10 (Diamante Unique) | Passageiro de Primeira, 01/2026 |
+
+Milhas de promoções podem ter prazo diferente. Na dúvida, o extrato do programa mostra a data de cada lote.
+
+### Como descobrir o que vence primeiro
+
+- Abra o extrato de cada programa e procure a área de milhas a expirar.
+
+- Anote, por titular, o saldo e a data de cada lote que vence nos próximos 6 meses.
+
+- Junte tudo num lugar só: a planilha de milhas grátis tem uma coluna de vencimento, e o controle de milhas do GO Manager mostra os vencimentos de cada conta.
+
+### O que fazer quando as milhas estão para vencer
+
+#### 1. Emitir uma passagem
+
+É a saída mais segura. Mesmo que a viagem seja só daqui a meses, a emissão usa as milhas antes do prazo. Antes, veja se a emissão vale a pena com a calculadora de valor da milha: compare o que cada milheiro rende com o preço em dinheiro.
+
+#### 2. Emitir para alguém da família
+
+Os programas permitem emitir para outras pessoas, dentro dos limites de cada um: na Smiles e na LATAM, até 25 pessoas diferentes por período; na Azul, a lista de beneficiários tem vagas por categoria e carência para nomes novos.
+
+#### 3. Renovar a validade, quando o programa permite
+
+Na LATAM, um voo pago renova a validade de todas as milhas por mais 36 meses. Mudar de categoria ou assinar um clube também pode mudar o prazo; confira a regra no seu programa.
+
+#### 4. Planejar melhor da próxima vez
+
+Transferir pontos do cartão só quando houver uma emissão em vista evita que as milhas comecem a contar o prazo cedo demais. Veja quando a transferência bonificada vale a pena.
+
+Regras conferidas em 18 de novembro de 2026 nas fontes indicadas. Os programas mudam as regras: confira sempre o regulamento em vigor.
+
+---
+
+# O que é milheiro? Glossário de milhas simples
+
+Endereço: https://gonorte.com.br/blog/o-que-e-milheiro/
+
+Milheiro, custo médio, transferência bonificada, paridade, CPFs livres, balcão de milhas e outros termos explicados de forma direta, para quem está começando.
+
+## O que é milheiro? Glossário de milhas
+
+Os termos que aparecem em toda conversa sobre milhas, explicados de forma direta: do milheiro ao balcão, passando por bônus, paridade e CPFs.
+
+Quem entra no mundo das milhas descobre rápido que ele tem vocabulário próprio. Este glossário reúne os termos mais usados, em ordem alfabética, com links para os guias que explicam cada um em detalhe. Ele faz parte do guia de gestão de milhas.
+
+### Milheiro
+
+Cada 1.000 milhas ou pontos. É a unidade usada para falar de preço: "o milheiro está a R$ 20,00" quer dizer que 1.000 milhas custam R$ 20,00. A palavra também é usada para a pessoa que compra, acumula e vende milhas com frequência ("ele é milheiro").
+
+### Balcão de milhas
+
+Lugar onde compradores e vendedores de milhas se encontram para negociar. Pode ser um grupo informal de mensagens ou uma plataforma com regras, verificação de identidade e pagamento intermediado. Veja como funciona um balcão de milhas.
+
+### Bônus de transferência (transferência bonificada)
+
+Promoção em que o programa de fidelidade da companhia aérea dá milhas a mais para quem transfere pontos do cartão ou de outro programa. Com 100% de bônus, 10.000 pontos viram 20.000 milhas. Leia quando a transferência bonificada vale a pena.
+
+### Clube de pontos ou de milhas
+
+Assinatura mensal de um programa que credita pontos todo mês e costuma dar vantagens, como bônus maiores nas transferências. O valor pago entra no custo das milhas.
+
+### CPFs livres (limite de beneficiários)
+
+Muitos programas limitam quantas pessoas diferentes podem receber passagens emitidas com as milhas de uma conta, num certo período. "CPFs livres" são as vagas que ainda restam. Para quem emite para terceiros, é um número tão importante quanto o saldo. As regras mudam de programa para programa.
+
+### Custo do milheiro
+
+Quanto você pagou por cada 1.000 milhas: valor pago ÷ milhas recebidas × 1.000. Teste na calculadora de custo do milheiro.
+
+### Custo médio
+
+O custo do milheiro de uma conta inteira, quando as milhas vieram de compras diferentes: tudo o que foi pago ÷ todas as milhas recebidas × 1.000. É o número certo para calcular o lucro de uma venda. Exemplos no guia como calcular o custo do milheiro.
+
+### Emissão
+
+A compra da passagem com milhas, que gera o localizador. "Emitir para terceiros" é usar as milhas da sua conta para a passagem de outra pessoa.
+
+### Intermediação
+
+Quando o pagamento da negociação passa por um terceiro, que só repassa o dinheiro ao vendedor depois da emissão. Protege quem compra de pagar e não receber. Veja como funciona no GO Balcão.
+
+### Localizador
+
+O código da reserva (em geral, 6 letras e números). Com ele e o sobrenome, você confere a passagem no site da companhia aérea.
+
+### Paridade
+
+A proporção da transferência entre programas. Paridade 1:1 quer dizer que 1 ponto vira 1 milha; 2:1, que 2 pontos viram 1 milha. Muda a conta do custo.
+
+### Programa de fidelidade
+
+O sistema de pontos ou milhas de uma companhia aérea, de um banco ou de uma loja. Cada um tem regulamento próprio, com regras de validade, transferência e uso por terceiros.
+
+### Tabela fixa e tabela variável
+
+Na tabela fixa, um trecho custa sempre a mesma quantidade de milhas. Na variável (ou dinâmica), a quantidade muda com a data e a procura, como o preço em dinheiro.
+
+### Taxas de embarque
+
+Valor em dinheiro cobrado mesmo nas passagens emitidas com milhas. Deve ser descontado ao calcular quanto as milhas economizaram.
+
+### Validade (vencimento)
+
+O prazo para usar as milhas antes que expirem. Cada programa tem a sua regra, e milhas compradas em promoção podem ter prazos diferentes das demais.
+
+### Valor de resgate
+
+Quanto cada milheiro economiza numa passagem, comparado ao preço em dinheiro. Entenda em quanto vale uma milha em reais.
+
+Está começando com milhas? Veja por onde começar, com as regras dos programas e os riscos.
+
+Quer aprender isso do zero, com exercícios e aulas ao vivo? O Método Norte é a formação da GO Educação em programas de fidelidade, emissão de passagens com milhas e mercado de milhas. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027.
+
+As regras citadas variam entre programas e mudam com o tempo. Confira sempre o regulamento do programa de fidelidade.
+
+---
+
+# Quanto vale uma milha em reais? Custo e venda
+
+Endereço: https://gonorte.com.br/blog/quanto-vale-uma-milha/
+
+Custo, valor de resgate e preço de venda são três números diferentes. Veja como calcular cada um e como usá-los para decidir entre emitir, guardar ou vender.
+
+## Quanto vale uma milha em reais?
+
+Custo, valor de resgate e preço de venda não são a mesma coisa. Veja como calcular cada um e usar os três para decidir o que fazer com as suas milhas.
+
+"Quanto vale uma milha?" parece ter uma resposta só, mas tem três. Uma milha tem um custo (quanto você pagou), um valor de resgate (quanto ela economiza numa passagem) e um preço de venda (quanto alguém paga por ela). Misturar os três é o erro mais comum de quem começa na gestão de milhas.
+
+Por convenção, os três são medidos por milheiro: o valor de cada 1.000 milhas.
+
+### 1. O custo: quanto você pagou
+
+É o valor gasto para ter as milhas, dividido pela quantidade recebida. Inclui compras de pontos, clubes e transferências com bônus.
+
+custo do milheiro = valor pago ÷ milhas recebidas × 1.000
+
+Exemplo: R$ 700,00 por 20.000 pontos, transferidos com 80% de bônus, viram 36.000 milhas. O custo fica em R$ 700,00 ÷ 36.000 × 1.000 = R$ 19,44 por milheiro.
+
+Milhas que vêm "de graça", como as do cartão de crédito, também têm custo, ainda que difícil de medir: a anuidade do cartão, o clube ou o gasto que você fez para ganhá-las. O guia como calcular o custo do milheiro mostra como juntar milhas de origens diferentes num custo médio.
+
+### 2. O valor de resgate: quanto a milha economiza
+
+É quanto você deixa de pagar em dinheiro ao usar milhas numa passagem. Muda a cada emissão: a mesma milha pode valer muito numa data concorrida e pouco numa promoção em dinheiro.
+
+valor de resgate = (preço em dinheiro − taxas da emissão) ÷ milhas × 1.000
+
+Exemplo: uma passagem custa R$ 1.250,00 em dinheiro ou 40.000 milhas mais R$ 50,00 de taxas. O valor de resgate é (R$ 1.250,00 − R$ 50,00) ÷ 40.000 × 1.000 = R$ 30,00 por milheiro.
+
+Na calculadora de valor da milha, você faz essa conta para qualquer passagem.
+
+### 3. O preço de venda: quanto alguém paga
+
+É o preço combinado por milheiro numa negociação entre pessoas ou com empresas que compram milhas. Varia por programa, quantidade e prazo de emissão. Não existe uma tabela oficial: o preço é o que comprador e vendedor aceitam.
+
+Antes de vender, leia o regulamento do seu programa. O guia vender milhas explica os cuidados.
+
+### Como usar os três números juntos
+
+Situação | O que costuma fazer sentido |
+
+Valor de resgate maior que o custo | Emitir com milhas sai mais barato do que as milhas custaram. |
+
+Valor de resgate menor que o custo | Pagar em dinheiro e guardar as milhas para uma emissão melhor (de olho no vencimento). |
+
+Preço de venda maior que o custo | Vender dá lucro sobre o que as milhas custaram. |
+
+Preço de venda maior que o valor de resgate | Em reais, vender rende mais do que usar nesta emissão. |
+
+No exemplo acima, com custo de R$ 19,44 e resgate de R$ 30,00, emitir economiza R$ 10,56 por milheiro, ou R$ 422,40 nas 40.000 milhas.
+
+### Por que não existe "o" valor da milha
+
+Sites e cursos costumam citar um valor médio por programa. Esse número serve de referência, mas a decisão boa depende do seu custo e da sua emissão. Uma milha comprada barata e usada numa passagem cara vale muito; a mesma milha numa passagem em promoção pode valer menos do que custou.
+
+Para ter o custo de cada conta sempre atualizado, use a planilha de milhas grátis ou o controle de milhas do GO Manager.
+
+Os valores deste artigo são exemplos para mostrar as contas, não preços de mercado. Confira sempre o regulamento do seu programa de fidelidade.
+
+---
+
+# Como calcular o custo do milheiro (com exemplos)
+
+Endereço: https://gonorte.com.br/blog/como-calcular-o-custo-do-milheiro/
+
+Saiba calcular o custo do milheiro, o custo médio de uma conta com milhas de origens diferentes e o lucro de uma venda de milhas, com contas passo a passo.
+
+## Como calcular o custo do milheiro, com exemplos
+
+A fórmula, o custo médio quando as milhas vêm de lugares diferentes e como usar o resultado para saber o lucro real de cada venda.
+
+O custo do milheiro é quanto você pagou, em média, por cada mil milhas ou pontos de uma conta. É o número que separa uma boa compra de pontos de um prejuízo disfarçado, e é a base para saber se uma venda de milhas deu lucro de verdade.
+
+### A fórmula
+
+Divida o total que você pagou pela quantidade de pontos ou milhas que recebeu e multiplique por mil:
+
+custo do milheiro = valor pago ÷ pontos recebidos × 1.000
+
+Para fazer a conta sem papel, use a calculadora de custo do milheiro, grátis e sem cadastro.
+
+Exemplo ilustrativo: você comprou 20.000 pontos por R$ 700,00.
+
+R$ 700,00 ÷ 20.000 × 1.000 = R$ 35,00 por milheiro
+
+### Quando entra um bônus de transferência
+
+Se você transfere esses 20.000 pontos para um programa aéreo com 80% de bônus, recebe 36.000 milhas. O dinheiro gasto continua o mesmo, mas agora ele está dividido por mais milhas, então o custo cai:
+
+R$ 700,00 ÷ 36.000 × 1.000 = R$ 19,44 por milheiro
+
+É por isso que transferências bonificadas são tão usadas: o mesmo investimento gera mais milhas. No artigo sobre transferência bonificada mostramos como avaliar se a promoção compensa.
+
+### Custo médio: quando as milhas vêm de lugares diferentes
+
+Na prática, uma conta junta milhas de várias origens, cada uma com um custo. Nesse caso, some tudo o que foi pago e divida pelo total de milhas:
+
+Origem | Milhas | Custo do milheiro | Valor pago |
+
+Compra com bônus | 50.000 | R$ 20,00 | R$ 1.000,00 |
+
+Compra direta | 30.000 | R$ 30,00 | R$ 900,00 |
+
+Total | 80.000 | R$ 23,75 | R$ 1.900,00 |
+
+R$ 1.900,00 ÷ 80.000 × 1.000 = R$ 23,75 por milheiro
+
+Repare que a média não é simplesmente (20 + 30) ÷ 2 = 25: ela pesa mais a origem que trouxe mais milhas. A planilha de milhas grátis já traz essa conta de custo médio pronta, por programa.
+
+### E os pontos que vieram do cartão?
+
+Pontos ganhos no cartão de crédito não têm um preço tão claro. Uma forma comum é considerar o que você pagou para tê-los, como a anuidade ou um clube de pontos. O importante é escolher um critério e mantê-lo, para que os números da sua operação continuem comparáveis ao longo do tempo.
+
+### Do custo ao lucro de uma venda
+
+Com o custo do milheiro em mãos, o lucro de uma venda fica simples. Exemplo ilustrativo: vender 50.000 milhas a R$ 25,00 o milheiro, numa conta com custo de R$ 19,44.
+
+Receita: 50 × R$ 25,00 = R$ 1.250,00
+
+Custo: 50 × R$ 19,44 = R$ 972,00
+
+Lucro: R$ 278,00
+
+Se o custo da conta estivesse em R$ 26,00, a mesma venda daria prejuízo. Por isso vale acompanhar o custo a cada movimento, e não só de vez em quando.
+
+### Deixe o sistema fazer a conta
+
+Em planilha, cada compra, transferência e bônus exige refazer as contas. No GO Manager, o custo do milheiro é recalculado sozinho a cada movimento lançado, por titular e por programa, e usado para mostrar o lucro de cada venda.
+
+Quer aprender isso do zero, com exercícios e aulas ao vivo? O Método Norte é a formação da GO Educação em custo do milheiro, preço de venda e emissão de passagens com milhas. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027.
+
+Os valores deste artigo são exemplos ilustrativos para mostrar as contas. Preços de pontos, bônus e regras mudam conforme cada programa e campanha.
+
+---
+
+# Transferência bonificada: quando vale a pena
+
+Endereço: https://gonorte.com.br/blog/transferencia-bonificada-vale-a-pena/
+
+Veja como calcular o novo custo do milheiro numa transferência bonificada, quanto cada faixa de bônus reduz o custo e o que conferir antes de transferir.
+
+## Transferência bonificada: como saber se vale a pena
+
+Uma conta rápida para saber quanto o bônus reduz o custo do milheiro, uma tabela por faixa de bônus e os cuidados antes de transferir.
+
+Transferir pontos de um programa de banco para um programa aéreo durante uma promoção com bônus é uma das formas mais usadas de baixar o custo das milhas. Mas nem todo bônus compensa: depende de quanto os pontos custaram e do que você vai fazer com as milhas depois.
+
+### A conta do novo custo
+
+Numa transferência na proporção de 1 para 1, o custo do milheiro de destino é o custo de origem dividido por (1 + bônus):
+
+novo custo = custo de origem ÷ (1 + bônus)
+
+Exemplo ilustrativo: pontos que custaram R$ 35,00 o milheiro, transferidos com 80% de bônus.
+
+R$ 35,00 ÷ 1,80 = R$ 19,44 por milheiro
+
+Para conferir com os seus números, o simulador de transferência bonificada faz a conta com o bônus e compara com o preço de venda, grátis e sem cadastro.
+
+Se a proporção não for 1 para 1 (por exemplo, quando cada ponto vale menos de uma milha), ajuste a quantidade de milhas recebidas antes de fazer a conta, como mostramos no guia de custo do milheiro.
+
+### Quanto cada faixa de bônus reduz o custo
+
+Partindo de pontos com custo de R$ 35,00 o milheiro:
+
+Bônus | Milhas para cada 10.000 pontos | Novo custo do milheiro |
+
+30% | 13.000 | R$ 26,92 |
+
+50% | 15.000 | R$ 23,33 |
+
+80% | 18.000 | R$ 19,44 |
+
+100% | 20.000 | R$ 17,50 |
+
+### Antes de transferir, confira
+
+- O destino das milhas. Se a ideia é vender, compare o novo custo com o preço que você consegue receber pelo milheiro daquele programa (a planilha de milhas ajuda a acompanhar o custo de cada conta). Se é para viajar, compare com o preço da passagem em dinheiro.
+
+- As regras da promoção. Muitas campanhas exigem clube ativo, cadastro prévio ou têm teto de pontos bonificados. O bônus pode ser creditado depois das milhas básicas.
+
+- A validade. Milhas transferidas podem ter um prazo de expiração diferente dos pontos de origem.
+
+- A transferência não volta. Depois de enviados, os pontos normalmente não retornam para o programa de origem.
+
+Uma promoção de bônus alto sobre pontos caros pode render um custo final pior do que um bônus menor sobre pontos baratos. O que importa é o custo que sobra no fim da conta.
+
+### Simule antes, com os seus números
+
+O GO Manager tem um simulador de transferências: você informa os pontos, o custo e o bônus, e vê quantas milhas recebe e qual será o novo custo do milheiro antes de transferir. Depois de lançada, a transferência já atualiza o custo da conta de destino.
+
+Os valores deste artigo são exemplos ilustrativos. Bônus, proporções e regras variam conforme cada programa e campanha; confira sempre o regulamento da promoção.
+
+---
+
+# Como comprar milhas com segurança
+
+Endereço: https://gonorte.com.br/blog/como-comprar-milhas-com-seguranca/
+
+O que acontece ao comprar milhas de outra pessoa, os riscos de negociar direto em grupos e o que conferir antes: verificação, intermediação e reputação.
+
+## Como comprar milhas com segurança
+
+Como funciona a compra de milhas de terceiros, onde estão os riscos e um checklist para negociar com segurança.
+
+Comprar milhas de outra pessoa pode deixar uma viagem bem mais barata. Mas, como o dinheiro e a passagem passam por pessoas que muitas vezes não se conhecem, vale entender como a negociação funciona e onde estão os riscos antes de pagar.
+
+### Como funciona, na prática
+
+Os programas de fidelidade não permitem transferir milhas entre contas de terceiros. Por isso, quando você "compra milhas", quem vende emite a passagem com as milhas da conta dele, em nome dos passageiros que você informar. Você paga pelo milheiro combinado e recebe a passagem emitida.
+
+Isso significa que os dados dos passageiros precisam estar exatamente iguais aos documentos, e que você depende de o vendedor emitir o que foi combinado.
+
+### Onde estão os riscos
+
+- Pagamento direto a desconhecidos. Em negociações informais, você paga antes e só depois descobre se a emissão vai acontecer.
+
+- Identidade não confirmada. Em grupos abertos, qualquer pessoa pode se apresentar como vendedor.
+
+- Sem histórico. Sem reputação pública, não há como saber se aquela pessoa costuma entregar.
+
+- Regras pouco claras. O que acontece se o voo mudar, se você desistir ou se a emissão atrasar?
+
+### Checklist antes de pagar
+
+- Quem vende tem a identidade verificada? Documento e selfie conferidos por alguém além de você.
+
+- O pagamento é intermediado? O ideal é que o vendedor só receba depois da emissão.
+
+- Existe reputação pública? Avaliações e histórico de negociações concluídas.
+
+- As regras de cancelamento estão escritas? Antes e depois da emissão.
+
+- Os dados dos passageiros estão corretos? Nome completo e documento, como no documento oficial.
+
+### Como o GO Balcão faz
+
+O GO Balcão foi criado para resolver esses pontos:
+
+- Todos os membros fazem uma verificação única: dados pessoais, CPF e/ou CNPJ, documento (frente e verso), selfie com o documento, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe.
+
+- Com intermediação, você paga ao balcão por PIX e o vendedor recebe depois da emissão: quando você confirma ou em até 3 dias, se não houver reclamação. Ela é obrigatória no Módulo Viajante e opcional no Agentes e no Milheiro, com taxa de R$ 0,75 por milheiro.
+
+- Cada membro tem reputação pública, com avaliações e histórico, para você consultar antes de fechar.
+
+- O cancelamento tem regra escrita: antes da emissão, a desistência tem estorno; até 24 horas depois da emissão, são descontados R$ 100,00 por passageiro e a taxa de intermediação.
+
+Veja em detalhes como funciona a segurança no GO Balcão.
+
+Está começando com milhas? Veja por onde começar, com as regras dos programas e os riscos.
+
+Quer aprender isso do zero, com exercícios e aulas ao vivo? O Método Norte é a formação da GO Educação em compra e venda de milhas com segurança e emissão de passagens. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027.
+
+Este artigo explica como funcionam as negociações de milhas entre pessoas e não substitui a leitura dos termos de cada programa de fidelidade e de cada plataforma.
+
+---
+
+# Gestão de milhas, custo do milheiro e balcão
+
+Endereço: https://gonorte.com.br/
+
+Custo do milheiro e lucro de cada titular no GO Manager. Compra e venda de milhas com identidade conferida e PIX intermediado no GO Balcão. Comece grátis.
+
+[Praia em Fernando de Noronha com o Morro Dois Irmãos ao fundo]
+
+## Saiba quanto suas milhas custam, quanto rendem e com quem negociar.
+
+O GO Manager calcula o custo do milheiro e o lucro de cada titular. O GO Balcão reúne quem compra e quem vende milhas, com identidade conferida e a opção de PIX intermediado até a emissão.
+
+Trabalho com milhas Agentes, agências, emissores e milheiros: custo de cada CPF, lucro de cada emissão, equipe e compra e venda no balcão. Ver para profissionais Sou milheiro
+
+Estou começando Quer uma renda extra com milhas ou viajar pagando menos? Veja como funciona, quanto custa e quais são os riscos. Ver por onde começar
+
+Viajo com milhas Pontos da família num lugar só, grátis. Quando faltar milha, compre com PIX intermediado até a emissão. Ver para viajantes
+
+Manager: 15 dias com tudo do Gestor, sem cartão. Balcão: sem cobrança automática.
+
+[Painel do GO Manager no celular, com saldo total e custo do milheiro por programa]
+
+[Logo Smiles]Smiles
+
+[Logo LATAM Pass]LATAM Pass
+
+[Logo Azul Fidelidade]Azul Fidelidade
+
+[Logo Livelo]Livelo
+
+[Logo Esfera]Esfera
+
+[Logo TAP Miles&Go]TAP Miles&Go
+
+[Logo Flying Blue]Flying Blue
+
+[Logo Iberia Plus]Iberia Plus
+
+[Logo ConnectMiles]ConnectMiles
+
+[Logo ALL Accor]ALL Accor
+
+A GONORTE é uma empresa brasileira de tecnologia para viagens, começando pelo mercado de milhas. Trocamos planilha, grupo e conta de cabeça por números que você confere e negociações mais seguras. Feita para quem acumula pontos e viaja, para agentes que emitem passagens e para milheiros que vendem milhas.
+
+Saldo, valor em reais e custo do milheiro de todos os titulares num só painel.
+
+Cada negociação de venda de milhas por etapa, com o lucro calculado.
+
+Faturas, pontos a receber e o que cada cartão rende em milhas.
+
+[Painel do Manager]
+
+[CRM Milhas do Manager]
+
+[Central de Cartões do Manager]
+
+Entenda quanto você tem, quanto custou e quanto lucrou, com o custo do milheiro recalculado a cada movimento.
+
+Criar conta grátis
+
+Ver os planos
+
+GO Manager
+
+### Feito para a operação de milhas
+
+Saldos de cada CPF em todos os programas, com vencimentos e extrato da origem de cada milha.
+
+Recalculado a cada compra, transferência e bônus. Simulador de transferências bonificadas.
+
+Lucro de cada venda e emissão, CRM de pedidos, clientes, passageiros e fornecedores.
+
+Login próprio para a equipe, permissões por função, contas a pagar e a receber.
+
+[CRM Milhas do GO Manager no celular]
+
+No dia a dia
+
+### Tudo conectado, sem planilha
+
+Cada venda, transferência e fatura entra no lugar certo, e o custo se atualiza sozinho.
+
+Titulares, clientes e fornecedores organizados, com o saldo e o custo de cada um.
+
+[Praia do Leão, em Fernando de Noronha, vista do alto]
+
+#### Sempre atualizado
+
+Compras, vendas e transferências mudam o saldo e o custo na hora, sem refazer contas.
+
+#### Feito para o dia a dia
+
+Funciona no navegador, no computador e no celular, com alertas de saldo e vencimentos.
+
+#### Cresce com você
+
+Do plano grátis para organizar os próprios pontos ao Gestor para equipes e contas de clientes.
+
+### Compre e venda milhas com quem tem identidade conferida
+
+Quem quer comprar publica a oferta no Telegram, com programa, quantidade e preço do milheiro, e recebe propostas de vendedores com identidade conferida.
+
+Vendedores aceitam a oferta ou fazem contraproposta pelo bot, e a reputação pública mostra quem entrega.
+
+A entrada no balcão exige conferência de identidade: documento (frente e verso), selfie com o documento, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe antes de liberar o acesso.
+
+Com intermediação, o comprador paga ao balcão por PIX e o vendedor recebe depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação. Obrigatória no Viajante, opcional no Agentes e no Milheiro.
+
+Acessar o Balcão
+
+Ver os planos
+
+[Viajante sentada na areia de uma praia em Fernando de Noronha]
+
+Para quem é
+
+### Feito para quem vive o mercado de milhas
+
+Do viajante que organiza os pontos da família ao milheiro com vários CPFs.
+
+Sou viajante Sou milheiro Sou agência ou agente
+
+Por que a GONORTE
+
+### O que você confere antes de decidir
+
+[Vista noturna do Vidigal e da orla do Rio de Janeiro]
+
+15 dias de teste grátis no Manager com os recursos do plano Gestor, sem cartão de crédito
+
+#### Custo do milheiro
+
+Recalculado a cada compra, transferência e bônus. Você vê de onde veio cada número.
+
+#### Identidade conferida
+
+Documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe.
+
+#### PIX intermediado
+
+Com intermediação, o vendedor só recebe depois da emissão. Obrigatória no Viajante, opcional no Agentes e no Milheiro. Taxa de R$ 0,75 por milheiro.
+
+#### Reputação pública
+
+Avaliações e histórico de cada membro, consultáveis pelo @ do Telegram.
+
+Por dentro do Manager
+
+### Gestão de milhas, simplificada
+
+[CRM Milhas]
+
+[Painel]
+
+[Central de Cartões]
+
+Painel com o saldo e o custo do milheiro de cada programa
+
+[Foto de Raphael Godinho]Raphael Godinho Sócio fundador da GONORTE · vende milhas há mais de 3 anos
+
+Criei a GONORTE para levar a quem vive o mercado de milhas números confiáveis e negociações mais seguras.
+
+### Feita por quem opera milhas
+
+A GONORTE desenvolve tecnologia para o mercado de viagens: pessoas que acumulam pontos e viajam, agentes e agências que emitem passagens para clientes e milheiros que vendem milhas.
+
+Cada produto resolve uma parte do dia a dia: o GO Manager organiza a operação, o GO Balcão conecta quem compra e quem vende, e a GO Educação ensina o ofício. Produto novo só aparece aqui quando estiver no ar.
+
+Conexões criptografadas, senhas guardadas com hash e dados tratados conforme a LGPD. Política de Privacidade · Termos de Serviço · CNPJ 70.001.231/0001-03.
+
+Fale com a gente
+
+[Raphael Godinho, sócio fundador da GONORTE]Raphael Godinho · Sócio fundador
+
+[Cidade vista da janela do avião, com a turbina em primeiro plano]
+
+Planos
+
+### Comece grátis ou pelo plano que cabe na sua operação
+
+Cada produto tem a própria assinatura. Os planos completos ficam no site de cada um.
+
+[GO Manager]
+
+Grátis no plano Pessoal
+
+- PRO por R$ 19,90/mês e Gestor por R$ 59,90/mês, com desconto no anual
+
+- 15 dias de teste com os recursos do Gestor, sem cartão de crédito
+
+Criar conta grátis Ver os planos
+
+[GO Balcão]
+
+A partir de R$ 9,90 /mês · sem cobrança automática · + R$ 0,75 por milheiro nas negociações intermediadas
+
+- Módulos Viajante, Agentes e Milheiro, conforme o seu objetivo
+
+- Mensal, anual (economize 17%) ou vitalício; ativação direto no Telegram
+
+Acessar o Balcão Ver os planos
+
+[GO Educação]Método Norte, a formação da GO Educação em emissão de passagens com milhas e mercado de milhas. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027. Ver a formação
+
+Blog
+
+### Guias para tirar mais das suas milhas
+
+Ver todos os artigos
+
+Dúvidas
+
+### Perguntas frequentes
+
+O que é a GONORTE?
+
+A GONORTE é uma empresa de tecnologia para o mercado de viagens, com três frentes para quem trabalha com milhas: o GO Manager, para organizar e acompanhar a operação, o GO Balcão, para negociar milhas com membros de identidade conferida, e a GO Educação, com cursos sobre o mercado de milhas.
+
+Preciso assinar os dois?
+
+Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos.
+
+O Manager tem teste grátis?
+
+Sim. Toda conta nova começa com 15 dias com os recursos do plano Gestor, sem cartão de crédito. Depois, continua grátis no plano Pessoal se você não assinar.
+
+Qual a diferença entre o PRO e o Gestor?
+
+O PRO é para quem trabalha com as próprias milhas: vendas com o lucro de cada uma, até 2 titulares, GO Balcão dentro do app e o conector do Claude. O Gestor soma o que uma operação com clientes precisa: titulares ilimitados, fornecedores e emissão com fornecedor, financeiro, CRM de passagens e a página do titular.
+
+Como assino o Balcão?
+
+Escolha o módulo e o período, pague pela página de assinatura e ative o plano direto no Telegram. Antes de negociar, você faz uma verificação única de identidade.
+
+As milhas são transferidas entre contas no Balcão?
+
+Não. Os programas de fidelidade não permitem transferir milhas entre contas de terceiros. O vendedor emite a passagem com as milhas dele, em nome dos passageiros informados.
+
+WhatsApp (21) 99493-4776
+
+Telegram @gonorte
+
+Instagram @somosgonorte
+
+---
+
+# Sobre a GONORTE: tecnologia brasileira para viagens
+
+Endereço: https://gonorte.com.br/sobre/
+
+A GONORTE é uma empresa brasileira de tecnologia para viagens, criadora do GO Manager e do GO Balcão. Conheça a missão, os valores e o fundador.
+
+Sobre
+
+## Tecnologia brasileira para quem viaja, emite e negocia com milhas
+
+A GONORTE existe para trocar planilhas, grupos e conta de cabeça por números confiáveis e negociações mais seguras.
+
+Tecnologia para viagens · CNPJ 70.001.231/0001-03
+
+Smiles LATAM Pass Azul Fidelidade Livelo Esfera TAP Miles&Go Flying Blue Iberia Plus
+
+### Um jeito mais simples de trabalhar com milhas
+
+A GONORTE desenvolve tecnologia para o mercado de viagens: pessoas que acumulam pontos e viajam, agentes e agências que emitem passagens para clientes e milheiros que vendem milhas.
+
+Cada produto resolve uma parte do dia a dia: o GO Manager organiza a operação, com saldos, custos e vendas, o GO Balcão conecta quem compra e quem vende, com verificação de identidade e intermediação, e a GO Educação ensina o ofício, com a formação Método Norte. Produto novo só é anunciado quando estiver funcionando.
+
+Raphael Godinho Sócio fundador da GONORTE
+
+### No que acreditamos
+
+Os princípios que guiam como a GONORTE cria e melhora cada produto.
+
+Fale com a gente
+
+#### Números confiáveis
+
+Custo do milheiro, saldo e lucro calculados a partir do que você lançou, sem conta de cabeça.
+
+#### Segurança na negociação
+
+Identidade conferida pela equipe e PIX intermediado: o vendedor recebe depois da emissão, quando o comprador confirma ou em até 3 dias, se não houver reclamação. Obrigatório no Módulo Viajante, opcional no Agentes e no Milheiro.
+
+#### Simplicidade primeiro
+
+Cada recurso existe para tirar trabalho do seu dia, não para adicionar mais uma tela.
+
+#### Transparência e privacidade
+
+Dados tratados conforme a LGPD, conexões criptografadas e nenhum dado vendido.
+
+Raphael Godinho Sócio fundador da GONORTE
+
+Meu propósito é seguir desenvolvendo tecnologia para tornar o ecossistema de milhas cada vez mais simples, acessível e confiável.
+
+Quem faz
+
+### Quem está por trás da GONORTE
+
+Raphael Godinho vende milhas há mais de 3 anos e é formado em Análise e Desenvolvimento de Sistemas. Criou o GO Manager e o GO Balcão para controlar a própria operação.
+
+[Raphael Godinho, sócio fundador da GONORTE]
+
+Raphael Godinho Sócio fundador
+
+### Simplicidade no centro
+
+Quem trabalha com milhas costuma juntar planilhas, aplicativos de banco, grupos de mensagem e anotações para saber quanto tem e quanto lucrou. Cada ferramenta resolve um pedaço e cria mais trabalho no meio do caminho.
+
+A GONORTE faz diferente: tudo foi pensado para funcionar junto. O objetivo não é só organizar a operação, mas deixar o dia a dia mais previsível e as negociações mais seguras.
+
+---
+
+# Dúvidas sobre o GO Manager e o GO Balcão
+
+Endereço: https://gonorte.com.br/duvidas/
+
+Respostas sobre a GONORTE, o GO Manager (custo do milheiro, teste grátis, titulares) e o GO Balcão (verificação, intermediação, cancelamento e planos).
+
+Dúvidas
+
+## Perguntas frequentes
+
+Não achou a resposta? Fale com a gente.
+
+### GONORTE
+
+O que é a GONORTE?
+
+A GONORTE é uma empresa de tecnologia para o mercado de viagens, com três frentes para quem trabalha com milhas: o GO Manager, para organizar e acompanhar a operação, o GO Balcão, para negociar milhas com membros de identidade conferida, e a GO Educação, com cursos sobre o mercado de milhas.
+
+A GONORTE tem cursos?
+
+Sim. A GO Educação oferece cursos e mentorias sobre o mercado de milhas. A primeira formação é o Método Norte, sobre emissão de passagens com milhas e o mercado de milhas. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027.
+
+Preciso assinar os dois?
+
+Não. Cada produto tem a própria conta e os próprios planos. Use só o que fizer sentido: o Manager para controle e gestão, o Balcão para negociar milhas, ou os dois juntos.
+
+### GO Manager
+
+O que é o custo do milheiro?
+
+É quanto você pagou, em média, por cada mil milhas ou pontos de uma conta. O GO Manager calcula sozinho a partir das compras, transferências e bônus que você lança, e usa esse valor para mostrar o lucro de cada venda.
+
+Preciso entender de milhas para usar?
+
+Não. Você cadastra os titulares e os programas, informa os saldos e vai lançando as movimentações. As contas (custo médio, saldo por programa, lucro) são feitas pelo sistema.
+
+O Manager tem teste grátis?
+
+Sim. Toda conta nova começa com 15 dias com os recursos do plano Gestor, sem cartão de crédito. Depois, continua grátis no plano Pessoal se você não assinar.
+
+Quantos titulares e programas posso cadastrar?
+
+Depende do plano: o Pessoal permite 1 titular e até 5 contas; o PRO, contas ilimitadas e até 2 titulares; o Gestor é para quem administra contas de terceiros.
+
+Qual a diferença entre o PRO e o Gestor?
+
+O PRO é para quem trabalha com as próprias milhas: vendas com o lucro de cada uma, até 2 titulares, GO Balcão dentro do app e o conector do Claude. O Gestor soma o que uma operação com clientes precisa: titulares ilimitados, fornecedores e emissão com fornecedor, financeiro, CRM de passagens e a página do titular. Veja a comparação em planos.
+
+Serve para quem vende milhas ou emite passagens?
+
+Sim. O plano Gestor tem clientes, fornecedores, emissões, contas de terceiros e relatórios de lucro por venda, além de CRM de pedidos e acesso para a equipe.
+
+Meus dados ficam seguros?
+
+Estes são os cuidados: a conexão é criptografada, senhas são guardadas com hash e credenciais de acesso aos programas ficam criptografadas. Não vendemos dados.
+
+Funciona no celular?
+
+Sim. O GO Manager roda no navegador e se adapta à tela do celular, do tablet e do computador. Não precisa instalar nada.
+
+### GO Balcão
+
+As milhas são transferidas para a minha conta?
+
+Não. Os programas de fidelidade não permitem transferir milhas entre contas de terceiros. O vendedor emite a passagem com as milhas dele, em nome dos passageiros informados.
+
+Vou perder minha conta de milhas ou meu CPF por usar o GO Balcão?
+
+O GO Balcão não pede a sua senha e não entra na sua conta do programa: quem vende emite a passagem pela própria conta, em nome dos passageiros informados. Mesmo assim, os regulamentos dos programas de fidelidade restringem a venda de milhas, e o programa pode bloquear uma conta que considere comercial. Esse risco existe em qualquer venda de milhas, dentro ou fora do balcão. Por isso o vendedor decide quanto e com que frequência negocia, e o comprador recebe a passagem emitida em nome dele, com o localizador para conferir direto na companhia. O seu CPF não fica negativado nem é informado a programas pelo GO Balcão: os dados da verificação ficam com a GONORTE e só servem para conferir a identidade dos membros e prevenir fraudes.
+
+E se a GONORTE fechar?
+
+No GO Manager, os seus dados são seus: você exporta lançamentos e relatórios em planilha a qualquer momento, pelo próprio sistema. No GO Balcão, não existe saldo guardado: sem intermediação, o comprador paga direto ao vendedor em até 20 horas depois da emissão, e nesse caso a GONORTE não segura o dinheiro; com intermediação, o PIX fica no Mercado Pago, em nome da GONORTE, só até a emissão, e é repassado ao vendedor quando o comprador confirma ou em até 3 dias. A assinatura do Balcão não renova sozinha, então nenhuma cobrança futura fica pendurada.
+
+Como funciona a intermediação?
+
+Você paga ao balcão por PIX e o contato com o vendedor é liberado. O vendedor recebe depois da emissão: quando você confirma ou em até 3 dias, se não houver reclamação. A taxa é de R$ 0,75 por milheiro, somada ao valor que você paga, só nas negociações intermediadas. No Módulo Viajante a intermediação é obrigatória; no Agentes e no Milheiro, é opcional.
+
+Onde fica o dinheiro na intermediação?
+
+Nas negociações intermediadas, o PIX é recebido pela GONORTE (CNPJ 70.001.231/0001-03) pelo Mercado Pago e repassado ao vendedor depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação.
+
+Como é feita a verificação dos usuários?
+
+Uma única vez, por uma página de cadastro: dados pessoais, CPF e/ou CNPJ, documento (frente e verso), selfie com o documento, um vídeo curto e um termo assinado com a conta GOV.BR. A equipe confere antes de liberar o acesso.
+
+Posso cancelar depois que a passagem foi emitida?
+
+Sim, em até 24 horas após a emissão. São descontados R$ 100,00 por passageiro (pagos a quem emitiu) e a taxa de intermediação; o restante volta para você. Antes da emissão, a desistência tem estorno.
+
+E se a emissão for cancelada, bloqueada ou perdida?
+
+Pelas regras do GO Balcão, se a emissão for cancelada, bloqueada ou perdida, o comprador é reembolsado integralmente. Se a apuração concluir que a perda foi por negligência do vendedor ou do titular da conta, o vendedor faz uma nova emissão equivalente, sem custo. Se a perda foi só por falha da companhia aérea, a nova emissão é por conta do comprador. As regras completas estão em balcao.gonorte.com.br/regras.
+
+Como assino o Balcão?
+
+Escolha o módulo e o período, pague pela página de assinatura e ative o plano direto no Telegram. Antes de negociar, você faz uma verificação única de identidade.
+
+Posso cancelar minha assinatura?
+
+Sim. Não existe cobrança automática: o plano vale pelo período pago e você renova só se quiser. E você tem 7 dias para desistir da assinatura: se desistir em até 7 dias depois do pagamento, o valor pago é devolvido.
+
+---
+
+# Contato: WhatsApp, Telegram e Instagram
+
+Endereço: https://gonorte.com.br/contato/
+
+Fale com a equipe da GONORTE pelo WhatsApp, Telegram ou Instagram: dúvidas sobre o GO Manager, o GO Balcão, planos e parcerias.
+
+Contato
+
+## Fale com a nossa equipe
+
+Dúvidas sobre os produtos, planos ou parcerias: escreva aqui e a mensagem abre pronta no WhatsApp, ou chame no canal que preferir.
+
+WhatsApp (21) 99493-4776
+
+Telegram @gonorte
+
+E-mail contato@gonorte.com.br
+
+Instagram @somosgonorte
+
+YouTube @gonorte
+
+TikTok @somosgonorte
+
+Pinterest somosgonorte
+
+Já é membro do Balcão? Use Falar com Suporte no próprio bot: a equipe recebe na hora e acompanha até resolver.

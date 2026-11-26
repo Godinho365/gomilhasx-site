@@ -88,7 +88,7 @@ for ref, linha in refs:
 
 # páginas geradas precisam estar em dia com as fontes
 import subprocess
-antes = {p: p.read_bytes() for p in paginas + [ROOT / "sitemap.xml"] if p.exists()}
+antes = {p: p.read_bytes() for p in paginas + [ROOT / "sitemap.xml", ROOT / "llms.txt", ROOT / "llms-full.txt"] if p.exists()}
 subprocess.run([sys.executable, str(ROOT / "ferramentas/gerar_site.py")], check=True, capture_output=True)
 for p, conteudo in antes.items():
     if p.read_bytes() != conteudo:
