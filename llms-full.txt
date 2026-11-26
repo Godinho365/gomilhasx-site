@@ -572,6 +572,8 @@ Intermediação quando quiser No Módulo Agentes a intermediação é opcional: 
 
 Ver planos e preços
 
+Vai cotar uma emissão agora? Veja o custo, o preço com a sua margem e o lucro na calculadora de preço de passagem com milhas, grátis e sem cadastro.
+
 ### Por que o Gestor custa R$ 59,90
 
 Numa agência, a conta que importa é o lucro de cada emissão depois de pagar milhas, fornecedor e equipe. O Gestor junta isso num lugar só. Nele, a equipe, o financeiro e os clientes ficam no mesmo sistema em que você controla as milhas, sem plano “sob consulta” e sem cobrança por pessoa da equipe.
@@ -810,6 +812,56 @@ Ler o guia: quanto vale uma milha em reais
 
 ---
 
+# Calculadora: quanto cobrar por passagem com milhas
+
+Endereço: https://gonorte.com.br/calculadora-preco-passagem-milhas/
+
+Calcule o preço de uma passagem emitida com milhas: custo da emissão, preço com a sua margem, lucro e se vale mais emitir ou vender as milhas. Grátis, sem cadastro.
+
+Ferramenta grátis
+
+## Quanto cobrar por uma passagem emitida com milhas
+
+Informe as milhas da emissão, o seu custo do milheiro e as taxas. A calculadora mostra quanto a emissão custa para você, o preço com a sua margem e o lucro. Nada é enviado: o cálculo acontece no seu navegador.
+
+Custo da emissão (milhas + taxas) –
+
+Preço com a sua margem –
+
+Não sabe o seu custo do milheiro? Calcule na calculadora do custo do milheiro. No GO Manager, o custo de cada conta se atualiza sozinho a cada compra, transferência e venda, e cada venda registrada mostra o lucro. Toda conta nova tem 15 dias com os recursos do Gestor, sem cartão.
+
+### Como a conta é feita
+
+Como é calculado o custo da emissão?
+
+Custo = milhas usadas ÷ 1.000 × custo do milheiro + taxas de embarque. Exemplo: 50.000 milhas a R$ 22,00 o milheiro, com R$ 120,00 de taxas, custam R$ 1.220,00. Esse é o piso: abaixo dele, você perde dinheiro.
+
+Sobre o que a margem é aplicada?
+
+Sobre o custo das milhas. As taxas de embarque entram no preço sem margem, porque são repassadas. Preço = custo das milhas × (1 + margem) + taxas. No exemplo, com 15% de margem: R$ 1.100,00 × 1,15 + R$ 120,00 = R$ 1.385,00, com R$ 165,00 de lucro.
+
+Para que serve a tarifa em dinheiro?
+
+É o teto do preço. Se a emissão com milhas sai mais cara que a passagem comprada direto na companhia, no mesmo voo, data e classe, o cliente não tem motivo para comprar com você. A calculadora mostra quanto o cliente economiza no preço calculado.
+
+Por que comparar com vender as milhas?
+
+As milhas usadas na emissão poderiam ser vendidas. Se o milheiro vale R$ 30,00 no mercado, 50.000 milhas valem R$ 1.500,00. Somando as taxas, emitir só vale mais que vender quando o preço ao cliente passa de R$ 1.620,00.
+
+A conta inclui impostos e taxa de serviço?
+
+Não. É uma estimativa para a cotação. Se você cobra taxa de serviço ou tem impostos e custos de equipe, some ao preço ou aumente a margem.
+
+Os dados que eu digito ficam salvos?
+
+Não. A conta é feita no seu navegador e nada é enviado para a GONORTE.
+
+Ler o guia: quanto cobrar por uma passagem com milhas
+
+Quer aprender emissão, custo e preço com aulas e exercícios? Conheça o Método Norte, da GO Educação.
+
+---
+
 # Simulador de transferência bonificada grátis
 
 Endereço: https://gonorte.com.br/simulador-transferencia-bonificada/
@@ -979,6 +1031,8 @@ A planilha é grátis. No GO Manager, o plano Pessoal é grátis para sempre (at
 - Calculadora de custo do milheiro: o custo de uma compra ou transferência, com bônus.
 
 - Calculadora de valor da milha: quanto cada milha rende numa emissão, comparado com o custo.
+
+- Calculadora de preço de passagem com milhas: quanto cobrar do cliente por uma emissão, com a sua margem.
 
 - Simulador de transferência bonificada: milhas que chegam, novo custo do milheiro e lucro se vender.
 
@@ -1719,6 +1773,8 @@ Os valores são de exemplo. O custo do milheiro muda de conta para conta, e o va
 O passo a passo da emissão em si, do pedido ao localizador, está em como emitir passagem com milhas para clientes.
 
 ### Fazendo a conta sem planilha
+
+Para a conta da cotação, use a calculadora de preço de passagem com milhas: ela mostra o piso, o preço com a sua margem, a comparação com vender as milhas e a economia do cliente sobre a tarifa.
 
 No GO Manager, o custo do milheiro de cada conta é calculado sozinho a partir do que você lança, e cada venda registrada mostra o lucro. Antes de responder o cliente, você já sabe o piso da conta que vai emitir. O teste do plano Gestor é grátis por 15 dias, sem cartão.
 

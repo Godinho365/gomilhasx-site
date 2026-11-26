@@ -31,6 +31,7 @@
 
 - [Calculadora de custo do milheiro grátis](https://gonorte.com.br/calculadora-custo-do-milheiro/): Calcule o custo do milheiro de uma compra de pontos ou milhas, com bônus de transferência, e veja o lucro se vender. Grátis, sem cadastro.
 - [Calculadora de valor da milha em reais, grátis](https://gonorte.com.br/calculadora-valor-da-milha/): Descubra quanto cada milheiro rende numa passagem, compare com o custo das suas milhas e com o preço de venda, e saiba se vale emitir com milhas.
+- [Calculadora: quanto cobrar por passagem com milhas](https://gonorte.com.br/calculadora-preco-passagem-milhas/): Calcule o preço de uma passagem emitida com milhas: custo da emissão, preço com a sua margem, lucro e se vale mais emitir ou vender as milhas. Grátis, sem cadastro.
 - [Simulador de transferência bonificada grátis](https://gonorte.com.br/simulador-transferencia-bonificada/): Simule a transferência bonificada de pontos (Livelo, Esfera etc.) para LATAM Pass, Smiles ou Azul: milhas recebidas, novo custo do milheiro e lucro se vender.
 - [Planilha de controle de milhas grátis (Excel)](https://gonorte.com.br/planilha-de-milhas/): Baixe grátis a planilha de milhas da GONORTE: saldos por titular e programa, custo do milheiro, transferências com bônus e lucro das vendas.
 
