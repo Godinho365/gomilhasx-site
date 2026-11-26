@@ -26,5 +26,6 @@ Todas em domínio público (CC0), do Wikimedia Commons. Uso comercial livre, sem
 | cafe-trabalho.webp | https://commons.wikimedia.org/wiki/File:Coffee_at_work_(Unsplash).jpg |
 | celular-maos.webp | https://commons.wikimedia.org/wiki/File:Colored_pen_and_smartphone_on_a_table_(Unsplash_36nRvt6EP2I).jpg |
 | caderno-mesa.webp | https://commons.wikimedia.org/wiki/File:White_work_table_with_notes,_smartphone_and_laptop_(Unsplash).jpg |
+| notebook-graficos.webp | https://commons.wikimedia.org/wiki/File:Statistics_on_a_laptop_(Unsplash).jpg |
 
 As telas em `assets/telas/` são do GO Manager com a conta de demonstração (dados fictícios).

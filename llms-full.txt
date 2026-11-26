@@ -1582,6 +1582,84 @@ Se ele não for o curso certo para você, use o checklist com qualquer outro ant
 
 ---
 
+# Custo médio das milhas: venda, bônus e vencimento
+
+Endereço: https://gonorte.com.br/blog/custo-medio-das-milhas/
+
+Como o custo médio ponderado das milhas muda depois de uma venda, de uma compra nova, de uma transferência e de milhas que vencem, com uma conta do começo ao fim.
+
+## Custo médio das milhas: o que muda a cada venda, bônus e vencimento
+
+Vender não muda o custo médio, comprar barato derruba, transferir leva o custo junto e milha vencida encarece o que sobra. Veja cada caso numa conta que vai do começo ao fim.
+
+O custo do milheiro de uma conta é uma média ponderada: o total que você pagou dividido pelo total de milhas, vezes mil. A fórmula é simples. O que confunde é o que acontece com essa média depois de cada movimento. Abaixo, uma mesma conta passa por uma venda, uma compra nova, um vencimento e uma transferência, e você vê o custo mudar (ou não) em cada passo.
+
+### O ponto de partida
+
+Uma conta com 80.000 milhas, pelas quais você pagou R$ 1.900,00 no total.
+
+R$ 1.900,00 ÷ 80.000 × 1.000 = R$ 23,75 por milheiro
+
+### 1. Depois de uma venda, o custo médio não muda
+
+Você vende 30.000 milhas. O custo dessas milhas sai da conta pelo mesmo custo médio:
+
+custo da venda = 30 × R$ 23,75 = R$ 712,50
+
+ficam 50.000 milhas e R$ 1.187,50 → R$ 23,75 por milheiro
+
+A média continua igual, porque milhas e dinheiro saem na mesma proporção. O que muda é o lucro daquela venda: o preço que você recebeu menos os R$ 712,50 de custo. O mesmo vale quando você usa milhas numa viagem sua: o custo sai junto e a média das que ficam não se mexe.
+
+### 2. Uma compra mais barata puxa a média para baixo
+
+Você compra 20.000 milhas com bônus, a R$ 15,00 o milheiro (R$ 300,00).
+
+(R$ 1.187,50 + R$ 300,00) ÷ 70.000 × 1.000 = R$ 21,25 por milheiro
+
+A média caiu, mas não até R$ 15,00: ela pesa as 50.000 milhas que já estavam lá. Uma compra cara faz o contrário e puxa a média para cima.
+
+### 3. Milhas que vencem encarecem as que sobram
+
+10.000 milhas vencem. Elas saem da conta, mas o dinheiro que você pagou por elas não volta.
+
+R$ 1.487,50 ÷ 60.000 × 1.000 = R$ 24,79 por milheiro
+
+O custo subiu de R$ 21,25 para R$ 24,79 sem você comprar nada. Algumas pessoas preferem lançar o vencimento como prejuízo à parte e manter a média; as duas formas funcionam, desde que você use sempre a mesma. O que não dá é ignorar: aí o lucro das próximas vendas parece maior do que foi. Veja o que fazer com milhas vencendo.
+
+### 4. Na transferência, o custo vai junto
+
+Agora você transfere 20.000 pontos de um programa de pontos, com custo de R$ 35,00 o milheiro (R$ 700,00), para essa conta aérea, com 25% de bônus. Chegam 25.000 milhas, e os R$ 700,00 vão junto:
+
+custo das milhas que chegam = R$ 700,00 ÷ 25.000 × 1.000 = R$ 28,00
+
+conta depois: (R$ 1.487,50 + R$ 700,00) ÷ 85.000 × 1.000 = R$ 25,74 por milheiro
+
+O erro comum é tratar milhas transferidas como se fossem de graça. Elas carregam o custo dos pontos de origem, já dividido pelo bônus. Para simular antes de transferir, use o simulador de transferência bonificada.
+
+### Resumo: o que cada movimento faz com a média
+
+Movimento | Custo médio | No exemplo |
+
+Venda ou uso numa viagem | Não muda | R$ 23,75 → R$ 23,75 |
+
+Compra mais barata que a média | Cai | R$ 23,75 → R$ 21,25 |
+
+Milhas vencidas | Sobe (se o prejuízo ficar na conta) | R$ 21,25 → R$ 24,79 |
+
+Transferência de pontos com custo maior | Sobe | R$ 24,79 → R$ 25,74 |
+
+### Por que média, e não "as primeiras que entraram"?
+
+Daria para tratar cada lote separado e vender primeiro as milhas mais antigas. Na prática, os programas não separam lotes de custo dentro da conta: a milha é uma só. A média ponderada é mais simples de manter, não depende de lembrar de qual compra veio cada milha e é a mesma lógica usada no controle de estoque e de investimentos.
+
+### Fazendo a conta sem planilha
+
+Na planilha de milhas grátis, a média já vem pronta, mas cada movimento precisa ser lançado à mão. No GO Manager, o gerenciador de milhas da GONORTE, o custo médio de cada conta é recalculado sozinho a cada compra, transferência, bônus e venda que você lança, por titular e por programa.
+
+Os valores deste artigo são exemplos para mostrar as contas. Preços de pontos, bônus e regras mudam conforme cada programa e campanha.
+
+---
+
 # Quanto cobrar por uma passagem emitida com milhas
 
 Endereço: https://gonorte.com.br/blog/quanto-cobrar-passagem-emitida-com-milhas/
