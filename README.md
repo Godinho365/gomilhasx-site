@@ -28,8 +28,14 @@ python3 ferramentas/gerar_site.py
   Outros valores de `jsonld:` (separados por vírgula): `aplicativo` (WebApplication das calculadoras e do simulador),
   `ofertas-pagina` (Offer de cada plano, lido dos preços que estão na própria página de planos) e o nome de qualquer
   arquivo `_fontes/jsonld-<nome>.json` (`organizacao`, `faq`, `sobre`, `contato`).
-  `atualizado: AAAA-MM-DD` é obrigatório nas páginas indexáveis: vira o `lastmod` do `sitemap.xml`. Mudou o conteúdo da
-  página, mude a data (o gerador não usa o histórico do git, para o CI gerar de novo e dar o mesmo resultado).
+  O `lastmod` do `sitemap.xml` (e o `dateModified` dos artigos, quando for depois da `data`) vem do último commit que mudou
+  a fonte da página ou do artigo (`git log`, horário de Brasília); fonte com mudança ainda sem commit conta como hoje, então
+  gere e faça o commit no mesmo dia. `atualizado: AAAA-MM-DD` só vale fora de um repositório git. A CI usa
+  `fetch-depth: 0` (com clone raso o gerador para com erro).
+- `{{metodo_norte_oferta}}` em qualquer fonte vira o texto da oferta do Método Norte: com o preço de pré-venda até
+  `METODO_NORTE_PRE_VENDA_ATE` (gerar_site.py) e, depois dessa data, só o início das aulas. Passada a data, a CI acusa
+  diferença: gere de novo e envie.
+- Comentários `<!-- ... -->` das fontes não vão para as páginas: o gerador tira todos, menos o aviso de página gerada.
 - `_fontes/blog/<slug>.html`: cada artigo (o nome do arquivo vira o endereço `/blog/<slug>/`). Metadados: `titulo`, `titulo_curto`,
   `descricao`, `resumo`, `data` (AAAA-MM-DD), `categoria`, `imagem`, `imagem_alt` (descrição curta da foto de capa; obrigatório). O corpo é HTML simples (`h2`, `p`, `ul`, `ol`, `table`,
   `blockquote`, `<div class="conta">` para destacar uma conta, `<p class="aviso">` para a nota final).
@@ -52,7 +58,10 @@ python3 ferramentas/gerar_site.py
   de novo, copie por cima.
 - `_fontes/paginas/404.html` gera o `404.html` da raiz (fora do sitemap, `noindex`, sem canonical). O Caddy só mostra essa
   página com um `handle_errors` no bloco `gomilhasx.com` (veja abaixo).
-- O gerador também refaz `sitemap.xml`. A checagem do CI (`.github/scripts/checar_site.py`) confere todas as páginas e avisa se
+- O gerador também refaz `sitemap.xml`, `llms.txt` (cabeçalho, produtos, planos e contatos de `_fontes/llms.txt` + as
+  páginas do sitemap agrupadas por `LLMS_GRUPOS` em gerar_site.py; página nova precisa entrar num grupo) e `llms-full.txt`
+  (texto limpo de cada página e artigo).
+- `.well-known/security.txt` é estático: troque o `Expires` antes de vencer (vale 1 ano). A checagem do CI (`.github/scripts/checar_site.py`) confere todas as páginas e avisa se
   alguma página não foi gerada de novo depois de mudar a fonte.
 - Estilos em `assets/site.css` e `assets/motion/gomilhasx-motion.css`: o gerador põe os dois (sem comentários) num `<style>`
   dentro de cada página, para a primeira pintura não esperar outro arquivo. Mudou o CSS, gere as páginas de novo.

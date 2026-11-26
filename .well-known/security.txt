@@ -1,0 +1,4 @@
+Contact: mailto:contato@gonorte.com.br
+Expires: 2027-11-26T03:00:00.000Z
+Preferred-Languages: pt, en
+Canonical: https://gonorte.com.br/.well-known/security.txt

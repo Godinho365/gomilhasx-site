@@ -6,29 +6,76 @@
 
 - [GO Manager](https://manager.gonorte.com.br/): sistema de gestão de milhas e pontos no navegador. Saldos por titular em cada programa de fidelidade (LATAM Pass, Smiles, Azul Fidelidade, Livelo, Esfera e outros), custo do milheiro recalculado a cada compra, transferência e bônus, simulador de transferências bonificadas, vendas e emissões com lucro por operação, CRM de clientes e passageiros, cartões e faturas, financeiro, equipe com permissões, metas e comissões. Conecta ao Claude (MCP) para consultar a operação em português.
 - [GO Balcão](https://balcao.gonorte.com.br/): balcão de milhas no Telegram. Quem quer comprar publica uma oferta; vendedores com identidade conferida (documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe) aceitam ou fazem contraproposta. Com intermediação, o comprador paga ao balcão por PIX e o vendedor recebe depois da emissão: quando o comprador confirma ou em até 3 dias, se não houver reclamação. Obrigatória no Módulo Viajante, opcional no Agentes e no Milheiro. Sem intermediação, o comprador paga direto ao vendedor em até 20 horas depois da emissão; nesse caso a GONORTE não segura o dinheiro. Emissão cancelada, bloqueada ou perdida: o comprador é reembolsado integralmente (regras: https://balcao.gonorte.com.br/regras). Taxa de R$ 0,75 por milheiro, somada ao valor que o comprador paga, só nas negociações intermediadas. Reputação pública de cada membro.
-- [GO Educação](https://educacao.gonorte.com.br/): cursos e mentorias para quem trabalha com milhas e emissão, em educacao.gonorte.com.br. Primeira formação: [Método Norte](https://educacao.gonorte.com.br/cursos/metodo-norte/), sobre emissão de passagens com milhas, programas de fidelidade, custo do milheiro, compra e venda com segurança e atendimento; aulas gravadas, ao vivo e mentorias, em pré-venda com aulas a partir de 15/01/2027. Mais em https://educacao.gonorte.com.br/llms.txt
+- [GO Educação](https://educacao.gonorte.com.br/): cursos e mentorias para quem trabalha com milhas e emissão, em educacao.gonorte.com.br. Primeira formação: [Método Norte](https://educacao.gonorte.com.br/cursos/metodo-norte/), sobre emissão de passagens com milhas, programas de fidelidade, custo do milheiro, compra e venda com segurança e atendimento; aulas gravadas, ao vivo e mentorias. Pré-venda: R$ 297 até 31/12/2026 (depois, R$ 497). Aulas a partir de 15/01/2027. Mais em https://educacao.gonorte.com.br/llms.txt
 
 ## Planos (resumo)
 
 - Manager: plano Pessoal grátis; PRO R$ 19,90/mês; Gestor R$ 59,90/mês; desconto no anual; 15 dias de teste com os recursos do Gestor, sem cartão de crédito. PRO: vendas com lucro, até 2 titulares, GO Balcão dentro do app e conector do Claude. Gestor: tudo do PRO, titulares ilimitados, fornecedores, financeiro, CRM de passagens e página do titular. Comparação: https://gonorte.com.br/planos/
 - Balcão: módulos Viajante (R$ 9,90/mês), Agentes (R$ 24,90/mês) e Milheiro (R$ 49,90/mês), também em planos anual (17% de desconto) ou vitalício, sem cobrança automática e com 7 dias para desistir da assinatura. Vender milhas só no Milheiro. Detalhes: https://balcao.gonorte.com.br/#planos
 
-## Links
+## Páginas dos produtos
 
-- [Site da empresa](https://gonorte.com.br/): apresentação, produtos, fundador e contato
-- [Recursos](https://gonorte.com.br/recursos/), [Planos e preços](https://gonorte.com.br/planos/), [Sobre](https://gonorte.com.br/sobre/), [Dúvidas](https://gonorte.com.br/duvidas/) e [Contato](https://gonorte.com.br/contato/)
-- [Blog](https://gonorte.com.br/blog/): guias sobre custo do milheiro, transferências bonificadas e compra de milhas com segurança
-- Por público: [viajantes](https://gonorte.com.br/para-viajantes/), [milheiros](https://gonorte.com.br/para-milheiros/), [agências e agentes](https://gonorte.com.br/para-agencias/) e [quem está começando](https://gonorte.com.br/comecar-com-milhas/) (renda extra ou viajar pagando menos: como funciona, regras dos programas e decisão do STJ de 2024, riscos e primeiros passos, sem promessa de ganho)
-- [Segurança](https://gonorte.com.br/seguranca/): identidade conferida (documento, selfie, vídeo curto e termo assinado com a conta GOV.BR, conferidos pela equipe), PIX intermediado até a emissão, reputação pública, proteção de dados e dicas contra golpes
-- [Calculadora de custo do milheiro](https://gonorte.com.br/calculadora-custo-do-milheiro/): ferramenta grátis, sem cadastro; considera bônus e proporção de transferência e estima o lucro da venda
-- [Simulador de transferência bonificada](https://gonorte.com.br/simulador-transferencia-bonificada/): ferramenta grátis, sem cadastro; pontos do banco (Livelo, Esfera e outros) com bônus para o programa aéreo: milhas recebidas, pointsback, novo custo do milheiro e lucro pelo preço de venda informado
-- [Planilha de controle de milhas](https://gonorte.com.br/planilha-de-milhas/): planilha grátis (.xlsx) com contas, movimentações e vendas
-- [GO Manager no Claude](https://gonorte.com.br/claude/): conector MCP do GO Manager para o Claude (planos PRO e Gestor)
+- [Recursos da gestão e do balcão de milhas](https://gonorte.com.br/recursos/): Carteira por CPF, custo do milheiro, lucro por venda, CRM e equipe no GO Manager; ofertas de membros com identidade conferida e PIX intermediado no GO Balcão.
+- [Planos e preços do GO Manager e do GO Balcão](https://gonorte.com.br/planos/): Planos do GO Manager (Pessoal grátis, PRO e Gestor) e do GO Balcão (módulos Viajante, Agentes e Milheiro), com preços mensais, anuais e vitalícios.
+- [Como o GO Balcão protege a compra de milhas](https://gonorte.com.br/seguranca/): Como o GO Balcão reduz o risco na negociação de milhas: identidade conferida, PIX intermediado até a emissão, reputação pública e LGPD.
+- [GO Manager no Claude: sua carteira de milhas](https://gonorte.com.br/claude/): Conecte o GO Manager ao Claude e pergunte sobre saldos, custo do milheiro, vendas, CRM Milhas e ofertas do GO Balcão. Cada pessoa entra com a própria conta.
+
+## Por público
+
+- [Milhas para viajantes: organize e compre milhas](https://gonorte.com.br/para-viajantes/): Para quem viaja com milhas: controle os pontos da família de graça no GO Manager e compre no GO Balcão de quem tem identidade conferida, com PIX intermediado.
+- [Sistema para milheiros: custo e venda de milhas](https://gonorte.com.br/para-milheiros/): Para quem compra e vende milhas: custo médio e CPFs livres de cada titular no GO Manager, e venda com contrapropostas e alertas por programa no GO Balcão.
+- [Sistema de milhas para agências de viagens](https://gonorte.com.br/para-agencias/): Para agências e agentes: clientes, fornecedores, lucro por emissão e equipe com permissões no GO Manager; compra de milhas com CNPJ conferido no GO Balcão.
+- [Como começar a trabalhar com milhas](https://gonorte.com.br/comecar-com-milhas/): Quer renda extra com milhas ou viajar pagando menos? Veja como funciona, o que os programas proíbem, os riscos e os primeiros passos, sem promessa.
+
+## Ferramentas grátis (sem cadastro)
+
+- [Calculadora de custo do milheiro grátis](https://gonorte.com.br/calculadora-custo-do-milheiro/): Calcule o custo do milheiro de uma compra de pontos ou milhas, com bônus de transferência, e veja o lucro se vender. Grátis, sem cadastro.
+- [Calculadora de valor da milha em reais, grátis](https://gonorte.com.br/calculadora-valor-da-milha/): Descubra quanto cada milheiro rende numa passagem, compare com o custo das suas milhas e com o preço de venda, e saiba se vale emitir com milhas.
+- [Simulador de transferência bonificada grátis](https://gonorte.com.br/simulador-transferencia-bonificada/): Simule a transferência bonificada de pontos (Livelo, Esfera etc.) para LATAM Pass, Smiles ou Azul: milhas recebidas, novo custo do milheiro e lucro se vender.
+- [Planilha de controle de milhas grátis (Excel)](https://gonorte.com.br/planilha-de-milhas/): Baixe grátis a planilha de milhas da GONORTE: saldos por titular e programa, custo do milheiro, transferências com bônus e lucro das vendas.
+
+## Guias
+
+- [Gestão de milhas: o que é e como fazer bem](https://gonorte.com.br/gestao-de-milhas/): Guia de gestão de milhas: o que é, para quem é, como calcular o custo do milheiro, cuidar de vencimentos e medir o lucro, com ferramentas grátis.
+- [Controle de milhas por titular e por programa](https://gonorte.com.br/controle-de-milhas/): Controle de milhas por titular e programa: saldos, vencimentos, custo do milheiro e lucro de cada venda no GO Manager. Comece grátis ou baixe a planilha.
+- [Comprar milhas com segurança: como funciona](https://gonorte.com.br/comprar-milhas/): Como comprar milhas de outra pessoa: o que você recebe, onde estão os riscos, o que conferir antes de pagar e como o GO Balcão intermedia o PIX até a emissão.
+- [Vender milhas com segurança: como funciona](https://gonorte.com.br/vender-milhas/): Como funciona a venda de milhas, os riscos de negociar com desconhecidos, como saber se a venda dá lucro e como vender com mais segurança no GO Balcão.
+- [Golpes com milhas: como reconhecer e se proteger](https://gonorte.com.br/golpes-de-milhas/): Os golpes mais comuns na compra e venda de milhas e passagens com milhas, com casos noticiados pela polícia e pelos programas, e como se proteger de cada um.
+
+## Blog
+
+- [Blog de milhas: custo do milheiro e transferências](https://gonorte.com.br/blog/): Guias práticos sobre milhas, custo do milheiro, transferências bonificadas e como comprar e vender milhas com segurança.
+- [Como trabalhar com milhas: guia sem promessa](https://gonorte.com.br/blog/como-trabalhar-com-milhas/): O que faz quem trabalha com milhas, as três formas de atuar, quanto tempo e dinheiro a operação exige, os riscos reais e como começar pequeno.
+- [Quanto cobrar por uma passagem emitida com milhas](https://gonorte.com.br/blog/quanto-cobrar-passagem-emitida-com-milhas/): Como montar o preço de uma emissão com milhas: custo do milheiro, taxas, o valor de mercado das milhas e a margem, com um exemplo do começo ao fim.
+- [Como funciona um balcão de milhas e como avaliar](https://gonorte.com.br/blog/como-funciona-um-balcao-de-milhas/): O que é um balcão de milhas, como uma negociação acontece do anúncio à emissão e os pontos para avaliar um balcão antes de comprar ou vender milhas.
+- [Emitir passagem com milhas para clientes](https://gonorte.com.br/blog/emitir-passagem-com-milhas-para-clientes/): Passo a passo para agentes e agências emitirem passagens com milhas para clientes: cotação, limites de terceiros dos programas, conferência e registro do lucro.
+- [Milhas vencendo: o que fazer em cada programa](https://gonorte.com.br/blog/milhas-vencendo-o-que-fazer/): A validade das milhas na Smiles, LATAM Pass e Azul Fidelidade, como ver o que vence primeiro e as saídas para não perder milhas, com as fontes de cada regra.
+- [O que é milheiro? Glossário de milhas simples](https://gonorte.com.br/blog/o-que-e-milheiro/): Milheiro, custo médio, transferência bonificada, paridade, CPFs livres, balcão de milhas e outros termos explicados de forma direta, para quem está começando.
+- [Quanto vale uma milha em reais? Custo e venda](https://gonorte.com.br/blog/quanto-vale-uma-milha/): Custo, valor de resgate e preço de venda são três números diferentes. Veja como calcular cada um e como usá-los para decidir entre emitir, guardar ou vender.
+- [Como calcular o custo do milheiro (com exemplos)](https://gonorte.com.br/blog/como-calcular-o-custo-do-milheiro/): Saiba calcular o custo do milheiro, o custo médio de uma conta com milhas de origens diferentes e o lucro de uma venda de milhas, com contas passo a passo.
+- [Transferência bonificada: quando vale a pena](https://gonorte.com.br/blog/transferencia-bonificada-vale-a-pena/): Veja como calcular o novo custo do milheiro numa transferência bonificada, quanto cada faixa de bônus reduz o custo e o que conferir antes de transferir.
+- [Como comprar milhas com segurança](https://gonorte.com.br/blog/como-comprar-milhas-com-seguranca/): O que acontece ao comprar milhas de outra pessoa, os riscos de negociar direto em grupos e o que conferir antes: verificação, intermediação e reputação.
+
+## Institucional
+
+- [Gestão de milhas, custo do milheiro e balcão](https://gonorte.com.br/): Custo do milheiro e lucro de cada titular no GO Manager. Compra e venda de milhas com identidade conferida e PIX intermediado no GO Balcão. Comece grátis.
+- [Sobre a GONORTE: tecnologia brasileira para viagens](https://gonorte.com.br/sobre/): A GONORTE é uma empresa brasileira de tecnologia para viagens, criadora do GO Manager e do GO Balcão. Conheça a missão, os valores e o fundador.
+- [Dúvidas sobre o GO Manager e o GO Balcão](https://gonorte.com.br/duvidas/): Respostas sobre a GONORTE, o GO Manager (custo do milheiro, teste grátis, titulares) e o GO Balcão (verificação, intermediação, cancelamento e planos).
+- [Contato: WhatsApp, Telegram e Instagram](https://gonorte.com.br/contato/): Fale com a equipe da GONORTE pelo WhatsApp, Telegram ou Instagram: dúvidas sobre o GO Manager, o GO Balcão, planos e parcerias.
+
+## Outros endereços
+
 - [Novidades do Manager](https://manager.gonorte.com.br/novidades): novos recursos, melhorias e correções
 - [Política de Privacidade](https://manager.gonorte.com.br/privacidade)
 - [Termos de Serviço](https://manager.gonorte.com.br/termos)
+- [Texto completo das páginas e artigos](https://gonorte.com.br/llms-full.txt)
+
+## Redes e contato
+
 - Instagram: https://www.instagram.com/somosgonorte/
 - TikTok: https://www.tiktok.com/@somosgonorte
 - Pinterest: https://www.pinterest.com/somosgonorte/
 - YouTube: https://www.youtube.com/@gonorte
-- Contato: WhatsApp (21) 99493-4776, Telegram @gonorte e e-mail contato@gonorte.com.br
+- Telegram: https://t.me/gonorte
+- WhatsApp: (21) 99493-4776 (https://wa.me/5521994934776)
+- E-mail: contato@gonorte.com.br
