@@ -264,6 +264,7 @@ COMUM = {
     "v_js": versao(RAIZ / "assets/site-motion.js"),
     "v_lead_css": versao(RAIZ / "assets/lead.css"),
     "v_lead_js": versao(RAIZ / "assets/lead.js"),
+    "v_consentimento_js": versao(RAIZ / "assets/consentimento.js"),
 }
 # Chamada final por jornada: {{cta}} = duas portas (páginas neutras, blog); {{cta_b2b}} = quem trabalha com milhas;
 # {{cta_b2c}} = quem viaja com milhas; {{cta_iniciante}} = quem está começando (renda extra ou viajar pagando menos)

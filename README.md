@@ -50,6 +50,12 @@ python3 ferramentas/gerar_site.py
   `clique_contato` (canal: `whatsapp`, `telegram` ou `email`; posto pelo gerador em todo link `wa.me`, `t.me/gonorte` e
   `mailto:contato@`, e pelo formulário de `/contato/`), `baixar_planilha` (botão da planilha) e `usar_calculadora`
   (propriedade `qual`: `custo_do_milheiro`, `valor_da_milha` ou `transferencia_bonificada`; só quando a conta é feita).
+- Google Tag Manager (`GTM-N742HXVS`) só com permissão (LGPD): `assets/consentimento.js` mostra o aviso de cookies
+  (Recusar, Aceitar, Personalizar: Analíticos e Marketing) e guarda a escolha em `localStorage` e no cookie `gn_consent`
+  (12 meses, com versão; suba `VERSAO` no JS se as categorias mudarem). Sem escolha ou recusado, nada do Google é pedido;
+  com permissão, carrega o `gtm.js` com o modo de consentimento (padrão negado + `update` com o que foi permitido).
+  "Preferências de cookies" no rodapé reabre as opções. A CSP do Caddy precisa liberar `www.googletagmanager.com` (e o que o
+  contêiner usar, como `www.google-analytics.com`). O Umami não usa cookie e não depende do aviso.
 - Atalhos para outros sites: `ATALHOS` em `gerar_site.py` gera uma página mínima com `meta refresh` e `canonical` para o
   destino (hoje `/educacao/` → `https://educacao.gonorte.com.br/`), fora do sitemap. Como toda página nova, o endereço
   precisa entrar no `@site` do Caddy do Manager; melhor ainda é um `redir /educacao* https://educacao.gonorte.com.br/ 301` lá.
