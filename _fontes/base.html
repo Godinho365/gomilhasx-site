@@ -38,7 +38,9 @@
 <script src="{{motion_js}}" defer></script>
 <script src="/assets/site-motion.js?v={{v_js}}" defer></script>
 <script src="/assets/lead.js?v={{v_lead_js}}" defer></script>
-<!-- Umami (analytics sem cookie, no próprio servidor): script e coleta em /stats/, painel em stats.gonorte.com.br.
+<!-- Aviso de cookies: o Google Tag Manager só carrega depois do aceite (LGPD); sem escolha, nada do Google é pedido -->
+<script src="/assets/consentimento.js?v={{v_consentimento_js}}" defer></script>
+<!-- Umami (analytics sem cookie, no próprio servidor; não depende do aviso de cookies): script e coleta em /stats/, painel em stats.gonorte.com.br.
      Eventos: clique_produto (botão), clique_contato (canal), baixar_planilha e usar_calculadora (qual); nenhum leva dado pessoal -->
 <script defer src="/stats/script.js" data-website-id="35a98baa-31ee-4aa0-b2e8-d56b581d0caa" data-host-url="https://gonorte.com.br/stats" data-domains="gonorte.com.br"></script>
 </head>
@@ -115,6 +117,7 @@
       <li><a href="https://manager.gonorte.com.br/termos">Termos de Serviço</a></li>
       <li><a href="https://manager.gonorte.com.br/privacidade">Política de Privacidade</a></li>
       <li><a href="https://manager.gonorte.com.br/privacidade/solicitacao">Pedidos sobre seus dados</a></li>
+      <li><button type="button" class="ck-pref" data-cookies>Preferências de cookies</button></li>
     </ul></nav>
   </div>
   <p class="big-word" aria-hidden="true" inert data-split>Milhas, simplificadas.</p>

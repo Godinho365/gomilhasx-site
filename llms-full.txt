@@ -334,7 +334,7 @@ Backups diários Os dados do GO Manager e do GO Balcão têm cópia de seguranç
 
 LGPD Dados tratados conforme a LGPD, com política de privacidade e um canal para pedidos sobre os seus dados.
 
-Cookies só com permissão Cookies analíticos e de marketing só funcionam se você aceitar, e a escolha pode ser mudada a qualquer momento.
+Google só com a sua permissão Neste site, a contagem de visitas é feita no nosso próprio servidor, sem cookie e sem dado pessoal. Os cookies do Google (visitas e anúncios) só são usados se você aceitar no aviso de cookies, e dá para mudar a escolha quando quiser em.
 
 ### Dicas para não cair em golpe
 
