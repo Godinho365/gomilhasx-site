@@ -1038,6 +1038,8 @@ Para uma ou duas contas, uma planilha resolve. A planilha de milhas grátis da G
 
 O problema aparece com o volume. Na planilha, cada compra, transferência ou venda pede que você atualize o saldo e o total pago à mão. Com vários titulares e programas, um esquecimento muda o custo médio e, com ele, o lucro que você acha que teve.
 
+Um gerenciador de milhas, como o GO Manager, faz essas contas sozinho: você lança a compra, a transferência ou a venda, e o saldo, o custo médio e o lucro se atualizam na hora, no navegador do celular ou do computador.
+
 | Planilha | GO Manager |
 
 Custo | Grátis | Plano Pessoal grátis; PRO e Gestor pagos |
@@ -1170,11 +1172,11 @@ Antes da emissão, a desistência tem estorno. Depois, o cancelamento segue o pr
 
 ---
 
-# Vender milhas com segurança: como funciona
+# Onde vender milhas com segurança: como funciona
 
 Endereço: https://gonorte.com.br/vender-milhas/
 
-Como funciona a venda de milhas, os riscos de negociar com desconhecidos, como saber se a venda dá lucro e como vender com mais segurança no GO Balcão.
+Onde vender milhas, como funciona a negociação de milhas, os riscos de negociar com desconhecidos e como saber se a venda dá lucro antes de fechar.
 
 Guia
 
@@ -1211,6 +1213,20 @@ Cada programa de fidelidade tem regras próprias sobre emissões para terceiros.
 - Emita exatamente o combinado, com os nomes iguais aos documentos, e guarde os comprovantes.
 
 - Nunca passe login, senha ou código da sua conta para ninguém.
+
+### Onde vender milhas: as opções
+
+Quem tem milhas sobrando costuma escolher entre três caminhos. Cada um troca preço por prazo e por risco de um jeito diferente.
+
+Opção | Como funciona | O que pesar |
+
+Empresa que compra milhas | Paga um valor fixo por milheiro e cuida da emissão com os dados do cliente dela. | Mais simples, mas costuma pagar menos por milheiro. Confira o prazo de pagamento e a reputação da empresa. |
+
+Negociação de milhas entre pessoas (um balcão de milhas) | O comprador diz quanto paga, e você aceita ou faz contraproposta. | O preço costuma ser melhor, e o risco depende de quem está do outro lado: veja se há verificação de identidade e pagamento intermediado. |
+
+Usar as milhas | Emitir passagens para você ou para a família. | Muitas vezes é o melhor valor por milha. Compare com a calculadora de valor da milha. |
+
+Em qualquer opção, saiba o seu custo do milheiro antes de fechar: é ele que diz se a venda deu lucro.
 
 ### Como funciona a venda no GO Balcão
 
