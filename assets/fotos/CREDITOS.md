@@ -23,5 +23,6 @@ Todas em domínio público (CC0), do Wikimedia Commons. Uso comercial livre, sem
 | despertador.webp | https://commons.wikimedia.org/wiki/File:Roman_numerals_on_alarm_clock_%28Unsplash%29.jpg |
 | cofrinho.webp | https://commons.wikimedia.org/wiki/File:Cute_piggy_bank_%28Unsplash%29.jpg |
 | contando-dinheiro.webp | https://commons.wikimedia.org/wiki/File:Well-earned_cash_%28Unsplash%29.jpg |
+| cafe-trabalho.webp | https://commons.wikimedia.org/wiki/File:Coffee_at_work_(Unsplash).jpg |
 
 As telas em `assets/telas/` são do GO Manager com a conta de demonstração (dados fictícios).

@@ -333,6 +333,7 @@ LEIA = {
     "/golpes-de-milhas/": ("Golpes com milhas", "Os golpes mais comuns e como se proteger."),
     "manager": ("https://manager.gonorte.com.br/register", "GO Manager, grátis para começar", "O custo do milheiro recalculado a cada compra, transferência e venda."),
     "balcao": ("https://balcao.gonorte.com.br/", "GO Balcão", "Compre e venda milhas com quem tem identidade conferida e PIX intermediado."),
+    "educacao": ("https://educacao.gonorte.com.br/cursos/metodo-norte/", "Método Norte, da GO Educação", "Formação em emissão com milhas, custo, preço e compra e venda com segurança."),
 }
 
 
