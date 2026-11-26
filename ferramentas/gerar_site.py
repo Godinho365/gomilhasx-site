@@ -341,7 +341,7 @@ def montar(meta: dict[str, str], conteudo: str, extra_jsonld: list[dict] | None 
             {"@type": "ListItem", "position": 1, "name": "Início", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": meta.get("migalha", meta["titulo"].split(" | ")[0]), "item": SITE + caminho}]})
     conteudo = imagens_responsivas(conteudo)
-    imagem = meta.get("imagem", "/og-image.png?v=4")
+    imagem = meta.get("imagem", "/og-image.png?v=5")
     valores = {
         **COMUM,
         "titulo": html.escape(meta["titulo"], quote=True),
